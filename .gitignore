@@ -1,34 +1,69 @@
+# =========================
 # Dependencies
+# =========================
 node_modules/
 **/node_modules/
 
-# Next.js build outputs
+# =========================
+# Next.js
+# =========================
 .next/
 **/.next/
 out/
 **/out/
+
+# Build
+dist/
 build/
-**/build/
+coverage/
 
-# Operating system files
-.DS_Store
-**/.DS_Store
-Thumbs.db
-
-# Environment & secrets
+# =========================
+# Environment
+# =========================
 .env
-.env*.local
-.env.production
-.env.development
-*.pem
-*.key
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+!.env.example
 
-# Logs & debug
+# =========================
+# Python
+# =========================
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# =========================
+# Logs
+# =========================
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
 # Vercel
-.vercel
-**/.vercel
+# =========================
+.vercel/
+
+# =========================
+# Misc
+# =========================
+*.pem
+*.key
