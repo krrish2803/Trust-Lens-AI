@@ -6,7 +6,11 @@ import { ScreenshotScanIcon } from "@/components/icons/BrandIcons";
 
 type TabType = "link" | "message" | "screenshot";
 
-// Screenshot tab uses the brand ScreenshotScanIcon; Link and Message use Material Symbols
+export interface UploadBoxProps {
+  onFileSelect?: (file: File) => void;
+  defaultTab?: TabType;
+}
+
 const tabs: { id: TabType; label: string; icon: string | null; brandIcon?: string }[] = [
   { id: "link", label: "Link", icon: "link" },
   { id: "message", label: "Message", icon: "chat_bubble" },
@@ -31,9 +35,9 @@ const features = [
   },
 ];
 
-export default function UploadBox() {
+export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadBoxProps) {
   const router = useRouter();
-  const [activeTab, setActiveTab] = useState<TabType>("link");
+  const [activeTab, setActiveTab] = useState<TabType>(defaultTab);
   const [urlValue, setUrlValue] = useState("");
   const [messageValue, setMessageValue] = useState("");
   const [isDragging, setIsDragging] = useState(false);
@@ -41,13 +45,19 @@ export default function UploadBox() {
   const [isScanning, setIsScanning] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  const handleFileChange = (file: File | null) => {
+    setSelectedFile(file);
+    if (file && onFileSelect) {
+      onFileSelect(file);
+    }
+  };
+
   const handleAnalyze = async () => {
     if (activeTab === "link" && !urlValue.trim()) return;
     if (activeTab === "message" && !messageValue.trim()) return;
     if (activeTab === "screenshot" && !selectedFile) return;
 
     setIsScanning(true);
-    // Simulate scan delay — Krrish will wire real API here
     await new Promise((r) => setTimeout(r, 1800));
     setIsScanning(false);
     router.push("/report");
@@ -73,7 +83,6 @@ export default function UploadBox() {
                 : "text-[#c2c6d6] hover:text-[#d8e3fb] hover:bg-[#2a3548]"
             }`}
           >
-            {/* Screenshot tab uses brand icon; Link and Message use Material Symbols */}
             {tab.brandIcon === "screenshot" ? (
               <ScreenshotScanIcon
                 size={18}
@@ -151,7 +160,7 @@ export default function UploadBox() {
                 e.preventDefault();
                 setIsDragging(false);
                 const file = e.dataTransfer.files[0];
-                if (file) setSelectedFile(file);
+                if (file) handleFileChange(file);
               }}
               onClick={() => fileInputRef.current?.click()}
               className={`flex flex-col items-center justify-center gap-4 border-2 border-dashed rounded-2xl py-14 px-6 text-center cursor-pointer transition-all duration-200 ${
@@ -177,9 +186,10 @@ export default function UploadBox() {
                     </p>
                   </div>
                   <button
+                    type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setSelectedFile(null);
+                      handleFileChange(null);
                     }}
                     className="text-xs text-[#ffb4ab] hover:underline"
                   >
@@ -210,7 +220,7 @@ export default function UploadBox() {
               className="hidden"
               onChange={(e) => {
                 const file = e.target.files?.[0];
-                if (file) setSelectedFile(file);
+                if (file) handleFileChange(file);
               }}
             />
             <p className="flex items-center gap-1.5 text-xs text-[#8c909f]">

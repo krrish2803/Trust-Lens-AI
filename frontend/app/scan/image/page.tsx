@@ -40,7 +40,7 @@ export default function ScanImagePage() {
         </div>
 
         <div className="bg-slate-900/60 border border-slate-800 backdrop-blur-xl rounded-2xl p-6 md:p-8 shadow-2xl space-y-6">
-          <UploadBox onFileSelect={(file) => setSelectedFile(file)} />
+          <UploadBox defaultTab="screenshot" onFileSelect={(file) => setSelectedFile(file)} />
 
           {error && (
             <div className="p-4 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 text-sm">
@@ -52,7 +52,7 @@ export default function ScanImagePage() {
             type="button"
             onClick={handleScan}
             disabled={loading || !selectedFile}
-            className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/20 transition-all disabled:opacity-50 flex items-center justify-center gap-2 text-base"
+            className="w-full py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-xl shadow-lg shadow-cyan-500/20 transition-all disabled:opacity-50 flex items-center justify-center gap-2 text-base cursor-pointer"
           >
             {loading ? (
               <>
