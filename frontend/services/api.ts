@@ -1,67 +1,102 @@
 /**
- * api.ts — Base API client stub
- *
- * This file provides the base HTTP client configuration.
- * Krrish: replace the stub implementations with real fetch/axios calls
- * pointing to the FastAPI backend.
- *
- * Base URL is read from the NEXT_PUBLIC_API_URL env variable.
- * Default: http://localhost:8000
+ * TrustLens AI - API Client Service
+ * Connects Next.js Frontend to FastAPI Backend.
  */
 
-export const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+import { ScanResultResponse, HistoryResponse } from '@/types';
 
-export class ApiError extends Error {
-  constructor(
-    public status: number,
-    message: string,
-  ) {
-    super(message);
-    this.name = "ApiError";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
+export async function apiGet<T = any>(endpoint: string): Promise<T> {
+  const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+  });
+  if (!res.ok) {
+    throw new Error(`API GET request to ${endpoint} failed with status ${res.status}`);
   }
+  return res.json();
 }
 
-// ─── Generic GET ──────────────────────────────────────────────────────────
-
-export async function apiGet<T>(path: string): Promise<T> {
-  // TODO (Krrish): implement real fetch
-  // const res = await fetch(`${API_BASE}${path}`, { headers: authHeaders() });
-  // if (!res.ok) throw new ApiError(res.status, await res.text());
-  // return res.json();
-  console.warn(`[API stub] GET ${API_BASE}${path}`);
-  throw new Error(`API not connected yet. GET ${path}`);
+export async function apiPost<T = any>(endpoint: string, body: any): Promise<T> {
+  const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    throw new Error(`API POST request to ${endpoint} failed with status ${res.status}`);
+  }
+  return res.json();
 }
 
-// ─── Generic POST ─────────────────────────────────────────────────────────
+export async function scanUrl(url: string): Promise<ScanResultResponse> {
+  const res = await fetch(`${API_BASE_URL}/scan/url`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ url }),
+  });
 
-export async function apiPost<T>(path: string, body: unknown): Promise<T> {
-  // TODO (Krrish): implement real fetch
-  // const res = await fetch(`${API_BASE}${path}`, {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json", ...authHeaders() },
-  //   body: JSON.stringify(body),
-  // });
-  // if (!res.ok) throw new ApiError(res.status, await res.text());
-  // return res.json();
-  console.warn(`[API stub] POST ${API_BASE}${path}`, body);
-  throw new Error(`API not connected yet. POST ${path}`);
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Failed to analyze URL.');
+  }
+
+  return res.json();
 }
 
-// ─── Generic POST (multipart form) ───────────────────────────────────────
+export async function scanMessage(text: string, channel: string = 'auto'): Promise<ScanResultResponse> {
+  const res = await fetch(`${API_BASE_URL}/scan/message`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ text, channel }),
+  });
 
-export async function apiPostForm<T>(
-  path: string,
-  formData: FormData,
-): Promise<T> {
-  // TODO (Krrish): implement real fetch
-  console.warn(`[API stub] POST (form) ${API_BASE}${path}`, formData);
-  throw new Error(`API not connected yet. POST form ${path}`);
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Failed to analyze message content.');
+  }
+
+  return res.json();
 }
 
-// ─── Auth headers helper (to be filled in by auth.ts) ────────────────────
+export async function scanImage(file: File): Promise<ScanResultResponse> {
+  const formData = new FormData();
+  formData.append('file', file);
 
-export function authHeaders(): Record<string, string> {
-  // TODO (Krrish): read JWT token from cookie/localStorage
-  return {};
+  const res = await fetch(`${API_BASE_URL}/scan/image`, {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({}));
+    throw new Error(errorData.detail || 'Failed to process screenshot OCR analysis.');
+  }
+
+  return res.json();
+}
+
+export async function getHistory(limit: number = 20): Promise<HistoryResponse> {
+  const res = await fetch(`${API_BASE_URL}/history?limit=${limit}`, {
+    cache: 'no-store',
+  });
+
+  if (!res.ok) {
+    throw new Error('Failed to load scan history.');
+  }
+
+  return res.json();
+}
+
+export async function getScanById(scanId: string): Promise<ScanResultResponse> {
+  const res = await fetch(`${API_BASE_URL}/history/${scanId}`, {
+    cache: 'no-store',
+  });
+
+  if (!res.ok) {
+    throw new Error('Scan result not found.');
+  }
+
+  return res.json();
 }

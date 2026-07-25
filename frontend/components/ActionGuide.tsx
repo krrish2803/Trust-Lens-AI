@@ -1,10 +1,11 @@
 "use client";
 
-import type { ActionStep } from "@/types";
+import type { ActionStep, RiskLevel } from "@/types";
 
 interface ActionGuideProps {
-  actions: ActionStep[];
-  confidenceScore: number;
+  actions?: (ActionStep | string)[];
+  confidenceScore?: number;
+  verdict?: RiskLevel | string;
   onDownload?: () => void;
   onDismiss?: () => void;
 }
@@ -16,23 +17,43 @@ const severityStyles: Record<string, { bg: string; text: string }> = {
 };
 
 export default function ActionGuide({
-  actions,
-  confidenceScore,
+  actions = [],
+  confidenceScore = 95,
+  verdict = "Safe",
   onDownload,
   onDismiss,
 }: ActionGuideProps) {
+  // Normalize string actions into ActionStep objects if necessary
+  const normalizedSteps: ActionStep[] = actions.map((act, idx) => {
+    if (typeof act === "string") {
+      let severity: "primary" | "tertiary" | "error" = "primary";
+      if (act.includes("DO NOT") || act.includes("NEVER") || act.includes("🚨")) {
+        severity = "error";
+      } else if (act.includes("⚠️") || act.includes("Block")) {
+        severity = "tertiary";
+      }
+      return {
+        step: idx + 1,
+        title: act.split(".")[0] || `Step ${idx + 1}`,
+        description: act,
+        severity,
+      };
+    }
+    return act;
+  });
+
   return (
-    <div className="glass-panel rounded-2xl p-6 md:p-8">
+    <div className="glass-panel rounded-2xl p-6 md:p-8 bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
       <h4 className="font-[family-name:var(--font-manrope)] font-semibold text-lg text-[#d8e3fb] mb-6 flex items-center gap-2">
         <span className="material-symbols-outlined text-[#6bd8cb] text-xl">
           security_update_good
         </span>
-        Recommended Actions
+        Recommended Safety Actions
       </h4>
 
       {/* Action steps grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-        {actions.map((action) => {
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        {normalizedSteps.map((action) => {
           const style = severityStyles[action.severity] ?? severityStyles.primary;
           return (
             <div
@@ -62,26 +83,29 @@ export default function ActionGuide({
       {/* Footer row */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-white/5 pt-6">
         <p className="text-[#8c909f] text-sm max-w-md leading-relaxed">
-          TrustLens AI is a guardian layer. While{" "}
-          <span className="text-[#6bd8cb] font-semibold">{confidenceScore}% confident</span>,
-          always exercise personal caution with unsolicited digital communications.
+          TrustLens AI Engine is active. Threat analysis carries{" "}
+          <span className="text-[#6bd8cb] font-semibold">{Math.round(confidenceScore * 100)}% confidence</span>. Always verify unverified financial requests.
         </p>
 
         <div className="flex gap-3 shrink-0">
-          <button
-            id="download-report-btn"
-            onClick={onDownload}
-            className="px-6 py-2.5 rounded-full border border-[#8c909f] text-[#d8e3fb] text-sm font-semibold hover:bg-[#2a3548] active:scale-95 transition-all duration-200"
-          >
-            Download Report
-          </button>
-          <button
-            id="dismiss-threat-btn"
-            onClick={onDismiss}
-            className="px-6 py-2.5 rounded-full bg-[#adc6ff] text-[#002e6a] text-sm font-bold hover:bg-[#bdd0ff] active:scale-95 transition-all duration-200"
-          >
-            Dismiss Threat
-          </button>
+          {onDownload && (
+            <button
+              id="download-report-btn"
+              onClick={onDownload}
+              className="px-6 py-2.5 rounded-full border border-[#8c909f] text-[#d8e3fb] text-sm font-semibold hover:bg-[#2a3548] active:scale-95 transition-all duration-200"
+            >
+              Download Report
+            </button>
+          )}
+          {onDismiss && (
+            <button
+              id="dismiss-threat-btn"
+              onClick={onDismiss}
+              className="px-6 py-2.5 rounded-full bg-[#adc6ff] text-[#002e6a] text-sm font-bold hover:bg-[#bdd0ff] active:scale-95 transition-all duration-200"
+            >
+              Dismiss Threat
+            </button>
+          )}
         </div>
       </div>
     </div>
