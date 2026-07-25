@@ -1,45 +1,117 @@
-"""Rule engine for scam detection with 15 predefined rules."""
+"""
+TrustLens AI - Rule Engine Module
+Multi-category rule engine covering 10 distinct Indian scam types:
+1. OTP Scams
+2. KYC Scams
+3. Bank Impersonation Scams
+4. Delivery & Parcel Scams
+5. Lottery & Reward Scams
+6. UPI Fraud Scams
+7. Investment & Crypto Scams
+8. Job & Work From Home Scams
+9. Instant Loan Scams
+10. Government & CBI/Police Arrest Scams
+"""
+
 import re
-from typing import List, Dict, Optional
-
-
-# Rule definitions with risk scores
-RULES = {
-    "R001": {"name": "Urgency Language", "risk_score": 0.7, "description": "Detects urgent language patterns"},
-    "R002": {"name": "Credential Request", "risk_score": 0.95, "description": "Detects requests for credentials/OTP/PIN"},
-    "R003": {"name": "Payment Request", "risk_score": 0.9, "description": "Detects requests for money transfer"},
-    "R004": {"name": "Brand Impersonation", "risk_score": 0.85, "description": "Detects brand/company name usage in suspicious context"},
-    "R005": {"name": "Account Threat", "risk_score": 0.8, "description": "Detects threats about account suspension/closure"},
-    "R006": {"name": "Reward/Prize Offer", "risk_score": 0.75, "description": "Detects prize/reward/gift offers"},
-    "R007": {"name": "Too Good To Be True", "risk_score": 0.7, "description": "Detects unrealistic promises"},
-    "R008": {"name": "Unknown Sender", "risk_score": 0.6, "description": "Detects unknown/suspicious sender patterns"},
-    "R009": {"name": "Generic Greeting", "risk_score": 0.4, "description": "Detects generic greetings like Dear Customer"},
-    "R010": {"name": "Poor Grammar/Spelling", "risk_score": 0.5, "description": "Detects grammar/spelling errors"},
-    "R011": {"name": "Redirect Links", "risk_score": 0.75, "description": "Detects suspicious redirect URLs"},
-    "R012": {"name": "Time Pressure", "risk_score": 0.65, "description": "Detects time-limited pressure tactics"},
-    "R013": {"name": "Authority Impersonation", "risk_score": 0.85, "description": "Detects government/bank authority impersonation"},
-    "R014": {"name": "Mobile-Only Instruction", "risk_score": 0.7, "description": "Detects instructions to use only mobile"},
-    "R015": {"name": "Document Request", "risk_score": 0.8, "description": "Detects requests for personal documents"},
-}
+from typing import List, Dict, Any, Tuple
 
 
 class RuleEngine:
-    """Evaluates text against 15 predefined scam detection rules."""
-
     def __init__(self):
-        self.rules = RULES
+        # 1. OTP Scam Patterns
+        self.otp_patterns = [
+            r"\b(?:otp|one time password|cvv|pin|passcode|atm pin)\b",
+            r"(?:share|tell|send|enter|verify|provide)\s+(?:your|the)?\s*(?:otp|pin|cvv)",
+            r"\b(?:otp|pin)\s+(?:mat share karo|bhejo|diya|chahiye)\b",
+            r"bank officer.*(?:otp|pin)",
+            r"verification code.*(?:share|send)"
+        ]
 
-    def evaluate(self, text: str, url: str = "", has_link: bool = False,
-                 has_attachment: bool = False, sender_type: str = "unknown") -> dict:
+        # 2. KYC Scam Patterns
+        self.kyc_patterns = [
+            r"\b(?:kyc|know your customer|aadhaar|pan card|sim block)\b",
+            r"(?:kyc|account|sim)\s+(?:update|verify|suspend|deactivate|expire|complete)",
+            r"kyc\s+(?:nondone|pending|overdue|mandatory)",
+            r"update\s+your\s+(?:kyc|pan|aadhaar|bank details)",
+            r"document.*(?:upload|verify|submit).*(?:kyc|bank)"
+        ]
+
+        # 3. Bank Impersonation Patterns
+        self.bank_patterns = [
+            r"\b(?:sbi|hdfc|icici|axis|pnb|bob|kotak|canara|union bank|rbi)\b",
+            r"(?:account|netbanking|debit card|credit card)\s+(?:blocked|suspended|frozen|locked)",
+            r"dear\s+customer.*(?:bank|account|card)",
+            r"reward\s+points.*(?:expire|redeem|cashback)",
+            r"unauthorized\s+transaction.*(?:click|verify)"
+        ]
+
+        # 4. Delivery & Parcel Scam Patterns
+        self.delivery_patterns = [
+            r"\b(?:india post|courier|fedex|bluedart|dtdc|amazon parcel|delhivery)\b",
+            r"(?:parcel|package|delivery|shipment)\s+(?:stuck|failed|delayed|held|returned)",
+            r"address\s+(?:incorrect|update|invalid|missing)",
+            r"pay\s+(?:rs|rupees|\u20b9)?\s*\d+\s*(?:delivery fee|customs|custom duty|redelivery)"
+        ]
+
+        # 5. Lottery & Reward Scam Patterns
+        self.lottery_patterns = [
+            r"\b(?:kbc|kaun banega crorepati|lucky draw|winner|lottery|spin & win)\b",
+            r"(?:won|jeet gaya|jeeta|claim)\s+(?:rs|rupees|\u20b9)?\s*[\d,]+\s*(?:lakh|crore|prize|cash)",
+            r"congratulations.*(?:winner|lucky|selected|reward)",
+            r"whatsapp\s+(?:lottery|lucky draw)",
+            r"claim\s+your\s+(?:prize|gift|reward|car|iphone)"
+        ]
+
+        # 6. UPI Fraud Patterns
+        self.upi_patterns = [
+            r"\b(?:upi|gpay|google pay|phonepe|paytm|bhim)\b",
+            r"(?:scan|enter)\s+(?:qr code|upi pin)\s+to\s+(?:receive|get|claim)\s+(?:money|cashback)",
+            r"send\s+(?:rs|rupees|\u20b9)?\s*1\s+to\s+(?:verify|claim|receive)",
+            r"request\s+money.*(?:accept|enter pin)",
+            r"cashback.*(?:credited|pending|claim now)"
+        ]
+
+        # 7. Investment & Crypto Scam Patterns
+        self.investment_patterns = [
+            r"\b(?:guaranteed return|daily income|crypto mining|double money|forex trading)\b",
+            r"invest\s+(?:rs|rupees|\u20b9)?\s*\d+\s*(?:and get|earn|return)",
+            r"earn\s+(?:rs|rupees|\u20b9)?\s*[\d,]+\s*(?:per day|daily|per month)",
+            r"(?:100%|risk free|zero risk)\s+(?:profit|return)",
+            r"telegram\s+(?:investment|trading|signals|vip group)"
+        ]
+
+        # 8. Job & Work From Home Scam Patterns
+        self.job_patterns = [
+            r"\b(?:work from home|part time job|youtube like job|telegram job|data entry)\b",
+            r"earn\s+(?:rs|rupees|\u20b9)?\s*\d+-\d+\s*(?:daily|per day)",
+            r"like\s+(?:videos|posts|youtube)\s+and\s+earn",
+            r"no\s+(?:experience|qualification)\s+required",
+            r"task\s+completion.*(?:pay|prepaid|commission)"
+        ]
+
+        # 9. Fake Loan Scam Patterns
+        self.loan_patterns = [
+            r"\b(?:instant loan|pre-approved loan|zero cibil|no document loan)\b",
+            r"loan\s+of\s+(?:rs|rupees|\u20b9)?\s*[\d,]+\s*sanctioned",
+            r"pay\s+(?:processing fee|file charge|insurance|noc fee)\s+first",
+            r"low\s+interest\s+rate\s+loan\s+approval",
+            r"instant\s+credit\s+without\s+verification"
+        ]
+
+        # 10. Government & Law Enforcement Scam Patterns
+        self.govt_patterns = [
+            r"\b(?:cbi|customs|cyber crime|police|mha|digital arrest|trai|electricity bill)\b",
+            r"electricity\s+power\s+will\s+be\s+disconnected",
+            r"illegal\s+(?:parcel|drugs|passport|sim|money laundering)",
+            r"court\s+(?:notice|warrant|summons|fir|arrest)",
+            r"pay\s+fine\s+(?:immediately|online|to avoid arrest)"
+        ]
+
+    def evaluate(self, text: str) -> Dict[str, Any]:
         """
-        Evaluate text against all rules.
-
-        Input: {text, url, has_link, has_attachment, sender_type}
-        Output: {
-            "rules_triggered": [{"rule_id": str, "rule_name": str, "risk_score": float, "evidence": str}],
-            "total_risk_from_rules": float,
-            "explanation": str
-        }
+        Evaluates text against all 10 rule categories.
+        Returns triggered categories, matching rules, risk points, and evidence.
         """
         triggered_rules: List[dict] = []
 
@@ -69,9 +141,10 @@ class RuleEngine:
         explanation = self._generate_explanation(triggered_rules)
 
         return {
-            "rules_triggered": triggered_rules,
-            "total_risk_from_rules": total_risk,
-            "explanation": explanation,
+            "categories_triggered": list(categories_triggered),
+            "findings": findings,
+            "rule_risk_score": min(total_risk_score, 100),
+            "triggered_count": len(findings)
         }
 
     def _check_urgency(self, text: str) -> Optional[dict]:
@@ -495,4 +568,4 @@ class RuleEngine:
         if len(triggered_rules) > 5:
             lines.append(f"- ...and {len(triggered_rules) - 5} more indicators")
 
-        return "\n".join(lines)
+rule_engine = RuleEngine()

@@ -9,37 +9,46 @@ import {
 } from "@/components/icons/BrandIcons";
 
 interface VerdictCardProps {
-  verdict: Verdict;
-  title: string;
-  description: string;
-  timestamp: string;
-  scanId: string;
+  verdict: Verdict | RiskLevel | string;
+  title?: string;
+  category?: string;
+  confidence?: number;
+  summary?: string;
+  description?: string;
+  timestamp?: string;
+  scanId?: string;
   riskLevel?: RiskLevel;
 }
 
 export default function VerdictCard({
-  verdict,
+  verdict = "SAFE",
   title,
+  category,
+  confidence,
+  summary,
   description,
-  timestamp,
-  scanId,
+  timestamp = new Date().toLocaleTimeString(),
+  scanId = "SCAN-001",
   riskLevel,
 }: VerdictCardProps) {
-  const level = riskLevel ?? getRiskLevel(
-    verdict === "CRITICAL" ? 95
-    : verdict === "HIGH_RISK" ? 82
-    : verdict === "MEDIUM_RISK" ? 52
-    : verdict === "LOW_RISK" ? 28
-    : 5
-  );
-  const strokeColor = getRiskStrokeColor(level);
-  const icon = getVerdictIcon(verdict);
-  const verdictLabel = getVerdictLabel(verdict);
+  const displayTitle = title || category || "Threat Analysis Result";
+  const displayDesc = description || summary || "Analyzed against 8 multi-layered security verification models.";
 
-  const isSafe = verdict === "SAFE" || verdict === "LOW_RISK";
+  const vStr = String(verdict).toUpperCase();
+  const level = riskLevel ?? (
+    vStr.includes("CRITICAL") ? "critical"
+    : vStr.includes("HIGH") ? "high"
+    : vStr.includes("MEDIUM") ? "medium"
+    : vStr.includes("LOW") ? "low"
+    : "safe"
+  );
+
+  const strokeColor = getRiskStrokeColor(level);
+  const verdictLabelText = getVerdictLabel(verdict as Verdict);
+  const isSafe = vStr.includes("SAFE") || vStr.includes("LOW");
 
   return (
-    <div className="relative overflow-hidden glass-panel rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+    <div className="relative overflow-hidden glass-panel rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
       {/* Scan-line animation overlay */}
       <div
         className="absolute inset-0 pointer-events-none animate-scan-line opacity-40"
@@ -50,7 +59,7 @@ export default function VerdictCard({
         }}
       />
 
-      {/* Icon — brand SVG: Critical=✕circle, Safe=shield✓, High/Med=triangle! */}
+      {/* Icon */}
       <div
         className="relative z-10 shrink-0 w-20 h-20 rounded-full flex items-center justify-center animate-float"
         style={{
@@ -59,9 +68,9 @@ export default function VerdictCard({
           filter: `drop-shadow(0 0 16px ${strokeColor}30)`,
         }}
       >
-        {verdict === "CRITICAL" ? (
+        {vStr.includes("CRITICAL") ? (
           <CriticalAlertIcon size={44} color={strokeColor} />
-        ) : verdict === "SAFE" || verdict === "LOW_RISK" ? (
+        ) : isSafe ? (
           <SafeVerdictIcon size={44} color={strokeColor} />
         ) : (
           <RiskyWarningIcon size={44} color={strokeColor} />
@@ -82,14 +91,15 @@ export default function VerdictCard({
           <span className="material-symbols-outlined text-[12px]">
             {isSafe ? "verified" : "report"}
           </span>
-          Verdict: {verdictLabel}
+          Verdict: {verdictLabelText}
+          {confidence !== undefined && ` (${Math.round(confidence * 100)}% Confidence)`}
         </div>
 
         <h1 className="font-[family-name:var(--font-manrope)] font-bold text-3xl md:text-4xl text-[#d8e3fb] mb-2">
-          {title}
+          {displayTitle}
         </h1>
         <p className="text-[#c2c6d6] text-base leading-relaxed max-w-xl">
-          {description}
+          {displayDesc}
         </p>
       </div>
 

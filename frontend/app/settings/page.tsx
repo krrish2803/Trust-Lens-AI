@@ -8,9 +8,12 @@ import { logout } from "@/services/auth";
 export default function SettingsPage() {
   const router = useRouter();
   const [profile] = useState(mockUserProfile);
-  const [alerts, setAlerts] = useState(mockUserSettings.realtimeAlerts);
-  const [biometric, setBiometric] = useState(mockUserSettings.biometricAuth);
-  const [timeout, setTimeout_] = useState(mockUserSettings.sessionTimeout);
+  const [alerts, setAlerts] = useState<boolean>(mockUserSettings.realtimeAlerts ?? true);
+  const [biometric, setBiometric] = useState<boolean>(mockUserSettings.biometricAuth ?? false);
+  const [timeout, setTimeout_] = useState<number>(mockUserSettings.sessionTimeout ?? 30);
+
+  const userFullName = profile.fullName || profile.name || "User";
+  const avatarInitial = userFullName.trim().charAt(0).toUpperCase() || "U";
 
   const handleSignOut = async () => {
     try {
@@ -18,17 +21,16 @@ export default function SettingsPage() {
     } catch (_err) {
       console.warn("[SignOut] Executed logout stub");
     } finally {
-      // Direct navigation to public landing page
       router.push("/");
     }
   };
 
-  const toggleStyle = (on: boolean) =>
+  const toggleStyle = (on: boolean = false) =>
     `relative inline-flex w-12 h-6 rounded-full transition-all duration-300 cursor-pointer ${
       on ? "bg-[#4d8eff]" : "bg-[#2a3548]"
     }`;
 
-  const knobStyle = (on: boolean) =>
+  const knobStyle = (on: boolean = false) =>
     `absolute top-0.5 w-5 h-5 rounded-full bg-white shadow-md transition-all duration-300 ${
       on ? "left-6" : "left-0.5"
     }`;
@@ -51,7 +53,7 @@ export default function SettingsPage() {
           {/* Avatar */}
           <div className="relative shrink-0">
             <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#4d8eff] to-[#6bd8cb] flex items-center justify-center text-[#002e6a] text-2xl font-bold">
-              {profile.fullName.charAt(0)}
+              {avatarInitial}
             </div>
             <button
               aria-label="Edit avatar"
@@ -70,7 +72,7 @@ export default function SettingsPage() {
               <input
                 id="settings-full-name"
                 type="text"
-                defaultValue={profile.fullName}
+                defaultValue={userFullName}
                 className="w-full bg-[#081425] border border-[#424754] focus:border-[#4d8eff] text-[#d8e3fb] rounded-xl px-4 py-2.5 text-sm outline-none transition-colors"
               />
             </div>

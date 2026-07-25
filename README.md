@@ -1,6 +1,6 @@
-# TrustLens AI
-
+# TrustLens AI 🛡️
 > **Detect. Explain. Protect.**
+> AI-powered Scam & Phishing Detection Platform custom-built for Indian users.
 
 ![TrustLens AI Banner](trustlens_ai_branding/logo.svg)
 
@@ -22,7 +22,7 @@ It provides instant risk verdicts (**Safe**, **Low**, **Medium**, **High**, **Cr
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Overview
 
 ### Frontend Application
 - **Framework:** Next.js 16 (App Router)
@@ -43,7 +43,7 @@ It provides instant risk verdicts (**Safe**, **Low**, **Medium**, **High**, **Cr
 
 ---
 
-## 📁 Repository Structure
+## ⚡ 8-Layer Multi-Tiered Architecture
 
 ```
 Trust-Lens-AI/
@@ -150,20 +150,30 @@ Trust-Lens-AI/
 
 ### 2. Frontend Setup & Run
 
-1. **Navigate to the frontend directory:**
-   ```bash
-   cd frontend
-   ```
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
+# Configure environment
+cp .env.example .env
+
+# Run FastAPI server
+uvicorn backend.app:app --reload --port 8000
+```
+API Documentation available at: `http://localhost:8000/docs`
+
+### 3. Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Open `http://localhost:3000` in your browser.
+
+---
 
 4. **Access Application:**
    Open browser at [http://localhost:3000](http://localhost:3000)

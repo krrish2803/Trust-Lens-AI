@@ -1,7 +1,11 @@
-"""URL detection module for identifying phishing and suspicious URLs."""
+"""
+TrustLens AI - URL Detector Module
+Detects phishing URLs and suspicious domain patterns.
+"""
+
 import re
 from urllib.parse import urlparse
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Set
 from .utils import extract_domain, is_typosquat, load_json_dataset, get_dataset_path
 
 
@@ -13,12 +17,21 @@ SUSPICIOUS_TLDS = [
 ]
 
 LEGITIMATE_BANKING = [
-    'sbi.co.in', 'hdfcbank.com', 'icicibank.com', 'axisbank.com', 'yesbank.in',
+    'sbi.co.in', 'onlinesbi.sbi', 'onlinesbi.com', 'hdfcbank.com', 'icicibank.com', 'axisbank.com', 'yesbank.in',
     'kotak.com', 'pnbindia.com', 'bankofbaroda.com', 'canarabank.com',
     'unionbankofindia.co.in', 'idbibank.in', 'indianbank.in', 'centralbankofindia.co.in',
     'ucobank.co.in', 'bankofindia.co.in', 'finobank.com', 'airtelbank.in',
     'paytmbank.com', 'jio.com', 'indiapost.gov.in'
 ]
+
+BUILTIN_TRUSTED_DOMAINS: Set[str] = {
+    'sbi.co.in', 'onlinesbi.sbi', 'onlinesbi.com', 'hdfcbank.com', 'icicibank.com',
+    'axisbank.com', 'kotak.com', 'pnbindia.in', 'pnbindia.com', 'bankofbaroda.in',
+    'bankofbaroda.com', 'canarabank.com', 'unionbankofindia.co.in', 'google.com',
+    'google.co.in', 'microsoft.com', 'amazon.in', 'amazon.com', 'flipkart.com',
+    'paytm.com', 'phonepe.com', 'jio.com', 'airtel.in', 'indiapost.gov.in',
+    'cybercrime.gov.in', 'rbi.org.in'
+}
 
 URL_SHORTENERS = [
     'bit.ly', 'tinyurl.com', 't.co', 'goo.gl', 'ow.ly', 'is.gd', 'buff.ly',
@@ -34,6 +47,15 @@ PHISHING_KEYWORDS = [
 ]
 
 
+def clean_and_normalize_domain(url: str) -> str:
+    """Normalizes URL by lowering, stripping trailing slashes, and removing www."""
+    url_clean = url.lower().strip().rstrip('/')
+    domain = extract_domain(url_clean)
+    if domain.startswith('www.'):
+        domain = domain[4:]
+    return domain
+
+
 class URLDetector:
     """Detects phishing URLs and suspicious domain patterns."""
 
@@ -45,9 +67,10 @@ class URLDetector:
     def _load_trusted_domains(self) -> List[str]:
         try:
             data = load_json_dataset(get_dataset_path('trusted_domains.json'))
-            return [d['domain'].lower() for d in data.get('domains', [])]
+            loaded = [d['domain'].lower() for d in data.get('domains', [])]
+            return list(set(loaded + list(BUILTIN_TRUSTED_DOMAINS)))
         except (FileNotFoundError, KeyError):
-            return []
+            return list(BUILTIN_TRUSTED_DOMAINS)
 
     def _load_suspicious_domains(self) -> List[dict]:
         try:
@@ -62,6 +85,16 @@ class URLDetector:
             return data.get('banks', [])
         except (FileNotFoundError, KeyError):
             return []
+
+    def is_domain_whitelisted(self, domain: str) -> bool:
+        """Check if normalized domain is in built-in or loaded trusted lists."""
+        clean_dom = clean_and_normalize_domain(domain)
+        if clean_dom in self.trusted_domains or clean_dom in BUILTIN_TRUSTED_DOMAINS:
+            return True
+        for t in self.trusted_domains:
+            if clean_dom.endswith('.' + t):
+                return True
+        return False
 
     def detect(self, url: str) -> dict:
         if not url or not url.strip():
@@ -107,8 +140,14 @@ class URLDetector:
         verdict = self._generate_verdict(final_risk)
         recommendation = self._generate_recommendation(verdict, indicators)
 
+        is_phishing = bool(final_risk >= 0.40)
+        findings = [i.get("evidence", i.get("indicator", "")) for i in indicators]
+
         return {
             "url": url,
+            "is_phishing": is_phishing,
+            "risk_score": final_risk,
+            "findings": findings,
             "risk_indicators": indicators,
             "final_url_risk": final_risk,
             "verdict": verdict,
@@ -140,8 +179,9 @@ class URLDetector:
 
             legit_domains = bank.get('legitimate_domains', [])
             for legit in legit_domains:
-                legit_name = legit.split('.')[0].lower()
-                if domain != legit and domain_name == legit_name:
+                legit_clean = clean_and_normalize_domain(legit)
+                legit_name = legit_clean.split('.')[0].lower()
+                if domain != legit_clean and domain_name == legit_name:
                     return {
                         "indicator": "domain_squatting",
                         "evidence": f"Domain mimics '{bank['name']}' with exact name match on non-official domain",
@@ -164,13 +204,13 @@ class URLDetector:
         domain_name = domain.split('.')[0] if '.' in domain else domain
 
         for trusted in self.trusted_domains:
-            trusted_name = trusted.split('.')[0]
-            if domain == trusted:
+            trusted_clean = clean_and_normalize_domain(trusted)
+            if domain == trusted_clean:
                 continue
-            if is_typosquat(domain, trusted, threshold=0.85):
+            if is_typosquat(domain, trusted_clean, threshold=0.85):
                 return {
                     "indicator": "typosquatting",
-                    "evidence": f"Domain is a likely typo of '{trusted}'",
+                    "evidence": f"Domain is a likely typo of '{trusted_clean}'",
                     "risk_score": 0.85,
                 }
 
@@ -205,7 +245,7 @@ class URLDetector:
 
             for keyword in PHISHING_KEYWORDS:
                 if keyword in hostname.lower():
-                    for alias in [b['short_name'] for b in self.bank_names]:
+                    for alias in [b['short_name'] for b in self.bank_names if 'short_name' in b]:
                         if alias.lower() in hostname.lower():
                             return {
                                 "indicator": "subdomain_abuse",
@@ -226,7 +266,7 @@ class URLDetector:
         return None
 
     def _check_url_shortener(self, url: str) -> Optional[dict]:
-        domain = extract_domain(url)
+        domain = clean_and_normalize_domain(url)
         for shortener in URL_SHORTENERS:
             if domain == shortener or domain.endswith('.' + shortener):
                 return {
