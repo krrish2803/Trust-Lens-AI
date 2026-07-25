@@ -14,7 +14,7 @@ Multi-category rule engine covering 10 distinct Indian scam types:
 """
 
 import re
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Any
 
 
 # Rule definitions with risk scores
@@ -128,7 +128,8 @@ class RuleEngine:
             r"pay\s+fine\s+(?:immediately|online|to avoid arrest)"
         ]
 
-    def evaluate(self, text: str) -> Dict[str, Any]:
+    def evaluate(self, text: str, url: str = "", has_link: bool = False,
+                 has_attachment: bool = False, sender_type: str = "unknown") -> Dict[str, Any]:
         """
         Evaluates text against all 10 rule categories.
         Returns triggered categories, matching rules, risk points, and evidence.
@@ -161,10 +162,9 @@ class RuleEngine:
         explanation = self._generate_explanation(triggered_rules)
 
         return {
-            "categories_triggered": list(categories_triggered),
-            "findings": findings,
-            "rule_risk_score": min(total_risk_score, 100),
-            "triggered_count": len(findings)
+            "rules_triggered": triggered_rules,
+            "total_risk_from_rules": total_risk,
+            "explanation": explanation,
         }
 
     def _check_urgency(self, text: str) -> Optional[dict]:
@@ -588,4 +588,4 @@ class RuleEngine:
         if len(triggered_rules) > 5:
             lines.append(f"- ...and {len(triggered_rules) - 5} more indicators")
 
-rule_engine = RuleEngine()
+        return "\n".join(lines)
