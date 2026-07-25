@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TrustLens AI Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .risk-gradient-safe {
+            background: linear-gradient(90deg, #6bd8cb 0%, #29a195 100%);
+        }
+        .risk-gradient-warn {
+            background: linear-gradient(90deg, #ffb786 0%, #df7412 100%);
+        }
+        .risk-gradient-danger {
+            background: linear-gradient(90deg, #ffb4ab 0%, #93000a 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #081425;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a3548;
+            border-radius: 10px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#081425",
+                        "surface": "#081425",
+                        "secondary": "#6bd8cb",
+                        "outline": "#8c909f",
+                        "surface-variant": "#2a3548",
+                        "on-tertiary": "#502400",
+                        "inverse-on-surface": "#263143",
+                        "primary-fixed": "#d8e2ff",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-secondary": "#003732",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#424754",
+                        "on-tertiary-fixed": "#311400",
+                        "tertiary-container": "#df7412",
+                        "on-surface": "#d8e3fb",
+                        "on-primary-container": "#00285d",
+                        "surface-container-low": "#111c2d",
+                        "inverse-surface": "#d8e3fb",
+                        "on-secondary-container": "#00302b",
+                        "on-primary-fixed-variant": "#004395",
+                        "error-container": "#93000a",
+                        "surface-bright": "#2f3a4c",
+                        "on-background": "#d8e3fb",
+                        "on-tertiary-container": "#461f00",
+                        "surface-container": "#152031",
+                        "background": "#081425",
+                        "secondary-container": "#29a195",
+                        "on-secondary-fixed-variant": "#005049",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdcc6",
+                        "tertiary": "#ffb786",
+                        "primary-container": "#4d8eff",
+                        "surface-container-highest": "#2a3548",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "primary": "#adc6ff",
+                        "surface-container-lowest": "#040e1f",
+                        "surface-container-high": "#1f2a3c",
+                        "on-primary": "#002e6a",
+                        "on-primary-fixed": "#001a42",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "secondary-fixed": "#89f5e7",
+                        "on-secondary-fixed": "#00201d",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface-tint": "#adc6ff",
+                        "inverse-primary": "#005ac2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "lg": "40px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "code-mono": ["Geist"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "code-mono": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary/30 min-h-screen flex">
+<!-- Side Navigation Bar -->
+<aside class="hidden md:flex flex-col h-screen border-r border-outline-variant/10 bg-surface-container-low docked left-0 w-64 sticky top-0">
+<div class="px-md py-lg flex flex-col gap-xs">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">TrustLens AI</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Guardian Intelligence</p>
+</div>
+<nav class="flex-1 px-sm flex flex-col gap-xs">
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-sm py-xs cursor-pointer active:scale-95 transition-all duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+<button class="mt-lg w-full bg-primary text-on-primary py-sm rounded-xl font-label-sm font-bold flex items-center justify-center gap-xs hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+                New Scan
+            </button>
+</nav>
+<div class="p-sm flex flex-col gap-xs border-t border-outline-variant/10">
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-label-sm text-label-sm">Support</span>
+</a>
+</div>
+</aside>
+<div class="flex-1 flex flex-col min-h-screen">
+<!-- Top App Bar (Mobile + Desktop Context) -->
+<header class="flex justify-between items-center w-full px-md h-16 max-w-container-max mx-auto bg-surface-container sticky top-0 z-40">
+<div class="flex items-center gap-xs md:hidden">
+<span class="font-headline-md text-headline-md font-bold text-primary">TrustLens AI</span>
+</div>
+<div class="hidden md:flex gap-md items-center h-full">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md cursor-pointer" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-body-md text-body-md cursor-pointer" href="#">History</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-body-md text-body-md cursor-pointer" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-body-md text-body-md cursor-pointer" href="#">Settings</a>
+</div>
+<div class="flex items-center gap-sm">
+<button class="p-xs text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<div class="h-10 w-10 rounded-full overflow-hidden border border-outline-variant/20 cursor-pointer active:opacity-80">
+<img class="w-full h-full object-cover" data-alt="A professional business portrait of a modern security analyst in a minimalist high-tech office. The lighting is soft blue and charcoal tones, reflecting the Guardian Intelligence brand aesthetic. The individual is focused and empowered, looking directly at the camera with a calm and authoritative expression." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBybDYd1ZCVtSxEsxEDM8yNomR2TCtbBNgYE2ilZbwgixS7k-DlKTZwuDoqr_fIncSqIqHoDbTPGw9ggU3ghgIJzNyYBhe4ExHj2mfn9v75Czl9QyRtKAPXHmF6Y_URPMOqu-LHCqGGxxPyw5dkNLwTJLnJ0zCm7-l_alzqP9LJgE0eOLGy2GVaodOpqrz25mI666n6-FUsYyE9iy_6FTvcEZuBd8kjNb3SEK5Ttdridt2hVGMkAqnn9XCboZj_qCCOUep_YVlzwK8"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-gutter max-w-container-max mx-auto w-full pb-xl">
+<div class="flex flex-col gap-lg">
+<!-- Hero Heading -->
+<section class="flex flex-col gap-xs">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Intelligence Dashboard</h2>
+<p class="text-on-surface-variant max-w-2xl font-body-md text-body-md">Real-time surveillance and predictive risk assessment across your digital ecosystem.</p>
+</section>
+<!-- Bento Grid: Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-sm">
+<!-- Total Scans -->
+<div class="glass-card rounded-xl p-md flex flex-col justify-between h-40 group hover:border-primary/30 transition-all">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Scans</span>
+<div class="p-xs bg-primary/10 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="radar">radar</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-xl text-headline-xl text-on-surface">14,208</span>
+<div class="flex items-center gap-xs text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="font-label-sm text-label-sm">12% from last month</span>
+</div>
+</div>
+</div>
+<!-- Scams Blocked -->
+<div class="glass-card rounded-xl p-md flex flex-col justify-between h-40 group hover:border-error/30 transition-all">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Scams Blocked</span>
+<div class="p-xs bg-error/10 rounded-lg text-error">
+<span class="material-symbols-outlined" data-icon="shield_lock">shield_lock</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-xl text-headline-xl text-on-surface">432</span>
+<div class="flex items-center gap-xs text-secondary">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+<span class="font-label-sm text-label-sm">High-threat neutralizations</span>
+</div>
+</div>
+</div>
+<!-- Security Rating -->
+<div class="glass-card rounded-xl p-md flex flex-col justify-between h-40 group hover:border-secondary/30 transition-all relative overflow-hidden">
+<div class="flex justify-between items-start relative z-10">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Security Rating</span>
+<div class="p-xs bg-secondary/10 rounded-lg text-secondary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+</div>
+<div class="flex flex-col relative z-10">
+<div class="flex items-baseline gap-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">98</span>
+<span class="font-headline-md text-headline-md text-on-surface-variant">/100</span>
+</div>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mt-xs">
+<div class="h-full w-[98%] risk-gradient-safe rounded-full"></div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-5">
+<span class="material-symbols-outlined text-[120px]" data-icon="verified_user">verified_user</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Risk Breakdown Chart Section (Col Span 2) -->
+<section class="lg:col-span-2 flex flex-col gap-sm">
+<div class="flex justify-between items-end">
+<h3 class="font-headline-md text-headline-md text-on-surface">Risk Analysis Breakdown</h3>
+<button class="flex items-center gap-xs text-primary font-label-sm hover:underline">
+                                Details <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="glass-card rounded-xl p-lg min-h-[400px] flex flex-col gap-lg">
+<!-- Mock Visualization -->
+<div class="flex-1 flex items-end gap-md h-full px-sm">
+<div class="flex-1 flex flex-col gap-xs items-center group">
+<div class="w-full bg-surface-variant rounded-t-lg transition-all duration-500 group-hover:bg-secondary relative" style="height: 85%;">
+<div class="absolute -top-8 w-full text-center font-label-sm text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">85%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Safe</span>
+</div>
+<div class="flex-1 flex flex-col gap-xs items-center group">
+<div class="w-full bg-surface-variant rounded-t-lg transition-all duration-500 group-hover:bg-tertiary relative" style="height: 12%;">
+<div class="absolute -top-8 w-full text-center font-label-sm text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">12%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Neutral</span>
+</div>
+<div class="flex-1 flex flex-col gap-xs items-center group">
+<div class="w-full bg-surface-variant rounded-t-lg transition-all duration-500 group-hover:bg-error relative" style="height: 3%;">
+<div class="absolute -top-8 w-full text-center font-label-sm text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">3%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Critical</span>
+</div>
+<div class="flex-1 flex flex-col gap-xs items-center group">
+<div class="w-full bg-surface-variant rounded-t-lg transition-all duration-500 group-hover:bg-secondary relative" style="height: 75%;">
+<div class="absolute -top-8 w-full text-center font-label-sm text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">75%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Verified</span>
+</div>
+<div class="flex-1 flex flex-col gap-xs items-center group">
+<div class="w-full bg-surface-variant rounded-t-lg transition-all duration-500 group-hover:bg-primary relative" style="height: 45%;">
+<div class="absolute -top-8 w-full text-center font-label-sm text-on-surface opacity-0 group-hover:opacity-100 transition-opacity">45%</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Encrypted</span>
+</div>
+</div>
+<!-- Data Table Row (Minimalist) -->
+<div class="grid grid-cols-3 gap-sm pt-md border-t border-outline-variant/10">
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm">Active Monitoring</span>
+<span class="text-on-surface font-headline-md">24/7 Enabled</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm">Detection Speed</span>
+<span class="text-on-surface font-headline-md">42ms</span>
+</div>
+<div class="flex flex-col">
+<span class="text-on-surface-variant font-label-sm">Confidence AI</span>
+<span class="text-on-surface font-headline-md">99.8%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Recent Activity Mini-List -->
+<section class="flex flex-col gap-sm">
+<div class="flex justify-between items-end">
+<h3 class="font-headline-md text-headline-md text-on-surface">Recent Scans</h3>
+<button class="text-on-surface-variant font-label-sm hover:text-primary">Clear all</button>
+</div>
+<div class="glass-card rounded-xl overflow-hidden flex flex-col h-full max-h-[400px]">
+<div class="flex-1 overflow-y-auto">
+<!-- Activity Item 1 -->
+<div class="p-sm flex items-center gap-sm border-b border-outline-variant/5 hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<p class="font-label-sm font-bold text-on-surface truncate">intel-node-04.io</p>
+<span class="text-[10px] text-on-surface-variant">2m ago</span>
+</div>
+<span class="text-[12px] bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">Safe</span>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="p-sm flex items-center gap-sm border-b border-outline-variant/5 hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<p class="font-label-sm font-bold text-on-surface truncate">bank-verification.com.sh</p>
+<span class="text-[10px] text-on-surface-variant">14m ago</span>
+</div>
+<span class="text-[12px] bg-error/10 text-error px-2 py-0.5 rounded-full">Critical Scam</span>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="p-sm flex items-center gap-sm border-b border-outline-variant/5 hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary shrink-0">
+<span class="material-symbols-outlined" data-icon="folder">folder</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<p class="font-label-sm font-bold text-on-surface truncate">contracts_v2.pdf</p>
+<span class="text-[10px] text-on-surface-variant">42m ago</span>
+</div>
+<span class="text-[12px] bg-tertiary/10 text-tertiary px-2 py-0.5 rounded-full">Suspicious</span>
+</div>
+</div>
+<!-- Activity Item 4 -->
+<div class="p-sm flex items-center gap-sm border-b border-outline-variant/5 hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="attachment">attachment</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<p class="font-label-sm font-bold text-on-surface truncate">meeting_notes.docx</p>
+<span class="text-[10px] text-on-surface-variant">1h ago</span>
+</div>
+<span class="text-[12px] bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">Verified</span>
+</div>
+</div>
+<!-- Activity Item 5 -->
+<div class="p-sm flex items-center gap-sm border-b border-outline-variant/5 hover:bg-surface-variant/30 transition-colors cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<p class="font-label-sm font-bold text-on-surface truncate">internal.trustlens.ai</p>
+<span class="text-[10px] text-on-surface-variant">3h ago</span>
+</div>
+<span class="text-[12px] bg-secondary/10 text-secondary px-2 py-0.5 rounded-full">Safe</span>
+</div>
+</div>
+</div>
+<a class="p-sm text-center text-primary font-label-sm bg-surface-container hover:bg-primary/10 transition-colors" href="#">View All Activity</a>
+</div>
+</section>
+</div>
+<!-- Secondary Row: AI Insights & Global Map -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<!-- AI Insight Card -->
+<div class="glass-card rounded-xl p-lg flex flex-col gap-md relative overflow-hidden">
+<div class="flex items-center gap-sm">
+<div class="h-10 w-10 bg-primary/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="psychology">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Guardian AI Insight</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            "We've detected a significant 18% increase in spear-phishing attempts targeting financial domains in your region. TrustLens AI has automatically updated your behavioral firewall to preemptively block these emerging signature patterns."
+                        </p>
+<div class="flex gap-sm mt-sm">
+<button class="bg-primary-container text-on-primary-container px-md py-xs rounded-lg font-label-sm font-bold hover:opacity-90 active:scale-95 transition-all">Optimize Security</button>
+<button class="border border-outline-variant/30 px-md py-xs rounded-lg font-label-sm text-on-surface hover:bg-surface-variant/30 transition-all">Dismiss</button>
+</div>
+<!-- Ambient effect -->
+<div class="absolute -right-20 -top-20 w-48 h-48 bg-primary/10 blur-[80px] rounded-full"></div>
+</div>
+<!-- Global Threat Map Visualization -->
+<div class="glass-card rounded-xl p-sm overflow-hidden min-h-[300px] flex flex-col">
+<div class="px-md py-sm flex justify-between items-center">
+<h3 class="font-label-sm font-bold text-on-surface uppercase tracking-widest">Global Intelligence Feed</h3>
+<span class="flex items-center gap-xs text-[12px] text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                                Live Pulse
+                            </span>
+</div>
+<div class="flex-1 w-full bg-surface-container-lowest rounded-lg relative overflow-hidden">
+<!-- In a real app, this would be a map. Using an image placeholder as required. -->
+<div class="w-full h-full opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="A futuristic, dark-themed world map displayed on a high-tech data interface. The map shows glowing nodes and interconnected data lines representing global security threats and network traffic. The color palette is dominated by deep navy and charcoal, with electric blue highlights and subtle amber dots indicating potential risk zones. The style is clean, corporate minimalist, and technologically sophisticated." data-location="Global" style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')">
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-center">
+<p class="font-headline-md text-headline-md text-on-surface drop-shadow-lg">Global Node Status: 100% Operational</p>
+<p class="text-on-surface-variant font-label-sm">Monitoring 128 global datacenters</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm md:hidden bg-surface-container-highest shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<!-- Contextual FAB (Only on main dashboard) -->
+<button class="fixed bottom-20 right-gutter md:bottom-gutter md:right-gutter bg-primary text-on-primary w-14 h-14 rounded-2xl shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40 group">
+<span class="material-symbols-outlined text-[32px] group-hover:rotate-90 transition-transform duration-300" data-icon="search">search</span>
+</button>
+</div>
+<script>
+        // Micro-interaction for hover states on charts
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Subtle scale or interaction logic could be added here
+            });
+        });
+
+        // Simple dashboard refresh simulation
+        setInterval(() => {
+            const scanCount = document.querySelector('.grid > div:first-child .text-headline-xl');
+            if(scanCount) {
+                let current = parseInt(scanCount.innerText.replace(',', ''));
+                if(Math.random() > 0.7) {
+                    current++;
+                    scanCount.innerText = current.toLocaleString();
+                }
+            }
+        }, 5000);
+    </script>
+</body></html>

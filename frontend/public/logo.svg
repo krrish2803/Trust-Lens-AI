@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" fill="none" role="img" aria-label="TrustLens AI logo">
+  <!-- Shield body -->
+  <path d="M14 4L26 8V20C26 27 20 32 14 34C8 32 2 27 2 20V8L14 4Z"
+        fill="#adc6ff18" stroke="#adc6ff" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Eye / lens iris -->
+  <ellipse cx="14" cy="20" rx="5.5" ry="3.5"
+           stroke="#adc6ff" stroke-width="1.2"/>
+  <!-- Pupil -->
+  <circle cx="14" cy="20" r="1.8" fill="#adc6ff"/>
+  <!-- Lash glint top-right of iris -->
+  <line x1="18.2" y1="17.8" x2="19.4" y2="16.6"
+        stroke="#adc6ff" stroke-width="1" stroke-linecap="round"/>
+  <!-- Brand wordmark - TrustLens -->
+  <text x="36" y="26"
+        font-family="Manrope, Inter, sans-serif"
+        font-weight="700"
+        font-size="18"
+        letter-spacing="-0.02em"
+        fill="#adc6ff">TrustLens</text>
+  <!-- Brand wordmark - AI (lighter weight) -->
+  <text x="151" y="26"
+        font-family="Manrope, Inter, sans-serif"
+        font-weight="400"
+        font-size="18"
+        letter-spacing="0.04em"
+        fill="#6bd8cb"> AI</text>
+</svg>

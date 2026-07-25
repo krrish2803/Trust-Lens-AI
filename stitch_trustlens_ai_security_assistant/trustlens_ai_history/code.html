@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TrustLens AI - Scan History</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Manrope:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, rgba(173, 198, 255, 0.1) 10%, rgba(173, 198, 255, 0.1) 90%, transparent);
+        }
+        /* Custom scrollbar for minimalist feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #081425; }
+        ::-webkit-scrollbar-thumb { background: #2a3548; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #424754; }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-dim": "#081425",
+                    "surface": "#081425",
+                    "secondary": "#6bd8cb",
+                    "outline": "#8c909f",
+                    "surface-variant": "#2a3548",
+                    "on-tertiary": "#502400",
+                    "inverse-on-surface": "#263143",
+                    "primary-fixed": "#d8e2ff",
+                    "on-surface-variant": "#c2c6d6",
+                    "on-secondary": "#003732",
+                    "error": "#ffb4ab",
+                    "outline-variant": "#424754",
+                    "on-tertiary-fixed": "#311400",
+                    "tertiary-container": "#df7412",
+                    "on-surface": "#d8e3fb",
+                    "on-primary-container": "#00285d",
+                    "surface-container-low": "#111c2d",
+                    "inverse-surface": "#d8e3fb",
+                    "on-secondary-container": "#00302b",
+                    "on-primary-fixed-variant": "#004395",
+                    "error-container": "#93000a",
+                    "surface-bright": "#2f3a4c",
+                    "on-background": "#d8e3fb",
+                    "on-tertiary-container": "#461f00",
+                    "surface-container": "#152031",
+                    "background": "#081425",
+                    "secondary-container": "#29a195",
+                    "on-secondary-fixed-variant": "#005049",
+                    "on-error-container": "#ffdad6",
+                    "on-error": "#690005",
+                    "tertiary-fixed": "#ffdcc6",
+                    "tertiary": "#ffb786",
+                    "primary-container": "#4d8eff",
+                    "surface-container-highest": "#2a3548",
+                    "on-tertiary-fixed-variant": "#723600",
+                    "primary": "#adc6ff",
+                    "surface-container-lowest": "#040e1f",
+                    "surface-container-high": "#1f2a3c",
+                    "on-primary": "#002e6a",
+                    "on-primary-fixed": "#001a42",
+                    "tertiary-fixed-dim": "#ffb786",
+                    "secondary-fixed": "#89f5e7",
+                    "on-secondary-fixed": "#00201d",
+                    "secondary-fixed-dim": "#6bd8cb",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-tint": "#adc6ff",
+                    "inverse-primary": "#005ac2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "sm": "16px",
+                    "lg": "40px",
+                    "container-max": "1280px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "md": "24px",
+                    "xl": "64px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Inter"],
+                    "headline-xl": ["Manrope"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "code-mono": ["Geist"],
+                    "headline-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "code-mono": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface-dim text-on-surface font-body-md selection:bg-primary/30 min-h-screen flex">
+<!-- Sidebar Navigation -->
+<aside class="hidden md:flex flex-col h-screen w-64 bg-surface-container-low border-r border-outline-variant/10 fixed left-0 top-0 z-40">
+<div class="px-md py-lg">
+<h1 class="font-headline-md text-headline-md font-bold text-primary tracking-tight">TrustLens AI</h1>
+<p class="text-[12px] text-on-surface-variant/60 font-medium tracking-wider">GUARDIAN INTELLIGENCE</p>
+</div>
+<nav class="flex-1 px-xs space-y-xs">
+<a class="flex items-center gap-sm text-on-surface-variant hover:bg-surface-variant transition-all duration-200 px-sm py-xs rounded-lg cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Active Tab: History -->
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-sm py-xs cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant hover:bg-surface-variant transition-all duration-200 px-sm py-xs rounded-lg cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant hover:bg-surface-variant transition-all duration-200 px-sm py-xs rounded-lg cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-md py-md border-t border-outline-variant/5 space-y-xs">
+<button class="w-full bg-primary text-on-primary py-xs rounded-lg font-label-sm flex items-center justify-center gap-xs hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                New Scan
+            </button>
+<div class="pt-sm space-y-xs">
+<a class="flex items-center gap-sm text-on-surface-variant hover:bg-surface-variant px-sm py-xs rounded-lg text-label-sm transition-all" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+                    Profile
+                </a>
+<a class="flex items-center gap-sm text-on-surface-variant hover:bg-surface-variant px-sm py-xs rounded-lg text-label-sm transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+                    Support
+                </a>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 min-h-screen pb-32 md:pb-0 relative overflow-hidden">
+<!-- Subtle Ambient Background Shader Placeholder -->
+
+<!-- Top AppBar -->
+<header class="sticky top-0 z-30 bg-surface-container/80 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-md h-16 max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<span class="md:hidden font-headline-md text-headline-md font-bold text-primary">TrustLens AI</span>
+<h2 class="hidden md:block font-headline-md text-headline-md text-on-surface font-semibold">History</h2>
+</div>
+<div class="flex items-center gap-md">
+<div class="hidden sm:flex items-center bg-surface-container-highest px-sm py-xs rounded-full border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-label-sm text-on-surface placeholder:text-on-surface-variant/50 w-48 lg:w-64" placeholder="Search past scans..." type="text"/>
+</div>
+<span class="material-symbols-outlined cursor-pointer active:opacity-80 text-primary">account_circle</span>
+</div>
+</div>
+</header>
+<section class="max-w-4xl mx-auto px-md py-lg relative z-10">
+<!-- Filter Header -->
+<div class="flex flex-col gap-md mb-xl">
+<div class="flex items-center justify-between">
+<div>
+<h1 class="font-headline-lg text-headline-lg md:text-headline-xl text-on-surface tracking-tight">Scan Archives</h1>
+<p class="text-on-surface-variant font-body-md mt-xs opacity-80">Comprehensive audit trail of AI-analyzed activities.</p>
+</div>
+<div class="hidden lg:block">
+<div class="h-20 w-20 rounded-2xl bg-surface-container-high flex items-center justify-center border border-outline-variant/10">
+<span class="material-symbols-outlined text-[40px] text-primary" style="font-variation-settings: 'FILL' 1;">history</span>
+</div>
+</div>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-xs pt-md border-t border-outline-variant/10">
+<button class="px-md py-xs rounded-full bg-primary text-on-primary font-label-sm flex items-center gap-xs">
+                        All Scans
+                    </button>
+<button class="px-md py-xs rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/10 hover:border-primary/30 transition-all font-label-sm">
+                        Safe
+                    </button>
+<button class="px-md py-xs rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/10 hover:border-primary/30 transition-all font-label-sm">
+                        Medium
+                    </button>
+<button class="px-md py-xs rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/10 hover:border-primary/30 transition-all font-label-sm">
+                        High
+                    </button>
+<button class="px-md py-xs rounded-full bg-surface-container-high text-on-surface-variant border border-outline-variant/10 hover:border-primary/30 transition-all font-label-sm">
+                        Critical
+                    </button>
+</div>
+</div>
+<!-- Timeline List -->
+<div class="space-y-sm timeline-line relative">
+<!-- History Item: Critical -->
+<div class="relative pl-12 group">
+<!-- Timeline Dot -->
+<div class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-surface-dim bg-error z-10 shadow-[0_0_12px_rgba(255,180,171,0.5)]"></div>
+<div class="glass-card p-sm md:p-md rounded-xl transition-all duration-300 group-hover:bg-surface-variant/50 group-hover:translate-x-1 cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-error-container/20 rounded-lg">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">link</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Suspicious Financial URL</h3>
+<p class="text-on-surface-variant text-label-sm truncate max-w-xs md:max-w-md mt-xs">https://securesettle-bank-login-verify.com/update-auth/...</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:flex-col md:items-end gap-xs">
+<span class="px-sm py-1 rounded-full text-[10px] uppercase font-bold tracking-widest bg-error-container text-error border border-error/20">
+                                    CRITICAL RISK
+                                </span>
+<span class="text-[12px] text-on-surface-variant font-medium">Today, 2:45 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Item: Safe -->
+<div class="relative pl-12 group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-surface-dim bg-secondary z-10"></div>
+<div class="glass-card p-sm md:p-md rounded-xl transition-all duration-300 group-hover:bg-surface-variant/50 group-hover:translate-x-1 cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-secondary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Client Message Verification</h3>
+<p class="text-on-surface-variant text-label-sm mt-xs">"Meeting rescheduled for Friday at 3 PM. Sending invite..."</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:flex-col md:items-end gap-xs">
+<span class="px-sm py-1 rounded-full text-[10px] uppercase font-bold tracking-widest bg-secondary-container text-on-secondary-container">
+                                    SECURE
+                                </span>
+<span class="text-[12px] text-on-surface-variant font-medium">Today, 11:20 AM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Item: High -->
+<div class="relative pl-12 group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-surface-dim bg-tertiary z-10 shadow-[0_0_8px_rgba(255,183,134,0.4)]"></div>
+<div class="glass-card p-sm md:p-md rounded-xl transition-all duration-300 group-hover:bg-surface-variant/50 group-hover:translate-x-1 cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-tertiary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">alternate_email</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Potential Impersonation Email</h3>
+<p class="text-on-surface-variant text-label-sm mt-xs">Sender: payroll-noreply@corp-internal-support.io</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:flex-col md:items-end gap-xs">
+<span class="px-sm py-1 rounded-full text-[10px] uppercase font-bold tracking-widest bg-tertiary-container text-on-tertiary-container">
+                                    HIGH RISK
+                                </span>
+<span class="text-[12px] text-on-surface-variant font-medium">Yesterday, 5:12 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Item: Safe -->
+<div class="relative pl-12 group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-surface-dim bg-secondary z-10"></div>
+<div class="glass-card p-sm md:p-md rounded-xl transition-all duration-300 group-hover:bg-surface-variant/50 group-hover:translate-x-1 cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-secondary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">link</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Cloud Documentation Link</h3>
+<p class="text-on-surface-variant text-label-sm truncate max-w-xs md:max-w-md mt-xs">https://docs.company-portal.net/v2/shared/project-zeus-report</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:flex-col md:items-end gap-xs">
+<span class="px-sm py-1 rounded-full text-[10px] uppercase font-bold tracking-widest bg-secondary-container text-on-secondary-container">
+                                    SECURE
+                                </span>
+<span class="text-[12px] text-on-surface-variant font-medium">Yesterday, 9:05 AM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- History Item: Medium -->
+<div class="relative pl-12 group">
+<div class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-2 border-surface-dim bg-primary z-10"></div>
+<div class="glass-card p-sm md:p-md rounded-xl transition-all duration-300 group-hover:bg-surface-variant/50 group-hover:translate-x-1 cursor-pointer">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div class="flex items-start gap-md">
+<div class="p-xs bg-primary-container/20 rounded-lg">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">sms</span>
+</div>
+<div>
+<h3 class="font-headline-md text-on-surface group-hover:text-primary transition-colors">Unverified SMS Sender</h3>
+<p class="text-on-surface-variant text-label-sm mt-xs">"Your package delivery has been delayed. Click to view status..."</p>
+</div>
+</div>
+<div class="flex items-center justify-between md:flex-col md:items-end gap-xs">
+<span class="px-sm py-1 rounded-full text-[10px] uppercase font-bold tracking-widest bg-primary-container text-on-primary-container">
+                                    MEDIUM RISK
+                                </span>
+<span class="text-[12px] text-on-surface-variant font-medium">Oct 24, 4:30 PM</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State Filler -->
+<div class="relative pl-12 pt-lg flex justify-center">
+<button class="text-primary font-label-sm flex items-center gap-xs hover:underline decoration-2 underline-offset-4 transition-all">
+                        Load More History
+                        <span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm md:hidden bg-surface-container-highest shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<!-- Active Tab -->
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant active:scale-90 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction: Filter button toggles
+        const filterButtons = document.querySelectorAll('button.rounded-full');
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => {
+                    b.classList.remove('bg-primary', 'text-on-primary');
+                    b.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'border', 'border-outline-variant/10');
+                });
+                btn.classList.add('bg-primary', 'text-on-primary');
+                btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'border', 'border-outline-variant/10');
+            });
+        });
+
+        // Simple smooth scroll behavior for history items
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Subtle feedback handled by CSS, logic can be added here
+            });
+        });
+    </script>
+</body></html>

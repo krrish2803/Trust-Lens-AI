@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TrustLens AI - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2a3548;
+            border-radius: 10px;
+        }
+        input:checked + .toggle-bg {
+            background-color: #4d8eff;
+        }
+        input:checked + .toggle-bg div {
+            transform: translateX(100%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#081425",
+                        "surface": "#081425",
+                        "secondary": "#6bd8cb",
+                        "outline": "#8c909f",
+                        "surface-variant": "#2a3548",
+                        "on-tertiary": "#502400",
+                        "inverse-on-surface": "#263143",
+                        "primary-fixed": "#d8e2ff",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-secondary": "#003732",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#424754",
+                        "on-tertiary-fixed": "#311400",
+                        "tertiary-container": "#df7412",
+                        "on-surface": "#d8e3fb",
+                        "on-primary-container": "#00285d",
+                        "surface-container-low": "#111c2d",
+                        "inverse-surface": "#d8e3fb",
+                        "on-secondary-container": "#00302b",
+                        "on-primary-fixed-variant": "#004395",
+                        "error-container": "#93000a",
+                        "surface-bright": "#2f3a4c",
+                        "on-background": "#d8e3fb",
+                        "on-tertiary-container": "#461f00",
+                        "surface-container": "#152031",
+                        "background": "#081425",
+                        "secondary-container": "#29a195",
+                        "on-secondary-fixed-variant": "#005049",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdcc6",
+                        "tertiary": "#ffb786",
+                        "primary-container": "#4d8eff",
+                        "surface-container-highest": "#2a3548",
+                        "on-tertiary-fixed-variant": "#723600",
+                        "primary": "#adc6ff",
+                        "surface-container-lowest": "#040e1f",
+                        "surface-container-high": "#1f2a3c",
+                        "on-primary": "#002e6a",
+                        "on-primary-fixed": "#001a42",
+                        "tertiary-fixed-dim": "#ffb786",
+                        "secondary-fixed": "#89f5e7",
+                        "on-secondary-fixed": "#00201d",
+                        "secondary-fixed-dim": "#6bd8cb",
+                        "primary-fixed-dim": "#adc6ff",
+                        "surface-tint": "#adc6ff",
+                        "inverse-primary": "#005ac2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "sm": "16px",
+                        "lg": "40px",
+                        "container-max": "1280px",
+                        "base": "4px",
+                        "xs": "8px",
+                        "md": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Manrope"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Manrope"],
+                        "headline-lg-mobile": ["Manrope"],
+                        "code-mono": ["Geist"],
+                        "headline-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "code-mono": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md custom-scrollbar selection:bg-primary/30 min-h-screen">
+<!-- Desktop Side Navigation -->
+<aside class="hidden md:flex flex-col h-full border-r border-outline-variant/10 fixed left-0 top-0 w-64 bg-surface-container-low dark:bg-surface-container-low z-40">
+<div class="px-md py-lg">
+<h1 class="font-headline-md text-headline-md font-bold text-primary">TrustLens AI</h1>
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Guardian Intelligence</p>
+</div>
+<nav class="flex-1 px-sm space-y-xs">
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer active:scale-95 rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-sm bg-secondary-container text-on-secondary-container rounded-lg px-sm py-xs cursor-pointer active:scale-95" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-sm text-label-sm">Settings</span>
+</a>
+</nav>
+<div class="px-sm pb-md space-y-xs">
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer rounded-lg" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+<a class="flex items-center gap-sm text-on-surface-variant px-sm py-xs hover:bg-surface-variant transition-all duration-200 cursor-pointer rounded-lg" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="font-label-sm text-label-sm">Support</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="md:ml-64 pb-32 md:pb-12">
+<!-- Top App Bar (Mobile & Desktop Identity) -->
+<header class="flex justify-between items-center w-full px-md h-16 max-w-container-max mx-auto bg-surface-container dark:bg-surface-container sticky top-0 z-30">
+<div class="flex items-center gap-sm">
+<h2 class="font-headline-md text-headline-md font-bold text-primary md:hidden">TrustLens AI</h2>
+<span class="hidden md:block font-headline-md text-headline-md font-bold text-on-surface">Settings</span>
+</div>
+<div class="flex items-center gap-md">
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">History</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Settings</a>
+</nav>
+<div class="cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined text-primary text-2xl">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Settings Container -->
+<div class="max-w-4xl mx-auto px-md mt-lg space-y-lg">
+<!-- Section: Profile -->
+<section class="space-y-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary">person</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Profile</h3>
+</div>
+<div class="glass-card rounded-xl p-md flex flex-col md:flex-row gap-lg items-center">
+<div class="relative group">
+<div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary/20 bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="A professional studio headshot of a cybersecurity expert, late 30s, neutral expression, subtle confident smile. The lighting is dramatic and cool-toned, casting soft shadows that highlight structural facial features. The background is a blurred high-tech command center with soft electric blue data visualizations, matching the TrustLens AI corporate minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcEaU1Rg-lNfLIG38MoTcJrda92Il9KMvoFGK7kn5Vk9pZ_ar9af6jqi4SDdFcWdf5FRgGjquvPFCPX0lku52-_ufZXr79a8ni-2yQK5LYjDtpcGHbhFSKKaOeRq_T_TMSNrZr0Cgn_hHzHcvc2H-nMkDY2OKHEmVWpbxHBj-zbcHrMbuUULqO7cYkfBfShvCxyPgMFTvFOSDd_h_nDDsgLO5pG6WTVPFnYFrd1hPJJh8XVloEL2njeW72BLNboaqJp4y9Kp51psU"/>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-on-primary p-xs rounded-full shadow-lg hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="flex-1 space-y-sm w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Full Name</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-md py-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="text" value="Adrian Sterling"/>
+</div>
+<div class="space-y-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Work Email</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-md py-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" type="email" value="a.sterling@trustlens.ai"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Security Alerts -->
+<section class="space-y-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary">security</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Security Alerts</h3>
+</div>
+<div class="glass-card rounded-xl overflow-hidden">
+<div class="divide-y divide-outline-variant/10">
+<!-- Toggle Item -->
+<div class="flex items-center justify-between p-md hover:bg-white/5 transition-colors">
+<div class="space-y-1">
+<p class="font-body-md text-on-surface font-medium">Real-time Risk Detection</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Receive instant push notifications for critical AI anomalies.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-surface-variant rounded-full peer-focus:outline-none transition-all">
+<div class="absolute top-[2px] left-[2px] bg-white border-gray-300 border h-5 w-5 rounded-full transition-all"></div>
+</div>
+</label>
+</div>
+<!-- Toggle Item -->
+<div class="flex items-center justify-between p-md hover:bg-white/5 transition-colors">
+<div class="space-y-1">
+<p class="font-body-md text-on-surface font-medium">Biometric Authentication</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Require FaceID or fingerprint for accessing sensitive reports.</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-surface-variant rounded-full peer-focus:outline-none transition-all">
+<div class="absolute top-[2px] left-[2px] bg-white border-gray-300 border h-5 w-5 rounded-full transition-all"></div>
+</div>
+</label>
+</div>
+<!-- Select Item -->
+<div class="flex items-center justify-between p-md hover:bg-white/5 transition-colors">
+<div class="space-y-1">
+<p class="font-body-md text-on-surface font-medium">Session Timeout</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Automatically log out after periods of inactivity.</p>
+</div>
+<select class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg px-sm py-xs text-on-surface text-label-sm focus:border-primary outline-none">
+<option>15 Minutes</option>
+<option selected="">30 Minutes</option>
+<option>1 Hour</option>
+<option>Never</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Privacy -->
+<section class="space-y-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary">privacy_tip</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Privacy</h3>
+</div>
+<div class="glass-card rounded-xl overflow-hidden">
+<div class="divide-y divide-outline-variant/10">
+<button class="w-full flex items-center justify-between p-md hover:bg-white/5 transition-colors text-left group">
+<div class="space-y-1">
+<p class="font-body-md text-on-surface font-medium">Data Collection Preferences</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Manage how TrustLens AI utilizes your scanning history for model training.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">chevron_right</span>
+</button>
+<button class="w-full flex items-center justify-between p-md hover:bg-white/5 transition-colors text-left group">
+<div class="space-y-1">
+<p class="font-body-md text-on-surface font-medium">Encrypted Storage</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Currently using AES-256 end-to-end encryption for all cloud logs.</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">lock</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section: About -->
+<section class="space-y-md">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary">info</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">About TrustLens</h3>
+</div>
+<div class="glass-card rounded-xl p-md space-y-md">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl">visibility</span>
+</div>
+<div>
+<p class="font-body-md text-on-surface font-bold">TrustLens AI Guardian</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Version 4.2.0-Enterprise</p>
+</div>
+</div>
+<p class="font-body-md text-on-surface-variant/80">
+                        Empowering financial intelligence with advanced AI scanning and guardian-level security. 
+                        Designed for high-stakes environments where clarity and precision are non-negotiable.
+                    </p>
+<div class="flex flex-wrap gap-sm">
+<a class="text-primary hover:underline font-label-sm text-label-sm" href="#">Terms of Service</a>
+<span class="text-outline-variant opacity-30">•</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm" href="#">Privacy Policy</a>
+<span class="text-outline-variant opacity-30">•</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm" href="#">Licenses</a>
+</div>
+</div>
+</section>
+<!-- Danger Zone -->
+<div class="pt-lg">
+<button class="w-full py-md px-lg border border-error/30 text-error hover:bg-error/10 transition-colors rounded-xl font-body-md font-bold flex items-center justify-center gap-sm">
+<span class="material-symbols-outlined">logout</span>
+                    Sign Out of Account
+                </button>
+</div>
+</div>
+</main>
+<!-- Mobile Bottom Navigation -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-xs py-sm md:hidden bg-surface-container-highest dark:bg-surface-container-highest shadow-lg rounded-t-xl">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-sm text-label-sm">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-label-sm text-label-sm">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-full px-4 py-1 transition-transform duration-150 active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interactions for input focus
+        const inputs = document.querySelectorAll('input[type="text"], input[type="email"]');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.add('text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').classList.remove('text-primary');
+            });
+        });
+        
+        // Visual feedback for toggle switches
+        const toggles = document.querySelectorAll('input[type="checkbox"]');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const parent = this.closest('.hover\\:bg-white\\/5');
+                if (this.checked) {
+                    parent.style.backgroundColor = 'rgba(77, 142, 255, 0.03)';
+                } else {
+                    parent.style.backgroundColor = 'transparent';
+                }
+            });
+        });
+    </script>
+</body></html>
