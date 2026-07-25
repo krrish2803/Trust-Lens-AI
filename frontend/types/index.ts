@@ -2,9 +2,11 @@
  * TrustLens AI - Frontend TypeScript Definitions
  */
 
-export type RiskLevel = 'Safe' | 'Low Risk' | 'Medium Risk' | 'High Risk' | 'Critical';
+export type RiskLevel =
+  | 'safe' | 'low' | 'medium' | 'high' | 'critical'
+  | 'Safe' | 'Low Risk' | 'Medium Risk' | 'High Risk' | 'Critical';
 
-export type ScanType = 'url' | 'message' | 'image';
+export type ScanType = 'url' | 'message' | 'image' | 'link' | 'screenshot';
 
 export type Verdict = 'SAFE' | 'LOW_RISK' | 'MEDIUM_RISK' | 'HIGH_RISK' | 'CRITICAL';
 

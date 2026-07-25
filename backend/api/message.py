@@ -47,14 +47,18 @@ async def scan_message(payload: MessageScanRequest):
     url_risk_scores = []
     for u in extracted_urls:
         det = url_detector_instance.detect(u)
-        url_risk_scores.append(float(det.get("risk_score", 0.0)) * 100.0)
+        url_risk_scores.append(float(det.get("risk_score", det.get("final_url_risk", 0.0))) * 100.0)
     max_url_risk = max(url_risk_scores) if url_risk_scores else 0.0
 
     # Layer 6: Risk Scoring Engine
     phrase_score = len(matched_phrases) * 35.0
     rule_score = float(rule_results.get("rule_risk_score", 0.0))
 
-    combined_risk = int(min(max(phrase_score * 0.4 + rule_score * 0.4 + max_url_risk * 0.2, 0), 100))
+    if extracted_urls:
+        combined_risk = int(min(max(phrase_score * 0.4 + rule_score * 0.4 + max_url_risk * 0.2, 0), 100))
+    else:
+        # Dynamic weighting when no embedded URLs exist so text-only scams are not artificially deflated
+        combined_risk = int(min(max(phrase_score * 0.5 + rule_score * 0.5, 0), 100))
 
     # Determine Verdict
     if combined_risk >= 80:

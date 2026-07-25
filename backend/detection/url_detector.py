@@ -1,4 +1,8 @@
-"""URL detection module for identifying phishing and suspicious URLs."""
+"""
+TrustLens AI - URL Detector Module
+Detects phishing URLs and suspicious domain patterns.
+"""
+
 import re
 from urllib.parse import urlparse
 from typing import List, Dict, Optional
@@ -87,8 +91,14 @@ class URLDetector:
         verdict = self._generate_verdict(final_risk)
         recommendation = self._generate_recommendation(verdict, indicators)
 
+        is_phishing = bool(final_risk >= 0.40 or len(indicators) > 0)
+        findings = [i.get("evidence", i.get("indicator", "")) for i in indicators]
+
         return {
             "url": url,
+            "is_phishing": is_phishing,
+            "risk_score": final_risk,
+            "findings": findings,
             "risk_indicators": indicators,
             "final_url_risk": final_risk,
             "verdict": verdict,
@@ -185,7 +195,7 @@ class URLDetector:
 
             for keyword in PHISHING_KEYWORDS:
                 if keyword in hostname.lower():
-                    for alias in [b['short_name'] for b in self.bank_names]:
+                    for alias in [b['short_name'] for b in self.bank_names if 'short_name' in b]:
                         if alias.lower() in hostname.lower():
                             return {
                                 "indicator": "subdomain_abuse",

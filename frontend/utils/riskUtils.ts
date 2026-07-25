@@ -13,97 +13,67 @@ export function getRiskLevel(score: number): RiskLevel {
 // ─── Risk Level → Tailwind Classes ────────────────────────────────────────
 
 export function getRiskColor(level: RiskLevel): string {
-  switch (level) {
-    case "safe":
-      return "text-[#6bd8cb]";
-    case "low":
-      return "text-[#adc6ff]";
-    case "medium":
-      return "text-[#adc6ff]";
-    case "high":
-      return "text-[#ffb786]";
-    case "critical":
-      return "text-[#ffb4ab]";
-  }
+  const l = (level || "").toLowerCase();
+  if (l.includes("safe")) return "text-[#6bd8cb]";
+  if (l.includes("low")) return "text-[#adc6ff]";
+  if (l.includes("medium")) return "text-[#adc6ff]";
+  if (l.includes("high")) return "text-[#ffb786]";
+  if (l.includes("critical")) return "text-[#ffb4ab]";
+  return "text-[#adc6ff]";
 }
 
 export function getRiskBgColor(level: RiskLevel): string {
-  switch (level) {
-    case "safe":
-      return "bg-[#6bd8cb]/15 border-[#6bd8cb]/25";
-    case "low":
-      return "bg-[#adc6ff]/12 border-[#adc6ff]/25";
-    case "medium":
-      return "bg-[#adc6ff]/12 border-[#adc6ff]/25";
-    case "high":
-      return "bg-[#ffb786]/12 border-[#ffb786]/25";
-    case "critical":
-      return "bg-[#ffb4ab]/15 border-[#ffb4ab]/30";
-  }
+  const l = (level || "").toLowerCase();
+  if (l.includes("safe")) return "bg-[#6bd8cb]/15 border-[#6bd8cb]/25";
+  if (l.includes("low")) return "bg-[#adc6ff]/12 border-[#adc6ff]/25";
+  if (l.includes("medium")) return "bg-[#adc6ff]/12 border-[#adc6ff]/25";
+  if (l.includes("high")) return "bg-[#ffb786]/12 border-[#ffb786]/25";
+  if (l.includes("critical")) return "bg-[#ffb4ab]/15 border-[#ffb4ab]/30";
+  return "bg-[#adc6ff]/12 border-[#adc6ff]/25";
 }
 
 export function getRiskStrokeColor(level: RiskLevel): string {
-  switch (level) {
-    case "safe":
-      return "#6bd8cb";
-    case "low":
-      return "#adc6ff";
-    case "medium":
-      return "#4d8eff";
-    case "high":
-      return "#ffb786";
-    case "critical":
-      return "#ffb4ab";
-  }
+  const l = (level || "").toLowerCase();
+  if (l.includes("safe")) return "#6bd8cb";
+  if (l.includes("low")) return "#adc6ff";
+  if (l.includes("medium")) return "#4d8eff";
+  if (l.includes("high")) return "#ffb786";
+  if (l.includes("critical")) return "#ffb4ab";
+  return "#4d8eff";
 }
 
 // ─── Risk Level → Label ────────────────────────────────────────────────────
 
 export function getRiskLabel(level: RiskLevel): string {
-  switch (level) {
-    case "safe":
-      return "Safe";
-    case "low":
-      return "Low Risk";
-    case "medium":
-      return "Medium Risk";
-    case "high":
-      return "High Risk";
-    case "critical":
-      return "Critical";
-  }
+  const l = (level || "").toLowerCase();
+  if (l.includes("safe")) return "Safe";
+  if (l.includes("low")) return "Low Risk";
+  if (l.includes("medium")) return "Medium Risk";
+  if (l.includes("high")) return "High Risk";
+  if (l.includes("critical")) return "Critical";
+  return "Unknown";
 }
 
 // ─── Verdict → Readable ───────────────────────────────────────────────────
 
-export function getVerdictLabel(verdict: Verdict): string {
-  switch (verdict) {
-    case "SAFE":
-      return "Safe";
-    case "LOW_RISK":
-      return "Low Risk";
-    case "MEDIUM_RISK":
-      return "Medium Risk";
-    case "HIGH_RISK":
-      return "Risky";
-    case "CRITICAL":
-      return "Critical";
-  }
+export function getVerdictLabel(verdict: Verdict | string): string {
+  const v = (verdict || "").toUpperCase();
+  if (v.includes("SAFE")) return "Safe";
+  if (v.includes("LOW")) return "Low Risk";
+  if (v.includes("MEDIUM")) return "Medium Risk";
+  if (v.includes("HIGH")) return "Risky";
+  if (v.includes("CRITICAL")) return "Critical";
+  return verdict;
 }
 
-export function getVerdictIcon(verdict: Verdict): string {
-  switch (verdict) {
-    case "SAFE":
-      return "verified";
-    case "LOW_RISK":
-      return "info";
-    case "MEDIUM_RISK":
-      return "warning_amber";
-    case "HIGH_RISK":
-      return "warning";
-    case "CRITICAL":
-      return "gpp_bad";
-  }
+export function getVerdictIcon(verdict: Verdict | string): string {
+  const v = (verdict || "").toUpperCase();
+  if (v.includes("SAFE")) return "verified";
+  if (v.includes("LOW")) return "info";
+  if (v.includes("MEDIUM")) return "warning_amber";
+  if (v.includes("HIGH")) return "warning";
+  if (v.includes("CRITICAL")) return "gpp_bad";
+  return "info";
 }
 
 // ─── Format timestamp ─────────────────────────────────────────────────────
@@ -128,10 +98,13 @@ export function formatTimestamp(iso: string): string {
 export function getScanTypeIcon(type: string): string {
   switch (type) {
     case "link":
+    case "url":
       return "link";
     case "message":
+    case "text":
       return "chat";
     case "screenshot":
+    case "image":
       return "screenshot_region";
     default:
       return "search";
