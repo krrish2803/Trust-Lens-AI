@@ -97,29 +97,47 @@ class URLDetector:
         return False
 
     def detect(self, url: str) -> dict:
-        indicators = []
-        domain = clean_and_normalize_domain(url)
-        is_trusted = self.is_domain_whitelisted(domain)
+        if not url or not url.strip():
+            return {
+                "url": "",
+                "is_phishing": False,
+                "risk_score": 0.0,
+                "findings": [],
+                "risk_indicators": [],
+                "final_url_risk": 0.0,
+                "verdict": "SAFE: No URL provided.",
+                "recommendation": "SAFE"
+            }
 
-        # If domain is trusted/whitelisted, bypass false-positive checks
-        if not is_trusted:
-            checks = [
-                self._check_suspicious_tld(domain),
-                self._check_domain_squatting(domain),
-                self._check_typosquatting(domain),
-                self._check_subdomain_abuse(url),
-                self._check_ip_address(domain),
-                self._check_url_shortener(url),
-                self._check_https(url),
-                self._check_suspicious_patterns(domain),
-                self._check_known_suspicious(domain),
-            ]
-        else:
-            # Trusted domains only check critical threats (e.g. IP spoofing / database overrides)
-            checks = [
-                self._check_ip_address(domain),
-                self._check_known_suspicious(domain),
-            ]
+        indicators = []
+        domain = extract_domain(url)
+
+        # Check if domain is trusted
+        is_trusted = domain in self.trusted_domains or any(domain == td or domain.endswith('.' + td) for td in self.trusted_domains)
+        if is_trusted:
+            return {
+                "url": url,
+                "is_phishing": False,
+                "risk_score": 0.0,
+                "findings": [],
+                "risk_indicators": [],
+                "final_url_risk": 0.0,
+                "verdict": "SAFE: Officially verified legitimate domain.",
+                "recommendation": "SAFE to proceed. Official verified domain."
+            }
+
+
+        checks = [
+            self._check_suspicious_tld(domain),
+            self._check_domain_squatting(domain),
+            self._check_typosquatting(domain),
+            self._check_subdomain_abuse(url),
+            self._check_ip_address(domain),
+            self._check_url_shortener(url),
+            self._check_https(url),
+            self._check_suspicious_patterns(domain),
+            self._check_known_suspicious(domain),
+        ]
 
         for result in checks:
             if result is not None:
