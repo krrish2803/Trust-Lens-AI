@@ -1,0 +1,1402 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-25",
+  "total_phrases": 120,
+  "phrases": [
+    {
+      "phrase": "Aapka bank account block hone wala hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Aapka account block ho jayega", "Bank account block kar diya jayega", "Account temporarily blocked"],
+      "confidence": 0.95,
+      "scam_category": "bank_impersonation",
+      "example_context": "SBI se call aaya ki account block hoga agar detail nahi diya toh"
+    },
+    {
+      "phrase": "Aapke khilaf FIR darj ho chuki hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["FIR already darj ho chuki hai", "Police FIR file kar chuki hai", "Aapke naam par FIR hai"],
+      "confidence": 0.97,
+      "scam_category": "legal_threat",
+      "example_context": "CBI officer ne bola ki aapke khilaf FIR darj hai aur aapko jail hona hai"
+    },
+    {
+      "phrase": "Turant Rs 5,000 bharna hoga processing fee",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Processing fee jama karo", "Registration fee bharna zaroori hai", "Rs 5000 processing charge hai"],
+      "confidence": 0.92,
+      "scam_category": "advance_fee_fraud",
+      "example_context": "Loan approve hone ke liye pehle processing fee bhejo"
+    },
+    {
+      "phrase": "Congratulations! Aapne iPhone 15 jeeta hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Aapko iPhone mila hai", "iPhone 15 Pro Max aapka hai", "Lucky winner iPhone"],
+      "confidence": 0.93,
+      "scam_category": "lottery_scam",
+      "example_context": "Message aaya ki main lottery mein jeeta hoon"
+    },
+    {
+      "phrase": "Apna OTP bhejo verification ke liye",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["OTP share karo", "OTP batao", "Jo OTP aaya wo bhejo", "6 digit code bhejo"],
+      "confidence": 0.98,
+      "scam_category": "otp_theft",
+      "example_context": "Bank wale ne bola OTP bhejo account verify karne ke liye"
+    },
+    {
+      "phrase": "Ye last warning hai aapki",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Aakhri mauka hai", "Last chance hai", "Abhi nahi toh kabhi nahi"],
+      "confidence": 0.91,
+      "scam_category": "pressure_tactic",
+      "example_context": "Message aaya ki ye last warning hai aur turant act karo"
+    },
+    {
+      "phrase": "Aapka account se Rs 50,000 kat gaya hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Account se paisa kat gaya", "Rs 50,000 debited", "Transaction of Rs 50000 failed"],
+      "confidence": 0.94,
+      "scam_category": "fake_bank_alert",
+      "example_context": "SBI se message aaya ki 50000 kat gaye"
+    },
+    {
+      "phrase": "Aadhaar link nahi hai toh account band hoga",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Aadhaar linking zaroori hai", "Aadhaar update karo warna account close", "KYC complete karo"],
+      "confidence": 0.89,
+      "scam_category": "fake_kyc",
+      "example_context": "Kotak se call aaya ki Aadhaar link karo nahi toh account band"
+    },
+    {
+      "phrase": "Police warrant aapke naam par hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Warrant issue ho chuka hai", "Arrest warrant ready hai", "Police aapko dhundh rahi hai"],
+      "confidence": 0.96,
+      "scam_category": "legal_threat",
+      "example_context": "CBI wale ne bola arrest warrant hai aur pakad ke le jayenge"
+    },
+    {
+      "phrase": "UPI PIN share karo refund ke liye",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["UPI PIN batao", "PIN number do", "UPI PIN zaroori hai refund ke liye"],
+      "confidence": 0.98,
+      "scam_category": "upi_fraud",
+      "example_context": "PhonePe se call aaya ki PIN share karo refund milega"
+    },
+    {
+      "phrase": "Lucky draw mein aapka naam aaya hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Lucky winner aap ho", "Draw mein select hua hai", "Lucky draw result"],
+      "confidence": 0.90,
+      "scam_category": "lottery_scam",
+      "example_context": "WhatsApp pe message aaya lucky draw mein jeeta hoon"
+    },
+    {
+      "phrase": "Customs department hai, parcel roka hua hai",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Customs ne parcel pakda hai", "International parcel held", "Customs duty pending hai"],
+      "confidence": 0.88,
+      "scam_category": "customs_scam",
+      "example_context": "Call aaya customs se ki mera parcel roka hai"
+    },
+    {
+      "phrase": "24 ghante mein paisa wapas karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["24 hours ka time hai", "Sirf 24 ghante bache hain", "Kal tak payment karo"],
+      "confidence": 0.92,
+      "scam_category": "pressure_tactic",
+      "example_context": "Message aaya 24 ghante mein paisa bhejo nahi toh account block"
+    },
+    {
+      "phrase": "Screen share karo hum check karenge",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["TeamViewer on karo", "AnyDesk install karo", "Screen share zaroori hai"],
+      "confidence": 0.97,
+      "scam_category": "remote_access",
+      "example_context": "Tech support ne bola screen share karo problem solve karne ke liye"
+    },
+    {
+      "phrase": "PM Kisan scheme ka paisa aaya hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["PM Kisan installment aayi hai", "Kisan samman nidhi aayi hai", "PM Kisan ka Rs 6000 aaya"],
+      "confidence": 0.87,
+      "scam_category": "government_scam",
+      "example_context": "PM Kisan ka paisa aane ka message aaya aur link diya"
+    },
+    {
+      "phrase": "Aapka credit score bahut kharab hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["CIBIL score low hai", "Credit score gira hai", "Score theek karo"],
+      "confidence": 0.88,
+      "scam_category": "financial_threat",
+      "example_context": "Call aaya ki credit score kharab hai aur loan nahi milega"
+    },
+    {
+      "phrase": "Bank manager baat kar raha hai",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Main branch manager hoon", "Bank se bol raha hoon", "Senior manager ka call hai"],
+      "confidence": 0.90,
+      "scam_category": "bank_impersonation",
+      "example_context": "Caller ne bola bank manager hoon aur urgent baat hai"
+    },
+    {
+      "phrase": "Parcel deliver hone ke liye Rs 500 bhejo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Delivery charge pay karo", "Shipping fee do", "Courier charge bhejo"],
+      "confidence": 0.86,
+      "scam_category": "delivery_scam",
+      "example_context": "Amazon se parcel hai aur delivery charge pay karna hai"
+    },
+    {
+      "phrase": "Aapka SIM card band hone wala hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["SIM deactivate ho jayega", "Number band hoga", "SIM validity khatam"],
+      "confidence": 0.91,
+      "scam_category": "telecom_scam",
+      "example_context": "TRAI se call aaya ki SIM band hone wala hai"
+    },
+    {
+      "phrase": "Lottery mein Rs 25 lakh jeete hain",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Rs 25 lakh lottery", "Lottery prize aaya hai", "You won Rs 25 lakhs"],
+      "confidence": 0.94,
+      "scam_category": "lottery_scam",
+      "example_context": "Message aaya lottery mein 25 lakh jeete ho"
+    },
+    {
+      "phrase": "RBI ne aapka account investigate kar raha hai",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["RBI investigation chal rahi hai", "RBI se inquiry hai", "RBI order hai"],
+      "confidence": 0.93,
+      "scam_category": "authority_impersonation",
+      "example_context": "Caller ne bola RBI se hai aur account investigate kar rahe hain"
+    },
+    {
+      "phrase": "Aadhaar card update karo turant",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Aadhaar update zaroori hai", "UIDAI update karo", "Biometric update karo"],
+      "confidence": 0.87,
+      "scam_category": "fake_kyc",
+      "example_context": "UIDAI se message aaya ki Aadhaar update karna hai"
+    },
+    {
+      "phrase": "Refund ke liye bank details do",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["Account number batao", "IFSC code do", "Bank details share karo"],
+      "confidence": 0.93,
+      "scam_category": "phishing",
+      "example_context": "Amazon se call aaya refund ke liye bank details chahiye"
+    },
+    {
+      "phrase": "Aapke ghar ke paas police bhejenge",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Police aayegi ghar pe", "Ghar pe raid hogi", "Police bhej denge"],
+      "confidence": 0.95,
+      "scam_category": "legal_threat",
+      "example_context": "Caller ne bola police bhejenge agar paisa nahi diya"
+    },
+    {
+      "phrase": "Scratch card mein gift mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Scratch and win", "Scratch card open karo", "Gift card mila hai"],
+      "confidence": 0.89,
+      "scam_category": "lottery_scam",
+      "example_context": "WhatsApp pe scratch card aaya gift ke liye"
+    },
+    {
+      "phrase": "Ayushman Bharat card banwao free",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Ayushman card free hai", "PMJAY card banwao", "Ayushman Bharat registration"],
+      "confidence": 0.85,
+      "scam_category": "government_scam",
+      "example_context": "Ayushman Bharat card banwane ke liye link aaya"
+    },
+    {
+      "phrase": "IT return file karna zaroori hai",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Income tax return file karo", "ITR deadline hai", "Tax penalty lagegi"],
+      "confidence": 0.88,
+      "scam_category": "tax_scam",
+      "example_context": "Income tax se call aaya ki ITR file karna hai"
+    },
+    {
+      "phrase": "Passport office se verification pending hai",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Passport verification incomplete", "Passport office ka call hai", "Passport block hoga"],
+      "confidence": 0.86,
+      "scam_category": "authority_impersonation",
+      "example_context": "Passport office se call aaya ki verification pending hai"
+    },
+    {
+      "phrase": "Property attach karne ka order hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Property seize hogi", "Ghar attach hoga", "Property ka order aaya"],
+      "confidence": 0.95,
+      "scam_category": "legal_threat",
+      "example_context": "Court se call aaya ki property attach hone wali hai"
+    },
+    {
+      "phrase": "Hurry up, offer sirf 1 ghante mein expire",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Sirf 1 ghanta baki hai", "Offer jaldi khatam hoga", "Time limit hai"],
+      "confidence": 0.90,
+      "scam_category": "pressure_tactic",
+      "example_context": "Online shopping pe offer aaya jo 1 ghante mein expire"
+    },
+    {
+      "phrase": "Sebi registered advisor hai, guaranteed returns",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["SEBI approved hai", "Guaranteed 30% returns", "SEBI registered"],
+      "confidence": 0.92,
+      "scam_category": "investment_fraud",
+      "example_context": "WhatsApp group mein SEBI registered advisor bola guaranteed returns"
+    },
+    {
+      "phrase": "HDFC bank se security alert",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["HDFC alert", "HDFC security notice", "HDFC fraud alert"],
+      "confidence": 0.91,
+      "scam_category": "bank_impersonation",
+      "example_context": "HDFC se security alert aaya aur link diya"
+    },
+    {
+      "phrase": "Aapka passport cancel hone wala hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Passport revoke hoga", "Passport band hoga", "Passport block"],
+      "confidence": 0.94,
+      "scam_category": "legal_threat",
+      "example_context": "Passport office se call aaya ki passport cancel hone wala hai"
+    },
+    {
+      "phrase": "Amazon parcel stuck hai, tracking link pe click karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Amazon delivery issue", "Amazon tracking update", "Parcel stuck hai"],
+      "confidence": 0.87,
+      "scam_category": "phishing",
+      "example_context": "Amazon se message aaya parcel stuck hai aur tracking link diya"
+    },
+    {
+      "phrase": "SBI se KYC update karo warna account band",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["SBI KYC pending hai", "SBI account update karo", "SBI KYC deadline"],
+      "confidence": 0.93,
+      "scam_category": "bank_impersonation",
+      "example_context": "SBI se message aaya KYC update karna hai warna account band"
+    },
+    {
+      "phrase": "Aapka debit card blocked hai, unblock karo",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Card temporarily blocked", "Debit card block", "Card frozen hai"],
+      "confidence": 0.90,
+      "scam_category": "bank_impersonation",
+      "example_context": "Bank se call aaya ki card blocked hai aur unblock karna hai"
+    },
+    {
+      "phrase": "ICICI credit card limit badhai hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Credit card upgrade mila", "ICICI limit increased", "Premium card offer"],
+      "confidence": 0.88,
+      "scam_category": "bank_impersonation",
+      "example_context": "ICICI se call aaya ki credit card limit badhai hai"
+    },
+    {
+      "phrase": "CBI officer baat kar raha hoon",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["CBI se bol raha hoon", "Central Bureau of Investigation", "CBI department"],
+      "confidence": 0.96,
+      "scam_category": "authority_impersonation",
+      "example_context": "Caller ne bola CBI officer hoon aur investigation hai"
+    },
+    {
+      "phrase": "UPI refund aane wala hai, details verify karo",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["UPI refund verify karo", "Payment refund aayega", "Transaction refund"],
+      "confidence": 0.89,
+      "scam_category": "upi_fraud",
+      "example_context": "PhonePe se message aaya refund aane wala hai aur details maangi"
+    },
+    {
+      "phrase": "Khata aur Khiladi scheme ka paisa mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Khata scheme benefit", "Khiladi scheme reward", "Government scheme payment"],
+      "confidence": 0.84,
+      "scam_category": "government_scam",
+      "example_context": "Scheme ka paisa aane ka message aur link aaya"
+    },
+    {
+      "phrase": "Blacklist mein naam aa gaya hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Aap blacklist mein ho", "Defaulter list mein hai", "Defaulters list"],
+      "confidence": 0.91,
+      "scam_category": "financial_threat",
+      "example_context": "Caller ne bola blacklist mein naam hai aur loan nahi milega"
+    },
+    {
+      "phrase": "Aapka package customs mein fas gaya hai",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Package stuck in customs", "Customs clearance pending", "Customs duty due"],
+      "confidence": 0.88,
+      "scam_category": "delivery_scam",
+      "example_context": "DHL se message aaya package customs mein hai"
+    },
+    {
+      "phrase": "Paytm KYC update karo Rs 1000 cashback",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Paytm cashback KYC", "KYC karke paise lo", "Paytm KYC reward"],
+      "confidence": 0.86,
+      "scam_category": "payment_scam",
+      "example_context": "Paytm se message aaya KYC karo 1000 cashback"
+    },
+    {
+      "phrase": "Bank of India se fraud transaction alert",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["BOI fraud alert", "Bank of India security", "BOI transaction blocked"],
+      "confidence": 0.90,
+      "scam_category": "bank_impersonation",
+      "example_context": "Bank of India se fraud alert aaya aur link diya"
+    },
+    {
+      "phrase": "Ujjwala scheme ka LPG cylinder free hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Ujjwala free cylinder", "LPG subsidy aayi", "Ujjwala benefit"],
+      "confidence": 0.85,
+      "scam_category": "government_scam",
+      "example_context": "Ujjwala scheme ka message aaya free cylinder ke liye"
+    },
+    {
+      "phrase": "Passport number share karo verification ke liye",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["Passport details do", "Passport number chahiye", "Passport info share karo"],
+      "confidence": 0.93,
+      "scam_category": "phishing",
+      "example_context": "Visa office se call aaya passport details chahiye"
+    },
+    {
+      "phrase": "Axis Bank credit card block kar diya gaya hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Axis card blocked", "Credit card frozen", "Axis card deactivate"],
+      "confidence": 0.89,
+      "scam_category": "bank_impersonation",
+      "example_context": "Axis Bank se call aaya credit card block hai"
+    },
+    {
+      "phrase": "Jan Dhan account mein Rs 10,000 aaye hain",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Jan Dhan subsidy", "PMJDY payment aaya", "Jan Dhan benefit"],
+      "confidence": 0.87,
+      "scam_category": "government_scam",
+      "example_context": "Jan Dhan account mein paisa aane ka message aaya"
+    },
+    {
+      "phrase": "Aapka Aadhaar card deactivated ho gaya hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Aadhaar deactivated", "UIDAI deactivated card", "Aadhaar band hai"],
+      "confidence": 0.92,
+      "scam_category": "fake_kyc",
+      "example_context": "UIDAI se message aaya Aadhaar deactivate ho gaya"
+    },
+    {
+      "phrase": "Guaranteed 50% returns mahine ka",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["50% monthly returns", "Guaranteed profit", "Sure shot returns"],
+      "confidence": 0.94,
+      "scam_category": "investment_fraud",
+      "example_context": "WhatsApp group mein guaranteed returns ka offer aaya"
+    },
+    {
+      "phrase": "Kotak Mahindra bank se urgent call",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Kotak bank call", "Kotak urgent", "Kotak verification"],
+      "confidence": 0.88,
+      "scam_category": "bank_impersonation",
+      "example_context": "Kotak se urgent call aaya account verification ke liye"
+    },
+    {
+      "phrase": "PNB account mein suspicious activity detected",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["PNB fraud detected", "PNB suspicious transaction", "PNB security alert"],
+      "confidence": 0.91,
+      "scam_category": "bank_impersonation",
+      "example_context": "PNB se alert aaya suspicious activity mili hai"
+    },
+    {
+      "phrase": "Canara Bank ATM card compromised hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Canara card compromised", "Canara ATM fraud", "Card data leaked"],
+      "confidence": 0.90,
+      "scam_category": "bank_impersonation",
+      "example_context": "Canara Bank se call aaya card compromised hai"
+    },
+    {
+      "phrase": "Mudra loan Rs 10 lakh approve hua hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Mudra loan approved", "PMMY loan mila", "Mudra scheme benefit"],
+      "confidence": 0.88,
+      "scam_category": "loan_scam",
+      "example_context": "Mudra loan approve hone ka message aaya"
+    },
+    {
+      "phrase": "Standing instruction cancel karo warna paisa kat jayega",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Auto-debit alert", "Standing instruction update", "EMI deduction warning"],
+      "confidence": 0.86,
+      "scam_category": "bank_impersonation",
+      "example_context": "Bank se message aaya standing instruction cancel karna hai"
+    },
+    {
+      "phrase": "Fino Payments Bank KYC pending hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Fino KYC update", "Fino account KYC", "Fino bank update"],
+      "confidence": 0.84,
+      "scam_category": "bank_impersonation",
+      "example_context": "Fino se message aaya KYC pending hai"
+    },
+    {
+      "phrase": "Airtel Payments Bank account blocked hoga",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Airtel bank blocked", "Airtel account freeze", "Airtel bank deactivation"],
+      "confidence": 0.87,
+      "scam_category": "bank_impersonation",
+      "example_context": "Airtel Payments Bank se call aaya account blocked hoga"
+    },
+    {
+      "phrase": "Jio Payments Bank se verification call",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Jio bank call", "Jio payment verification", "Jio bank alert"],
+      "confidence": 0.85,
+      "scam_category": "bank_impersonation",
+      "example_context": "Jio Payments Bank se verification call aaya"
+    },
+    {
+      "phrase": "India Post Payments Bank ka parcel aaya hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["IPPB parcel", "India Post delivery", "Post office parcel"],
+      "confidence": 0.83,
+      "scam_category": "delivery_scam",
+      "example_context": "India Post se parcel aane ka message aaya"
+    },
+    {
+      "phrase": "NSDL tax refund aaya hai Rs 15,000",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["NSDL refund", "Tax refund NSDL", "Income tax refund"],
+      "confidence": 0.86,
+      "scam_category": "tax_scam",
+      "example_context": "NSDL se message aaya tax refund aaya hai"
+    },
+    {
+      "phrase": "UTIITSL PAN card update karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["UTIITSL PAN update", "PAN card link Aadhaar", "PAN card validity"],
+      "confidence": 0.85,
+      "scam_category": "fake_kyc",
+      "example_context": "UTIITSL se message aaya PAN card update karna hai"
+    },
+    {
+      "phrase": "IDBI Bank account dormant hai, activate karo",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["IDBI dormant account", "IDBI account inactive", "IDBI activate karo"],
+      "confidence": 0.88,
+      "scam_category": "bank_impersonation",
+      "example_context": "IDBI se call aaya account dormant hai"
+    },
+    {
+      "phrase": "UCO Bank se credit card offer hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["UCO credit card", "UCO card offer", "UCO premium card"],
+      "confidence": 0.84,
+      "scam_category": "bank_impersonation",
+      "example_context": "UCO Bank se credit card offer aaya"
+    },
+    {
+      "phrase": "Central Bank of India KYC deadline hai",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Central Bank KYC", "CBI bank KYC", "Central Bank update"],
+      "confidence": 0.87,
+      "scam_category": "bank_impersonation",
+      "example_context": "Central Bank se KYC deadline ka message aaya"
+    },
+    {
+      "phrase": "Union Bank loan approve hua hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Union Bank loan", "UBI loan approved", "Union Bank offer"],
+      "confidence": 0.86,
+      "scam_category": "loan_scam",
+      "example_context": "Union Bank se loan approve hone ka message aaya"
+    },
+    {
+      "phrase": "Yes Bank account se unauthorized transaction",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Yes Bank fraud", "Yes Bank unauthorized", "Yes Bank alert"],
+      "confidence": 0.90,
+      "scam_category": "bank_impersonation",
+      "example_context": "Yes Bank se unauthorized transaction ka alert aaya"
+    },
+    {
+      "phrase": "Indian Bank ATM card cloned hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Indian Bank card cloned", "ATM skimming detected", "Card data stolen"],
+      "confidence": 0.91,
+      "scam_category": "bank_impersonation",
+      "example_context": "Indian Bank se call aaya card cloned hai"
+    },
+    {
+      "phrase": "Bandhan Bank account verification pending",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Bandhan Bank KYC", "Bandhan verification", "Bandhan Bank update"],
+      "confidence": 0.83,
+      "scam_category": "bank_impersonation",
+      "example_context": "Bandhan Bank se verification pending ka message aaya"
+    },
+    {
+      "phrase": "Federal Bank debit card reward mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Federal Bank reward", "Federal card benefit", "Federal cashback"],
+      "confidence": 0.84,
+      "scam_category": "bank_impersonation",
+      "example_context": "Federal Bank se reward milne ka message aaya"
+    },
+    {
+      "phrase": "Karnataka Bank account frozen hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Karnataka Bank freeze", "Account blocked Karnataka", "KBank frozen"],
+      "confidence": 0.87,
+      "scam_category": "bank_impersonation",
+      "example_context": "Karnataka Bank se call aaya account frozen hai"
+    },
+    {
+      "phrase": "South Indian Bank KYC incomplete hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["SIB KYC pending", "South Indian Bank update", "SIB KYC deadline"],
+      "confidence": 0.85,
+      "scam_category": "bank_impersonation",
+      "example_context": "South Indian Bank se KYC incomplete ka message aaya"
+    },
+    {
+      "phrase": "City Union Bank credit card limit badhai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["CUB credit card", "City Union limit", "CUB card offer"],
+      "confidence": 0.83,
+      "scam_category": "bank_impersonation",
+      "example_context": "City Union Bank se credit card limit badhai ka offer"
+    },
+    {
+      "phrase": "DCB Bank fraud alert aaya hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["DCB fraud", "DCB security alert", "DCB Bank warning"],
+      "confidence": 0.88,
+      "scam_category": "bank_impersonation",
+      "example_context": "DCB Bank se fraud alert aaya"
+    },
+    {
+      "phrase": "Lakshmi Vilas Bank account update karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["LVB update", "Lakshmi Vilas KYC", "LVB account update"],
+      "confidence": 0.84,
+      "scam_category": "bank_impersonation",
+      "example_context": "Lakshmi Vilas Bank se update karne ka message aaya"
+    },
+    {
+      "phrase": "Tamilnad Mercantile Bank se ATM fraud",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["TMB ATM fraud", "Tamilnad Mercantile alert", "TMB card fraud"],
+      "confidence": 0.86,
+      "scam_category": "bank_impersonation",
+      "example_context": "Tamilnad Mercantile Bank se ATM fraud ka alert aaya"
+    },
+    {
+      "phrase": "Dhanlaxmi Bank loan approve hua hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Dhanlaxmi loan", "DLB loan approved", "Dhanlaxmi offer"],
+      "confidence": 0.83,
+      "scam_category": "loan_scam",
+      "example_context": "Dhanlaxmi Bank se loan approve hone ka message aaya"
+    },
+    {
+      "phrase": "Ratnakar Bank account suspicious hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Ratnakar suspicious", "RBL fraud alert", "Ratnakar Bank warning"],
+      "confidence": 0.85,
+      "scam_category": "bank_impersonation",
+      "example_context": "Ratnakar Bank se suspicious account ka message aaya"
+    },
+    {
+      "phrase": "Karur Vysya Bank KYC update karo turant",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["KVB KYC", "Karur Vysya update", "KVB KYC deadline"],
+      "confidence": 0.84,
+      "scam_category": "bank_impersonation",
+      "example_context": "Karur Vysya Bank se KYC update ka urgent message aaya"
+    },
+    {
+      "phrase": "IRDAI insurance policy claim mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["IRDAI claim", "Insurance claim approved", "Policy benefit aaya"],
+      "confidence": 0.87,
+      "scam_category": "insurance_scam",
+      "example_context": "IRDAI se insurance claim milne ka message aaya"
+    },
+    {
+      "phrase": "Court order hai, turant paisa bhejo",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Court ka order hai", "Judicial notice", "Court mein case hai"],
+      "confidence": 0.96,
+      "scam_category": "legal_threat",
+      "example_context": "Caller ne bola court order hai aur paisa bhejo"
+    },
+    {
+      "phrase": "UPI collect request accept karo",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["UPI request approve karo", "Collect request aaya", "UPI payment accept"],
+      "confidence": 0.90,
+      "scam_category": "upi_fraud",
+      "example_context": "Unknown number se UPI collect request aayi"
+    },
+    {
+      "phrase": "Aapka laptop prize mein mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Laptop prize", "Free laptop mila", "Laptop gift"],
+      "confidence": 0.91,
+      "scam_category": "lottery_scam",
+      "example_context": "Message aaya laptop prize mein jeeta hai"
+    },
+    {
+      "phrase": "Gold coin reward mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Free gold coin", "Gold gift", "Gold reward"],
+      "confidence": 0.89,
+      "scam_category": "lottery_scam",
+      "example_context": "Message aaya gold coin reward mila hai"
+    },
+    {
+      "phrase": "Car prize aapke naam par hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Free car mila", "Car gift hai", "Car lottery"],
+      "confidence": 0.92,
+      "scam_category": "lottery_scam",
+      "example_context": "Message aaya car prize aapke naam par hai"
+    },
+    {
+      "phrase": "GST refund aane wala hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["GST refund", "Tax refund aaya", "GST credit mila"],
+      "confidence": 0.87,
+      "scam_category": "tax_scam",
+      "example_context": "GST refund aane ka message aaya aur link diya"
+    },
+    {
+      "phrase": "Security deposit Rs 2,000 bhejo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Security deposit do", "Refundable deposit", "Security amount"],
+      "confidence": 0.91,
+      "scam_category": "advance_fee_fraud",
+      "example_context": "Job ke liye security deposit bhejne ko bola"
+    },
+    {
+      "phrase": "Customs duty Rs 3,500 pay karo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Customs charge hai", "Import duty do", "Customs clearance fee"],
+      "confidence": 0.90,
+      "scam_category": "delivery_scam",
+      "example_context": "Parcel ke liye customs duty pay karne ko bola"
+    },
+    {
+      "phrase": "Registration fee Rs 1,500 jama karo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Registration charge", "Enrollment fee", "Registration amount"],
+      "confidence": 0.89,
+      "scam_category": "advance_fee_fraud",
+      "example_context": "Scheme mein register karne ke liye fee maangi"
+    },
+    {
+      "phrase": "Delivery charge Rs 299 pay karo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Shipping charge", "Courier fee", "Delivery amount"],
+      "confidence": 0.87,
+      "scam_category": "delivery_scam",
+      "example_context": "Free gift aane ke liye delivery charge pay karo"
+    },
+    {
+      "phrase": "CVV number batao card verify karne ke liye",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["CVV do", "Card CVV chahiye", "CVV share karo"],
+      "confidence": 0.97,
+      "scam_category": "card_fraud",
+      "example_context": "Caller ne bola card verify karne ke liye CVV chahiye"
+    },
+    {
+      "phrase": "Card number share karo verification ke liye",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["Card number do", "16 digit number batao", "Card details share"],
+      "confidence": 0.97,
+      "scam_category": "card_fraud",
+      "example_context": "Bank wale ne card number maanga"
+    },
+    {
+      "phrase": "Password change karo ye compromised hai",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["Password update karo", "New password do", "Password change karo"],
+      "confidence": 0.93,
+      "scam_category": "phishing",
+      "example_context": "Email aaya password compromised hai aur change karo"
+    },
+    {
+      "phrase": "Remote access do hum fix karenge",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["AnyDesk code do", "Remote desktop access", "Screen share permission"],
+      "confidence": 0.98,
+      "scam_category": "remote_access",
+      "example_context": "Tech support ne remote access manga problem fix karne ke liye"
+    },
+    {
+      "phrase": "Ministry of Finance se official call hai",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["Finance Ministry call", "MoF official", "Ministry verification"],
+      "confidence": 0.92,
+      "scam_category": "authority_impersonation",
+      "example_context": "Caller ne bola Ministry of Finance se hoon"
+    },
+    {
+      "phrase": "Income Tax department notice aaya hai",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["IT notice", "Income tax notice", "Tax department alert"],
+      "confidence": 0.91,
+      "scam_category": "authority_impersonation",
+      "example_context": "Income Tax department se notice aane ka message aaya"
+    },
+    {
+      "phrase": "Swachh Bharat cess refund hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Swachh Bharat refund", "Clean India cess", "SBC refund"],
+      "confidence": 0.82,
+      "scam_category": "government_scam",
+      "example_context": "Swachh Bharat cess refund aane ka message aaya"
+    },
+    {
+      "phrase": "Digital India scheme ka benefit mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Digital India benefit", "DI scheme payment", "Digital India reward"],
+      "confidence": 0.83,
+      "scam_category": "government_scam",
+      "example_context": "Digital India scheme ka benefit aane ka message aaya"
+    },
+    {
+      "phrase": "Skill India training free hai, register karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Skill India course", "Free training Skill India", "PMKVY registration"],
+      "confidence": 0.84,
+      "scam_category": "government_scam",
+      "example_context": "Skill India free training ka message aaya"
+    },
+    {
+      "phrase": "Startup India fund mila hai Rs 50,000",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Startup India grant", "Startup fund mila", "Innovation fund"],
+      "confidence": 0.85,
+      "scam_category": "government_scam",
+      "example_context": "Startup India fund milne ka message aaya"
+    },
+    {
+      "phrase": "Stand Up India loan approve hua hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Stand Up loan approved", "SUI loan mila", "Stand Up benefit"],
+      "confidence": 0.84,
+      "scam_category": "government_scam",
+      "example_context": "Stand Up India loan approve hone ka message aaya"
+    },
+    {
+      "phrase": "WhatsApp hack ho gaya hai, verification code bhejo",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["WhatsApp verify karo", "WhatsApp code share", "WhatsApp security code"],
+      "confidence": 0.96,
+      "scam_category": "social_engineering",
+      "example_context": "Friend ne message kiya WhatsApp hack hai aur code bhejo"
+    },
+    {
+      "phrase": "Hamara dost hai jo aapki help karega, uska number save karo",
+      "type": "social_engineering",
+      "language": "hinglish",
+      "variations": ["Mera dost hai", "Ek bhai hai jo help karega", "Trusted person hai"],
+      "confidence": 0.88,
+      "scam_category": "social_engineering",
+      "example_context": "Dost ne bola ek friend hai jo help karega"
+    },
+    {
+      "phrase": "Mujhe urgent paisa chahiye, UPI bhejo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Urgent loan chahiye", "Paisa chahiye turant", "Emergency mein paisa do"],
+      "confidence": 0.85,
+      "scam_category": "social_engineering",
+      "example_context": "Unknown number pe message aaya urgent paisa chahiye"
+    },
+    {
+      "phrase": "Aapka SIM port ho raha hai, verify karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["SIM porting hai", "Number port karo", "SIM port verification"],
+      "confidence": 0.90,
+      "scam_category": "telecom_scam",
+      "example_context": "SIM port hone ka message aaya aur verify karne ko bola"
+    },
+    {
+      "phrase": "Electricity bill pending hai, disconnect hoga",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Bijli bill due hai", "Electricity cut hoga", "Power disconnection warning"],
+      "confidence": 0.88,
+      "scam_category": "utility_scam",
+      "example_context": "Bijli vibhag se message aaya bill pending hai"
+    },
+    {
+      "phrase": "LPG subsidy aayi hai, bank account verify karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Gas subsidy", "LPG credit aaya", "Subsidy bank mein aayi"],
+      "confidence": 0.86,
+      "scam_category": "government_scam",
+      "example_context": "LPG subsidy aane ka message aaya aur account maanga"
+    },
+    {
+      "phrase": "Aapka mobile number lottery mein select hua hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Number lottery mein hai", "Mobile number lucky draw", "Aapka number select hua"],
+      "confidence": 0.91,
+      "scam_category": "lottery_scam",
+      "example_context": "Message aaya mobile number lottery mein select hua"
+    },
+    {
+      "phrase": "KYC complete karo nahi toh account freeze hoga",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["KYC karo warna freeze", "KYC deadline hai", "Account freeze warning"],
+      "confidence": 0.92,
+      "scam_category": "fake_kyc",
+      "example_context": "Bank se KYC complete karne ka urgent message aaya"
+    },
+    {
+      "phrase": "Debit card expiry date batao",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["Card expiry date do", "Expiry batao", "Valid thru date share karo"],
+      "confidence": 0.95,
+      "scam_category": "card_fraud",
+      "example_context": "Caller ne card expiry date maangi"
+    },
+    {
+      "phrase": "Google Pay account hacked hai, verify karo",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["GPay hacked", "Google Pay fraud", "GPay account compromised"],
+      "confidence": 0.93,
+      "scam_category": "payment_scam",
+      "example_context": "Google Pay se message aaya account hacked hai"
+    },
+    {
+      "phrase": "PhonePe account lock ho gaya hai",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["PhonePe locked", "PhonePe account frozen", "PhonePe restricted"],
+      "confidence": 0.92,
+      "scam_category": "payment_scam",
+      "example_context": "PhonePe se message aaya account lock ho gaya"
+    },
+    {
+      "phrase": "BHIM app update karo nahi toh band hoga",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["BHIM update zaroori hai", "BHIM app expired", "BHIM latest version"],
+      "confidence": 0.89,
+      "scam_category": "payment_scam",
+      "example_context": "BHIM app update karne ka message aaya"
+    },
+    {
+      "phrase": "NPCI se transaction verification call",
+      "type": "authority_impersonation",
+      "language": "hinglish",
+      "variations": ["NPCI verification", "NPCI call", "NPCI transaction check"],
+      "confidence": 0.87,
+      "scam_category": "authority_impersonation",
+      "example_context": "NPCI se verification call aayi"
+    },
+    {
+      "phrase": "Insurance policy lapse ho jayegi",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Policy expire hogi", "Insurance lapsed", "Policy renewal urgent"],
+      "confidence": 0.88,
+      "scam_category": "insurance_scam",
+      "example_context": "Insurance company se policy lapse hone ka message aaya"
+    },
+    {
+      "phrase": "Credit card annual fee waiver mila hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Card fee waived", "Annual charge maaf", "No annual fee"],
+      "confidence": 0.86,
+      "scam_category": "bank_impersonation",
+      "example_context": "Bank se credit card annual fee waiver ka message aaya"
+    },
+    {
+      "phrase": "Demat account verify karo warna freeze",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Demat account update", "Trading account verify", "Demat freeze warning"],
+      "confidence": 0.89,
+      "scam_category": "financial_threat",
+      "example_context": "Broker se demat account verify karne ka message aaya"
+    },
+    {
+      "phrase": "Mutual fund redemption aaya hai Rs 25,000",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["MF redemption", "Mutual fund credit", "Fund redemption aaya"],
+      "confidence": 0.87,
+      "scam_category": "investment_fraud",
+      "example_context": "Mutual fund redemption aane ka message aaya"
+    },
+    {
+      "phrase": "Zomato order cancel hai, refund ke liye click karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Zomato refund", "Food order cancelled", "Zomato cancellation"],
+      "confidence": 0.88,
+      "scam_category": "phishing",
+      "example_context": "Zomato se order cancel hone ka message aaya refund link ke saath"
+    },
+    {
+      "phrase": "Swiggy order issue hai, account verify karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Swiggy account issue", "Swiggy verification", "Swiggy order problem"],
+      "confidence": 0.86,
+      "scam_category": "phishing",
+      "example_context": "Swiggy se account issue ka message aaya"
+    },
+    {
+      "phrase": "IRCTC ticket cancel hai, refund process karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["IRCTC refund", "Train ticket refund", "IRCTC cancellation"],
+      "confidence": 0.89,
+      "scam_category": "phishing",
+      "example_context": "IRCTC se ticket cancel hone ka message aaya refund ke liye"
+    },
+    {
+      "phrase": "Aadhaar card pe photo update karo offline",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Aadhaar photo update", "Photo change Aadhaar", "UIDAI photo update"],
+      "confidence": 0.85,
+      "scam_category": "fake_kyc",
+      "example_context": "UIDAI se Aadhaar photo update karne ka message aaya"
+    },
+    {
+      "phrase": "Passport se name mismatch hai, correct karo",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Passport name error", "Name mismatch passport", "Passport correction"],
+      "confidence": 0.88,
+      "scam_category": "legal_threat",
+      "example_context": "Passport office se name mismatch ka message aaya"
+    },
+    {
+      "phrase": "Vehicle RC pending hai, update karo nahi toh challan",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["RC update karo", "Vehicle registration pending", "RC renewal warning"],
+      "confidence": 0.86,
+      "scam_category": "transport_scam",
+      "example_context": "Transport department se RC update ka message aaya"
+    },
+    {
+      "phrase": "Voter ID link Aadhaar karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Voter ID Aadhaar link", "EPIC link Aadhaar", "Voter card update"],
+      "confidence": 0.84,
+      "scam_category": "fake_kyc",
+      "example_context": "Election commission se Voter ID link ka message aaya"
+    },
+    {
+      "phrase": "Ration card update karo subsidy ke liye",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Ration card benefit", "Ration subsidy", "PDS update"],
+      "confidence": 0.83,
+      "scam_category": "government_scam",
+      "example_context": "Ration card update karne ka message aaya benefit ke liye"
+    },
+    {
+      "phrase": "Scholarship amount credit hua hai, claim karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Scholarship aayi hai", "PM scholarship", "Education scholarship"],
+      "confidence": 0.85,
+      "scam_category": "government_scam",
+      "example_context": "Scholarship credit hone ka message aaya claim karne ke liye"
+    },
+    {
+      "phrase": "EPFO balance check karo, paisa aaya hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["PF balance aaya", "EPFO credit", "Provident fund payment"],
+      "confidence": 0.86,
+      "scam_category": "government_scam",
+      "example_context": "EPFO se balance check karne ka message aaya"
+    },
+    {
+      "phrase": "RTO se challan pending hai Rs 5,000",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["RTO challan", "Traffic challan pending", "Challan pay karo"],
+      "confidence": 0.89,
+      "scam_category": "transport_scam",
+      "example_context": "RTO se challan pending ka message aaya"
+    },
+    {
+      "phrase": "Driving licence expired hai, renew karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["DL renewal", "Licence expired", "Driving licence update"],
+      "confidence": 0.87,
+      "scam_category": "transport_scam",
+      "example_context": "RTO se DL expiry ka message aaya"
+    },
+    {
+      "phrase": "Bank se new cheque book aayi hai, collect karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Cheque book delivered", "New cheque book", "Cheque book collection"],
+      "confidence": 0.84,
+      "scam_category": "bank_impersonation",
+      "example_context": "Bank se cheque book aane ka message aaya"
+    },
+    {
+      "phrase": "NEFT transaction stuck hai, details do",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["NEFT pending", "Transfer stuck", "NEFT refund"],
+      "confidence": 0.90,
+      "scam_category": "upi_fraud",
+      "example_context": "Bank se NEFT transaction stuck ka message aaya"
+    },
+    {
+      "phrase": "IMPS refund aane wala hai, verify karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["IMPS refund", "IMPS credit", "IMPS transaction refund"],
+      "confidence": 0.88,
+      "scam_category": "upi_fraud",
+      "example_context": "IMPS refund aane ka message aaya aur verify karne ko bola"
+    },
+    {
+      "phrase": "RTGS payment failed hai, bank details do wapas",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["RTGS failed", "RTGS refund details", "Payment return RTGS"],
+      "confidence": 0.91,
+      "scam_category": "upi_fraud",
+      "example_context": "Bank se RTGS failed ka message aaya aur details maangi"
+    },
+    {
+      "phrase": "LIC policy bonus aaya hai Rs 20,000",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["LIC bonus", "LIC policy benefit", "LIC maturity credit"],
+      "confidence": 0.87,
+      "scam_category": "insurance_scam",
+      "example_context": "LIC se bonus aane ka message aaya"
+    },
+    {
+      "phrase": "EPIC number share karo voter verification ke liye",
+      "type": "credential_request",
+      "language": "hinglish",
+      "variations": ["EPIC number do", "Voter ID number share", "EPIC details chahiye"],
+      "confidence": 0.88,
+      "scam_category": "phishing",
+      "example_context": "Election commission se EPIC number maanga gaya"
+    },
+    {
+      "phrase": "Aapka WhatsApp business account verified ho gaya hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["WhatsApp business verified", "Business account approved", "Blue tick mila"],
+      "confidence": 0.90,
+      "scam_category": "social_engineering",
+      "example_context": "WhatsApp pe verified account hone ka message aaya"
+    },
+    {
+      "phrase": "Facebook account disabled hai, appeal karo",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Facebook disabled", "FB account suspended", "Facebook appeal"],
+      "confidence": 0.88,
+      "scam_category": "social_engineering",
+      "example_context": "Facebook se account disabled hone ka message aaya"
+    },
+    {
+      "phrase": "Instagram account verify karwao blue tick ke liye",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Instagram verified", "Blue tick mila", "IG verification"],
+      "confidence": 0.91,
+      "scam_category": "social_engineering",
+      "example_context": "Instagram pe blue tick verify karne ka message aaya"
+    },
+    {
+      "phrase": "YouTube channel monetize ho gaya hai",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["YouTube monetization", "Channel approved", "YT partnership"],
+      "confidence": 0.89,
+      "scam_category": "social_engineering",
+      "example_context": "YouTube pe channel monetize hone ka message aaya"
+    },
+    {
+      "phrase": "Aapka Netflix subscription expire ho raha hai",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Netflix expiry", "Subscription lapsed", "Netflix renewal"],
+      "confidence": 0.86,
+      "scam_category": "subscription_scam",
+      "example_context": "Netflix se subscription expiry ka message aaya"
+    },
+    {
+      "phrase": "Amazon Prime membership renew karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Prime renewal", "Amazon Prime expiry", "Prime membership update"],
+      "confidence": 0.85,
+      "scam_category": "subscription_scam",
+      "example_context": "Amazon se Prime renewal ka message aaya"
+    },
+    {
+      "phrase": "Flipkart order cancel hai, refund claim karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Flipkart refund", "Order cancelled Flipkart", "FK refund"],
+      "confidence": 0.88,
+      "scam_category": "phishing",
+      "example_context": "Flipkart se order cancel ka message aaya refund ke liye"
+    },
+    {
+      "phrase": "Myntra order delivery failed, reschedule karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Myntra delivery issue", "Myntra order pending", "Myntra reschedule"],
+      "confidence": 0.85,
+      "scam_category": "phishing",
+      "example_context": "Myntra se delivery failed ka message aaya"
+    },
+    {
+      "phrase": "Snapdeal loot deal mila hai, claim karo",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Snapdeal offer", "Snapdeal deal", "Snapdeal loot"],
+      "confidence": 0.87,
+      "scam_category": "phishing",
+      "example_context": "Snapdeal se loot deal ka message aaya"
+    },
+    {
+      "phrase": "OLX pe buyer aaya hai, payment confirm karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["OLX buyer", "OLX payment", "OLX transaction"],
+      "confidence": 0.89,
+      "scam_category": "social_engineering",
+      "example_context": "OLX pe buyer aane ka message aaya payment ke liye"
+    },
+    {
+      "phrase": "LinkedIn job offer aaya hai Rs 45,000 salary",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["LinkedIn job offer", "Job salary credited", "LinkedIn hiring"],
+      "confidence": 0.86,
+      "scam_category": "job_scam",
+      "example_context": "LinkedIn pe job offer aaya salary ke saath"
+    },
+    {
+      "phrase": "Freelancing project mila hai, registration fee do",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Freelancing fee", "Project registration", "Freelance setup fee"],
+      "confidence": 0.90,
+      "scam_category": "job_scam",
+      "example_context": "Freelancing site pe project ke liye registration fee maangi"
+    },
+    {
+      "phrase": "Data entry job guaranteed Rs 25,000 mahine ka",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Data entry salary", "Online job guaranteed", "Work from home job"],
+      "confidence": 0.91,
+      "scam_category": "job_scam",
+      "example_context": "Online job mein data entry ke liye guaranteed salary ka message"
+    },
+    {
+      "phrase": "Crypto investment karo 100% profit hoga",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Crypto returns", "Bitcoin investment", "Crypto guaranteed profit"],
+      "confidence": 0.95,
+      "scam_category": "investment_fraud",
+      "example_context": "Crypto mein guaranteed profit ka offer aaya"
+    },
+    {
+      "phrase": "Forex trading mein guaranteed returns milenge",
+      "type": "reward",
+      "language": "hinglish",
+      "variations": ["Forex profit", "Forex guaranteed", "Currency trading returns"],
+      "confidence": 0.94,
+      "scam_category": "investment_fraud",
+      "example_context": "Forex trading mein guaranteed returns ka offer aaya"
+    },
+    {
+      "phrase": "Insurance agent hai, policy upgrade karo",
+      "type": "urgency",
+      "language": "hinglish",
+      "variations": ["Insurance upgrade", "Policy upgrade offer", "Insurance agent call"],
+      "confidence": 0.87,
+      "scam_category": "insurance_scam",
+      "example_context": "Insurance agent ne policy upgrade karne ko bola"
+    },
+    {
+      "phrase": "PAN card cancelled hai, reactivate karo",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["PAN cancelled", "PAN card deactivate", "PAN inactive hai"],
+      "confidence": 0.90,
+      "scam_category": "fake_kyc",
+      "example_context": "Income tax se PAN card cancel hone ka message aaya"
+    },
+    {
+      "phrase": "Gas cylinder booking pending hai, pay karo",
+      "type": "payment_request",
+      "language": "hinglish",
+      "variations": ["Gas booking pending", "LPG booking pay", "Cylinder booking"],
+      "confidence": 0.86,
+      "scam_category": "utility_scam",
+      "example_context": "Gas agency se booking pending ka message aaya"
+    },
+    {
+      "phrase": "Water bill overdue hai, disconnect hoga",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Water bill due", "Paani bill pending", "Water supply cut"],
+      "confidence": 0.85,
+      "scam_category": "utility_scam",
+      "example_context": "Water department se bill overdue ka message aaya"
+    },
+    {
+      "phrase": "Property tax pending hai, penalty lagegi",
+      "type": "threat",
+      "language": "hinglish",
+      "variations": ["Property tax due", "Tax penalty warning", "Property tax overdue"],
+      "confidence": 0.88,
+      "scam_category": "tax_scam",
+      "example_context": "Municipal corporation se property tax ka message aaya"
+    }
+  ]
+}

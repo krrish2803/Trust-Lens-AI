@@ -1,0 +1,285 @@
+{
+  "version": "1.0",
+  "patterns": [
+    {
+      "legitimate_brand": "ICICI Bank",
+      "brand_type": "banking",
+      "impostor_patterns": ["icici-secure.in", "icicibank-verify.com", "icici-login.in", "icici-kyc.com", "icici-update.in", "icicibank-official.net", "icici-portal.in", "icici-auth.com", "icici-help.in", "icici-support.com"],
+      "keywords": ["ICICI Bank alert", "ICICI security", "ICICI KYC", "ICICI account blocked", "ICICI transaction", "ICICI OTP", "ICICI credit card", "ICICI debit card", "ICICI net banking", "ICICI loan"],
+      "common Tricks": ["Fake ICICI helpline numbers", "ICICI branded SMS with links", "ICICI lookalike websites", "ICICI email phishing", "ICICI WhatsApp fraud", "ICICI fake app", "ICICI KYC scam", "ICICI refund scam"]
+    },
+    {
+      "legitimate_brand": "State Bank of India",
+      "brand_type": "banking",
+      "impostor_patterns": ["sbi-secure.in", "sbi-login.com", "sbi-verify.in", "sbi-kyc.com", "sbi-update.in", "sbiofficial.net", "sbi-portal.in", "sbi-auth.com", "sbi-help.in", "sbi-support.com"],
+      "keywords": ["SBI alert", "SBI security", "SBI KYC", "SBI account blocked", "SBI transaction", "SBI OTP", "SBI credit card", "SBI debit card", "SBI net banking", "SBI YONO"],
+      "common Tricks": ["Fake SBI helpline numbers", "SBI branded SMS with links", "SBI lookalike websites", "SBI email phishing", "SBI WhatsApp fraud", "SBI fake app", "SBI KYC scam", "SBI reward scam"]
+    },
+    {
+      "legitimate_brand": "HDFC Bank",
+      "brand_type": "banking",
+      "impostor_patterns": ["hdfc-secure.in", "hdfcbank-verify.com", "hdfc-login.in", "hdfc-kyc.com", "hdfc-update.in", "hdfcbank-official.net", "hdfc-portal.in", "hdfc-auth.com", "hdfc-help.in", "hdfc-support.com"],
+      "keywords": ["HDFC Bank alert", "HDFC security", "HDFC KYC", "HDFC account blocked", "HDFC transaction", "HDFC OTP", "HDFC credit card", "HDFC debit card", "HDFC net banking", "HDFC loan"],
+      "common Tricks": ["Fake HDFC helpline numbers", "HDFC branded SMS with links", "HDFC lookalike websites", "HDFC email phishing", "HDFC WhatsApp fraud", "HDFC fake app", "HDFC KYC scam", "HDFC credit card scam"]
+    },
+    {
+      "legitimate_brand": "Axis Bank",
+      "brand_type": "banking",
+      "impostor_patterns": ["axis-secure.in", "axisbank-verify.com", "axis-login.in", "axis-kyc.com", "axis-update.in", "axisbank-official.net", "axis-portal.in", "axis-auth.com", "axis-help.in", "axis-support.com"],
+      "keywords": ["Axis Bank alert", "Axis security", "Axis KYC", "Axis account blocked", "Axis transaction", "Axis OTP", "Axis credit card", "Axis debit card", "Axis net banking", "Axis loan"],
+      "common Tricks": ["Fake Axis helpline numbers", "Axis branded SMS with links", "Axis lookalike websites", "Axis email phishing", "Axis WhatsApp fraud", "Axis fake app", "Axis KYC scam", "Axis reward scam"]
+    },
+    {
+      "legitimate_brand": "Amazon",
+      "brand_type": "ecommerce",
+      "impostor_patterns": ["amazon-verify.in", "amazon-kyc.com", "amazon-login.in", "amazon-update.in", "amazon-official.net", "amazon-portal.in", "amazon-delivery.in", "amazon-refund.in", "amazon-prize.in", "amazon-offer.in"],
+      "keywords": ["Amazon order", "Amazon delivery", "Amazon refund", "Amazon OTP", "Amazon account", "Amazon prime", "Amazon prize", "Amazon lottery", "Amazon offer", "Amazon cashback"],
+      "common Tricks": ["Fake Amazon delivery alerts", "Amazon refund scam links", "Amazon prize winning messages", "Amazon OTP phishing", "Amazon account verification scam", "Amazon fake customer care", "Amazon prime renewal scam", "Amazon gift card scam"]
+    },
+    {
+      "legitimate_brand": "Flipkart",
+      "brand_type": "ecommerce",
+      "impostor_patterns": ["flipkart-verify.in", "flipkart-kyc.com", "flipkart-login.in", "flipkart-update.in", "flipkart-official.net", "flipkart-portal.in", "flipkart-delivery.in", "flipkart-refund.in", "flipkart-prize.in", "flipkart-offer.in"],
+      "keywords": ["Flipkart order", "Flipkart delivery", "Flipkart refund", "Flipkart OTP", "Flipkart account", "Flipkart prize", "Flipkart lottery", "Flipkart offer", "Flipkart cashback", "Flipkart Big Billion"],
+      "common Tricks": ["Fake Flipkart delivery alerts", "Flipkart refund scam links", "Flipkart prize winning messages", "Flipkart OTP phishing", "Flipkart account verification scam", "Flipkart fake customer care", "Flipkart sale scam", "Flipkart gift card scam"]
+    },
+    {
+      "legitimate_brand": "Paytm",
+      "brand_type": "payment",
+      "impostor_patterns": ["paytm-secure.in", "paytm-verify.com", "paytm-login.in", "paytm-kyc.com", "paytm-update.in", "paytm-official.net", "paytm-portal.in", "paytm-auth.com", "paytm-help.in", "paytm-support.com"],
+      "keywords": ["Paytm KYC", "Paytm wallet", "Paytm UPI", "Paytm transaction", "Paytm cashback", "Paytm refund", "Paytm account", "Paytm OTP", "Paytm credit card", "Paytm postpaid"],
+      "common Tricks": ["Fake Paytm KYC alerts", "Paytm cashback scam", "Paytm refund scam links", "Paytm OTP phishing", "Paytm account verification scam", "Paytm fake customer care", "Paytm postpaid scam", "Paytm wallet scam"]
+    },
+    {
+      "legitimate_brand": "PhonePe",
+      "brand_type": "payment",
+      "impostor_patterns": ["phonepe-secure.in", "phonepe-verify.com", "phonepe-login.in", "phonepe-kyc.com", "phonepe-update.in", "phonepe-official.net", "phonepe-portal.in", "phonepe-auth.com", "phonepe-help.in", "phonepe-support.com"],
+      "keywords": ["PhonePe UPI", "PhonePe transaction", "PhonePe cashback", "PhonePe refund", "PhonePe account", "PhonePe OTP", "PhonePe wallet", "PhonePe credit card", "PhonePe insurance", "PhonePe Gold"],
+      "common Tricks": ["Fake PhonePe refund alerts", "PhonePe cashback scam", "PhonePe UPI collect scam", "PhonePe OTP phishing", "PhonePe account verification scam", "PhonePe fake customer care", "PhonePe insurance scam", "PhonePe gold scam"]
+    },
+    {
+      "legitimate_brand": "Google Pay",
+      "brand_type": "payment",
+      "impostor_patterns": ["gpay-secure.in", "gpay-verify.com", "gpay-login.in", "gpay-kyc.com", "gpay-update.in", "gpay-official.net", "gpay-portal.in", "gpay-auth.com", "gpay-help.in", "gpay-support.com"],
+      "keywords": ["Google Pay UPI", "Google Pay transaction", "Google Pay cashback", "Google Pay refund", "Google Pay account", "Google Pay OTP", "Google Pay scratch card", "Google Pay rewards", "Google Pay credit card", "Google Pay bill"],
+      "common Tricks": ["Fake Google Pay refund alerts", "Google Pay scratch card scam", "Google Pay UPI collect scam", "Google Pay OTP phishing", "Google Pay account verification scam", "Google Pay fake customer care", "Google Pay rewards scam", "Google Pay bill scam"]
+    },
+    {
+      "legitimate_brand": "BHIM",
+      "brand_type": "payment",
+      "impostor_patterns": ["bhim-secure.in", "bhim-verify.com", "bhim-login.in", "bhim-kyc.com", "bhim-update.in", "bhim-official.net", "bhim-portal.in", "bhim-auth.com", "bhim-help.in", "bhim-support.com"],
+      "keywords": ["BHIM UPI", "BHIM transaction", "BHIM cashback", "BHIM refund", "BHIM account", "BHIM OTP", "BHIM wallet", "BHIM rewards", "BHIM PIN", "BHIM QR"],
+      "common Tricks": ["Fake BHIM refund alerts", "BHIM cashback scam", "BHIM UPI collect scam", "BHIM OTP phishing", "BHIM PIN scam", "BHIM account verification scam", "BHIM fake customer care", "BHIM QR code scam"]
+    },
+    {
+      "legitimate_brand": "NPCI",
+      "brand_type": "payment",
+      "impostor_patterns": ["npci-secure.in", "npci-verify.com", "npci-login.in", "npci-update.in", "npci-official.net", "npci-portal.in", "npci-auth.com", "npci-help.in", "npci-support.com"],
+      "keywords": ["NPCI UPI", "NPCI transaction", "NPCI RuPay", "NPCI guidelines", "NPCI circular", "NPCI compliance", "NPCI verification", "NPCI audit", "NPCI dispute", "NPCI settlement"],
+      "common Tricks": ["Fake NPCI circulars", "NPCI compliance scam", "NPCI verification scam", "NPCI audit scam", "NPCI dispute scam", "NPCI settlement scam", "NPCI fake helpline", "NPCI fake email"]
+    },
+    {
+      "legitimate_brand": "UIDAI",
+      "brand_type": "government",
+      "impostor_patterns": ["uidai-secure.in", "uidai-verify.com", "uidai-login.in", "uidai-update.in", "uidai-official.net", "uidai-portal.in", "uidai-auth.com", "uidai-help.in", "uidai-support.com", "aadhaar-secure.in"],
+      "keywords": ["Aadhaar update", "Aadhaar linking", "Aadhaar verification", "UIDAI alert", "Aadhaar OTP", "Aadhaar biometric", "Aadhaar card", "Aadhaar number", "Aadhaar address", "Aadhaar name"],
+      "common Tricks": ["Fake Aadhaar update alerts", "Aadhaar linking scam", "Aadhaar OTP phishing", "Aadhaar biometric scam", "Aadhaar card verification scam", "UIDAI fake helpline", "UIDAI fake website", "Aadhaar address update scam"]
+    },
+    {
+      "legitimate_brand": "India Post",
+      "brand_type": "government",
+      "impostor_patterns": ["indiapost-secure.in", "indiapost-verify.com", "indiapost-login.in", "indiapost-update.in", "indiapost-official.net", "indiapost-portal.in", "indiapost-delivery.in", "indiapost-help.in", "indiapost-support.com"],
+      "keywords": ["India Post tracking", "India Post delivery", "India Post speed post", "India Post parcel", "India Post PIN code", "India Post office", "India Post registration", "India Post money order", "India Post passport", "India Post banking"],
+      "common Tricks": ["Fake India Post delivery alerts", "India Post parcel scam", "India Post tracking scam", "India Post speed post scam", "India Post money order scam", "India Post passport scam", "India Post banking scam", "India Post PIN code scam"]
+    },
+    {
+      "legitimate_brand": "Income Tax Department",
+      "brand_type": "government",
+      "impostor_patterns": ["incometax-secure.in", "incometax-verify.com", "incometax-login.in", "incometax-update.in", "incometax-official.net", "incometax-portal.in", "incometax-refund.in", "incometax-help.in", "incometax-support.com"],
+      "keywords": ["Income tax return", "Income tax refund", "Income tax notice", "Income tax filing", "Income tax PAN", "Income tax e-filing", "Income tax verification", "Income tax assessment", "Income tax demand", "Income tax audit"],
+      "common Tricks": ["Fake income tax refund alerts", "Income tax notice scam", "Income tax e-filing scam", "Income tax PAN scam", "Income tax verification scam", "Income tax assessment scam", "Income tax demand scam", "Income tax audit scam"]
+    },
+    {
+      "legitimate_brand": "IRCTC",
+      "brand_type": "ecommerce",
+      "impostor_patterns": ["irctc-secure.in", "irctc-verify.com", "irctc-login.in", "irctc-update.in", "irctc-official.net", "irctc-portal.in", "irctc-booking.in", "irctc-refund.in", "irctc-help.in", "irctc-support.com"],
+      "keywords": ["IRCTC ticket", "IRCTC booking", "IRCTC refund", "IRCTC PNR", "IRCTC train", "IRCTC cancellation", "IRCTC tatkal", "IRCTC food", "IRCTC coach", "IRCTC seat"],
+      "common Tricks": ["Fake IRCTC ticket alerts", "IRCTC refund scam", "IRCTC PNR scam", "IRCTC booking scam", "IRCTC cancellation scam", "IRCTC tatkal scam", "IRCTC food scam", "IRCTC fake website"]
+    },
+    {
+      "legitimate_brand": "WhatsApp",
+      "brand_type": "social",
+      "impostor_patterns": ["whatsapp-verify.in", "whatsapp-secure.com", "whatsapp-login.in", "whatsapp-update.in", "whatsapp-official.net", "whatsapp-portal.in", "whatsapp-auth.com", "whatsapp-help.in", "whatsapp-support.com"],
+      "keywords": ["WhatsApp ban", "WhatsApp account", "WhatsApp OTP", "WhatsApp verification", "WhatsApp business", "WhatsApp group", "WhatsApp status", "WhatsApp payment", "WhatsApp backup", "WhatsApp number"],
+      "common Tricks": ["Fake WhatsApp ban alerts", "WhatsApp OTP phishing", "WhatsApp account scam", "WhatsApp business scam", "WhatsApp group scam", "WhatsApp payment scam", "WhatsApp backup scam", "WhatsApp number scam"]
+    },
+    {
+      "legitimate_brand": "SBI Card",
+      "brand_type": "banking",
+      "impostor_patterns": ["sbicard-secure.in", "sbicard-verify.com", "sbicard-login.in", "sbicard-update.in", "sbicard-official.net", "sbicard-portal.in", "sbicard-auth.com", "sbicard-help.in", "sbicard-support.com"],
+      "keywords": ["SBI Card", "SBI credit card", "SBI card limit", "SBI card block", "SBI card reward", "SBI card annual fee", "SBI card statement", "SBI card payment", "SBI card OTP", "SBI card offer"],
+      "common Tricks": ["Fake SBI Card alerts", "SBI Card reward scam", "SBI Card limit increase scam", "SBI Card block scam", "SBI Card annual fee scam", "SBI Card statement scam", "SBI Card payment scam", "SBI Card OTP scam"]
+    },
+    {
+      "legitimate_brand": "HDFC Life",
+      "brand_type": "banking",
+      "impostor_patterns": ["hdfclife-secure.in", "hdfclife-verify.com", "hdfclife-login.in", "hdfclife-update.in", "hdfclife-official.net", "hdfclife-portal.in", "hdfclife-auth.com", "hdfclife-help.in", "hdfclife-support.com"],
+      "keywords": ["HDFC Life insurance", "HDFC Life policy", "HDFC Life claim", "HDFC Life maturity", "HDFC Life premium", "HDFC Life bonus", "HDFC Life agent", "HDFC Life renewal", "HDFC Life surrender", "HDFC Life fund"],
+      "common Tricks": ["Fake HDFC Life maturity alerts", "HDFC Life claim scam", "HDFC Life premium scam", "HDFC Life bonus scam", "HDFC Life agent scam", "HDFC Life renewal scam", "HDFC Life surrender scam", "HDFC Life fund scam"]
+    },
+    {
+      "legitimate_brand": "LIC",
+      "brand_type": "banking",
+      "impostor_patterns": ["lic-secure.in", "lic-verify.com", "lic-login.in", "lic-update.in", "lic-official.net", "lic-portal.in", "lic-auth.com", "lic-help.in", "lic-support.com"],
+      "keywords": ["LIC policy", "LIC premium", "LIC maturity", "LIC claim", "LIC bonus", "LIC agent", "LIC renewal", "LIC surrender", "LIC fund", "LIC investment"],
+      "common Tricks": ["Fake LIC maturity alerts", "LIC claim scam", "LIC premium scam", "LIC bonus scam", "LIC agent scam", "LIC renewal scam", "LIC surrender scam", "LIC investment scam"]
+    },
+    {
+      "legitimate_brand": "Paytm Payments Bank",
+      "brand_type": "banking",
+      "impostor_patterns": ["paytmbank-secure.in", "paytmbank-verify.com", "paytmbank-login.in", "paytmbank-kyc.com", "paytmbank-update.in", "paytmbank-official.net", "paytmbank-portal.in", "paytmbank-auth.com"],
+      "keywords": ["Paytm Bank KYC", "Paytm Bank account", "Paytm Bank balance", "Paytm Bank UPI", "Paytm Bank debit card", "Paytm Bank savings", "Paytm Bank FD", "Paytm Bank interest"],
+      "common Tricks": ["Fake Paytm Bank KYC alerts", "Paytm Bank account scam", "Paytm Bank balance scam", "Paytm Bank UPI scam", "Paytm Bank debit card scam", "Paytm Bank savings scam", "Paytm Bank FD scam", "Paytm Bank interest scam"]
+    },
+    {
+      "legitimate_brand": "RBI",
+      "brand_type": "government",
+      "impostor_patterns": ["rbi-secure.in", "rbi-verify.com", "rbi-login.in", "rbi-update.in", "rbi-official.net", "rbi-portal.in", "rbi-auth.com", "rbi-help.in", "rbi-support.com"],
+      "keywords": ["RBI circular", "RBI guidelines", "RBI alert", "RBI warning", "RBI notice", "RBI regulation", "RBI compliance", "RBI audit", "RBI inquiry", "RBI investigation"],
+      "common Tricks": ["Fake RBI circulars", "RBI compliance scam", "RBI audit scam", "RBI inquiry scam", "RBI investigation scam", "RBI warning scam", "RBI notice scam", "RBI fake helpline"]
+    },
+    {
+      "legitimate_brand": "SEBI",
+      "brand_type": "government",
+      "impostor_patterns": ["sebi-secure.in", "sebi-verify.com", "sebi-login.in", "sebi-update.in", "sebi-official.net", "sebi-portal.in", "sebi-auth.com", "sebi-help.in", "sebi-support.com"],
+      "keywords": ["SEBI registered", "SEBI approved", "SEBI certified", "SEBI complaint", "SEBI circular", "SEBI guidelines", "SEBI regulation", "SEBI investor", "SEBI stock", "SEBI mutual fund"],
+      "common Tricks": ["Fake SEBI registration claims", "SEBI approved scam", "SEBI certified scam", "SEBI complaint scam", "SEBI circular scam", "SEBI investor scam", "SEBI stock scam", "SEBI mutual fund scam"]
+    },
+    {
+      "legitimate_brand": "TRAI",
+      "brand_type": "government",
+      "impostor_patterns": ["trai-secure.in", "trai-verify.com", "trai-login.in", "trai-update.in", "trai-official.net", "trai-portal.in", "trai-auth.com", "trai-help.in", "trai-support.com"],
+      "keywords": ["TRAI alert", "TRAI guidelines", "TRAI regulation", "TRAI complaint", "TRAI verification", "TRAI SIM", "TRAI porting", "TRAI tariff", "TRAI DND", "TRAI number"],
+      "common Tricks": ["Fake TRAI alerts", "TRAI SIM deactivation scam", "TRAI porting scam", "TRAI tariff scam", "TRAI DND scam", "TRAI number scam", "TRAI verification scam", "TRAI fake helpline"]
+    },
+    {
+      "legitimate_brand": "EPFO",
+      "brand_type": "government",
+      "impostor_patterns": ["epfo-secure.in", "epfo-verify.com", "epfo-login.in", "epfo-update.in", "epfo-official.net", "epfo-portal.in", "epfo-auth.com", "epfo-help.in", "epfo-support.com"],
+      "keywords": ["EPFO balance", "EPFO claim", "EPFO withdrawal", "EPFO passbook", "EPFO UAN", "EPFO KYC", "EPFO transfer", "EPFO pension", "EPFO interest", "EPFO employer"],
+      "common Tricks": ["Fake EPFO balance alerts", "EPFO claim scam", "EPFO withdrawal scam", "EPFO passbook scam", "EPFO UAN scam", "EPFO KYC scam", "EPFO transfer scam", "EPFO pension scam"]
+    },
+    {
+      "legitimate_brand": "NSDL",
+      "brand_type": "government",
+      "impostor_patterns": ["nsdl-secure.in", "nsdl-verify.com", "nsdl-login.in", "nsdl-update.in", "nsdl-official.net", "nsdl-portal.in", "nsdl-auth.com", "nsdl-help.in", "nsdl-support.com"],
+      "keywords": ["NSDL PAN", "NSDL TAN", "NSDL PAN card", "NSDL PAN link", "NSDL PAN update", "NSDL PAN apply", "NSDL PAN status", "NSDL PAN verification", "NSDL tax", "NSDL e-filing"],
+      "common Tricks": ["Fake NSDL PAN alerts", "NSDL PAN link scam", "NSDL PAN update scam", "NSDL PAN apply scam", "NSDL PAN status scam", "NSDL PAN verification scam", "NSDL tax scam", "NSDL e-filing scam"]
+    },
+    {
+      "legitimate_brand": "UPI",
+      "brand_type": "payment",
+      "impostor_patterns": ["upi-secure.in", "upi-verify.com", "upi-login.in", "upi-update.in", "upi-official.net", "upi-portal.in", "upi-auth.com", "upi-help.in", "upi-support.com"],
+      "keywords": ["UPI PIN", "UPI transaction", "UPI collect", "UPI refund", "UPI cashback", "UPI ID", "UPI QR", "UPI bank", "UPI app", "UPI mandate"],
+      "common Tricks": ["Fake UPI PIN scams", "UPI collect request scam", "UPI refund scam", "UPI cashback scam", "UPI ID scam", "UPI QR scam", "UPI bank scam", "UPI mandate scam"]
+    },
+    {
+      "legitimate_brand": "Amazon Pay",
+      "brand_type": "payment",
+      "impostor_patterns": ["amazonpay-secure.in", "amazonpay-verify.com", "amazonpay-login.in", "amazonpay-update.in", "amazonpay-official.net", "amazonpay-portal.in", "amazonpay-auth.com"],
+      "keywords": ["Amazon Pay balance", "Amazon Pay UPI", "Amazon Pay cashback", "Amazon Pay refund", "Amazon Pay wallet", "Amazon Pay bill", "Amazon Pay recharge", "Amazon Pay gift card"],
+      "common Tricks": ["Fake Amazon Pay balance alerts", "Amazon Pay UPI scam", "Amazon Pay cashback scam", "Amazon Pay refund scam", "Amazon Pay wallet scam", "Amazon Pay bill scam", "Amazon Pay recharge scam", "Amazon Pay gift card scam"]
+    },
+    {
+      "legitimate_brand": "CRED",
+      "brand_type": "payment",
+      "impostor_patterns": ["cred-secure.in", "cred-verify.com", "cred-login.in", "cred-update.in", "cred-official.net", "cred-portal.in", "cred-auth.com"],
+      "keywords": ["CRED credit card", "CRED reward", "CRED cashback", "CRED bill pay", "CRED coins", "CRED rent", "CRED cash", "CRED membership"],
+      "common Tricks": ["Fake CRED reward alerts", "CRED credit card scam", "CRED cashback scam", "CRED bill pay scam", "CRED coins scam", "CRED rent scam", "CRED cash scam", "CRED membership scam"]
+    },
+    {
+      "legitimate_brand": "Flipkart",
+      "brand_type": "ecommerce",
+      "impostor_patterns": ["flipkart-bigbillion.in", "flipkart-sale.in", "flipkart-offer.in", "flipkart-prize.in", "flipkart-reward.in"],
+      "keywords": ["Flipkart Big Billion", "Flipkart sale", "Flipkart offer", "Flipkart prize", "Flipkart reward", "Flipkart SuperCoin", "Flipkart Plus", "Flipkart Pay Later"],
+      "common Tricks": ["Fake Flipkart sale alerts", "Flipkart Big Billion scam", "Flipkart prize scam", "Flipkart reward scam", "Flipkart SuperCoin scam", "Flipkart Plus scam", "Flipkart Pay Later scam", "Flipkart gift card scam"]
+    },
+    {
+      "legitimate_brand": "Google",
+      "brand_type": "social",
+      "impostor_patterns": ["google-secure.in", "google-verify.com", "google-login.in", "google-update.in", "google-official.net", "google-portal.in", "google-auth.com"],
+      "keywords": ["Google account", "Google security", "Google password", "Google OTP", "Google storage", "Google Drive", "Google Photos", "Google Pay", "Google AdSense", "Google AdWords"],
+      "common Tricks": ["Fake Google security alerts", "Google account scam", "Google password scam", "Google OTP phishing", "Google storage scam", "Google Drive scam", "Google Photos scam", "Google AdSense scam"]
+    },
+    {
+      "legitimate_brand": "Microsoft",
+      "brand_type": "social",
+      "impostor_patterns": ["microsoft-secure.in", "microsoft-verify.com", "microsoft-login.in", "microsoft-update.in", "microsoft-official.net", "microsoft-portal.in", "microsoft-auth.com"],
+      "keywords": ["Microsoft account", "Microsoft security", "Microsoft password", "Microsoft OTP", "Microsoft 365", "Microsoft Teams", "Microsoft Azure", "Microsoft Office", "Microsoft support", "Microsoft license"],
+      "common Tricks": ["Fake Microsoft security alerts", "Microsoft account scam", "Microsoft password scam", "Microsoft OTP phishing", "Microsoft 365 scam", "Microsoft Teams scam", "Microsoft Azure scam", "Microsoft license scam"]
+    },
+    {
+      "legitimate_brand": "Apple",
+      "brand_type": "social",
+      "impostor_patterns": ["apple-secure.in", "apple-verify.com", "apple-login.in", "apple-update.in", "apple-official.net", "apple-portal.in", "apple-auth.com"],
+      "keywords": ["Apple ID", "Apple iCloud", "Apple iPhone", "Apple security", "Apple password", "Apple OTP", "Apple Music", "Apple Pay", "Apple support", "Apple warranty"],
+      "common Tricks": ["Fake Apple ID alerts", "Apple iCloud scam", "Apple iPhone scam", "Apple security scam", "Apple password scam", "Apple OTP phishing", "Apple Music scam", "Apple Pay scam"]
+    },
+    {
+      "legitimate_brand": "WhatsApp",
+      "brand_type": "social",
+      "impostor_patterns": ["whatsapp-web.in", "whatsapp-desktop.in", "whatsapp-business.in", "whatsapp-backup.in", "whatsapp-number.in"],
+      "keywords": ["WhatsApp ban", "WhatsApp web", "WhatsApp desktop", "WhatsApp business", "WhatsApp backup", "WhatsApp number", "WhatsApp group", "WhatsApp payment", "WhatsApp OTP", "WhatsApp verification"],
+      "common Tricks": ["Fake WhatsApp ban alerts", "WhatsApp web scam", "WhatsApp desktop scam", "WhatsApp business scam", "WhatsApp backup scam", "WhatsApp number scam", "WhatsApp group scam", "WhatsApp payment scam"]
+    },
+    {
+      "legitimate_brand": "Telegram",
+      "brand_type": "social",
+      "impostor_patterns": ["telegram-secure.in", "telegram-verify.com", "telegram-login.in", "telegram-update.in", "telegram-official.net", "telegram-portal.in"],
+      "keywords": ["Telegram account", "Telegram OTP", "Telegram verification", "Telegram premium", "Telegram bot", "Telegram group", "Telegram channel", "Telegram secret chat"],
+      "common Tricks": ["Fake Telegram account alerts", "Telegram OTP phishing", "Telegram verification scam", "Telegram premium scam", "Telegram bot scam", "Telegram group scam", "Telegram channel scam", "Telegram secret chat scam"]
+    },
+    {
+      "legitimate_brand": "Instagram",
+      "brand_type": "social",
+      "impostor_patterns": ["instagram-secure.in", "instagram-verify.com", "instagram-login.in", "instagram-update.in", "instagram-official.net", "instagram-portal.in"],
+      "keywords": ["Instagram account", "Instagram OTP", "Instagram verification", "Instagram blue tick", "Instagram followers", "Instagram reels", "Instagram stories", "Instagram business"],
+      "common Tricks": ["Fake Instagram account alerts", "Instagram OTP phishing", "Instagram blue tick scam", "Instagram followers scam", "Instagram reels scam", "Instagram stories scam", "Instagram business scam", "Instagram verification scam"]
+    },
+    {
+      "legitimate_brand": "Facebook",
+      "brand_type": "social",
+      "impostor_patterns": ["facebook-secure.in", "facebook-verify.com", "facebook-login.in", "facebook-update.in", "facebook-official.net", "facebook-portal.in"],
+      "keywords": ["Facebook account", "Facebook OTP", "Facebook verification", "Facebook marketplace", "Facebook ads", "Facebook page", "Facebook group", "Facebook gaming"],
+      "common Tricks": ["Fake Facebook account alerts", "Facebook OTP phishing", "Facebook marketplace scam", "Facebook ads scam", "Facebook page scam", "Facebook group scam", "Facebook gaming scam", "Facebook verification scam"]
+    },
+    {
+      "legitimate_brand": "Reliance Jio",
+      "brand_type": "telecom",
+      "impostor_patterns": ["jio-secure.in", "jio-verify.com", "jio-login.in", "jio-update.in", "jio-official.net", "jio-portal.in"],
+      "keywords": ["Jio plan", "Jio recharge", "Jio number", "Jio SIM", "Jio fiber", "Jio TV", "Jio cinema", "Jio mart"],
+      "common Tricks": ["Fake Jio plan alerts", "Jio recharge scam", "Jio number scam", "Jio SIM scam", "Jio fiber scam", "Jio TV scam", "Jio cinema scam", "Jio mart scam"]
+    },
+    {
+      "legitimate_brand": "Airtel",
+      "brand_type": "telecom",
+      "impostor_patterns": ["airtel-secure.in", "airtel-verify.com", "airtel-login.in", "airtel-update.in", "airtel-official.net", "airtel-portal.in"],
+      "keywords": ["Airtel plan", "Airtel recharge", "Airtel number", "Airtel SIM", "Airtel Xstream", "Airtel Payments", "Airtel DTH", "Airtel broadband"],
+      "common Tricks": ["Fake Airtel plan alerts", "Airtel recharge scam", "Airtel number scam", "Airtel SIM scam", "Airtel Xstream scam", "Airtel Payments scam", "Airtel DTH scam", "Airtel broadband scam"]
+    },
+    {
+      "legitimate_brand": "Vodafone Idea",
+      "brand_type": "telecom",
+      "impostor_patterns": ["vi-secure.in", "vi-verify.com", "vi-login.in", "vi-update.in", "vi-official.net", "vi-portal.in"],
+      "keywords": ["Vi plan", "Vi recharge", "Vi number", "Vi SIM", "Vi Movies", "Vi Games", "Vi Payments", "Vi broadband"],
+      "common Tricks": ["Fake Vi plan alerts", "Vi recharge scam", "Vi number scam", "Vi SIM scam", "Vi Movies scam", "Vi Games scam", "Vi Payments scam", "Vi broadband scam"]
+    },
+    {
+      "legitimate_brand": "BSNL",
+      "brand_type": "telecom",
+      "impostor_patterns": ["bsnl-secure.in", "bsnl-verify.com", "bsnl-login.in", "bsnl-update.in", "bsnl-official.net", "bsnl-portal.in"],
+      "keywords": ["BSNL plan", "BSNL recharge", "BSNL number", "BSNL SIM", "BSNL fiber", "BSNL landline", "BSNL broadband", "BSNL WiFi"],
+      "common Tricks": ["Fake BSNL plan alerts", "BSNL recharge scam", "BSNL number scam", "BSNL SIM scam", "BSNL fiber scam", "BSNL landline scam", "BSNL broadband scam", "BSNL WiFi scam"]
+    }
+  ]
+}

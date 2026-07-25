@@ -1,0 +1,1715 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-25",
+  "total_domains": 244,
+  "domains": [
+    {
+      "domain": "sbi.co.in",
+      "entity": "State Bank of India",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "onlinesbi.com",
+      "entity": "SBI Online",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sbiintl.com",
+      "entity": "SBI International",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "hdfcbank.com",
+      "entity": "HDFC Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "hdfcsec.com",
+      "entity": "HDFC Securities",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "hdfclife.com",
+      "entity": "HDFC Life",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "netbanking.hdfcbank.com",
+      "entity": "HDFC NetBanking",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "icicibank.com",
+      "entity": "ICICI Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "icicibankonline.in",
+      "entity": "ICICI Online",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "icicisecurities.com",
+      "entity": "ICICI Securities",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "axisbank.com",
+      "entity": "Axis Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "axisdirect.in",
+      "entity": "Axis Direct",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "yesbank.in",
+      "entity": "Yes Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "netbanking.yesbank.com",
+      "entity": "Yes Bank NetBanking",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "kotak.com",
+      "entity": "Kotak Mahindra Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "kotakbank.com",
+      "entity": "Kotak Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "kotaksecurities.com",
+      "entity": "Kotak Securities",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "pnb.co.in",
+      "entity": "Punjab National Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "pnetbanking.com",
+      "entity": "PNB NetBanking",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bankofbaroda.com",
+      "entity": "Bank of Baroda",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bobibanking.com",
+      "entity": "BOB Banking",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "canarabank.com",
+      "entity": "Canara Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "unionbankofindia.co.in",
+      "entity": "Union Bank of India",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "idbibank.in",
+      "entity": "IDBI Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "indianbank.in",
+      "entity": "Indian Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "centralbankofindia.co.in",
+      "entity": "Central Bank of India",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ucobank.com",
+      "entity": "UCO Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bankofindia.com",
+      "entity": "Bank of India",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "finobank.com",
+      "entity": "Fino Payments Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "airtelbank.com",
+      "entity": "Airtel Payments Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "paytmbank.com",
+      "entity": "Paytm Payments Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "jiobank.com",
+      "entity": "Jio Payments Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ippbonline.com",
+      "entity": "India Post Payments Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bandhanbank.com",
+      "entity": "Bandhan Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "federalbank.co.in",
+      "entity": "Federal Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "karurvysyabank.com",
+      "entity": "Karur Vysya Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cityunionbank.com",
+      "entity": "City Union Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "dcb bank.in",
+      "entity": "DCB Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "lvbank.com",
+      "entity": "Lakshmi Vilas Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "tmbank.in",
+      "entity": "Tamilnad Mercantile Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "karnatakabank.com",
+      "entity": "Karnataka Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "southindianbank.com",
+      "entity": "South Indian Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "dhanlaxmibank.com",
+      "entity": "Dhanlaxmi Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "rblbank.com",
+      "entity": "RBL Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "indusind.com",
+      "entity": "IndusInd Bank",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bajajfinserv.in",
+      "entity": "Bajaj Finserv",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "licindia.in",
+      "entity": "LIC of India",
+      "category": "banking",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "npci.org.in",
+      "entity": "NPCI",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bhimupi.org.in",
+      "entity": "BHIM UPI",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "paytm.com",
+      "entity": "Paytm",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "phonepe.com",
+      "entity": "PhonePe",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mobikwik.com",
+      "entity": "Mobikwik",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "freecharge.in",
+      "entity": "Freecharge",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cred.club",
+      "entity": "CRED",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "razorpay.com",
+      "entity": "Razorpay",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cashfree.com",
+      "entity": "Cashfree",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "instamojo.com",
+      "entity": "Instamojo",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "payu.in",
+      "entity": "PayU",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ccavenue.com",
+      "entity": "CCAvenue",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "billdesk.com",
+      "entity": "BillDesk",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sliceit.in",
+      "entity": "Slice",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "lazypay.in",
+      "entity": "LazyPay",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "simpl.com",
+      "entity": "Simpl",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "onecard.com",
+      "entity": "OneCard",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "jupiter.money",
+      "entity": "Jupiter",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "fi.money",
+      "entity": "Fi Money",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "niyo.in",
+      "entity": "Niyo",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "zestmoney.com",
+      "entity": "ZestMoney",
+      "category": "payment",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "rbi.org.in",
+      "entity": "Reserve Bank of India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sebi.gov.in",
+      "entity": "SEBI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "irdai.gov.in",
+      "entity": "IRDAI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "incometaxindia.gov.in",
+      "entity": "Income Tax",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "incometaxindiaefiling.gov.in",
+      "entity": "IT E-filing",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "uidai.gov.in",
+      "entity": "UIDAI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "trai.gov.in",
+      "entity": "TRAI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nsdl.com",
+      "entity": "NSDL",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "tin-nsdl.com",
+      "entity": "TIN NSDL",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "utiitsl.com",
+      "entity": "UTIITSL",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "epfindia.gov.in",
+      "entity": "EPFO",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cbic.gov.in",
+      "entity": "CBIC",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "gst.gov.in",
+      "entity": "GST Portal",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mca.gov.in",
+      "entity": "MCA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nclt.gov.in",
+      "entity": "NCLT",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cci.gov.in",
+      "entity": "CCI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nhb.org.in",
+      "entity": "NHB",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nabard.org",
+      "entity": "NABARD",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sidbi.in",
+      "entity": "SIDBI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "eximbankindia.in",
+      "entity": "Exim Bank",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cbi.gov.in",
+      "entity": "CBI",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ncrb.gov.in",
+      "entity": "NCRB",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nia.gov.in",
+      "entity": "NIA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ed.gov.in",
+      "entity": "Enforcement Directorate",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "isro.gov.in",
+      "entity": "ISRO",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "niti.gov.in",
+      "entity": "NITI Aayog",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "digitalindia.gov.in",
+      "entity": "Digital India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mygov.in",
+      "entity": "MyGov",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "pmkisan.gov.in",
+      "entity": "PM Kisan",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "pmjay.gov.in",
+      "entity": "Ayushman Bharat",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "startupindia.gov.in",
+      "entity": "Startup India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "skillindia.gov.in",
+      "entity": "Skill India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "swachhbharat.gov.in",
+      "entity": "Swachh Bharat",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "indiapost.gov.in",
+      "entity": "India Post",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "passportindia.gov.in",
+      "entity": "Passport India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "parivahan.gov.in",
+      "entity": "Parivahan",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "indianrailways.gov.in",
+      "entity": "Indian Railways",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "india.gov.in",
+      "entity": "National Portal",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "makeinindia.com",
+      "entity": "Make in India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "investindia.gov.in",
+      "entity": "Invest India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "pib.gov.in",
+      "entity": "PIB",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "eci.gov.in",
+      "entity": "Election Commission",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "supremecourt.nic.in",
+      "entity": "Supreme Court",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "highcourts.gov.in",
+      "entity": "High Courts",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "esic.gov.in",
+      "entity": "ESIC",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "imd.gov.in",
+      "entity": "IMD",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "dst.gov.in",
+      "entity": "DST",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mea.gov.in",
+      "entity": "MEA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mod.gov.in",
+      "entity": "MOD",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mha.nic.in",
+      "entity": "MHA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ndma.gov.in",
+      "entity": "NDMA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ndrf.gov.in",
+      "entity": "NDRF",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "presidentofindia.gov.in",
+      "entity": "President of India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sansad.in",
+      "entity": "Parliament",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "smartcities.gov.in",
+      "entity": "Smart Cities",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "dbt.gov.in",
+      "entity": "DBT India",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sagarmala.gov.in",
+      "entity": "Sagarmala",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "arogyasetu.gov.in",
+      "entity": "Aarogya Setu",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cowin.gov.in",
+      "entity": "CoWIN",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "abdm.gov.in",
+      "entity": "ABDM",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "icmr.gov.in",
+      "entity": "ICMR",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ncdc.gov.in",
+      "entity": "NCDC",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mohfw.gov.in",
+      "entity": "Ministry of Health",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nmc.org.in",
+      "entity": "NMC",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cdsco.gov.in",
+      "entity": "CDSCO",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nrega.nic.in",
+      "entity": "NREGA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mca.gov.in",
+      "entity": "MCA",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "google.com",
+      "entity": "Google",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "google.co.in",
+      "entity": "Google India",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "youtube.com",
+      "entity": "YouTube",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "gmail.com",
+      "entity": "Gmail",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "facebook.com",
+      "entity": "Facebook",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "instagram.com",
+      "entity": "Instagram",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "twitter.com",
+      "entity": "Twitter",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "x.com",
+      "entity": "X (Twitter)",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "linkedin.com",
+      "entity": "LinkedIn",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "whatsapp.com",
+      "entity": "WhatsApp",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "telegram.org",
+      "entity": "Telegram",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "t.me",
+      "entity": "Telegram Links",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "reddit.com",
+      "entity": "Reddit",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "discord.com",
+      "entity": "Discord",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "slack.com",
+      "entity": "Slack",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "skype.com",
+      "entity": "Skype",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "zoom.us",
+      "entity": "Zoom",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "microsoft.com",
+      "entity": "Microsoft",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "apple.com",
+      "entity": "Apple",
+      "category": "social",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "amazon.in",
+      "entity": "Amazon India",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "amazon.com",
+      "entity": "Amazon",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "flipkart.com",
+      "entity": "Flipkart",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "myntra.com",
+      "entity": "Myntra",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "snapdeal.com",
+      "entity": "Snapdeal",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "meesho.com",
+      "entity": "Meesho",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ajio.com",
+      "entity": "AJIO",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "tatacliq.com",
+      "entity": "Tata CLiQ",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nykaa.com",
+      "entity": "Nykaa",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "1mg.com",
+      "entity": "1mg",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "pharmeasy.in",
+      "entity": "PharmEasy",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bigbasket.com",
+      "entity": "BigBasket",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "swiggy.com",
+      "entity": "Swiggy",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "zomato.com",
+      "entity": "Zomato",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ubereats.com",
+      "entity": "Uber Eats",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "dream11.com",
+      "entity": "Dream11",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "makemytrip.com",
+      "entity": "MakeMyTrip",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "goibibo.com",
+      "entity": "Goibibo",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "irctc.co.in",
+      "entity": "IRCTC",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "redbus.in",
+      "entity": "RedBus",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "oyo.com",
+      "entity": "OYO",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "khaatabook.com",
+      "entity": "Khatabook",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "vyaparapp.com",
+      "entity": "Vyapar",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "zoho.com",
+      "entity": "Zoho",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "freshworks.com",
+      "entity": "Freshworks",
+      "category": "ecommerce",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "jio.com",
+      "entity": "Reliance Jio",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "airtel.in",
+      "entity": "Airtel",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "vi.in",
+      "entity": "Vodafone Idea",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "bsnl.co.in",
+      "entity": "BSNL",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mtnl.in",
+      "entity": "MTNL",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "reliance.com",
+      "entity": "Reliance Industries",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "tata.com",
+      "entity": "Tata Group",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "adani.com",
+      "entity": "Adani Group",
+      "category": "telecom",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "byjus.com",
+      "entity": "BYJUS",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "unacademy.com",
+      "entity": "Unacademy",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "vedantu.com",
+      "entity": "Vedantu",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "toppr.com",
+      "entity": "Toppr",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "doubtnut.com",
+      "entity": "Doubtnut",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "coursera.org",
+      "entity": "Coursera",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "udemy.com",
+      "entity": "Udemy",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "edx.org",
+      "entity": "edX",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nptel.ac.in",
+      "entity": "NPTEL",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "swayam.gov.in",
+      "entity": "Swayam",
+      "category": "education",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "apollohospitals.com",
+      "entity": "Apollo Hospitals",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "fortishealthcare.com",
+      "entity": "Fortis Healthcare",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "narayanhealth.org",
+      "entity": "Narayan Health",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "maxhealthcare.in",
+      "entity": "Max Healthcare",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "aiims.edu",
+      "entity": "AIIMS",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "practo.com",
+      "entity": "Practo",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "healthifyme.com",
+      "entity": "HealthifyMe",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "cult.fit",
+      "entity": "Cult.fit",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nabh.co",
+      "entity": "NABH",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nabl.org.in",
+      "entity": "NABL",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mciindia.org",
+      "entity": "MCI",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "niv.co.in",
+      "entity": "NIV",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nhm.gov.in",
+      "entity": "NHM",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "abha.gov.in",
+      "entity": "ABHA",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ndhm.gov.in",
+      "entity": "NDHM",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nha.gov.in",
+      "entity": "NHA",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "covid19.gov.in",
+      "entity": "COVID-19 Portal",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "docsapp.in",
+      "entity": "DocsApp",
+      "category": "healthcare",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "karnataka.gov.in",
+      "entity": "Karnataka Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "tn.gov.in",
+      "entity": "Tamil Nadu Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "delhi.gov.in",
+      "entity": "Delhi Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "wb.gov.in",
+      "entity": "West Bengal Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "up.gov.in",
+      "entity": "Uttar Pradesh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "rajasthan.gov.in",
+      "entity": "Rajasthan Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mp.gov.in",
+      "entity": "Madhya Pradesh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "gujarat.gov.in",
+      "entity": "Gujarat Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "kerala.gov.in",
+      "entity": "Kerala Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "assam.gov.in",
+      "entity": "Assam Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "odisha.gov.in",
+      "entity": "Odisha Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "punjab.gov.in",
+      "entity": "Punjab Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "haryana.gov.in",
+      "entity": "Haryana Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "jharkhand.gov.in",
+      "entity": "Jharkhand Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "chhattisgarh.gov.in",
+      "entity": "Chhattisgarh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "goa.gov.in",
+      "entity": "Goa Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "himachal.nic.in",
+      "entity": "Himachal Pradesh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "ladakh.gov.in",
+      "entity": "Ladakh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "chandigarh.gov.in",
+      "entity": "Chandigarh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "puducherry.gov.in",
+      "entity": "Puducherry Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "meghalaya.gov.in",
+      "entity": "Meghalaya Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "mizoram.gov.in",
+      "entity": "Mizoram Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "nagaland.gov.in",
+      "entity": "Nagaland Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "sikkim.gov.in",
+      "entity": "Sikkim Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "tripura.gov.in",
+      "entity": "Tripura Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "arunachal.gov.in",
+      "entity": "Arunachal Pradesh Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "manipur.gov.in",
+      "entity": "Manipur Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "andaman.gov.in",
+      "entity": "Andaman & Nicobar Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    },
+    {
+      "domain": "lakshadweep.gov.in",
+      "entity": "Lakshadweep Government",
+      "category": "government",
+      "verified": true,
+      "added_date": "2024-01-01"
+    }
+  ]
+}

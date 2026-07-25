@@ -1,0 +1,433 @@
+{
+  "audit_summary": {
+    "total_legitimate_content": 20,
+    "false_positives_detected": 20,
+    "false_positive_rate": "100.0%",
+    "threshold_used": 0.5,
+    "grade": "D"
+  },
+  "false_positives": [
+    {
+      "content": "Dear Customer, your account has been updated successfully.",
+      "risk_score": 0.66,
+      "risk_level": "high",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        },
+        {
+          "rule_id": "R009",
+          "rule_name": "Generic Greeting",
+          "risk_score": 0.4,
+          "evidence": "Generic greeting patterns detected: \\bdear\\s*(?:customer|user|member|sir|madam|valued|trusted|esteemed)\\b"
+        }
+      ]
+    },
+    {
+      "content": "Your OTP for login is 123456. Do not share with anyone.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Congratulations on your purchase! Your order is confirmed.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your monthly account statement is ready for download.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Thank you for banking with us. Your feedback is valuable.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your KYC has been verified. Thank you for your patience.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Meeting scheduled for tomorrow at 3pm. Please confirm attendance.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Happy Diwali! Wishing you and your family a prosperous year.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your password was changed successfully. If this wasn't you, contact us.",
+      "risk_score": 1.0,
+      "risk_level": "critical",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R002",
+          "rule_name": "Credential Request",
+          "risk_score": 0.95,
+          "evidence": "Credential request patterns detected: \\bpassword\\b"
+        },
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Welcome to our platform. Here's how to get started.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your subscription has been renewed. Next billing date: 15/08/2026.",
+      "risk_score": 0.5167,
+      "risk_level": "medium",
+      "triggered_phrases": [
+        {
+          "phrase": "Subscription lapsed",
+          "type": "urgency",
+          "confidence": 0.6634285714285714,
+          "position": -1,
+          "match_type": "fuzzy_variation",
+          "scam_category": "subscription_scam"
+        }
+      ],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "We've received your application. We'll get back to you in 2-3 business days.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your account balance is Rs. 25,000. Last transaction: Rs. 500 credited.",
+      "risk_score": 0.514,
+      "risk_level": "medium",
+      "triggered_phrases": [
+        {
+          "phrase": "OLX transaction",
+          "type": "urgency",
+          "confidence": 0.6508125,
+          "position": -1,
+          "match_type": "fuzzy_variation",
+          "scam_category": "social_engineering"
+        }
+      ],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Important: Update your profile to continue using our services.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your transaction of Rs. 1,500 was successful. UPI Ref: 1234567890",
+      "risk_score": 0.5163,
+      "risk_level": "medium",
+      "triggered_phrases": [
+        {
+          "phrase": "OLX transaction",
+          "type": "urgency",
+          "confidence": 0.6718064516129032,
+          "position": -1,
+          "match_type": "fuzzy_variation",
+          "scam_category": "social_engineering"
+        },
+        {
+          "phrase": "Transaction refund",
+          "type": "credential_request",
+          "confidence": 0.6508125,
+          "position": -1,
+          "match_type": "fuzzy_variation",
+          "scam_category": "upi_fraud"
+        }
+      ],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Dear user, your OTP for transaction verification is 654321.",
+      "risk_score": 0.5469,
+      "risk_level": "medium",
+      "triggered_phrases": [
+        {
+          "phrase": "OLX transaction",
+          "type": "urgency",
+          "confidence": 0.6942000000000002,
+          "position": -1,
+          "match_type": "fuzzy_variation",
+          "scam_category": "social_engineering"
+        },
+        {
+          "phrase": "IG verification",
+          "type": "reward",
+          "confidence": 0.6552000000000001,
+          "position": -1,
+          "match_type": "fuzzy_variation",
+          "scam_category": "social_engineering"
+        }
+      ],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        },
+        {
+          "rule_id": "R009",
+          "rule_name": "Generic Greeting",
+          "risk_score": 0.4,
+          "evidence": "Generic greeting patterns detected: \\bdear\\s*(?:customer|user|member|sir|madam|valued|trusted|esteemed)\\b"
+        }
+      ]
+    },
+    {
+      "content": "Your EMI of Rs. 5,000 has been debited from your account.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Account alert: Credit of Rs. 50,000 on 25/07/2026.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Your request for account statement has been processed.",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    },
+    {
+      "content": "Thank you for visiting our branch. How may we help you?",
+      "risk_score": 0.6,
+      "risk_level": "medium",
+      "triggered_phrases": [],
+      "triggered_rules": [
+        {
+          "rule_id": "R008",
+          "rule_name": "Unknown Sender",
+          "risk_score": 0.6,
+          "evidence": "Sender type is 'unknown'"
+        }
+      ]
+    }
+  ],
+  "problematic_rules": [
+    {
+      "rule_id": "R008",
+      "trigger_count": 20,
+      "recommendation": "Consider adjusting threshold for R008"
+    },
+    {
+      "rule_id": "R009",
+      "trigger_count": 2,
+      "recommendation": "Consider adjusting threshold for R009"
+    }
+  ],
+  "problematic_phrases": [
+    {
+      "phrase": "OLX transaction",
+      "trigger_count": 3,
+      "recommendation": "Review phrase 'OLX transaction' for false positive risk"
+    },
+    {
+      "phrase": "Subscription lapsed",
+      "trigger_count": 1,
+      "recommendation": "Review phrase 'Subscription lapsed' for false positive risk"
+    },
+    {
+      "phrase": "Transaction refund",
+      "trigger_count": 1,
+      "recommendation": "Review phrase 'Transaction refund' for false positive risk"
+    },
+    {
+      "phrase": "IG verification",
+      "trigger_count": 1,
+      "recommendation": "Review phrase 'IG verification' for false positive risk"
+    }
+  ],
+  "suggestions": [
+    {
+      "type": "rule_adjustment",
+      "target": "R008",
+      "suggestion": "Increase risk score threshold for R008 to reduce false positives",
+      "priority": "high"
+    },
+    {
+      "type": "rule_adjustment",
+      "target": "R009",
+      "suggestion": "Increase risk score threshold for R009 to reduce false positives",
+      "priority": "medium"
+    },
+    {
+      "type": "phrase_review",
+      "target": "OLX transaction",
+      "suggestion": "Consider adding 'OLX transaction' to legitimate whitelist or reducing confidence",
+      "priority": "high"
+    },
+    {
+      "type": "phrase_review",
+      "target": "Subscription lapsed",
+      "suggestion": "Consider adding 'Subscription lapsed' to legitimate whitelist or reducing confidence",
+      "priority": "low"
+    },
+    {
+      "type": "phrase_review",
+      "target": "Transaction refund",
+      "suggestion": "Consider adding 'Transaction refund' to legitimate whitelist or reducing confidence",
+      "priority": "low"
+    },
+    {
+      "type": "phrase_review",
+      "target": "IG verification",
+      "suggestion": "Consider adding 'IG verification' to legitimate whitelist or reducing confidence",
+      "priority": "low"
+    }
+  ]
+}

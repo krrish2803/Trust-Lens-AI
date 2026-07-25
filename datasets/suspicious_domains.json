@@ -1,0 +1,7007 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-25",
+  "total_domains": 1000,
+  "domains": [
+    {
+      "domain": "sbi-auth.site",
+      "impersonates": "Sbi Bank",
+      "threat_level": "high",
+      "first_seen": "2025-12-04",
+      "category": "banking"
+    },
+    {
+      "domain": "sbi-auth.in",
+      "impersonates": "Sbi Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-10-14",
+      "category": "banking"
+    },
+    {
+      "domain": "sbi-verify.com",
+      "impersonates": "Sbi Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-02-07",
+      "category": "banking"
+    },
+    {
+      "domain": "sbi-auth.org",
+      "impersonates": "Sbi Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-01",
+      "category": "banking"
+    },
+    {
+      "domain": "sbi-auth.net",
+      "impersonates": "Sbi Bank",
+      "threat_level": "high",
+      "first_seen": "2025-12-21",
+      "category": "banking"
+    },
+    {
+      "domain": "hdfc-portal.biz",
+      "impersonates": "HDFC Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-03-23",
+      "category": "banking"
+    },
+    {
+      "domain": "hdfc-service.club",
+      "impersonates": "HDFC Bank",
+      "threat_level": "high",
+      "first_seen": "2025-05-05",
+      "category": "banking"
+    },
+    {
+      "domain": "hdfc-official.xyz",
+      "impersonates": "HDFC Bank",
+      "threat_level": "high",
+      "first_seen": "2025-02-03",
+      "category": "banking"
+    },
+    {
+      "domain": "hdfc-dept.net",
+      "impersonates": "HDFC Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-06-28",
+      "category": "banking"
+    },
+    {
+      "domain": "hdfc-team.top",
+      "impersonates": "HDFC Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-26",
+      "category": "banking"
+    },
+    {
+      "domain": "icici-update.com",
+      "impersonates": "ICICI Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-27",
+      "category": "banking"
+    },
+    {
+      "domain": "icici-team.top",
+      "impersonates": "ICICI Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-23",
+      "category": "banking"
+    },
+    {
+      "domain": "icici-update.club",
+      "impersonates": "ICICI Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-11-08",
+      "category": "banking"
+    },
+    {
+      "domain": "icici-help.in",
+      "impersonates": "ICICI Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-04-28",
+      "category": "banking"
+    },
+    {
+      "domain": "icici-login.xyz",
+      "impersonates": "ICICI Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-15",
+      "category": "banking"
+    },
+    {
+      "domain": "axis-official.site",
+      "impersonates": "AXIS Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-23",
+      "category": "banking"
+    },
+    {
+      "domain": "axis-update.info",
+      "impersonates": "AXIS Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-06",
+      "category": "banking"
+    },
+    {
+      "domain": "axis-auth.co",
+      "impersonates": "AXIS Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-06",
+      "category": "banking"
+    },
+    {
+      "domain": "axis-check.biz",
+      "impersonates": "AXIS Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-21",
+      "category": "banking"
+    },
+    {
+      "domain": "axis-auth.club",
+      "impersonates": "AXIS Bank",
+      "threat_level": "high",
+      "first_seen": "2025-11-11",
+      "category": "banking"
+    },
+    {
+      "domain": "yes-portal.com",
+      "impersonates": "Yes Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-04-19",
+      "category": "banking"
+    },
+    {
+      "domain": "yes-support.net",
+      "impersonates": "Yes Bank",
+      "threat_level": "high",
+      "first_seen": "2025-11-16",
+      "category": "banking"
+    },
+    {
+      "domain": "yes-dept.biz",
+      "impersonates": "Yes Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-05",
+      "category": "banking"
+    },
+    {
+      "domain": "yes-portal.info",
+      "impersonates": "Yes Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-24",
+      "category": "banking"
+    },
+    {
+      "domain": "yes-auth.xyz",
+      "impersonates": "Yes Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-24",
+      "category": "banking"
+    },
+    {
+      "domain": "kotak-auth.online",
+      "impersonates": "KOTAK Bank",
+      "threat_level": "high",
+      "first_seen": "2025-09-16",
+      "category": "banking"
+    },
+    {
+      "domain": "kotak-update.xyz",
+      "impersonates": "KOTAK Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-02-05",
+      "category": "banking"
+    },
+    {
+      "domain": "kotak-netbanking.biz",
+      "impersonates": "KOTAK Bank",
+      "threat_level": "low",
+      "first_seen": "2025-07-20",
+      "category": "banking"
+    },
+    {
+      "domain": "kotak-update.site",
+      "impersonates": "KOTAK Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-20",
+      "category": "banking"
+    },
+    {
+      "domain": "kotak-check.info",
+      "impersonates": "KOTAK Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-18",
+      "category": "banking"
+    },
+    {
+      "domain": "pnb-support.com",
+      "impersonates": "Pnb Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-05-14",
+      "category": "banking"
+    },
+    {
+      "domain": "pnb-netbanking.site",
+      "impersonates": "Pnb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-24",
+      "category": "banking"
+    },
+    {
+      "domain": "pnb-portal.in",
+      "impersonates": "Pnb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-17",
+      "category": "banking"
+    },
+    {
+      "domain": "pnb-login.club",
+      "impersonates": "Pnb Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-27",
+      "category": "banking"
+    },
+    {
+      "domain": "pnb-validate.org",
+      "impersonates": "Pnb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-05",
+      "category": "banking"
+    },
+    {
+      "domain": "bob-support.info",
+      "impersonates": "Bob Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-04",
+      "category": "banking"
+    },
+    {
+      "domain": "bob-team.co",
+      "impersonates": "Bob Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-02",
+      "category": "banking"
+    },
+    {
+      "domain": "bob-auth.club",
+      "impersonates": "Bob Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-02-03",
+      "category": "banking"
+    },
+    {
+      "domain": "bob-confirm.online",
+      "impersonates": "Bob Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-09-25",
+      "category": "banking"
+    },
+    {
+      "domain": "bob-kyc.com",
+      "impersonates": "Bob Bank",
+      "threat_level": "high",
+      "first_seen": "2025-11-16",
+      "category": "banking"
+    },
+    {
+      "domain": "canara-official.club",
+      "impersonates": "CANARA Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-23",
+      "category": "banking"
+    },
+    {
+      "domain": "canara-official.co",
+      "impersonates": "CANARA Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-13",
+      "category": "banking"
+    },
+    {
+      "domain": "canara-team.org",
+      "impersonates": "CANARA Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-09-15",
+      "category": "banking"
+    },
+    {
+      "domain": "canara-login.biz",
+      "impersonates": "CANARA Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-03",
+      "category": "banking"
+    },
+    {
+      "domain": "canara-support.xyz",
+      "impersonates": "CANARA Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-10-18",
+      "category": "banking"
+    },
+    {
+      "domain": "union-verify.net",
+      "impersonates": "UNION Bank",
+      "threat_level": "high",
+      "first_seen": "2025-02-02",
+      "category": "banking"
+    },
+    {
+      "domain": "union-support.online",
+      "impersonates": "UNION Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-09-08",
+      "category": "banking"
+    },
+    {
+      "domain": "union-portal.biz",
+      "impersonates": "UNION Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-07",
+      "category": "banking"
+    },
+    {
+      "domain": "union-auth.com",
+      "impersonates": "UNION Bank",
+      "threat_level": "high",
+      "first_seen": "2025-12-19",
+      "category": "banking"
+    },
+    {
+      "domain": "union-confirm.in",
+      "impersonates": "UNION Bank",
+      "threat_level": "high",
+      "first_seen": "2025-08-26",
+      "category": "banking"
+    },
+    {
+      "domain": "idbi-team.xyz",
+      "impersonates": "IDBI Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-15",
+      "category": "banking"
+    },
+    {
+      "domain": "idbi-verify.net",
+      "impersonates": "IDBI Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-21",
+      "category": "banking"
+    },
+    {
+      "domain": "idbi-login.in",
+      "impersonates": "IDBI Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-07-24",
+      "category": "banking"
+    },
+    {
+      "domain": "idbi-support.online",
+      "impersonates": "IDBI Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-04-07",
+      "category": "banking"
+    },
+    {
+      "domain": "idbi-official.biz",
+      "impersonates": "IDBI Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-05",
+      "category": "banking"
+    },
+    {
+      "domain": "indian-update.xyz",
+      "impersonates": "INDIAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-09-04",
+      "category": "banking"
+    },
+    {
+      "domain": "indian-verify.co",
+      "impersonates": "INDIAN Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-27",
+      "category": "banking"
+    },
+    {
+      "domain": "indian-secure.org",
+      "impersonates": "INDIAN Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-04-06",
+      "category": "banking"
+    },
+    {
+      "domain": "indian-service.top",
+      "impersonates": "INDIAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-07",
+      "category": "banking"
+    },
+    {
+      "domain": "indian-dept.net",
+      "impersonates": "INDIAN Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-03-13",
+      "category": "banking"
+    },
+    {
+      "domain": "central-service.com",
+      "impersonates": "CENTRAL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-26",
+      "category": "banking"
+    },
+    {
+      "domain": "central-auth.xyz",
+      "impersonates": "CENTRAL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-16",
+      "category": "banking"
+    },
+    {
+      "domain": "central-kyc.org",
+      "impersonates": "CENTRAL Bank",
+      "threat_level": "high",
+      "first_seen": "2025-05-07",
+      "category": "banking"
+    },
+    {
+      "domain": "central-verify.top",
+      "impersonates": "CENTRAL Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-18",
+      "category": "banking"
+    },
+    {
+      "domain": "central-verify.online",
+      "impersonates": "CENTRAL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-02",
+      "category": "banking"
+    },
+    {
+      "domain": "uco-verify.com",
+      "impersonates": "Uco Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-02-28",
+      "category": "banking"
+    },
+    {
+      "domain": "uco-netbanking.online",
+      "impersonates": "Uco Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-10-03",
+      "category": "banking"
+    },
+    {
+      "domain": "uco-auth.top",
+      "impersonates": "Uco Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-02-19",
+      "category": "banking"
+    },
+    {
+      "domain": "uco-auth.club",
+      "impersonates": "Uco Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-02",
+      "category": "banking"
+    },
+    {
+      "domain": "uco-update.co",
+      "impersonates": "Uco Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-19",
+      "category": "banking"
+    },
+    {
+      "domain": "bankofindia-support.online",
+      "impersonates": "BANKOFINDIA Bank",
+      "threat_level": "high",
+      "first_seen": "2025-05-13",
+      "category": "banking"
+    },
+    {
+      "domain": "bankofindia-kyc.club",
+      "impersonates": "BANKOFINDIA Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-10",
+      "category": "banking"
+    },
+    {
+      "domain": "bankofindia-check.info",
+      "impersonates": "BANKOFINDIA Bank",
+      "threat_level": "high",
+      "first_seen": "2025-02-01",
+      "category": "banking"
+    },
+    {
+      "domain": "bankofindia-check.org",
+      "impersonates": "BANKOFINDIA Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-04",
+      "category": "banking"
+    },
+    {
+      "domain": "bankofindia-update.net",
+      "impersonates": "BANKOFINDIA Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-17",
+      "category": "banking"
+    },
+    {
+      "domain": "fino-team.org",
+      "impersonates": "FINO Bank",
+      "threat_level": "high",
+      "first_seen": "2025-03-15",
+      "category": "banking"
+    },
+    {
+      "domain": "fino-auth.co",
+      "impersonates": "FINO Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-20",
+      "category": "banking"
+    },
+    {
+      "domain": "fino-validate.info",
+      "impersonates": "FINO Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-11-27",
+      "category": "banking"
+    },
+    {
+      "domain": "fino-auth.in",
+      "impersonates": "FINO Bank",
+      "threat_level": "high",
+      "first_seen": "2025-11-04",
+      "category": "banking"
+    },
+    {
+      "domain": "fino-kyc.net",
+      "impersonates": "FINO Bank",
+      "threat_level": "high",
+      "first_seen": "2025-02-04",
+      "category": "banking"
+    },
+    {
+      "domain": "airtel-official.biz",
+      "impersonates": "AIRTEL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-07",
+      "category": "banking"
+    },
+    {
+      "domain": "airtel-portal.club",
+      "impersonates": "AIRTEL Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-09",
+      "category": "banking"
+    },
+    {
+      "domain": "airtel-verify.co",
+      "impersonates": "AIRTEL Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-11-14",
+      "category": "banking"
+    },
+    {
+      "domain": "airtel-portal.org",
+      "impersonates": "AIRTEL Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-01-11",
+      "category": "banking"
+    },
+    {
+      "domain": "airtel-kyc.site",
+      "impersonates": "AIRTEL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-06",
+      "category": "banking"
+    },
+    {
+      "domain": "paytm-login.biz",
+      "impersonates": "PAYTM Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-12-05",
+      "category": "banking"
+    },
+    {
+      "domain": "paytm-auth.top",
+      "impersonates": "PAYTM Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-06-19",
+      "category": "banking"
+    },
+    {
+      "domain": "paytm-auth.club",
+      "impersonates": "PAYTM Bank",
+      "threat_level": "high",
+      "first_seen": "2025-07-05",
+      "category": "banking"
+    },
+    {
+      "domain": "paytm-verify.xyz",
+      "impersonates": "PAYTM Bank",
+      "threat_level": "high",
+      "first_seen": "2025-06-26",
+      "category": "banking"
+    },
+    {
+      "domain": "paytm-verify.com",
+      "impersonates": "PAYTM Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-22",
+      "category": "banking"
+    },
+    {
+      "domain": "jio-kyc.net",
+      "impersonates": "Jio Bank",
+      "threat_level": "high",
+      "first_seen": "2025-03-26",
+      "category": "banking"
+    },
+    {
+      "domain": "jio-netbanking.site",
+      "impersonates": "Jio Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-06",
+      "category": "banking"
+    },
+    {
+      "domain": "jio-support.in",
+      "impersonates": "Jio Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-28",
+      "category": "banking"
+    },
+    {
+      "domain": "jio-auth.info",
+      "impersonates": "Jio Bank",
+      "threat_level": "high",
+      "first_seen": "2025-03-26",
+      "category": "banking"
+    },
+    {
+      "domain": "jio-login.xyz",
+      "impersonates": "Jio Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-28",
+      "category": "banking"
+    },
+    {
+      "domain": "ippb-help.top",
+      "impersonates": "IPPB Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-01",
+      "category": "banking"
+    },
+    {
+      "domain": "ippb-official.net",
+      "impersonates": "IPPB Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-06-09",
+      "category": "banking"
+    },
+    {
+      "domain": "ippb-update.site",
+      "impersonates": "IPPB Bank",
+      "threat_level": "high",
+      "first_seen": "2025-06-21",
+      "category": "banking"
+    },
+    {
+      "domain": "ippb-validate.biz",
+      "impersonates": "IPPB Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-27",
+      "category": "banking"
+    },
+    {
+      "domain": "ippb-auth.info",
+      "impersonates": "IPPB Bank",
+      "threat_level": "high",
+      "first_seen": "2025-01-04",
+      "category": "banking"
+    },
+    {
+      "domain": "bandhan-login.org",
+      "impersonates": "BANDHAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-12",
+      "category": "banking"
+    },
+    {
+      "domain": "bandhan-support.co",
+      "impersonates": "BANDHAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-17",
+      "category": "banking"
+    },
+    {
+      "domain": "bandhan-login.online",
+      "impersonates": "BANDHAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-07",
+      "category": "banking"
+    },
+    {
+      "domain": "bandhan-portal.biz",
+      "impersonates": "BANDHAN Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-12-14",
+      "category": "banking"
+    },
+    {
+      "domain": "bandhan-secure.com",
+      "impersonates": "BANDHAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-09-22",
+      "category": "banking"
+    },
+    {
+      "domain": "federal-update.biz",
+      "impersonates": "FEDERAL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-20",
+      "category": "banking"
+    },
+    {
+      "domain": "federal-support.site",
+      "impersonates": "FEDERAL Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-24",
+      "category": "banking"
+    },
+    {
+      "domain": "federal-help.net",
+      "impersonates": "FEDERAL Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-22",
+      "category": "banking"
+    },
+    {
+      "domain": "federal-service.info",
+      "impersonates": "FEDERAL Bank",
+      "threat_level": "high",
+      "first_seen": "2025-07-23",
+      "category": "banking"
+    },
+    {
+      "domain": "federal-help.xyz",
+      "impersonates": "FEDERAL Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-07",
+      "category": "banking"
+    },
+    {
+      "domain": "karur-dept.xyz",
+      "impersonates": "KARUR Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-10",
+      "category": "banking"
+    },
+    {
+      "domain": "karur-help.site",
+      "impersonates": "KARUR Bank",
+      "threat_level": "high",
+      "first_seen": "2025-07-26",
+      "category": "banking"
+    },
+    {
+      "domain": "karur-support.biz",
+      "impersonates": "KARUR Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-15",
+      "category": "banking"
+    },
+    {
+      "domain": "karur-official.co",
+      "impersonates": "KARUR Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-26",
+      "category": "banking"
+    },
+    {
+      "domain": "karur-netbanking.org",
+      "impersonates": "KARUR Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-10",
+      "category": "banking"
+    },
+    {
+      "domain": "cityunion-auth.club",
+      "impersonates": "CITYUNION Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-08",
+      "category": "banking"
+    },
+    {
+      "domain": "cityunion-official.site",
+      "impersonates": "CITYUNION Bank",
+      "threat_level": "high",
+      "first_seen": "2025-01-02",
+      "category": "banking"
+    },
+    {
+      "domain": "cityunion-auth.online",
+      "impersonates": "CITYUNION Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-28",
+      "category": "banking"
+    },
+    {
+      "domain": "cityunion-update.info",
+      "impersonates": "CITYUNION Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-21",
+      "category": "banking"
+    },
+    {
+      "domain": "cityunion-official.in",
+      "impersonates": "CITYUNION Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-13",
+      "category": "banking"
+    },
+    {
+      "domain": "dcb-login.top",
+      "impersonates": "Dcb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-06",
+      "category": "banking"
+    },
+    {
+      "domain": "dcb-validate.xyz",
+      "impersonates": "Dcb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-18",
+      "category": "banking"
+    },
+    {
+      "domain": "dcb-auth.net",
+      "impersonates": "Dcb Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-08-05",
+      "category": "banking"
+    },
+    {
+      "domain": "dcb-check.co",
+      "impersonates": "Dcb Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-18",
+      "category": "banking"
+    },
+    {
+      "domain": "dcb-support.com",
+      "impersonates": "Dcb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-27",
+      "category": "banking"
+    },
+    {
+      "domain": "lvb-netbanking.biz",
+      "impersonates": "Lvb Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-15",
+      "category": "banking"
+    },
+    {
+      "domain": "lvb-portal.club",
+      "impersonates": "Lvb Bank",
+      "threat_level": "high",
+      "first_seen": "2025-11-09",
+      "category": "banking"
+    },
+    {
+      "domain": "lvb-validate.xyz",
+      "impersonates": "Lvb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-08",
+      "category": "banking"
+    },
+    {
+      "domain": "lvb-portal.site",
+      "impersonates": "Lvb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-02-23",
+      "category": "banking"
+    },
+    {
+      "domain": "lvb-help.top",
+      "impersonates": "Lvb Bank",
+      "threat_level": "high",
+      "first_seen": "2025-05-11",
+      "category": "banking"
+    },
+    {
+      "domain": "tmb-auth.info",
+      "impersonates": "Tmb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-05",
+      "category": "banking"
+    },
+    {
+      "domain": "tmb-official.club",
+      "impersonates": "Tmb Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-07-14",
+      "category": "banking"
+    },
+    {
+      "domain": "tmb-support.in",
+      "impersonates": "Tmb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-14",
+      "category": "banking"
+    },
+    {
+      "domain": "tmb-verify.co",
+      "impersonates": "Tmb Bank",
+      "threat_level": "high",
+      "first_seen": "2025-07-13",
+      "category": "banking"
+    },
+    {
+      "domain": "tmb-secure.site",
+      "impersonates": "Tmb Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-16",
+      "category": "banking"
+    },
+    {
+      "domain": "karnataka-auth.com",
+      "impersonates": "KARNATAKA Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-18",
+      "category": "banking"
+    },
+    {
+      "domain": "karnataka-auth.info",
+      "impersonates": "KARNATAKA Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-09",
+      "category": "banking"
+    },
+    {
+      "domain": "karnataka-service.org",
+      "impersonates": "KARNATAKA Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-13",
+      "category": "banking"
+    },
+    {
+      "domain": "karnataka-support.xyz",
+      "impersonates": "KARNATAKA Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-26",
+      "category": "banking"
+    },
+    {
+      "domain": "karnataka-dept.club",
+      "impersonates": "KARNATAKA Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-27",
+      "category": "banking"
+    },
+    {
+      "domain": "southindian-dept.top",
+      "impersonates": "SOUTHINDIAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "banking"
+    },
+    {
+      "domain": "southindian-secure.co",
+      "impersonates": "SOUTHINDIAN Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-11-14",
+      "category": "banking"
+    },
+    {
+      "domain": "southindian-kyc.online",
+      "impersonates": "SOUTHINDIAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-02",
+      "category": "banking"
+    },
+    {
+      "domain": "southindian-portal.club",
+      "impersonates": "SOUTHINDIAN Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-06-07",
+      "category": "banking"
+    },
+    {
+      "domain": "southindian-check.com",
+      "impersonates": "SOUTHINDIAN Bank",
+      "threat_level": "high",
+      "first_seen": "2025-06-25",
+      "category": "banking"
+    },
+    {
+      "domain": "dhanlaxmi-confirm.xyz",
+      "impersonates": "DHANLAXMI Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-12-18",
+      "category": "banking"
+    },
+    {
+      "domain": "dhanlaxmi-verify.org",
+      "impersonates": "DHANLAXMI Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-21",
+      "category": "banking"
+    },
+    {
+      "domain": "dhanlaxmi-update.biz",
+      "impersonates": "DHANLAXMI Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-25",
+      "category": "banking"
+    },
+    {
+      "domain": "dhanlaxmi-secure.site",
+      "impersonates": "DHANLAXMI Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-27",
+      "category": "banking"
+    },
+    {
+      "domain": "dhanlaxmi-secure.in",
+      "impersonates": "DHANLAXMI Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-08",
+      "category": "banking"
+    },
+    {
+      "domain": "rbl-portal.co",
+      "impersonates": "Rbl Bank",
+      "threat_level": "high",
+      "first_seen": "2025-03-20",
+      "category": "banking"
+    },
+    {
+      "domain": "rbl-login.top",
+      "impersonates": "Rbl Bank",
+      "threat_level": "high",
+      "first_seen": "2025-05-04",
+      "category": "banking"
+    },
+    {
+      "domain": "rbl-secure.in",
+      "impersonates": "Rbl Bank",
+      "threat_level": "high",
+      "first_seen": "2025-10-22",
+      "category": "banking"
+    },
+    {
+      "domain": "rbl-dept.net",
+      "impersonates": "Rbl Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-07",
+      "category": "banking"
+    },
+    {
+      "domain": "rbl-update.site",
+      "impersonates": "Rbl Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-27",
+      "category": "banking"
+    },
+    {
+      "domain": "indusind-verify.site",
+      "impersonates": "INDUSIND Bank",
+      "threat_level": "high",
+      "first_seen": "2025-09-14",
+      "category": "banking"
+    },
+    {
+      "domain": "indusind-team.net",
+      "impersonates": "INDUSIND Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-09-21",
+      "category": "banking"
+    },
+    {
+      "domain": "indusind-support.in",
+      "impersonates": "INDUSIND Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-07-27",
+      "category": "banking"
+    },
+    {
+      "domain": "indusind-confirm.org",
+      "impersonates": "INDUSIND Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-07-12",
+      "category": "banking"
+    },
+    {
+      "domain": "indusind-check.online",
+      "impersonates": "INDUSIND Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-14",
+      "category": "banking"
+    },
+    {
+      "domain": "bajaj-check.co",
+      "impersonates": "BAJAJ Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-19",
+      "category": "banking"
+    },
+    {
+      "domain": "bajaj-portal.club",
+      "impersonates": "BAJAJ Bank",
+      "threat_level": "high",
+      "first_seen": "2025-04-27",
+      "category": "banking"
+    },
+    {
+      "domain": "bajaj-update.org",
+      "impersonates": "BAJAJ Bank",
+      "threat_level": "high",
+      "first_seen": "2025-08-08",
+      "category": "banking"
+    },
+    {
+      "domain": "bajaj-check.site",
+      "impersonates": "BAJAJ Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "banking"
+    },
+    {
+      "domain": "bajaj-dept.top",
+      "impersonates": "BAJAJ Bank",
+      "threat_level": "high",
+      "first_seen": "2025-01-16",
+      "category": "banking"
+    },
+    {
+      "domain": "lic-portal.info",
+      "impersonates": "Lic Bank",
+      "threat_level": "high",
+      "first_seen": "2025-05-20",
+      "category": "banking"
+    },
+    {
+      "domain": "lic-portal.co",
+      "impersonates": "Lic Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-17",
+      "category": "banking"
+    },
+    {
+      "domain": "lic-official.top",
+      "impersonates": "Lic Bank",
+      "threat_level": "critical",
+      "first_seen": "2025-04-24",
+      "category": "banking"
+    },
+    {
+      "domain": "lic-service.net",
+      "impersonates": "Lic Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-09-25",
+      "category": "banking"
+    },
+    {
+      "domain": "lic-auth.biz",
+      "impersonates": "Lic Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-21",
+      "category": "banking"
+    },
+    {
+      "domain": "paytm-update.biz",
+      "impersonates": "Paytm",
+      "threat_level": "high",
+      "first_seen": "2025-04-13",
+      "category": "payment"
+    },
+    {
+      "domain": "paytm-auth.top",
+      "impersonates": "Paytm",
+      "threat_level": "high",
+      "first_seen": "2025-11-19",
+      "category": "payment"
+    },
+    {
+      "domain": "paytm-team.site",
+      "impersonates": "Paytm",
+      "threat_level": "high",
+      "first_seen": "2025-09-17",
+      "category": "payment"
+    },
+    {
+      "domain": "paytm-team.com",
+      "impersonates": "Paytm",
+      "threat_level": "high",
+      "first_seen": "2025-12-18",
+      "category": "payment"
+    },
+    {
+      "domain": "phonepe-help.info",
+      "impersonates": "PhonePe",
+      "threat_level": "high",
+      "first_seen": "2025-04-04",
+      "category": "payment"
+    },
+    {
+      "domain": "phonepe-official.biz",
+      "impersonates": "PhonePe",
+      "threat_level": "high",
+      "first_seen": "2025-02-24",
+      "category": "payment"
+    },
+    {
+      "domain": "phonepe-auth.top",
+      "impersonates": "PhonePe",
+      "threat_level": "medium",
+      "first_seen": "2025-03-07",
+      "category": "payment"
+    },
+    {
+      "domain": "phonepe-official.org",
+      "impersonates": "PhonePe",
+      "threat_level": "medium",
+      "first_seen": "2025-08-09",
+      "category": "payment"
+    },
+    {
+      "domain": "gpay-login.biz",
+      "impersonates": "Google Pay",
+      "threat_level": "critical",
+      "first_seen": "2025-05-08",
+      "category": "payment"
+    },
+    {
+      "domain": "gpay-team.online",
+      "impersonates": "Google Pay",
+      "threat_level": "critical",
+      "first_seen": "2025-05-01",
+      "category": "payment"
+    },
+    {
+      "domain": "gpay-auth.club",
+      "impersonates": "Google Pay",
+      "threat_level": "critical",
+      "first_seen": "2025-05-02",
+      "category": "payment"
+    },
+    {
+      "domain": "gpay-verify.org",
+      "impersonates": "Google Pay",
+      "threat_level": "medium",
+      "first_seen": "2025-05-23",
+      "category": "payment"
+    },
+    {
+      "domain": "bhim-secure.co",
+      "impersonates": "BHIM",
+      "threat_level": "medium",
+      "first_seen": "2025-05-16",
+      "category": "payment"
+    },
+    {
+      "domain": "bhim-confirm.site",
+      "impersonates": "BHIM",
+      "threat_level": "high",
+      "first_seen": "2025-06-06",
+      "category": "payment"
+    },
+    {
+      "domain": "bhim-verify.top",
+      "impersonates": "BHIM",
+      "threat_level": "high",
+      "first_seen": "2025-08-04",
+      "category": "payment"
+    },
+    {
+      "domain": "bhim-update.in",
+      "impersonates": "BHIM",
+      "threat_level": "high",
+      "first_seen": "2025-08-03",
+      "category": "payment"
+    },
+    {
+      "domain": "amazonpay-kyc.online",
+      "impersonates": "Amazon Pay",
+      "threat_level": "medium",
+      "first_seen": "2025-05-03",
+      "category": "payment"
+    },
+    {
+      "domain": "amazonpay-auth.site",
+      "impersonates": "Amazon Pay",
+      "threat_level": "critical",
+      "first_seen": "2025-09-25",
+      "category": "payment"
+    },
+    {
+      "domain": "amazonpay-service.com",
+      "impersonates": "Amazon Pay",
+      "threat_level": "medium",
+      "first_seen": "2025-10-26",
+      "category": "payment"
+    },
+    {
+      "domain": "amazonpay-auth.co",
+      "impersonates": "Amazon Pay",
+      "threat_level": "medium",
+      "first_seen": "2025-07-15",
+      "category": "payment"
+    },
+    {
+      "domain": "mobikwik-help.top",
+      "impersonates": "Mobikwik",
+      "threat_level": "medium",
+      "first_seen": "2025-10-02",
+      "category": "payment"
+    },
+    {
+      "domain": "mobikwik-login.org",
+      "impersonates": "Mobikwik",
+      "threat_level": "critical",
+      "first_seen": "2025-11-07",
+      "category": "payment"
+    },
+    {
+      "domain": "mobikwik-portal.online",
+      "impersonates": "Mobikwik",
+      "threat_level": "medium",
+      "first_seen": "2025-02-06",
+      "category": "payment"
+    },
+    {
+      "domain": "mobikwik-auth.xyz",
+      "impersonates": "Mobikwik",
+      "threat_level": "critical",
+      "first_seen": "2025-09-03",
+      "category": "payment"
+    },
+    {
+      "domain": "freecharge-confirm.co",
+      "impersonates": "Freecharge",
+      "threat_level": "high",
+      "first_seen": "2025-01-08",
+      "category": "payment"
+    },
+    {
+      "domain": "freecharge-help.com",
+      "impersonates": "Freecharge",
+      "threat_level": "medium",
+      "first_seen": "2025-05-23",
+      "category": "payment"
+    },
+    {
+      "domain": "freecharge-check.xyz",
+      "impersonates": "Freecharge",
+      "threat_level": "critical",
+      "first_seen": "2025-11-08",
+      "category": "payment"
+    },
+    {
+      "domain": "freecharge-portal.top",
+      "impersonates": "Freecharge",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "payment"
+    },
+    {
+      "domain": "cred-auth.net",
+      "impersonates": "CRED",
+      "threat_level": "medium",
+      "first_seen": "2025-03-09",
+      "category": "payment"
+    },
+    {
+      "domain": "cred-kyc.xyz",
+      "impersonates": "CRED",
+      "threat_level": "critical",
+      "first_seen": "2025-01-06",
+      "category": "payment"
+    },
+    {
+      "domain": "cred-help.in",
+      "impersonates": "CRED",
+      "threat_level": "medium",
+      "first_seen": "2025-12-27",
+      "category": "payment"
+    },
+    {
+      "domain": "cred-help.club",
+      "impersonates": "CRED",
+      "threat_level": "high",
+      "first_seen": "2025-02-15",
+      "category": "payment"
+    },
+    {
+      "domain": "slice-validate.biz",
+      "impersonates": "Slice",
+      "threat_level": "medium",
+      "first_seen": "2025-08-15",
+      "category": "payment"
+    },
+    {
+      "domain": "slice-update.org",
+      "impersonates": "Slice",
+      "threat_level": "medium",
+      "first_seen": "2025-01-14",
+      "category": "payment"
+    },
+    {
+      "domain": "slice-support.xyz",
+      "impersonates": "Slice",
+      "threat_level": "medium",
+      "first_seen": "2025-05-01",
+      "category": "payment"
+    },
+    {
+      "domain": "slice-update.site",
+      "impersonates": "Slice",
+      "threat_level": "critical",
+      "first_seen": "2025-11-27",
+      "category": "payment"
+    },
+    {
+      "domain": "jupiter-verify.online",
+      "impersonates": "Jupiter",
+      "threat_level": "critical",
+      "first_seen": "2025-08-17",
+      "category": "payment"
+    },
+    {
+      "domain": "jupiter-check.biz",
+      "impersonates": "Jupiter",
+      "threat_level": "high",
+      "first_seen": "2025-03-19",
+      "category": "payment"
+    },
+    {
+      "domain": "jupiter-service.com",
+      "impersonates": "Jupiter",
+      "threat_level": "medium",
+      "first_seen": "2025-08-03",
+      "category": "payment"
+    },
+    {
+      "domain": "jupiter-confirm.org",
+      "impersonates": "Jupiter",
+      "threat_level": "high",
+      "first_seen": "2025-07-11",
+      "category": "payment"
+    },
+    {
+      "domain": "amazon-support.info",
+      "impersonates": "Amazon",
+      "threat_level": "low",
+      "first_seen": "2025-12-16",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "amazon-help.site",
+      "impersonates": "Amazon",
+      "threat_level": "low",
+      "first_seen": "2025-09-02",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "amazon-check.in",
+      "impersonates": "Amazon",
+      "threat_level": "high",
+      "first_seen": "2025-06-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "amazon-support.co",
+      "impersonates": "Amazon",
+      "threat_level": "high",
+      "first_seen": "2025-07-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "flipkart-service.club",
+      "impersonates": "Flipkart",
+      "threat_level": "high",
+      "first_seen": "2025-04-17",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "flipkart-team.com",
+      "impersonates": "Flipkart",
+      "threat_level": "low",
+      "first_seen": "2025-11-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "flipkart-verify.biz",
+      "impersonates": "Flipkart",
+      "threat_level": "medium",
+      "first_seen": "2025-05-18",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "flipkart-kyc.top",
+      "impersonates": "Flipkart",
+      "threat_level": "medium",
+      "first_seen": "2025-08-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "myntra-netbanking.top",
+      "impersonates": "Myntra",
+      "threat_level": "medium",
+      "first_seen": "2025-09-01",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "myntra-auth.in",
+      "impersonates": "Myntra",
+      "threat_level": "low",
+      "first_seen": "2025-02-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "myntra-login.com",
+      "impersonates": "Myntra",
+      "threat_level": "low",
+      "first_seen": "2025-02-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "myntra-kyc.net",
+      "impersonates": "Myntra",
+      "threat_level": "low",
+      "first_seen": "2025-12-10",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "meesho-confirm.club",
+      "impersonates": "Meesho",
+      "threat_level": "medium",
+      "first_seen": "2025-08-18",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "meesho-kyc.org",
+      "impersonates": "Meesho",
+      "threat_level": "low",
+      "first_seen": "2025-04-20",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "meesho-validate.xyz",
+      "impersonates": "Meesho",
+      "threat_level": "medium",
+      "first_seen": "2025-02-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "meesho-service.top",
+      "impersonates": "Meesho",
+      "threat_level": "medium",
+      "first_seen": "2025-09-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "snapdeal-kyc.com",
+      "impersonates": "Snapdeal",
+      "threat_level": "low",
+      "first_seen": "2025-09-16",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "snapdeal-team.org",
+      "impersonates": "Snapdeal",
+      "threat_level": "medium",
+      "first_seen": "2025-09-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "snapdeal-auth.site",
+      "impersonates": "Snapdeal",
+      "threat_level": "low",
+      "first_seen": "2025-08-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "snapdeal-official.top",
+      "impersonates": "Snapdeal",
+      "threat_level": "medium",
+      "first_seen": "2025-10-13",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "ajio-confirm.net",
+      "impersonates": "AJIO",
+      "threat_level": "low",
+      "first_seen": "2025-07-22",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "ajio-kyc.xyz",
+      "impersonates": "AJIO",
+      "threat_level": "low",
+      "first_seen": "2025-01-05",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "ajio-validate.com",
+      "impersonates": "AJIO",
+      "threat_level": "medium",
+      "first_seen": "2025-02-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "ajio-check.info",
+      "impersonates": "AJIO",
+      "threat_level": "high",
+      "first_seen": "2025-09-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "tatacliq-update.com",
+      "impersonates": "Tata CLiQ",
+      "threat_level": "low",
+      "first_seen": "2025-05-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "tatacliq-dept.co",
+      "impersonates": "Tata CLiQ",
+      "threat_level": "high",
+      "first_seen": "2025-06-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "tatacliq-auth.xyz",
+      "impersonates": "Tata CLiQ",
+      "threat_level": "low",
+      "first_seen": "2025-06-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "tatacliq-confirm.site",
+      "impersonates": "Tata CLiQ",
+      "threat_level": "high",
+      "first_seen": "2025-10-03",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "nykaa-update.net",
+      "impersonates": "Nykaa",
+      "threat_level": "low",
+      "first_seen": "2025-02-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "nykaa-login.site",
+      "impersonates": "Nykaa",
+      "threat_level": "low",
+      "first_seen": "2025-03-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "nykaa-help.org",
+      "impersonates": "Nykaa",
+      "threat_level": "high",
+      "first_seen": "2025-01-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "nykaa-verify.biz",
+      "impersonates": "Nykaa",
+      "threat_level": "medium",
+      "first_seen": "2025-06-12",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "swiggy-service.xyz",
+      "impersonates": "Swiggy",
+      "threat_level": "medium",
+      "first_seen": "2025-03-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "swiggy-update.co",
+      "impersonates": "Swiggy",
+      "threat_level": "low",
+      "first_seen": "2025-10-22",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "swiggy-auth.net",
+      "impersonates": "Swiggy",
+      "threat_level": "low",
+      "first_seen": "2025-10-05",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "swiggy-auth.club",
+      "impersonates": "Swiggy",
+      "threat_level": "low",
+      "first_seen": "2025-11-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "zomato-help.top",
+      "impersonates": "Zomato",
+      "threat_level": "medium",
+      "first_seen": "2025-02-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "zomato-team.org",
+      "impersonates": "Zomato",
+      "threat_level": "medium",
+      "first_seen": "2025-11-14",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "zomato-portal.com",
+      "impersonates": "Zomato",
+      "threat_level": "low",
+      "first_seen": "2025-05-07",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "zomato-dept.biz",
+      "impersonates": "Zomato",
+      "threat_level": "low",
+      "first_seen": "2025-02-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "olx-help.xyz",
+      "impersonates": "OLX",
+      "threat_level": "high",
+      "first_seen": "2025-11-13",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "olx-portal.online",
+      "impersonates": "OLX",
+      "threat_level": "high",
+      "first_seen": "2025-10-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "olx-verify.info",
+      "impersonates": "OLX",
+      "threat_level": "low",
+      "first_seen": "2025-05-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "olx-auth.org",
+      "impersonates": "OLX",
+      "threat_level": "medium",
+      "first_seen": "2025-04-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "uidai-kyc.net",
+      "impersonates": "UIDAI/Aadhaar",
+      "threat_level": "critical",
+      "first_seen": "2025-11-21",
+      "category": "government"
+    },
+    {
+      "domain": "uidai-verify.online",
+      "impersonates": "UIDAI/Aadhaar",
+      "threat_level": "high",
+      "first_seen": "2025-08-02",
+      "category": "government"
+    },
+    {
+      "domain": "uidai-team.org",
+      "impersonates": "UIDAI/Aadhaar",
+      "threat_level": "critical",
+      "first_seen": "2025-02-10",
+      "category": "government"
+    },
+    {
+      "domain": "incometax-official.info",
+      "impersonates": "Income Tax",
+      "threat_level": "critical",
+      "first_seen": "2025-09-12",
+      "category": "government"
+    },
+    {
+      "domain": "incometax-validate.xyz",
+      "impersonates": "Income Tax",
+      "threat_level": "medium",
+      "first_seen": "2025-05-27",
+      "category": "government"
+    },
+    {
+      "domain": "incometax-netbanking.co",
+      "impersonates": "Income Tax",
+      "threat_level": "high",
+      "first_seen": "2025-08-26",
+      "category": "government"
+    },
+    {
+      "domain": "epfo-check.org",
+      "impersonates": "EPFO",
+      "threat_level": "critical",
+      "first_seen": "2025-03-25",
+      "category": "government"
+    },
+    {
+      "domain": "epfo-auth.info",
+      "impersonates": "EPFO",
+      "threat_level": "high",
+      "first_seen": "2025-09-12",
+      "category": "government"
+    },
+    {
+      "domain": "epfo-update.in",
+      "impersonates": "EPFO",
+      "threat_level": "high",
+      "first_seen": "2025-01-09",
+      "category": "government"
+    },
+    {
+      "domain": "irctc-team.club",
+      "impersonates": "IRCTC",
+      "threat_level": "high",
+      "first_seen": "2025-10-13",
+      "category": "government"
+    },
+    {
+      "domain": "irctc-team.in",
+      "impersonates": "IRCTC",
+      "threat_level": "critical",
+      "first_seen": "2025-11-08",
+      "category": "government"
+    },
+    {
+      "domain": "irctc-confirm.top",
+      "impersonates": "IRCTC",
+      "threat_level": "critical",
+      "first_seen": "2025-10-18",
+      "category": "government"
+    },
+    {
+      "domain": "digilocker-update.info",
+      "impersonates": "DigiLocker",
+      "threat_level": "high",
+      "first_seen": "2025-12-10",
+      "category": "government"
+    },
+    {
+      "domain": "digilocker-service.online",
+      "impersonates": "DigiLocker",
+      "threat_level": "critical",
+      "first_seen": "2025-03-02",
+      "category": "government"
+    },
+    {
+      "domain": "digilocker-verify.net",
+      "impersonates": "DigiLocker",
+      "threat_level": "high",
+      "first_seen": "2025-08-04",
+      "category": "government"
+    },
+    {
+      "domain": "pmkisan-kyc.in",
+      "impersonates": "PM Kisan",
+      "threat_level": "high",
+      "first_seen": "2025-08-12",
+      "category": "government"
+    },
+    {
+      "domain": "pmkisan-auth.net",
+      "impersonates": "PM Kisan",
+      "threat_level": "high",
+      "first_seen": "2025-10-24",
+      "category": "government"
+    },
+    {
+      "domain": "pmkisan-kyc.club",
+      "impersonates": "PM Kisan",
+      "threat_level": "high",
+      "first_seen": "2025-11-04",
+      "category": "government"
+    },
+    {
+      "domain": "pmjay-portal.top",
+      "impersonates": "Ayushman Bharat",
+      "threat_level": "critical",
+      "first_seen": "2025-12-12",
+      "category": "government"
+    },
+    {
+      "domain": "pmjay-official.online",
+      "impersonates": "Ayushman Bharat",
+      "threat_level": "high",
+      "first_seen": "2025-08-08",
+      "category": "government"
+    },
+    {
+      "domain": "pmjay-team.xyz",
+      "impersonates": "Ayushman Bharat",
+      "threat_level": "critical",
+      "first_seen": "2025-11-12",
+      "category": "government"
+    },
+    {
+      "domain": "passportindia-verify.club",
+      "impersonates": "Passport India",
+      "threat_level": "high",
+      "first_seen": "2025-05-07",
+      "category": "government"
+    },
+    {
+      "domain": "passportindia-login.site",
+      "impersonates": "Passport India",
+      "threat_level": "high",
+      "first_seen": "2025-02-22",
+      "category": "government"
+    },
+    {
+      "domain": "passportindia-official.info",
+      "impersonates": "Passport India",
+      "threat_level": "medium",
+      "first_seen": "2025-01-02",
+      "category": "government"
+    },
+    {
+      "domain": "parivahan-official.info",
+      "impersonates": "Parivahan",
+      "threat_level": "critical",
+      "first_seen": "2025-09-07",
+      "category": "government"
+    },
+    {
+      "domain": "parivahan-official.net",
+      "impersonates": "Parivahan",
+      "threat_level": "critical",
+      "first_seen": "2025-06-25",
+      "category": "government"
+    },
+    {
+      "domain": "parivahan-kyc.co",
+      "impersonates": "Parivahan",
+      "threat_level": "medium",
+      "first_seen": "2025-01-09",
+      "category": "government"
+    },
+    {
+      "domain": "gst-portal.co",
+      "impersonates": "GST Portal",
+      "threat_level": "critical",
+      "first_seen": "2025-02-22",
+      "category": "government"
+    },
+    {
+      "domain": "gst-secure.biz",
+      "impersonates": "GST Portal",
+      "threat_level": "critical",
+      "first_seen": "2025-01-12",
+      "category": "government"
+    },
+    {
+      "domain": "gst-auth.club",
+      "impersonates": "GST Portal",
+      "threat_level": "medium",
+      "first_seen": "2025-06-01",
+      "category": "government"
+    },
+    {
+      "domain": "nsdl-kyc.co",
+      "impersonates": "NSDL",
+      "threat_level": "high",
+      "first_seen": "2025-09-04",
+      "category": "government"
+    },
+    {
+      "domain": "nsdl-update.org",
+      "impersonates": "NSDL",
+      "threat_level": "high",
+      "first_seen": "2025-08-25",
+      "category": "government"
+    },
+    {
+      "domain": "nsdl-team.com",
+      "impersonates": "NSDL",
+      "threat_level": "medium",
+      "first_seen": "2025-10-04",
+      "category": "government"
+    },
+    {
+      "domain": "utiitsl-verify.top",
+      "impersonates": "UTIITSL",
+      "threat_level": "medium",
+      "first_seen": "2025-05-15",
+      "category": "government"
+    },
+    {
+      "domain": "utiitsl-secure.club",
+      "impersonates": "UTIITSL",
+      "threat_level": "critical",
+      "first_seen": "2025-08-28",
+      "category": "government"
+    },
+    {
+      "domain": "utiitsl-dept.net",
+      "impersonates": "UTIITSL",
+      "threat_level": "high",
+      "first_seen": "2025-11-04",
+      "category": "government"
+    },
+    {
+      "domain": "trai-update.top",
+      "impersonates": "TRAI",
+      "threat_level": "high",
+      "first_seen": "2025-10-05",
+      "category": "government"
+    },
+    {
+      "domain": "trai-update.biz",
+      "impersonates": "TRAI",
+      "threat_level": "critical",
+      "first_seen": "2025-05-20",
+      "category": "government"
+    },
+    {
+      "domain": "trai-auth.in",
+      "impersonates": "TRAI",
+      "threat_level": "high",
+      "first_seen": "2025-07-20",
+      "category": "government"
+    },
+    {
+      "domain": "rbi-validate.club",
+      "impersonates": "RBI",
+      "threat_level": "medium",
+      "first_seen": "2025-07-04",
+      "category": "government"
+    },
+    {
+      "domain": "rbi-login.org",
+      "impersonates": "RBI",
+      "threat_level": "medium",
+      "first_seen": "2025-12-28",
+      "category": "government"
+    },
+    {
+      "domain": "rbi-official.top",
+      "impersonates": "RBI",
+      "threat_level": "high",
+      "first_seen": "2025-08-08",
+      "category": "government"
+    },
+    {
+      "domain": "sebi-dept.xyz",
+      "impersonates": "SEBI",
+      "threat_level": "high",
+      "first_seen": "2025-12-04",
+      "category": "government"
+    },
+    {
+      "domain": "sebi-support.info",
+      "impersonates": "SEBI",
+      "threat_level": "high",
+      "first_seen": "2025-06-22",
+      "category": "government"
+    },
+    {
+      "domain": "sebi-portal.top",
+      "impersonates": "SEBI",
+      "threat_level": "high",
+      "first_seen": "2025-03-22",
+      "category": "government"
+    },
+    {
+      "domain": "whatsapp-update.top",
+      "impersonates": "WhatsApp",
+      "threat_level": "high",
+      "first_seen": "2025-07-04",
+      "category": "social"
+    },
+    {
+      "domain": "whatsapp-team.in",
+      "impersonates": "WhatsApp",
+      "threat_level": "medium",
+      "first_seen": "2025-09-02",
+      "category": "social"
+    },
+    {
+      "domain": "whatsapp-auth.site",
+      "impersonates": "WhatsApp",
+      "threat_level": "medium",
+      "first_seen": "2025-11-04",
+      "category": "social"
+    },
+    {
+      "domain": "telegram-verify.xyz",
+      "impersonates": "Telegram",
+      "threat_level": "medium",
+      "first_seen": "2025-10-10",
+      "category": "social"
+    },
+    {
+      "domain": "telegram-team.info",
+      "impersonates": "Telegram",
+      "threat_level": "high",
+      "first_seen": "2025-10-17",
+      "category": "social"
+    },
+    {
+      "domain": "telegram-official.biz",
+      "impersonates": "Telegram",
+      "threat_level": "medium",
+      "first_seen": "2025-11-16",
+      "category": "social"
+    },
+    {
+      "domain": "instagram-auth.net",
+      "impersonates": "Instagram",
+      "threat_level": "medium",
+      "first_seen": "2025-02-25",
+      "category": "social"
+    },
+    {
+      "domain": "instagram-portal.in",
+      "impersonates": "Instagram",
+      "threat_level": "medium",
+      "first_seen": "2025-07-28",
+      "category": "social"
+    },
+    {
+      "domain": "instagram-auth.info",
+      "impersonates": "Instagram",
+      "threat_level": "high",
+      "first_seen": "2025-10-22",
+      "category": "social"
+    },
+    {
+      "domain": "facebook-netbanking.biz",
+      "impersonates": "Facebook",
+      "threat_level": "medium",
+      "first_seen": "2025-12-25",
+      "category": "social"
+    },
+    {
+      "domain": "facebook-help.org",
+      "impersonates": "Facebook",
+      "threat_level": "medium",
+      "first_seen": "2025-06-01",
+      "category": "social"
+    },
+    {
+      "domain": "facebook-netbanking.com",
+      "impersonates": "Facebook",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "social"
+    },
+    {
+      "domain": "twitter-secure.xyz",
+      "impersonates": "Twitter",
+      "threat_level": "high",
+      "first_seen": "2025-12-17",
+      "category": "social"
+    },
+    {
+      "domain": "twitter-official.in",
+      "impersonates": "Twitter",
+      "threat_level": "low",
+      "first_seen": "2025-07-15",
+      "category": "social"
+    },
+    {
+      "domain": "twitter-support.co",
+      "impersonates": "Twitter",
+      "threat_level": "medium",
+      "first_seen": "2025-06-10",
+      "category": "social"
+    },
+    {
+      "domain": "linkedin-update.biz",
+      "impersonates": "LinkedIn",
+      "threat_level": "high",
+      "first_seen": "2025-03-06",
+      "category": "social"
+    },
+    {
+      "domain": "linkedin-verify.info",
+      "impersonates": "LinkedIn",
+      "threat_level": "high",
+      "first_seen": "2025-05-15",
+      "category": "social"
+    },
+    {
+      "domain": "linkedin-service.online",
+      "impersonates": "LinkedIn",
+      "threat_level": "low",
+      "first_seen": "2025-10-15",
+      "category": "social"
+    },
+    {
+      "domain": "youtube-validate.xyz",
+      "impersonates": "YouTube",
+      "threat_level": "high",
+      "first_seen": "2025-06-14",
+      "category": "social"
+    },
+    {
+      "domain": "youtube-login.org",
+      "impersonates": "YouTube",
+      "threat_level": "medium",
+      "first_seen": "2025-11-22",
+      "category": "social"
+    },
+    {
+      "domain": "youtube-confirm.net",
+      "impersonates": "YouTube",
+      "threat_level": "medium",
+      "first_seen": "2025-01-08",
+      "category": "social"
+    },
+    {
+      "domain": "google-secure.xyz",
+      "impersonates": "Google",
+      "threat_level": "medium",
+      "first_seen": "2025-05-07",
+      "category": "social"
+    },
+    {
+      "domain": "google-kyc.online",
+      "impersonates": "Google",
+      "threat_level": "medium",
+      "first_seen": "2025-05-11",
+      "category": "social"
+    },
+    {
+      "domain": "google-login.com",
+      "impersonates": "Google",
+      "threat_level": "high",
+      "first_seen": "2025-08-24",
+      "category": "social"
+    },
+    {
+      "domain": "microsoft-dept.xyz",
+      "impersonates": "Microsoft",
+      "threat_level": "medium",
+      "first_seen": "2025-09-18",
+      "category": "social"
+    },
+    {
+      "domain": "microsoft-team.co",
+      "impersonates": "Microsoft",
+      "threat_level": "high",
+      "first_seen": "2025-07-28",
+      "category": "social"
+    },
+    {
+      "domain": "microsoft-verify.site",
+      "impersonates": "Microsoft",
+      "threat_level": "low",
+      "first_seen": "2025-01-15",
+      "category": "social"
+    },
+    {
+      "domain": "apple-service.in",
+      "impersonates": "Apple",
+      "threat_level": "low",
+      "first_seen": "2025-12-21",
+      "category": "social"
+    },
+    {
+      "domain": "apple-service.info",
+      "impersonates": "Apple",
+      "threat_level": "medium",
+      "first_seen": "2025-02-13",
+      "category": "social"
+    },
+    {
+      "domain": "apple-secure.online",
+      "impersonates": "Apple",
+      "threat_level": "medium",
+      "first_seen": "2025-03-26",
+      "category": "social"
+    },
+    {
+      "domain": "jio-update.online",
+      "impersonates": "Reliance Jio",
+      "threat_level": "medium",
+      "first_seen": "2025-02-08",
+      "category": "telecom"
+    },
+    {
+      "domain": "jio-service.top",
+      "impersonates": "Reliance Jio",
+      "threat_level": "low",
+      "first_seen": "2025-07-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "jio-update.info",
+      "impersonates": "Reliance Jio",
+      "threat_level": "medium",
+      "first_seen": "2025-05-24",
+      "category": "telecom"
+    },
+    {
+      "domain": "airtel-netbanking.info",
+      "impersonates": "Airtel",
+      "threat_level": "high",
+      "first_seen": "2025-09-21",
+      "category": "telecom"
+    },
+    {
+      "domain": "airtel-login.net",
+      "impersonates": "Airtel",
+      "threat_level": "low",
+      "first_seen": "2025-09-07",
+      "category": "telecom"
+    },
+    {
+      "domain": "airtel-team.biz",
+      "impersonates": "Airtel",
+      "threat_level": "medium",
+      "first_seen": "2025-12-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "vi-login.site",
+      "impersonates": "Vodafone Idea",
+      "threat_level": "high",
+      "first_seen": "2025-05-07",
+      "category": "telecom"
+    },
+    {
+      "domain": "vi-netbanking.co",
+      "impersonates": "Vodafone Idea",
+      "threat_level": "low",
+      "first_seen": "2025-03-25",
+      "category": "telecom"
+    },
+    {
+      "domain": "vi-update.net",
+      "impersonates": "Vodafone Idea",
+      "threat_level": "high",
+      "first_seen": "2025-11-16",
+      "category": "telecom"
+    },
+    {
+      "domain": "bsnl-check.top",
+      "impersonates": "BSNL",
+      "threat_level": "low",
+      "first_seen": "2025-10-21",
+      "category": "telecom"
+    },
+    {
+      "domain": "bsnl-support.online",
+      "impersonates": "BSNL",
+      "threat_level": "low",
+      "first_seen": "2025-06-05",
+      "category": "telecom"
+    },
+    {
+      "domain": "bsnl-check.site",
+      "impersonates": "BSNL",
+      "threat_level": "high",
+      "first_seen": "2025-08-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "reliance-verify.site",
+      "impersonates": "Reliance",
+      "threat_level": "medium",
+      "first_seen": "2025-09-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "reliance-help.org",
+      "impersonates": "Reliance",
+      "threat_level": "medium",
+      "first_seen": "2025-08-02",
+      "category": "telecom"
+    },
+    {
+      "domain": "reliance-verify.biz",
+      "impersonates": "Reliance",
+      "threat_level": "medium",
+      "first_seen": "2025-05-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-validate-6399.online",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-18",
+      "category": "government"
+    },
+    {
+      "domain": "deal-confirm-8314.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "reward-netbanking-741.club",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-12-15",
+      "category": "social"
+    },
+    {
+      "domain": "offer-team-4734.info",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-25",
+      "category": "telecom"
+    },
+    {
+      "domain": "prize-support-1179.site",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-02-18",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-kyc-5561.biz",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "bonus-dept-2212.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-03",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-support-2193.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-27",
+      "category": "banking"
+    },
+    {
+      "domain": "activate-team-398.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-05-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-auth-2353.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-02-10",
+      "category": "social"
+    },
+    {
+      "domain": "prize-support-2247.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-05",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-check-815.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-06-22",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-check-3933.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-10",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-check-7664.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-17",
+      "category": "government"
+    },
+    {
+      "domain": "offer-kyc-4196.net",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-11-16",
+      "category": "social"
+    },
+    {
+      "domain": "cashback-validate-2142.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-02-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-kyc-7267.club",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-27",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-verify-6595.xyz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-08",
+      "category": "banking"
+    },
+    {
+      "domain": "claim-secure-5321.net",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-21",
+      "category": "payment"
+    },
+    {
+      "domain": "gift-help-7840.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-03-25",
+      "category": "government"
+    },
+    {
+      "domain": "lottery-secure-4293.in",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-18",
+      "category": "social"
+    },
+    {
+      "domain": "activate-help-3993.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-02-02",
+      "category": "government"
+    },
+    {
+      "domain": "verify-login-8289.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-01",
+      "category": "social"
+    },
+    {
+      "domain": "win-kyc-4872.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-20",
+      "category": "payment"
+    },
+    {
+      "domain": "activate-update-8676.co",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-02-17",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-confirm-813.xyz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-12",
+      "category": "telecom"
+    },
+    {
+      "domain": "lottery-update-5749.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-22",
+      "category": "social"
+    },
+    {
+      "domain": "free-verify-5872.co",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-06-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "verify-confirm-3086.biz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-23",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-verify-3368.net",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-06-10",
+      "category": "government"
+    },
+    {
+      "domain": "secure-verify-3231.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-28",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-login-6129.org",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-24",
+      "category": "government"
+    },
+    {
+      "domain": "free-confirm-8251.co",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-09",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-service-9970.in",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-09-10",
+      "category": "banking"
+    },
+    {
+      "domain": "reward-help-5121.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-23",
+      "category": "payment"
+    },
+    {
+      "domain": "verify-check-793.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-20",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-dept-6052.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-22",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-check-670.online",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-02-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-verify-2613.online",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-08-12",
+      "category": "government"
+    },
+    {
+      "domain": "reward-kyc-8774.online",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-11",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-netbanking-8276.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-07-18",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-check-3615.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-23",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-update-7506.co",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-team-1163.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-09-10",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-validate-3773.info",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-04-26",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-team-9177.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-15",
+      "category": "payment"
+    },
+    {
+      "domain": "reward-help-6623.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-16",
+      "category": "government"
+    },
+    {
+      "domain": "activate-update-2153.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-03",
+      "category": "government"
+    },
+    {
+      "domain": "claim-auth-9730.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-14",
+      "category": "banking"
+    },
+    {
+      "domain": "cashback-kyc-5082.club",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-03-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "bonus-portal-3316.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-09-09",
+      "category": "telecom"
+    },
+    {
+      "domain": "bonus-auth-1630.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-06",
+      "category": "social"
+    },
+    {
+      "domain": "gift-support-9334.co",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-official-9473.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-21",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-help-8012.site",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-11-13",
+      "category": "government"
+    },
+    {
+      "domain": "reward-verify-2689.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-16",
+      "category": "payment"
+    },
+    {
+      "domain": "free-kyc-5221.online",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-24",
+      "category": "government"
+    },
+    {
+      "domain": "gift-validate-9302.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-06-08",
+      "category": "banking"
+    },
+    {
+      "domain": "lucky-auth-2408.top",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-01-10",
+      "category": "social"
+    },
+    {
+      "domain": "activate-netbanking-5464.net",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-11",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-check-8271.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-01",
+      "category": "government"
+    },
+    {
+      "domain": "verify-official-9657.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-02",
+      "category": "government"
+    },
+    {
+      "domain": "secure-auth-233.org",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-07-05",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-team-841.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-19",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-help-1304.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "cashback-login-6553.co",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-18",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-validate-6676.online",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-02",
+      "category": "payment"
+    },
+    {
+      "domain": "free-validate-7587.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-10-17",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-dept-5002.co",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-17",
+      "category": "social"
+    },
+    {
+      "domain": "secure-help-7880.biz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-06-11",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-secure-9879.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-05-21",
+      "category": "social"
+    },
+    {
+      "domain": "win-verify-9660.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-17",
+      "category": "government"
+    },
+    {
+      "domain": "gift-auth-617.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-04",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-service-2581.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-12-07",
+      "category": "social"
+    },
+    {
+      "domain": "secure-verify-2362.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-04-18",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-dept-5240.club",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-08-18",
+      "category": "social"
+    },
+    {
+      "domain": "claim-portal-8032.site",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-04-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "win-help-3496.org",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-16",
+      "category": "government"
+    },
+    {
+      "domain": "claim-portal-4815.club",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "government"
+    },
+    {
+      "domain": "unlock-kyc-4858.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-portal-7949.site",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-04-27",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-login-9714.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-04-02",
+      "category": "payment"
+    },
+    {
+      "domain": "win-login-6871.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-16",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-auth-2687.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-16",
+      "category": "telecom"
+    },
+    {
+      "domain": "deal-support-4776.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-25",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-verify-2968.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-03-02",
+      "category": "government"
+    },
+    {
+      "domain": "offer-help-713.biz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-05-19",
+      "category": "banking"
+    },
+    {
+      "domain": "free-check-9001.org",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-08-05",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-login-5517.net",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "offer-support-4933.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-25",
+      "category": "payment"
+    },
+    {
+      "domain": "unlock-validate-5472.xyz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-22",
+      "category": "payment"
+    },
+    {
+      "domain": "gift-support-4164.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-05-13",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-help-9643.info",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-10-01",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-auth-1117.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-15",
+      "category": "payment"
+    },
+    {
+      "domain": "unlock-validate-5195.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "win-kyc-7934.net",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-08-24",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-auth-7814.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-27",
+      "category": "payment"
+    },
+    {
+      "domain": "reward-check-8753.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-03",
+      "category": "banking"
+    },
+    {
+      "domain": "prize-validate-3412.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-09-05",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-official-9654.in",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-02-17",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-validate-6906.co",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-secure-6587.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-24",
+      "category": "social"
+    },
+    {
+      "domain": "reward-service-5744.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-18",
+      "category": "banking"
+    },
+    {
+      "domain": "secure-help-6798.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-03-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-dept-6254.top",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-11-22",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-netbanking-8902.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-09-05",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-check-9020.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-09-13",
+      "category": "payment"
+    },
+    {
+      "domain": "verify-kyc-4616.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-25",
+      "category": "banking"
+    },
+    {
+      "domain": "activate-secure-4043.online",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-02-04",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-verify-4109.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-13",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-kyc-8355.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-27",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-help-2447.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-09-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-auth-9793.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-03-21",
+      "category": "social"
+    },
+    {
+      "domain": "secure-team-6344.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-23",
+      "category": "government"
+    },
+    {
+      "domain": "gift-dept-3112.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "gift-verify-9314.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-18",
+      "category": "payment"
+    },
+    {
+      "domain": "unlock-portal-3431.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-03",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "reward-official-944.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-22",
+      "category": "social"
+    },
+    {
+      "domain": "prize-official-9726.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-18",
+      "category": "government"
+    },
+    {
+      "domain": "deal-help-351.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-24",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-official-6598.net",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-09-11",
+      "category": "government"
+    },
+    {
+      "domain": "verify-team-5153.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-17",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-confirm-5346.biz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-06-11",
+      "category": "banking"
+    },
+    {
+      "domain": "win-kyc-365.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-19",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-kyc-3314.org",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-13",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-support-4316.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-12-21",
+      "category": "government"
+    },
+    {
+      "domain": "offer-team-2873.biz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-12-18",
+      "category": "payment"
+    },
+    {
+      "domain": "prize-verify-1317.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-25",
+      "category": "government"
+    },
+    {
+      "domain": "gift-auth-1213.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-01",
+      "category": "social"
+    },
+    {
+      "domain": "verify-verify-8016.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-01",
+      "category": "social"
+    },
+    {
+      "domain": "activate-secure-8773.com",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-05-18",
+      "category": "banking"
+    },
+    {
+      "domain": "activate-login-1678.co",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-08",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-portal-6602.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-06-13",
+      "category": "social"
+    },
+    {
+      "domain": "win-auth-5014.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-21",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-dept-9155.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-21",
+      "category": "telecom"
+    },
+    {
+      "domain": "offer-confirm-7209.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-19",
+      "category": "social"
+    },
+    {
+      "domain": "prize-official-9386.net",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-02",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-verify-3038.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-07",
+      "category": "payment"
+    },
+    {
+      "domain": "unlock-help-2761.in",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-19",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-kyc-1384.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-12",
+      "category": "banking"
+    },
+    {
+      "domain": "activate-update-5680.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-20",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-portal-7481.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-12",
+      "category": "government"
+    },
+    {
+      "domain": "activate-dept-1504.co",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-05-26",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-portal-2626.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-26",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-team-1845.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-01-10",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-kyc-1530.in",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-07-15",
+      "category": "social"
+    },
+    {
+      "domain": "activate-secure-1568.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-03",
+      "category": "social"
+    },
+    {
+      "domain": "free-secure-4881.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-07-25",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-validate-2878.online",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "bonus-confirm-2490.org",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-03-14",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-update-6016.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-24",
+      "category": "social"
+    },
+    {
+      "domain": "deal-login-2319.top",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-13",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-check-5584.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-20",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-official-7948.online",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-03-13",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-auth-5439.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-27",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "cashback-official-9803.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-22",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-official-7283.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-12-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-help-4065.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-05",
+      "category": "government"
+    },
+    {
+      "domain": "reward-confirm-9639.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-09-17",
+      "category": "social"
+    },
+    {
+      "domain": "prize-auth-9829.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-02-04",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-verify-9327.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-secure-1715.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-17",
+      "category": "social"
+    },
+    {
+      "domain": "win-team-6508.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-19",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-confirm-1812.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-07-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-help-5720.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-17",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-check-7512.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-10",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-support-1891.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-24",
+      "category": "social"
+    },
+    {
+      "domain": "offer-netbanking-5522.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-15",
+      "category": "government"
+    },
+    {
+      "domain": "offer-service-6581.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-12-20",
+      "category": "government"
+    },
+    {
+      "domain": "activate-secure-3619.xyz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-25",
+      "category": "social"
+    },
+    {
+      "domain": "cashback-netbanking-6093.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-support-9880.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-13",
+      "category": "banking"
+    },
+    {
+      "domain": "claim-check-2926.info",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-26",
+      "category": "social"
+    },
+    {
+      "domain": "reward-kyc-5231.site",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-10",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-kyc-8469.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-20",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-netbanking-8073.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-09-23",
+      "category": "social"
+    },
+    {
+      "domain": "offer-help-2398.top",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-06-27",
+      "category": "social"
+    },
+    {
+      "domain": "prize-secure-8039.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-27",
+      "category": "social"
+    },
+    {
+      "domain": "secure-confirm-6909.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-16",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-help-635.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-04-18",
+      "category": "payment"
+    },
+    {
+      "domain": "verify-confirm-9106.online",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-19",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-verify-7331.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-14",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-verify-7468.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-28",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-official-9732.net",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-28",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-kyc-3485.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-01-19",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-auth-2858.online",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-10",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-login-2321.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-09",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-kyc-5377.net",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-11-13",
+      "category": "payment"
+    },
+    {
+      "domain": "lucky-service-6246.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-21",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-team-7549.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-19",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-check-5969.biz",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-09-13",
+      "category": "government"
+    },
+    {
+      "domain": "deal-portal-5389.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-18",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-verify-852.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-11-26",
+      "category": "banking"
+    },
+    {
+      "domain": "cashback-check-7579.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-07-07",
+      "category": "telecom"
+    },
+    {
+      "domain": "bonus-portal-1629.co",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "offer-dept-5105.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-25",
+      "category": "government"
+    },
+    {
+      "domain": "reward-login-117.biz",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-08-03",
+      "category": "social"
+    },
+    {
+      "domain": "win-check-252.club",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-11",
+      "category": "government"
+    },
+    {
+      "domain": "gift-update-3851.top",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-24",
+      "category": "banking"
+    },
+    {
+      "domain": "free-help-2346.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-21",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-netbanking-7310.online",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-07",
+      "category": "government"
+    },
+    {
+      "domain": "verify-update-1746.net",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-19",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-kyc-4159.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-03",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-secure-5042.biz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-09-20",
+      "category": "payment"
+    },
+    {
+      "domain": "unlock-verify-4021.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-04",
+      "category": "government"
+    },
+    {
+      "domain": "reward-secure-6016.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-13",
+      "category": "government"
+    },
+    {
+      "domain": "claim-netbanking-7817.club",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-19",
+      "category": "banking"
+    },
+    {
+      "domain": "lucky-verify-1090.net",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-10",
+      "category": "government"
+    },
+    {
+      "domain": "activate-dept-1450.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-18",
+      "category": "payment"
+    },
+    {
+      "domain": "lucky-help-1394.in",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-04-26",
+      "category": "social"
+    },
+    {
+      "domain": "free-update-5181.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-24",
+      "category": "banking"
+    },
+    {
+      "domain": "win-service-2000.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-20",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "offer-secure-2348.in",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-team-2179.co",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-24",
+      "category": "banking"
+    },
+    {
+      "domain": "free-portal-8682.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-05-23",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-check-8468.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-16",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-portal-1785.co",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-24",
+      "category": "payment"
+    },
+    {
+      "domain": "lottery-secure-4106.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-08-12",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-auth-6970.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-06-08",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-update-9464.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-17",
+      "category": "payment"
+    },
+    {
+      "domain": "win-verify-6668.club",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-08-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-auth-7583.in",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-06-07",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-auth-7700.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-16",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-secure-6818.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-04-18",
+      "category": "telecom"
+    },
+    {
+      "domain": "lottery-secure-6264.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-10",
+      "category": "payment"
+    },
+    {
+      "domain": "win-confirm-1081.xyz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-09",
+      "category": "banking"
+    },
+    {
+      "domain": "win-service-6202.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-03",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-dept-1326.site",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-help-4376.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-auth-1323.org",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-25",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-netbanking-7465.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-14",
+      "category": "social"
+    },
+    {
+      "domain": "claim-check-5151.net",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-28",
+      "category": "banking"
+    },
+    {
+      "domain": "offer-help-9984.site",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-04-27",
+      "category": "payment"
+    },
+    {
+      "domain": "reward-auth-5928.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-09-02",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "offer-dept-7508.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-18",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-kyc-2089.in",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-01-27",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-team-1476.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-09",
+      "category": "banking"
+    },
+    {
+      "domain": "reward-check-2210.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-06-04",
+      "category": "government"
+    },
+    {
+      "domain": "prize-service-6571.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-13",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-netbanking-4605.net",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-05",
+      "category": "social"
+    },
+    {
+      "domain": "win-help-8273.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-16",
+      "category": "banking"
+    },
+    {
+      "domain": "lucky-kyc-6968.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-11-26",
+      "category": "payment"
+    },
+    {
+      "domain": "lottery-team-7959.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-08-12",
+      "category": "social"
+    },
+    {
+      "domain": "free-portal-3046.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-06-20",
+      "category": "banking"
+    },
+    {
+      "domain": "lucky-confirm-8774.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-08",
+      "category": "banking"
+    },
+    {
+      "domain": "win-auth-4466.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-02",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-netbanking-2985.info",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-10-11",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-team-9400.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-19",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-confirm-721.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-01-08",
+      "category": "payment"
+    },
+    {
+      "domain": "lottery-confirm-111.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-07",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "offer-verify-459.info",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-10-23",
+      "category": "banking"
+    },
+    {
+      "domain": "claim-team-6581.in",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "gift-service-8082.co",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-06",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-netbanking-6299.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-23",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-secure-9485.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "social"
+    },
+    {
+      "domain": "free-auth-9365.online",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-08-05",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-team-5334.net",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-11-03",
+      "category": "government"
+    },
+    {
+      "domain": "lottery-official-4188.org",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-12",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-dept-7279.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-06",
+      "category": "government"
+    },
+    {
+      "domain": "unlock-auth-6249.info",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-08-26",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-check-1307.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-05-01",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "cashback-support-2887.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-24",
+      "category": "social"
+    },
+    {
+      "domain": "reward-confirm-607.info",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-06",
+      "category": "government"
+    },
+    {
+      "domain": "offer-login-5524.com",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-04-14",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-help-4972.site",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-02",
+      "category": "social"
+    },
+    {
+      "domain": "secure-verify-6011.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-07-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-login-521.net",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-03-21",
+      "category": "banking"
+    },
+    {
+      "domain": "secure-help-6612.in",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-08-22",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-team-6349.co",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-portal-3806.top",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-team-8971.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-08",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-service-8873.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-19",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-dept-668.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-check-2932.in",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-04-26",
+      "category": "payment"
+    },
+    {
+      "domain": "prize-update-7233.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-11-05",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-update-1525.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-13",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-check-302.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-19",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-kyc-2528.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-19",
+      "category": "banking"
+    },
+    {
+      "domain": "cashback-auth-5733.org",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-13",
+      "category": "social"
+    },
+    {
+      "domain": "secure-netbanking-4612.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-dept-5531.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-02",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-support-5065.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-kyc-5023.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-08-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-update-3179.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-team-1020.club",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-03-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-validate-9417.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-03-07",
+      "category": "banking"
+    },
+    {
+      "domain": "win-check-928.com",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-07",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-dept-2129.club",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-08",
+      "category": "government"
+    },
+    {
+      "domain": "verify-confirm-9715.co",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-06-12",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "reward-secure-6433.org",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-28",
+      "category": "payment"
+    },
+    {
+      "domain": "win-auth-3487.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-14",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-kyc-2937.top",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-08",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-portal-7043.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-15",
+      "category": "payment"
+    },
+    {
+      "domain": "verify-validate-6606.org",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-02-01",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-help-4990.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-16",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-support-4636.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-11-23",
+      "category": "payment"
+    },
+    {
+      "domain": "gift-auth-1030.club",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-22",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-secure-8248.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-14",
+      "category": "government"
+    },
+    {
+      "domain": "prize-official-5722.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-08",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-team-8411.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-27",
+      "category": "payment"
+    },
+    {
+      "domain": "bonus-confirm-2196.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-05-24",
+      "category": "payment"
+    },
+    {
+      "domain": "free-update-3741.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-04-24",
+      "category": "government"
+    },
+    {
+      "domain": "free-portal-9693.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-28",
+      "category": "government"
+    },
+    {
+      "domain": "prize-update-7836.site",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-09-04",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-verify-2570.xyz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-11",
+      "category": "social"
+    },
+    {
+      "domain": "verify-support-3054.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-08-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-check-4581.com",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-03-19",
+      "category": "government"
+    },
+    {
+      "domain": "reward-service-7135.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-16",
+      "category": "banking"
+    },
+    {
+      "domain": "prize-official-6212.club",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-06-25",
+      "category": "payment"
+    },
+    {
+      "domain": "lottery-secure-4176.site",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-12",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-validate-9744.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-03",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "bonus-validate-9870.top",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-06-14",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-official-2801.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-08",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-secure-9761.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-03-04",
+      "category": "telecom"
+    },
+    {
+      "domain": "prize-portal-8861.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-secure-890.site",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-02-14",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-portal-7872.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-07",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-login-8624.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-20",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-login-4731.club",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-02-16",
+      "category": "social"
+    },
+    {
+      "domain": "deal-validate-3404.org",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-14",
+      "category": "payment"
+    },
+    {
+      "domain": "prize-confirm-3502.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-11",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-update-1909.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-16",
+      "category": "banking"
+    },
+    {
+      "domain": "reward-login-4292.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-04-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-login-2962.com",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-05-12",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-verify-258.in",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-11-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-portal-1622.top",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-06",
+      "category": "government"
+    },
+    {
+      "domain": "unlock-portal-6419.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-26",
+      "category": "telecom"
+    },
+    {
+      "domain": "offer-kyc-1060.in",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-02-14",
+      "category": "government"
+    },
+    {
+      "domain": "verify-dept-5975.co",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-28",
+      "category": "government"
+    },
+    {
+      "domain": "secure-service-7320.in",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-02-09",
+      "category": "banking"
+    },
+    {
+      "domain": "win-support-8604.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-23",
+      "category": "banking"
+    },
+    {
+      "domain": "activate-auth-7995.site",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-22",
+      "category": "payment"
+    },
+    {
+      "domain": "prize-netbanking-8383.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-28",
+      "category": "banking"
+    },
+    {
+      "domain": "secure-auth-5521.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-17",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-auth-1391.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-08-26",
+      "category": "government"
+    },
+    {
+      "domain": "reward-check-5278.top",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-08-24",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-verify-9228.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-27",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-auth-3489.club",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-11-15",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-check-5539.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-check-1968.biz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-help-9073.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-23",
+      "category": "banking"
+    },
+    {
+      "domain": "offer-kyc-6804.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-05-20",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-official-7588.xyz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-11",
+      "category": "government"
+    },
+    {
+      "domain": "prize-login-7481.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-19",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-validate-895.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-27",
+      "category": "government"
+    },
+    {
+      "domain": "offer-netbanking-2203.biz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-07-22",
+      "category": "social"
+    },
+    {
+      "domain": "free-dept-6959.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-help-7519.info",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-14",
+      "category": "telecom"
+    },
+    {
+      "domain": "bonus-auth-5243.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-18",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-help-5757.online",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-23",
+      "category": "social"
+    },
+    {
+      "domain": "free-login-5871.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-08-19",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-auth-4784.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-17",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-verify-1027.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-05-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-verify-4935.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-09-02",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-auth-3775.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-18",
+      "category": "payment"
+    },
+    {
+      "domain": "bonus-verify-6351.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-26",
+      "category": "social"
+    },
+    {
+      "domain": "prize-portal-3427.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-auth-9985.online",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-07",
+      "category": "government"
+    },
+    {
+      "domain": "offer-update-3163.site",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-17",
+      "category": "government"
+    },
+    {
+      "domain": "prize-portal-9219.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-check-2636.info",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-11",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-auth-5966.top",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-12-11",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-update-8376.club",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-07-18",
+      "category": "government"
+    },
+    {
+      "domain": "reward-auth-3595.info",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "deal-validate-7880.online",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-01",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-auth-4094.top",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-11-11",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-auth-4733.org",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-09-27",
+      "category": "social"
+    },
+    {
+      "domain": "verify-verify-4956.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-11",
+      "category": "banking"
+    },
+    {
+      "domain": "cashback-auth-8836.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-11-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "deal-service-1802.site",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-09-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-kyc-489.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-11",
+      "category": "banking"
+    },
+    {
+      "domain": "reward-netbanking-4227.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-02-19",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-check-6726.xyz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-01",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-secure-1136.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "cashback-help-1517.org",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-13",
+      "category": "telecom"
+    },
+    {
+      "domain": "lottery-netbanking-8840.top",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-03-24",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-kyc-4983.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-21",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-verify-182.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-13",
+      "category": "social"
+    },
+    {
+      "domain": "reward-official-5733.org",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-07-21",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-auth-4240.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-02-06",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-auth-1298.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-11-03",
+      "category": "banking"
+    },
+    {
+      "domain": "deal-confirm-5520.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-22",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-update-3270.online",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-08-15",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-kyc-9366.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-26",
+      "category": "government"
+    },
+    {
+      "domain": "offer-support-4133.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-12-24",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-support-7963.co",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-08-12",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-update-4697.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-09-07",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-update-405.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-01",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-official-700.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-05-18",
+      "category": "government"
+    },
+    {
+      "domain": "gift-dept-3758.info",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-28",
+      "category": "payment"
+    },
+    {
+      "domain": "verify-validate-1583.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-netbanking-8523.online",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-08-06",
+      "category": "social"
+    },
+    {
+      "domain": "gift-confirm-5978.biz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-25",
+      "category": "payment"
+    },
+    {
+      "domain": "reward-team-3934.org",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-11-07",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-check-860.top",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-11",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-portal-9580.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-06",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-update-8565.info",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-08",
+      "category": "government"
+    },
+    {
+      "domain": "claim-confirm-7998.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-17",
+      "category": "government"
+    },
+    {
+      "domain": "offer-update-8530.net",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-05-07",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-login-3873.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-24",
+      "category": "government"
+    },
+    {
+      "domain": "secure-official-9779.top",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-11-27",
+      "category": "banking"
+    },
+    {
+      "domain": "win-kyc-9496.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-05",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-netbanking-4331.com",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-09-13",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-help-1504.biz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-08-20",
+      "category": "government"
+    },
+    {
+      "domain": "offer-service-9944.net",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-10-27",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-support-7529.co",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-03",
+      "category": "government"
+    },
+    {
+      "domain": "unlock-login-371.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-09-28",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-login-3006.co",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-20",
+      "category": "social"
+    },
+    {
+      "domain": "cashback-confirm-2235.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-27",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-service-6168.club",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-12-17",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-team-9750.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-19",
+      "category": "government"
+    },
+    {
+      "domain": "gift-confirm-3909.org",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-05-20",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-secure-216.net",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-04",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-official-5275.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-06-04",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-auth-7039.org",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-service-9145.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-08-06",
+      "category": "social"
+    },
+    {
+      "domain": "secure-help-9564.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-13",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-auth-7417.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-04",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-auth-952.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-21",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-service-1544.top",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-05-08",
+      "category": "banking"
+    },
+    {
+      "domain": "prize-dept-6664.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-11-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "prize-confirm-7292.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-04-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "deal-validate-8551.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-04-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "prize-auth-104.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-official-8582.xyz",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-23",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-auth-9650.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-27",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-dept-9519.top",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-05-06",
+      "category": "social"
+    },
+    {
+      "domain": "cashback-update-8343.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-04",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-check-6278.biz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-check-9714.site",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-08-04",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-auth-3867.site",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-12",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-portal-4167.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-13",
+      "category": "banking"
+    },
+    {
+      "domain": "offer-support-5892.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-10-09",
+      "category": "telecom"
+    },
+    {
+      "domain": "deal-official-3947.top",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-04-28",
+      "category": "payment"
+    },
+    {
+      "domain": "win-auth-5933.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-02-04",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-secure-8971.online",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-08-12",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-portal-8141.online",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-09-09",
+      "category": "payment"
+    },
+    {
+      "domain": "gift-validate-7033.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-02",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-netbanking-7590.site",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-12-17",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-official-6316.com",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-11",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-auth-4406.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-05-16",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-confirm-7045.co",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-07-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-check-3047.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-19",
+      "category": "banking"
+    },
+    {
+      "domain": "lucky-auth-7181.net",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-04-05",
+      "category": "government"
+    },
+    {
+      "domain": "lottery-service-8285.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-11-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-help-4211.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "banking"
+    },
+    {
+      "domain": "offer-official-4266.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-04",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-team-6003.org",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-09-26",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-login-5852.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-07",
+      "category": "social"
+    },
+    {
+      "domain": "offer-team-5426.org",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-09-16",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-help-7698.online",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-28",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-dept-1268.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-03-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-help-4482.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-11-13",
+      "category": "government"
+    },
+    {
+      "domain": "claim-validate-7477.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-06",
+      "category": "payment"
+    },
+    {
+      "domain": "win-portal-1411.site",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-13",
+      "category": "banking"
+    },
+    {
+      "domain": "reward-auth-981.top",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-07-17",
+      "category": "banking"
+    },
+    {
+      "domain": "lucky-kyc-1481.online",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-07-10",
+      "category": "payment"
+    },
+    {
+      "domain": "bonus-kyc-2250.top",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-01",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-confirm-7754.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-18",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-check-9340.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "claim-auth-3821.top",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-08-10",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-help-272.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-09-27",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "bonus-auth-236.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-25",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-help-9881.xyz",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-01-18",
+      "category": "payment"
+    },
+    {
+      "domain": "activate-service-6567.club",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-03-23",
+      "category": "government"
+    },
+    {
+      "domain": "win-update-7017.org",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-auth-4504.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-28",
+      "category": "payment"
+    },
+    {
+      "domain": "gift-login-7560.org",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-08-09",
+      "category": "government"
+    },
+    {
+      "domain": "deal-secure-2592.info",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-09-01",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-kyc-7283.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-08",
+      "category": "payment"
+    },
+    {
+      "domain": "lottery-official-5701.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-26",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-verify-5510.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-03-02",
+      "category": "government"
+    },
+    {
+      "domain": "reward-confirm-3075.club",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-05-27",
+      "category": "banking"
+    },
+    {
+      "domain": "cashback-auth-6404.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-24",
+      "category": "payment"
+    },
+    {
+      "domain": "verify-login-8638.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-16",
+      "category": "telecom"
+    },
+    {
+      "domain": "bonus-netbanking-791.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-17",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-help-3355.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-01-28",
+      "category": "banking"
+    },
+    {
+      "domain": "win-service-5416.site",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-03-26",
+      "category": "social"
+    },
+    {
+      "domain": "cashback-auth-246.xyz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-10-26",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-update-4175.info",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-08-03",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-team-2621.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-26",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-support-9248.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-26",
+      "category": "telecom"
+    },
+    {
+      "domain": "deal-dept-5968.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-03-09",
+      "category": "government"
+    },
+    {
+      "domain": "verify-help-8992.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-08-07",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-check-4610.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-06",
+      "category": "social"
+    },
+    {
+      "domain": "gift-help-4414.top",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-netbanking-406.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-25",
+      "category": "payment"
+    },
+    {
+      "domain": "free-update-8930.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-17",
+      "category": "social"
+    },
+    {
+      "domain": "gift-help-5385.online",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-11",
+      "category": "banking"
+    },
+    {
+      "domain": "reward-kyc-3026.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-04",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-dept-8126.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-10-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-auth-1261.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-21",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-verify-6013.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-14",
+      "category": "telecom"
+    },
+    {
+      "domain": "prize-portal-8767.online",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-03",
+      "category": "banking"
+    },
+    {
+      "domain": "deal-login-1758.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-18",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-auth-9439.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-18",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-team-7615.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-14",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-dept-8368.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-06",
+      "category": "social"
+    },
+    {
+      "domain": "verify-support-9112.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-14",
+      "category": "telecom"
+    },
+    {
+      "domain": "free-auth-9326.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-13",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-check-7431.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-24",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-kyc-5045.club",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-05-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-portal-9171.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-19",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-check-5927.com",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-03-09",
+      "category": "social"
+    },
+    {
+      "domain": "win-portal-5020.net",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-10-13",
+      "category": "payment"
+    },
+    {
+      "domain": "reward-support-8005.biz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-08-27",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-dept-1385.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-06-12",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-secure-6366.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-05-17",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "gift-validate-3717.info",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-01-22",
+      "category": "government"
+    },
+    {
+      "domain": "reward-service-4847.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-03-05",
+      "category": "banking"
+    },
+    {
+      "domain": "secure-verify-9080.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-05-03",
+      "category": "social"
+    },
+    {
+      "domain": "activate-kyc-2309.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-09-07",
+      "category": "government"
+    },
+    {
+      "domain": "deal-validate-4134.club",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "reward-service-7039.in",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-06-07",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-netbanking-5829.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-08-20",
+      "category": "government"
+    },
+    {
+      "domain": "prize-official-6224.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-12-28",
+      "category": "banking"
+    },
+    {
+      "domain": "prize-kyc-4813.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-06-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-secure-5537.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-12-18",
+      "category": "payment"
+    },
+    {
+      "domain": "lucky-confirm-2415.club",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-22",
+      "category": "government"
+    },
+    {
+      "domain": "prize-netbanking-1084.org",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-26",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-secure-1191.top",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-11-09",
+      "category": "banking"
+    },
+    {
+      "domain": "lottery-dept-3887.org",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-23",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "secure-auth-1542.online",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-04-17",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-auth-8773.com",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-16",
+      "category": "telecom"
+    },
+    {
+      "domain": "offer-team-5865.com",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-10",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-portal-6443.com",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-09-09",
+      "category": "payment"
+    },
+    {
+      "domain": "free-kyc-1538.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-17",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-auth-9486.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-07-10",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-kyc-3487.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-03-19",
+      "category": "telecom"
+    },
+    {
+      "domain": "deal-help-8682.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-07-25",
+      "category": "telecom"
+    },
+    {
+      "domain": "offer-update-9231.info",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-12-04",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "gift-secure-5321.biz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-10",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-official-1849.co",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-03-01",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-auth-9870.online",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-22",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "reward-confirm-2296.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-10-16",
+      "category": "payment"
+    },
+    {
+      "domain": "unlock-confirm-2353.top",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-04-08",
+      "category": "government"
+    },
+    {
+      "domain": "lottery-service-3746.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-07",
+      "category": "banking"
+    },
+    {
+      "domain": "offer-confirm-5423.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-14",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-support-6557.biz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-19",
+      "category": "social"
+    },
+    {
+      "domain": "prize-login-7499.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-08",
+      "category": "social"
+    },
+    {
+      "domain": "unlock-verify-9237.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-25",
+      "category": "payment"
+    },
+    {
+      "domain": "bonus-dept-5089.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-validate-2430.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-auth-2316.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-11",
+      "category": "banking"
+    },
+    {
+      "domain": "offer-official-7549.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-05-11",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-login-7462.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-03",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-validate-2719.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-09-13",
+      "category": "payment"
+    },
+    {
+      "domain": "free-kyc-2756.online",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-25",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-check-4831.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-04",
+      "category": "payment"
+    },
+    {
+      "domain": "lottery-portal-300.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-28",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-confirm-3997.online",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-10-22",
+      "category": "government"
+    },
+    {
+      "domain": "activate-update-9950.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-08",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "deal-netbanking-2529.com",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-12",
+      "category": "payment"
+    },
+    {
+      "domain": "prize-help-5524.site",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-01-04",
+      "category": "payment"
+    },
+    {
+      "domain": "offer-help-9847.site",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-09-06",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-update-5003.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-06-13",
+      "category": "government"
+    },
+    {
+      "domain": "reward-confirm-2304.org",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "activate-official-3525.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-04",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-help-7096.top",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-09",
+      "category": "social"
+    },
+    {
+      "domain": "claim-confirm-8614.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-16",
+      "category": "payment"
+    },
+    {
+      "domain": "win-help-3271.biz",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-01",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-official-6893.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-11",
+      "category": "social"
+    },
+    {
+      "domain": "deal-official-4714.com",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-02-10",
+      "category": "social"
+    },
+    {
+      "domain": "free-login-5560.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-24",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-official-5515.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-16",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-kyc-7646.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-06-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "prize-help-9356.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-11-11",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-support-5893.net",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-09",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "unlock-auth-2819.site",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-13",
+      "category": "social"
+    },
+    {
+      "domain": "cashback-support-618.org",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-03",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-help-3641.top",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-05-06",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "prize-update-7370.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-26",
+      "category": "social"
+    },
+    {
+      "domain": "gift-support-8021.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-09-10",
+      "category": "payment"
+    },
+    {
+      "domain": "cashback-kyc-3461.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-15",
+      "category": "telecom"
+    },
+    {
+      "domain": "cashback-help-821.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-10-28",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-login-8629.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-12-10",
+      "category": "social"
+    },
+    {
+      "domain": "bonus-official-5357.site",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-04-10",
+      "category": "social"
+    },
+    {
+      "domain": "free-login-4567.top",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-09",
+      "category": "banking"
+    },
+    {
+      "domain": "cashback-auth-5839.net",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-06-09",
+      "category": "telecom"
+    },
+    {
+      "domain": "bonus-auth-2906.online",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-05-20",
+      "category": "social"
+    },
+    {
+      "domain": "verify-kyc-575.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-11-02",
+      "category": "government"
+    },
+    {
+      "domain": "prize-service-6521.in",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-12-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "verify-team-5219.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-23",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-kyc-1622.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-04",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "verify-auth-3766.top",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-10-09",
+      "category": "government"
+    },
+    {
+      "domain": "offer-support-5420.biz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-08-01",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-confirm-7656.info",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-05-25",
+      "category": "social"
+    },
+    {
+      "domain": "gift-login-6746.club",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-02-11",
+      "category": "telecom"
+    },
+    {
+      "domain": "reward-auth-7652.org",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-14",
+      "category": "social"
+    },
+    {
+      "domain": "win-netbanking-8003.club",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-02-11",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-support-9021.xyz",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-06",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-check-5430.in",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-02-27",
+      "category": "payment"
+    },
+    {
+      "domain": "bonus-update-9901.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-11-27",
+      "category": "government"
+    },
+    {
+      "domain": "free-verify-1583.top",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-03-19",
+      "category": "payment"
+    },
+    {
+      "domain": "gift-auth-4875.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-10-19",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-support-5010.site",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-10",
+      "category": "telecom"
+    },
+    {
+      "domain": "claim-secure-8462.in",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-03-28",
+      "category": "banking"
+    },
+    {
+      "domain": "claim-verify-113.club",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-09-27",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-auth-7173.com",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-10-13",
+      "category": "telecom"
+    },
+    {
+      "domain": "unlock-dept-7230.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-04-22",
+      "category": "government"
+    },
+    {
+      "domain": "gift-auth-6401.net",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-05",
+      "category": "telecom"
+    },
+    {
+      "domain": "gift-secure-1275.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-05",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-update-2348.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-28",
+      "category": "telecom"
+    },
+    {
+      "domain": "activate-netbanking-7544.online",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-07-18",
+      "category": "government"
+    },
+    {
+      "domain": "claim-netbanking-7059.net",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-01-19",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-validate-4511.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-09-19",
+      "category": "banking"
+    },
+    {
+      "domain": "prize-confirm-6138.online",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-10-16",
+      "category": "payment"
+    },
+    {
+      "domain": "lucky-validate-1381.top",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-10-03",
+      "category": "government"
+    },
+    {
+      "domain": "reward-auth-9596.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-10-02",
+      "category": "social"
+    },
+    {
+      "domain": "lottery-check-8499.top",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-10-24",
+      "category": "government"
+    },
+    {
+      "domain": "claim-help-2844.org",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-12-20",
+      "category": "telecom"
+    },
+    {
+      "domain": "lucky-confirm-9572.com",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-10-02",
+      "category": "telecom"
+    },
+    {
+      "domain": "lottery-confirm-1451.org",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-09-03",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "gift-portal-4609.online",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-01-24",
+      "category": "social"
+    },
+    {
+      "domain": "offer-kyc-7417.online",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-03-09",
+      "category": "government"
+    },
+    {
+      "domain": "offer-verify-5717.club",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-03-20",
+      "category": "government"
+    },
+    {
+      "domain": "activate-auth-7311.xyz",
+      "impersonates": "Payment App",
+      "threat_level": "low",
+      "first_seen": "2025-11-06",
+      "category": "social"
+    },
+    {
+      "domain": "claim-portal-2000.com",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-03-15",
+      "category": "government"
+    },
+    {
+      "domain": "bonus-auth-3928.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-23",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-validate-7222.co",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-05-26",
+      "category": "government"
+    },
+    {
+      "domain": "free-verify-1695.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-12",
+      "category": "social"
+    },
+    {
+      "domain": "lucky-portal-4475.info",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-05-21",
+      "category": "government"
+    },
+    {
+      "domain": "verify-auth-9745.site",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-09-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lottery-secure-1213.site",
+      "impersonates": "Social Media",
+      "threat_level": "medium",
+      "first_seen": "2025-07-04",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-auth-4741.info",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-02",
+      "category": "social"
+    },
+    {
+      "domain": "reward-official-9920.com",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-02-23",
+      "category": "banking"
+    },
+    {
+      "domain": "gift-netbanking-1916.xyz",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-03-09",
+      "category": "government"
+    },
+    {
+      "domain": "reward-check-4628.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-12-22",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "offer-portal-1122.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-07-11",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "lucky-check-1237.co",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-04-20",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-kyc-8957.in",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-20",
+      "category": "government"
+    },
+    {
+      "domain": "lucky-verify-1294.in",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-10-24",
+      "category": "government"
+    },
+    {
+      "domain": "lottery-kyc-114.top",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-11-13",
+      "category": "payment"
+    },
+    {
+      "domain": "free-secure-8544.xyz",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-08-16",
+      "category": "government"
+    },
+    {
+      "domain": "reward-auth-154.club",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-12-27",
+      "category": "banking"
+    },
+    {
+      "domain": "claim-help-6663.info",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-11-21",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "free-check-4850.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-04-06",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-official-4996.site",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-07-04",
+      "category": "government"
+    },
+    {
+      "domain": "reward-check-3204.site",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-01-07",
+      "category": "telecom"
+    },
+    {
+      "domain": "win-dept-1132.top",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-11-10",
+      "category": "social"
+    },
+    {
+      "domain": "verify-verify-5658.com",
+      "impersonates": "Bank",
+      "threat_level": "medium",
+      "first_seen": "2025-06-26",
+      "category": "government"
+    },
+    {
+      "domain": "cashback-validate-7609.net",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-09-05",
+      "category": "payment"
+    },
+    {
+      "domain": "reward-kyc-8110.com",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-01-16",
+      "category": "banking"
+    },
+    {
+      "domain": "win-kyc-335.biz",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-11-02",
+      "category": "banking"
+    },
+    {
+      "domain": "verify-netbanking-9783.online",
+      "impersonates": "Government",
+      "threat_level": "medium",
+      "first_seen": "2025-02-04",
+      "category": "social"
+    },
+    {
+      "domain": "win-official-7083.in",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-12-22",
+      "category": "ecommerce"
+    },
+    {
+      "domain": "cashback-auth-2350.site",
+      "impersonates": "Bank",
+      "threat_level": "low",
+      "first_seen": "2025-04-25",
+      "category": "social"
+    },
+    {
+      "domain": "offer-update-2078.info",
+      "impersonates": "Government",
+      "threat_level": "low",
+      "first_seen": "2025-03-25",
+      "category": "payment"
+    },
+    {
+      "domain": "claim-netbanking-7287.club",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-10-02",
+      "category": "banking"
+    },
+    {
+      "domain": "unlock-secure-8078.co",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-01-01",
+      "category": "banking"
+    },
+    {
+      "domain": "bonus-confirm-2179.xyz",
+      "impersonates": "E-commerce",
+      "threat_level": "medium",
+      "first_seen": "2025-03-21",
+      "category": "social"
+    },
+    {
+      "domain": "verify-auth-2959.xyz",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-12-02",
+      "category": "payment"
+    },
+    {
+      "domain": "secure-update-5034.online",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-07-01",
+      "category": "payment"
+    },
+    {
+      "domain": "deal-validate-1667.in",
+      "impersonates": "Social Media",
+      "threat_level": "low",
+      "first_seen": "2025-06-28",
+      "category": "social"
+    },
+    {
+      "domain": "win-official-4628.top",
+      "impersonates": "Payment App",
+      "threat_level": "medium",
+      "first_seen": "2025-04-04",
+      "category": "telecom"
+    },
+    {
+      "domain": "secure-netbanking-2717.top",
+      "impersonates": "E-commerce",
+      "threat_level": "low",
+      "first_seen": "2025-01-02",
+      "category": "ecommerce"
+    }
+  ]
+}

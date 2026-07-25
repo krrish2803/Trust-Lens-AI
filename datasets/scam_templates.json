@@ -1,0 +1,1490 @@
+{
+  "version": "1.0",
+  "templates": [
+    {
+      "id": "FK001",
+      "template": "Dear Customer, your SBI account KYC is pending. Complete it immediately or your account will be frozen. Click here: sbi-kyc-verify.in to update.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["KYC pending", "account frozen", "sbi-kyc-verify.in"],
+      "red_flags": ["Fake domain", "Urgency threat", "Suspicious link"]
+    },
+    {
+      "id": "FK002",
+      "template": "URGENT: Your Aadhaar card has been deactivated due to incomplete biometric update. Visit your nearest center or call 1800-XXX-XXXX immediately.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["Aadhaar deactivated", "biometric update", "URGENT"],
+      "red_flags": ["Deactivation claim", "Urgency", "Unverified number"]
+    },
+    {
+      "id": "FK003",
+      "template": "UIDAI Alert: Your Aadhaar-Aadhaar linking is incomplete. Link now to avoid deactivation. Visit: uidai-update.org",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["UIDAI Alert", "Aadhaar linking", "uidai-update.org"],
+      "red_flags": ["Fake UIDAI domain", "Deactivation threat"]
+    },
+    {
+      "id": "FK004",
+      "template": "HDFC Bank: Your account will be suspended as KYC documents expired. Update at: hdfc-kyc-update.com within 24 hours.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["account suspended", "KYC expired", "hdfc-kyc-update.com"],
+      "red_flags": ["Fake bank domain", "Suspension threat", "Time pressure"]
+    },
+    {
+      "id": "FK005",
+      "template": "ICICI Bank Alert: Your PAN card is not linked with your account. Link PAN within 48 hours or account will be blocked. Click: icici-pan-link.in",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["PAN not linked", "account blocked", "icici-pan-link.in"],
+      "red_flags": ["Fake ICICI domain", "Blocking threat"]
+    },
+    {
+      "id": "BA001",
+      "template": "SBI Alert: Rs 45,000 debited from your account XXXX1234 at 14:23. If not you, call 1800-XXX-XXXX immediately to block.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["debited", "call immediately", "1800-XXX-XXXX"],
+      "red_flags": ["Fake debit alert", "Panic inducement", "Fake helpline"]
+    },
+    {
+      "id": "BA002",
+      "template": "HDFC Bank: Rs 89,500 transaction on your card ending 4521 at Flipkart. Unauthorized? Call 1800-XXX-XXXX NOW.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["Rs 89,500", "Unauthorized", "call NOW"],
+      "red_flags": ["High amount urgency", "Fake helpline", "Panic trigger"]
+    },
+    {
+      "id": "BA003",
+      "template": "ICICI Bank: Your account XXXX5678 has been credited with Rs 1,25,000 by mistake. Please return to account XXXX9999 immediately or legal action will be taken.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["credited by mistake", "return", "legal action"],
+      "red_flags": ["Fake credit alert", "Return demand", "Legal threat"]
+    },
+    {
+      "id": "BA004",
+      "template": "Axis Bank Alert: Unusual login detected from Mumbai on your net banking. If not you, verify now at axis-security-check.com",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["Unusual login", "net banking", "axis-security-check.com"],
+      "red_flags": ["Fake Axis domain", "Security scare"]
+    },
+    {
+      "id": "BA005",
+      "template": "PNB Fraud Alert: ATM withdrawal of Rs 35,000 from your account. This is not you? Send OTP to confirm block on 1800-XXX-XXXX.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["ATM withdrawal", "Send OTP", "1800-XXX-XXXX"],
+      "red_flags": ["Fake fraud alert", "OTP request", "Fake helpline"]
+    },
+    {
+      "id": "OT001",
+      "template": "Your OTP for SBI is 452189. Do NOT share this with anyone. Bank never asks for OTP.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["OTP", "Do NOT share"],
+      "red_flags": ["Legitimate-looking format", "Real OTP leaked in message"]
+    },
+    {
+      "id": "OT002",
+      "template": "Hello, I am from ICICI Bank fraud department. We detected unauthorized transaction. Please share the OTP sent to your phone to reverse it.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.99,
+      "detection_trigger": ["share the OTP", "fraud department", "reverse it"],
+      "red_flags": ["Bank never asks for OTP", "Urgency", "Fake authority"]
+    },
+    {
+      "id": "OT003",
+      "template": "Kotak Bank: OTP 883472 for transaction Rs 12,500. If you did not initiate, share OTP immediately to cancel.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["share OTP immediately", "cancel", "Kotak"],
+      "red_flags": ["OTP sharing request", "Fake cancellation"]
+    },
+    {
+      "id": "OT004",
+      "template": "UPI PIN verification needed for your BHIM account. Enter the 6-digit PIN sent to your registered number on our secure portal.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["UPI PIN verification", "secure portal", "6-digit PIN"],
+      "red_flags": ["PIN never shared", "Fake portal", "Credential harvesting"]
+    },
+    {
+      "id": "OT005",
+      "template": "Amazon OTP: 912345 for login verification. Share this code with our agent to confirm your identity.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["Share this code", "agent", "identity"],
+      "red_flags": ["OTP sharing request", "Agent impersonation"]
+    },
+    {
+      "id": "UP001",
+      "template": "You have received a payment request of Rs 5,000 from merchant@ybl. Approve to receive your cashback of Rs 500.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["payment request", "Approve to receive", "cashback"],
+      "red_flags": ["Fake payment request", "Cashback bait"]
+    },
+    {
+      "id": "UP002",
+      "template": "PhonePe: Your refund of Rs 2,340 has been initiated. To receive, approve collect request from refund@phonepe-upi.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["refund initiated", "approve collect request", "refund@phonepe-upi"],
+      "red_flags": ["Fake refund", "Collect request scam"]
+    },
+    {
+      "id": "UP003",
+      "template": "Google Pay Alert: Rs 15,000 pending in your account. Send Rs 1 to verify UPI ID and claim. UPI: gpay-verify@okaxis",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["Send Rs 1", "verify UPI ID", "gpay-verify@okaxis"],
+      "red_flags": ["Micro-transaction scam", "Fake verification"]
+    },
+    {
+      "id": "UP004",
+      "template": "BHIM App: Your UPI ID user@upi has been compromised. Reset immediately at bhim-security-reset.in or lose access.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["compromised", "Reset immediately", "bhim-security-reset.in"],
+      "red_flags": ["Fake BHIM domain", "Urgency", "Fake reset"]
+    },
+    {
+      "id": "UP005",
+      "template": "Paytm: Rs 10,000 reward unclaimed. Send Rs 199 processing fee to your UPI to unlock. UPI ID: reward@paytm-bank",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["processing fee", "reward@paytm-bank", "Send Rs 199"],
+      "red_flags": ["Advance fee", "Fake reward", "Suspicious UPI ID"]
+    },
+    {
+      "id": "DL001",
+      "template": "Your Amazon package (Order #AMZ-8847) could not be delivered. Pay Rs 49 delivery charge to reschedule. Click: amazon-delivery-fee.in",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["delivery charge", "amazon-delivery-fee.in", "reschedule"],
+      "red_flags": ["Fake Amazon domain", "Delivery fee scam"]
+    },
+    {
+      "id": "DL002",
+      "template": "FedEx: Your parcel is held at customs. Pay Rs 2,500 customs duty to release. Track: fedex-customs-pay.in",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["customs", "customs duty", "fedex-customs-pay.in"],
+      "red_flags": ["Fake FedEx domain", "Customs duty scam"]
+    },
+    {
+      "id": "DL003",
+      "template": "DTDC Courier: Package delivery failed. Rs 150 re-delivery fee pending. Pay via: dtdc-recharge.in or parcel will be returned.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["re-delivery fee", "dtdc-recharge.in", "returned"],
+      "red_flags": ["Fake DTDC domain", "Return threat"]
+    },
+    {
+      "id": "DL004",
+      "template": "Blue Dart: International parcel worth Rs 50,000 intercepted by customs. Pay Rs 5,500 processing fee within 24 hours. Link: bluedart-customs.com",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["customs", "processing fee", "bluedart-customs.com"],
+      "red_flags": ["Fake Blue Dart domain", "High fee", "Urgency"]
+    },
+    {
+      "id": "DL005",
+      "template": "India Post: Speed Post tracking EP123456789IN needs Rs 299 postal fee to complete delivery. Pay now:indiapost-delivery.in",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["postal fee", "indiapost-delivery.in", "Speed Post"],
+      "red_flags": ["Fake India Post domain", "Delivery fee"]
+    },
+    {
+      "id": "CS001",
+      "template": "Hello, I am Rahul from Amazon Customer Support. Your order has been charged incorrectly. I need to access your device via TeamViewer to process the refund. Please install TeamViewer and share the ID.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["TeamViewer", "access your device", "share the ID"],
+      "red_flags": ["Remote access request", "Fake support agent", "Screen sharing"]
+    },
+    {
+      "id": "CS002",
+      "template": "Amazon Prime Support: Your membership has been auto-renewed for Rs 1499. To cancel and get refund, share your card details for verification.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["share your card details", "auto-renewed", "refund"],
+      "red_flags": ["Card details request", "Refund bait"]
+    },
+    {
+      "id": "CS003",
+      "template": "Flipkart Customer Care: We detected suspicious activity on your account. To secure it, please share your login credentials and OTP.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["share your login credentials", "OTP", "suspicious activity"],
+      "red_flags": ["Credential request", "OTP sharing"]
+    },
+    {
+      "id": "CS004",
+      "template": "Swiggy Support: Your last order refund of Rs 350 is pending. To process, we need your UPI PIN for verification. Please share.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["UPI PIN", "share", "refund pending"],
+      "red_flags": ["UPI PIN request", "Refund bait"]
+    },
+    {
+      "id": "CS005",
+      "template": "Zomato Customer Support: Your Zomato Gold membership has been charged Rs 2999. Call 1800-XXX-XXXX to cancel within 1 hour.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["charged Rs 2999", "cancel within 1 hour", "1800-XXX-XXXX"],
+      "red_flags": ["Time pressure", "Fake helpline"]
+    },
+    {
+      "id": "JI001",
+      "template": "Congratulations! You have been selected for a Work From Home data entry job at Amazon. Salary: Rs 35,000/month. Register at: amazon-jobs-wfh.in with Rs 999 registration fee.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["registration fee", "amazon-jobs-wfh.in", "Rs 999"],
+      "red_flags": ["Fake job domain", "Advance fee", "Too good to be true"]
+    },
+    {
+      "id": "JI002",
+      "template": "Internship Opportunity at Google India! Stipend: Rs 25,000/month. Apply now at: google-internship-india.com. Processing fee: Rs 1,500.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["google-internship-india.com", "Processing fee", "stipend"],
+      "red_flags": ["Fake Google domain", "Fee demand"]
+    },
+    {
+      "id": "JI003",
+      "template": "Hiring Alert: TCS is hiring freshers for remote roles. Package: Rs 8 LPA. WhatsApp 98XXX XXXXX to apply. No experience needed.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["WhatsApp", "No experience", "No experience needed"],
+      "red_flags": ["WhatsApp recruitment", "Unrealistic salary", "No qualification"]
+    },
+    {
+      "id": "JI004",
+      "template": "Amazon Warehouse Job Opening! Guaranteed hiring for 10th pass candidates. Salary Rs 28,000. Pay Rs 500 processing fee at: amazon-hiring-india.in",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["Guaranteed hiring", "amazon-hiring-india.in", "processing fee"],
+      "red_flags": ["Fake domain", "Advance fee", "Guaranteed claim"]
+    },
+    {
+      "id": "JI005",
+      "template": "Urgent Hiring: Reliance Jio is looking for freshers. Work from home. Salary Rs 30,000. Send resume to jio-hr@outlook.com with Aadhaar copy.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["jio-hr@outlook.com", "Aadhaar copy", "Work from home"],
+      "red_flags": ["Personal email", "Aadhaar harvesting", "Identity theft"]
+    },
+    {
+      "id": "IF001",
+      "template": "Investment Opportunity: Earn guaranteed 30% monthly returns through our SEBI-registered trading platform. Minimum investment Rs 25,000. WhatsApp group link: t.me/investpro2026",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["guaranteed 30%", "minimum investment", "WhatsApp group"],
+      "red_flags": ["Unrealistic returns", "SEBI impersonation", "Telegram group"]
+    },
+    {
+      "id": "IF002",
+      "template": "IPO Allotment Guaranteed! We can get you shares in upcoming IPOs. Pay Rs 5,000 processing fee. Contact: 98XXX XXXXX or invest@ipo-guaranteed.com",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["IPO Allotment Guaranteed", "processing fee", "ipo-guaranteed.com"],
+      "red_flags": ["Guaranteed claim", "Advance fee", "Fake email"]
+    },
+    {
+      "id": "IF003",
+      "template": "Crypto Trading Bot: Earn Rs 50,000 daily with our AI bot. 100% profit guaranteed. Invest Rs 10,000 now. Join: crypto-profit.in",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["Rs 50,000 daily", "100% profit", "crypto-profit.in"],
+      "red_flags": ["Unrealistic returns", "100% guarantee", "Fake crypto platform"]
+    },
+    {
+      "id": "IF004",
+      "template": "Mutual Fund Agent: Our fund has given 45% returns in last 3 months. Invest Rs 1 lakh and double your money. Pay Rs 2,000 advisory fee.",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["45% returns", "double your money", "advisory fee"],
+      "red_flags": ["Unrealistic returns", "Fee demand", "Double money claim"]
+    },
+    {
+      "id": "IF005",
+      "template": "Forex Trading Signal: Guaranteed 50% monthly returns. Join our premium group. Rs 10,000 monthly subscription. Contact: forex-guru@proton.me",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["50% monthly returns", "subscription", "forex-guru@proton.me"],
+      "red_flags": ["Unrealistic returns", "Subscription fee", "Anonymous email"]
+    },
+    {
+      "id": "LS001",
+      "template": "Congratulations! Your personal loan of Rs 5,00,000 has been pre-approved by HDFC Bank. Disbursal within 30 minutes. Pay Rs 2,500 processing fee. Apply: hdfc-loan-quick.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["pre-approved", "processing fee", "hdfc-loan-quick.in"],
+      "red_flags": ["Fake HDFC domain", "Advance fee", "Guaranteed loan"]
+    },
+    {
+      "id": "LS002",
+      "template": "Personal Loan Instant: Rs 10,00,000 approved for you by SBI. No documents needed. Pay Rs 3,000 verification fee. Apply: sbi-loan-instant.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["No documents", "verification fee", "sbi-loan-instant.in"],
+      "red_flags": ["Fake SBI domain", "No documents claim", "Fee demand"]
+    },
+    {
+      "id": "LS003",
+      "template": "Gold Loan Offer: Get Rs 3,00,000 against your gold. Interest rate 0.5% per month. Pay Rs 1,000 processing fee. Apply: gold-loan-instant.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["processing fee", "0.5% interest", "gold-loan-instant.in"],
+      "red_flags": ["Too low interest", "Fee demand", "Fake domain"]
+    },
+    {
+      "id": "LS004",
+      "template": "Education Loan Approved! Rs 20,00,000 for your child's studies abroad. Pay Rs 5,000 as security deposit. Apply: edu-loan-pro.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["security deposit", "edu-loan-pro.in", "studies abroad"],
+      "red_flags": ["Advance fee", "Fake domain", "Too good terms"]
+    },
+    {
+      "id": "LS005",
+      "template": "Business Loan: Rs 50,00,000 sanctioned by ICICI Bank. Pay Rs 15,000 as insurance premium to activate. Apply: icici-business-loan.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["insurance premium", "icici-business-loan.in", "sanctioned"],
+      "red_flags": ["Fake ICICI domain", "Fee demand", "Guaranteed sanction"]
+    },
+    {
+      "id": "PH001",
+      "template": "Dear Customer, your bank account has been locked due to suspicious activity. To unlock, verify your identity at: bank-verify-now.com",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["bank-verify-now.com", "locked", "verify your identity"],
+      "red_flags": ["Fake bank domain", "Generic bank reference", "Credential harvesting"]
+    },
+    {
+      "id": "PH002",
+      "template": "Netflix: Your account will be deactivated. Update payment method at: netflix-payment-update.in to continue enjoying.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["netflix-payment-update.in", "deactivated", "Update payment"],
+      "red_flags": ["Fake Netflix domain", "Payment page phishing"]
+    },
+    {
+      "id": "PH003",
+      "template": "WhatsApp: Your account will be banned in 24 hours due to unusual activity. Verify at: whatsapp-verify-now.com",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["banned in 24 hours", "whatsapp-verify-now.com", "unusual activity"],
+      "red_flags": ["Fake WhatsApp domain", "Banning threat", "Urgency"]
+    },
+    {
+      "id": "PH004",
+      "template": "Google Account Alert: Someone tried to access your Gmail. If this wasn't you, secure your account at: google-security-check.in",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["google-security-check.in", "Gmail", "secure your account"],
+      "red_flags": ["Fake Google domain", "Security scare"]
+    },
+    {
+      "id": "PH005",
+      "template": "Instagram: Your account has been reported for violating community guidelines. Appeal within 24 hours or account will be permanently deleted. Click: instagram-appeal.in",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["instagram-appeal.in", "permanently deleted", "community guidelines"],
+      "red_flags": ["Fake Instagram domain", "Deletion threat", "Urgency"]
+    },
+    {
+      "id": "SE001",
+      "template": "Hello, I am your relative. I am stuck in an emergency and need Rs 15,000 urgently. Please send to my UPI: emergency@paytm. I will return tomorrow.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["relative", "emergency", "send to my UPI"],
+      "red_flags": ["Unknown UPI", "Urgency", "Vague identity"]
+    },
+    {
+      "id": "SE002",
+      "template": "Your friend Vikram is in hospital. He asked me to collect Rs 25,000 for his treatment. Please send to Google Pay: 98XXX XXXXX.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["hospital", "treatment", "collect Rs 25,000"],
+      "red_flags": ["Unverifiable claim", "Emotional manipulation", "Money collection"]
+    },
+    {
+      "id": "SE003",
+      "template": "Hi, this is from your office HR. We need to update your salary account. Please share your Aadhaar number and PAN for verification.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["HR", "salary account", "Aadhaar number", "PAN"],
+      "red_flags": ["Identity harvesting", "HR impersonation", "Sensitive data request"]
+    },
+    {
+      "id": "SE004",
+      "template": "I am from the apartment committee. We need your bank details to process the maintenance refund. Send account number and IFSC to this number.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["apartment committee", "maintenance refund", "bank details"],
+      "red_flags": ["Bank details request", "Unverifiable authority"]
+    },
+    {
+      "id": "SE005",
+      "template": "Dear resident, municipal corporation has approved Rs 5,000 water bill refund. To claim, send your UPI ID and PIN to this verified government number.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["UPI ID and PIN", "government number", "refund"],
+      "red_flags": ["UPI PIN request", "Government impersonation", "Refund bait"]
+    },
+    {
+      "id": "FK006",
+      "template": "Paytm KYC Pending: Complete KYC to unlock wallet. Send Rs 1 to verify: paytm-kyc.in. Account will be frozen after 24 hours.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["paytm-kyc.in", "Rs 1", "frozen after 24 hours"],
+      "red_flags": ["Fake Paytm domain", "Micro-payment scam", "Freezing threat"]
+    },
+    {
+      "id": "BA006",
+      "template": "Canara Bank: Rs 67,450 debited from account XXXX8901. Unauthorized transaction? Block card now: 1800-XXX-XXXX. Do not share OTP.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["debited", "Block card now", "1800-XXX-XXXX"],
+      "red_flags": ["Fake debit alert", "Fake helpline", "Urgency"]
+    },
+    {
+      "id": "OT006",
+      "template": "SBI: OTP 654321 for Rs 99,999 transaction. If you did not initiate, share OTP immediately to cancel transaction.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.99,
+      "detection_trigger": ["share OTP immediately", "Rs 99,999", "cancel transaction"],
+      "red_flags": ["High amount", "OTP sharing", "Panic inducement"]
+    },
+    {
+      "id": "UP006",
+      "template": "PhonePe Scratch Card: You won Rs 2,500! To claim, send Rs 99 activation fee to scratch@phonepe-reward.in",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["activation fee", "scratch@phonepe-reward.in", "Scratch Card"],
+      "red_flags": ["Advance fee", "Fake reward", "Suspicious UPI ID"]
+    },
+    {
+      "id": "DL006",
+      "template": "Your Flipkart order #FK-9987 needs Rs 199 shipping fee. Pay at flipkart-shipping.in within 12 hours or order cancelled.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["flipkart-shipping.in", "shipping fee", "order cancelled"],
+      "red_flags": ["Fake Flipkart domain", "Time pressure"]
+    },
+    {
+      "id": "CS006",
+      "template": "Apple Support: Your Apple ID has been locked. Share your Apple ID password and 6-digit verification code to unlock. Call: 1800-XXX-XXXX",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["Apple ID password", "6-digit verification", "1800-XXX-XXXX"],
+      "red_flags": ["Credential request", "Apple impersonation"]
+    },
+    {
+      "id": "JI006",
+      "template": "Microsoft Internship Program: Work from home, Rs 20,000 stipend. Apply at microsoft-internship.in. Pay Rs 750 registration fee.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["microsoft-internship.in", "registration fee", "Rs 750"],
+      "red_flags": ["Fake Microsoft domain", "Fee demand"]
+    },
+    {
+      "id": "IF006",
+      "template": "Binary Options Trading: Earn Rs 1,00,000 in 7 days. Guaranteed! Invest Rs 15,000. Contact: binary-profits@tutanota.com",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["Earn Rs 1,00,000", "Guaranteed", "binary-profits@tutanota.com"],
+      "red_flags": ["Unrealistic returns", "Anonymous email", "7-day claim"]
+    },
+    {
+      "id": "LS006",
+      "template": "Car Loan Approved! Rs 8,00,000 at 2% interest. No CIBIL check required. Pay Rs 4,000 documentation fee. Apply: car-loan-instant.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["No CIBIL check", "documentation fee", "car-loan-instant.in"],
+      "red_flags": ["No credit check claim", "Fee demand", "Too low interest"]
+    },
+    {
+      "id": "PH006",
+      "template": "Amazon: Your order #ORD-7741 needs address verification. Enter card details at amazon-address-verify.in to confirm delivery.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["amazon-address-verify.in", "card details", "address verification"],
+      "red_flags": ["Fake Amazon domain", "Card details request"]
+    },
+    {
+      "id": "SE006",
+      "template": "Hi, I am calling from telecom department. Your SIM will be deactivated today. To keep your number, share your Aadhaar and last 4 digits of card.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["SIM deactivated", "Aadhaar", "card details"],
+      "red_flags": ["SIM deactivation scare", "Identity harvesting"]
+    },
+    {
+      "id": "FK007",
+      "template": "Aadhaar Card Update: Your biometric data has expired. Update at nearest center or online at aadhaar-biometric.in. Rs 200 fee.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["biometric data expired", "aadhaar-biometric.in", "Rs 200 fee"],
+      "red_flags": ["Fake UIDAI domain", "Fee demand", "False expiry"]
+    },
+    {
+      "id": "BA007",
+      "template": "Yes Bank: Credit card ending 6789 has been charged Rs 34,999 at Amazon. Not you? Call fraud helpline: 1800-XXX-XXXX immediately.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["charged Rs 34,999", "call fraud helpline", "immediately"],
+      "red_flags": ["Fake debit alert", "Fake helpline", "Urgency"]
+    },
+    {
+      "id": "OT007",
+      "template": "HDFC NetBanking: Login OTP 445566. Someone is trying to access your account. Share OTP with our security team to block unauthorized access.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["Share OTP", "security team", "unauthorized access"],
+      "red_flags": ["OTP sharing", "Fake security team", "Scare tactic"]
+    },
+    {
+      "id": "UP007",
+      "template": "GPay: You received Rs 8,000 from unknown number. To accept, verify by sending Rs 1 to gpay-verify@okhdfc. This is a one-time verification.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["send Rs 1", "gpay-verify@okhdfc", "one-time verification"],
+      "red_flags": ["Micro-payment scam", "Fake verification"]
+    },
+    {
+      "id": "DL007",
+      "template": "DHL Express: Your international parcel from UK is held. Pay customs fee of Rs 4,500 at dhl-customs-release.in within 48 hours.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["dhl-customs-release.in", "customs fee", "Rs 4,500"],
+      "red_flags": ["Fake DHL domain", "Customs fee scam"]
+    },
+    {
+      "id": "CS007",
+      "template": "Samsung Support: Your device warranty is expiring. To extend, share your Samsung account credentials and OTP for verification.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["share your Samsung account", "OTP", "warranty expiring"],
+      "red_flags": ["Credential request", "OTP sharing"]
+    },
+    {
+      "id": "JI007",
+      "template": "Wipro Hiring: Walk-in interview for freshers. Salary Rs 4.5 LPA. Register at wipro-hiring.in with Rs 500 registration fee.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["wipro-hiring.in", "registration fee", "Rs 500"],
+      "red_flags": ["Fake Wipro domain", "Fee demand"]
+    },
+    {
+      "id": "IF007",
+      "template": "NFT Art Investment: Buy digital art and earn 100% returns. Minimum investment Rs 50,000. Join: nft-returns.in",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["100% returns", "nft-returns.in", "digital art"],
+      "red_flags": ["Unrealistic returns", "Fake NFT platform"]
+    },
+    {
+      "id": "LS007",
+      "template": "Home Loan Pre-Approved: Rs 30,00,000 by LIC HFL. Pay Rs 8,000 processing fee. Apply at: lic-home-loan.in within 24 hours.",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["lic-home-loan.in", "processing fee", "within 24 hours"],
+      "red_flags": ["Fake LIC domain", "Fee demand", "Urgency"]
+    },
+    {
+      "id": "PH007",
+      "template": "Bank of India: Your net banking access has been compromised. Login to secure it at: boi-netbanking-secure.in immediately.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["boi-netbanking-secure.in", "compromised", "Login to secure"],
+      "red_flags": ["Fake BOI domain", "Security scare", "Credential harvesting"]
+    },
+    {
+      "id": "SE007",
+      "template": "Hi, I am your bank relationship manager. Your fixed maturity is approaching. I need to verify your PAN and Aadhaar for renewal. Share on this number.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["relationship manager", "PAN and Aadhaar", "Share on this number"],
+      "red_flags": ["Identity harvesting", "Unverifiable caller"]
+    },
+    {
+      "id": "FK008",
+      "template": "IRCTC: Your train ticket booking requires PAN verification. Complete at irctc-pan-verify.in to avoid cancellation.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["irctc-pan-verify.in", "PAN verification", "cancellation"],
+      "red_flags": ["Fake IRCTC domain", "PAN harvesting"]
+    },
+    {
+      "id": "BA008",
+      "template": "Union Bank Alert: Rs 78,000 credited to your account by mistake. Please return to account XXXX4444 within 24 hours or face legal consequences.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["credited by mistake", "return", "legal consequences"],
+      "red_flags": ["Fake credit alert", "Return demand", "Legal threat"]
+    },
+    {
+      "id": "OT008",
+      "template": "PhonePe: Transaction of Rs 45,000 initiated. OTP 778899. If not you, forward OTP to 98XXX XXXXX to reverse.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["forward OTP", "reverse", "98XXX XXXXX"],
+      "red_flags": ["OTP forwarding", "Fake reversal", "Unknown number"]
+    },
+    {
+      "id": "UP008",
+      "template": "BHIM: Your UPI ID has been used for Rs 25,000 payment. If unauthorized, send Rs 1 to bhim-verify@npci to block.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["send Rs 1", "bhim-verify@npci", "block"],
+      "red_flags": ["Micro-payment scam", "Fake NPCI domain"]
+    },
+    {
+      "id": "DL008",
+      "template": "Gati-KWE Courier: Your shipment from China is intercepted. Pay Rs 8,000 clearance fee at gati-customs.in within 12 hours.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["gati-customs.in", "clearance fee", "Rs 8,000"],
+      "red_flags": ["Fake Gati domain", "High fee", "Urgency"]
+    },
+    {
+      "id": "CS008",
+      "template": "Microsoft Support: Your Windows license has expired. Share screen via AnyDesk so we can reactivate it remotely. This is urgent.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["AnyDesk", "share screen", "reactivate remotely"],
+      "red_flags": ["Remote access", "Screen sharing", "Urgency"]
+    },
+    {
+      "id": "JI008",
+      "template": "Infosys Recruitment: Walk-in for experienced professionals. Send resume with Aadhaar and PAN copy to infosys-hr@gmail.com. Registration: Rs 300.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["infosys-hr@gmail.com", "Aadhaar and PAN", "Registration: Rs 300"],
+      "red_flags": ["Personal email", "Identity harvesting", "Fee demand"]
+    },
+    {
+      "id": "IF008",
+      "template": "Share Market Tips: Guaranteed 500% profit in 3 months. Subscribe to our paid tips for Rs 5,000/month. Contact: stocktips@proton.me",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["500% profit", "paid tips", "stocktips@proton.me"],
+      "red_flags": ["Unrealistic returns", "Subscription fee", "Anonymous email"]
+    },
+    {
+      "id": "LS008",
+      "template": "Instant Personal Loan: Rs 7,00,000 approved. No income proof required. Pay Rs 3,500 insurance fee. Apply: instant-loan-24.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["No income proof", "insurance fee", "instant-loan-24.in"],
+      "red_flags": ["No documents claim", "Fee demand", "Fake domain"]
+    },
+    {
+      "id": "PH008",
+      "template": "Paytm: Your wallet balance of Rs 12,400 will expire. Transfer to bank at paytm-transfer.in or lose the amount.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["paytm-transfer.in", "expire", "lose the amount"],
+      "red_flags": ["Fake Paytm domain", "Expiry scare", "Loss threat"]
+    },
+    {
+      "id": "SE008",
+      "template": "Hello, I am calling from electricity board. Your electricity will be disconnected today. Share your UPI to pay Rs 2,500 bill immediately.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["disconnected today", "share your UPI", "immediately"],
+      "red_flags": ["Disconnection threat", "UPI sharing", "Urgency"]
+    },
+    {
+      "id": "FK009",
+      "template": "Vehicle RC Renewal: Your car RC expires on 31/03/2026. Renew at vehicle-rc-renew.in or pay Rs 5,000 penalty.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["vehicle-rc-renew.in", "penalty", "RC expires"],
+      "red_flags": ["Fake transport domain", "Penalty threat"]
+    },
+    {
+      "id": "BA009",
+      "template": "Indian Bank: Your account XXXX3210 has been flagged for unusual activity. Verify at indian-bank-verify.in within 6 hours.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["indian-bank-verify.in", "flagged", "within 6 hours"],
+      "red_flags": ["Fake Indian Bank domain", "Time pressure"]
+    },
+    {
+      "id": "OT009",
+      "template": "Axis Bank Credit Card: OTP 332211 for Rs 75,000. If not you, forward this message to 1800-XXX-XXXX immediately.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["forward this message", "1800-XXX-XXXX", "Rs 75,000"],
+      "red_flags": ["Fake helpline", "High amount", "Forward request"]
+    },
+    {
+      "id": "UP009",
+      "template": "Freecharge: You have an unclaimed cashback of Rs 1,200. To receive, approve the collect request from cashback@freecharge-upi.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["approve the collect request", "cashback@freecharge-upi", "unclaimed"],
+      "red_flags": ["Collect request scam", "Fake reward"]
+    },
+    {
+      "id": "DL009",
+      "template": "Professional Courier: Your parcel needs Rs 350 delivery charge. Pay at professional-delivery.in. Package will be destroyed after 24 hours.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["professional-delivery.in", "destroyed after 24 hours", "delivery charge"],
+      "red_flags": ["Fake courier domain", "Destruction threat", "Urgency"]
+    },
+    {
+      "id": "CS009",
+      "template": "Vodafone Idea Support: Your SIM will be ported to another number. To stop, share your Aadhaar OTP and last 4 card digits.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["SIM will be ported", "Aadhaar OTP", "card digits"],
+      "red_flags": ["SIM porting scare", "Identity harvesting", "Card details"]
+    },
+    {
+      "id": "JI009",
+      "template": "TCS Hiring: Remote data entry job. Rs 30,000 salary. No interview needed. Apply at tcs-jobs-india.in with Rs 400 processing fee.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["tcs-jobs-india.in", "processing fee", "No interview"],
+      "red_flags": ["Fake TCS domain", "Fee demand", "No process claim"]
+    },
+    {
+      "id": "IF009",
+      "template": "Commodity Trading: Gold and silver prices will surge. Invest Rs 2,00,000 now for 200% returns. Contact: gold-trading@proton.me",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["200% returns", "gold-trading@proton.me", "surge"],
+      "red_flags": ["Unrealistic returns", "Anonymous email", "Price prediction scam"]
+    },
+    {
+      "id": "LS009",
+      "template": "Personal Loan Disbursed: Rs 4,50,000 credited to fake account. To receive in your real account, pay Rs 6,000 reprocessing fee.",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["credited to fake account", "reprocessing fee", "Rs 6,000"],
+      "red_flags": ["Fake credit claim", "Fee demand", "Recovery scam"]
+    },
+    {
+      "id": "PH009",
+      "template": "Telegram: Your account has been reported for spam. Verify at telegram-verify.in within 48 hours or account deleted.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["telegram-verify.in", "account deleted", "reported for spam"],
+      "red_flags": ["Fake Telegram domain", "Deletion threat"]
+    },
+    {
+      "id": "SE009",
+      "template": "I am from your bank's NRI desk. To activate your NRE account, I need your passport details, PAN, and bank OTP. Please share.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["NRI desk", "passport details", "bank OTP", "share"],
+      "red_flags": ["NRI impersonation", "Identity harvesting", "OTP request"]
+    },
+    {
+      "id": "FK010",
+      "template": "Driving Licence: Your DL is suspended for traffic violations. Pay Rs 3,000 fine at dl-payment.in to reactivate.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["dl-payment.in", "suspended", "Rs 3,000 fine"],
+      "red_flags": ["Fake RTO domain", "Suspension claim", "Fee demand"]
+    },
+    {
+      "id": "BA010",
+      "template": "Kotak Mahindra Bank: Your account XXXX7654 has been debited Rs 1,25,000 for insurance renewal. If unauthorized, call 1800-XXX-XXXX now.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["debited Rs 1,25,000", "call 1800-XXX-XXXX now", "insurance renewal"],
+      "red_flags": ["Fake debit alert", "Fake helpline", "Urgency"]
+    },
+    {
+      "id": "OT010",
+      "template": "Paytm: OTP 998877 for UPI PIN reset. If you didn't request, forward OTP to 98XXX XXXXX to cancel immediately.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.99,
+      "detection_trigger": ["forward OTP", "cancel immediately", "UPI PIN reset"],
+      "red_flags": ["OTP forwarding", "Fake cancellation", "UPI PIN scam"]
+    },
+    {
+      "id": "UP010",
+      "template": "Amazon Pay: Rs 5,000 reward unlocked! To claim, send Rs 199 to amazon-reward@okaxis. One-time verification required.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["send Rs 199", "amazon-reward@okaxis", "One-time verification"],
+      "red_flags": ["Advance fee", "Fake reward", "Suspicious UPI ID"]
+    },
+    {
+      "id": "DL010",
+      "template": "Your Daraz order (PKG-9981) is stuck at customs. Pay Rs 1,200 customs fee at daraz-customs.in within 24 hours or parcel returned.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["daraz-customs.in", "customs fee", "returned"],
+      "red_flags": ["Fake Daraz domain", "Customs fee scam"]
+    },
+    {
+      "id": "CS010",
+      "template": "Airtel Support: Your broadband has been disconnected for non-payment. Pay Rs 2,400 via UPI to reactivate. Share your UPI PIN for processing.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["disconnected", "share your UPI PIN", "processing"],
+      "red_flags": ["UPI PIN request", "Disconnection threat", "Payment demand"]
+    },
+    {
+      "id": "JI010",
+      "template": "Wipro Freshers Hiring 2026: Guaranteed placement for B.Tech graduates. Package Rs 6 LPA. Apply at wipro-careers.in. Fee: Rs 1,200.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["wipro-careers.in", "Guaranteed placement", "Fee: Rs 1,200"],
+      "red_flags": ["Fake Wipro domain", "Guaranteed claim", "Fee demand"]
+    },
+    {
+      "id": "IF010",
+      "template": "Stock Market Course: Learn to earn Rs 1,00,000 monthly. Course fee Rs 15,000. Guaranteed placement in our trading firm. Contact: trading-academy@tutanota.com",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["Guaranteed placement", "Rs 1,00,000 monthly", "trading-academy@tutanota.com"],
+      "red_flags": ["Unrealistic claims", "Fee demand", "Anonymous email"]
+    },
+    {
+      "id": "LS010",
+      "template": "Education Loan: Rs 15,00,000 for abroad studies. No co-applicant needed. Pay Rs 10,000 loan insurance. Apply: edu-loan-abroad.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["No co-applicant", "edu-loan-abroad.in", "Rs 10,000 insurance"],
+      "red_flags": ["No guarantor claim", "Fee demand", "Fake domain"]
+    },
+    {
+      "id": "PH010",
+      "template": "ICICI Bank: Your credit card has been compromised. Login to icici-secure.in to set new password and save Rs 50,000 balance.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["icici-secure.in", "compromised", "set new password"],
+      "red_flags": ["Fake ICICI domain", "Credential harvesting", "Balance scare"]
+    },
+    {
+      "id": "SE010",
+      "template": "Hello, I am from UIDAI. Your Aadhaar is being used for fraud. To block, share your Aadhaar number and OTP immediately.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["UIDAI", "Aadhaar is being used for fraud", "share Aadhaar number and OTP"],
+      "red_flags": ["UIDAI impersonation", "Identity harvesting", "OTP request"]
+    },
+    {
+      "id": "FK011",
+      "template": "PAN-Aadhaar linking pending. Link at pan-aadhaar-link.in within 30 days or PAN will become invalid. Fee: Rs 107.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["pan-aadhaar-link.in", "PAN invalid", "Fee: Rs 107"],
+      "red_flags": ["Fake income tax domain", "Invalidity threat", "Fee demand"]
+    },
+    {
+      "id": "BA011",
+      "template": "Bandhan Bank: Your savings account XXXX2211 has suspicious transaction of Rs 92,000. Block immediately: 1800-XXX-XXXX.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["suspicious transaction", "Block immediately", "1800-XXX-XXXX"],
+      "red_flags": ["Fake alert", "Fake helpline", "Urgency"]
+    },
+    {
+      "id": "OT011",
+      "template": "BHIM App: PIN change request received. OTP 556677. Confirm by sharing OTP with our verification team at 1800-XXX-XXXX.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["share OTP", "verification team", "1800-XXX-XXXX"],
+      "red_flags": ["OTP sharing", "Fake team", "Fake helpline"]
+    },
+    {
+      "id": "UP011",
+      "template": "Mobikwik: Your wallet has Rs 3,400 unclaimed cashback. Send Rs 49 to claim at mobikwik-cashback@okicici. One-time process.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["send Rs 49", "mobikwik-cashback@okicici", "One-time process"],
+      "red_flags": ["Advance fee", "Fake reward", "Suspicious UPI ID"]
+    },
+    {
+      "id": "DL011",
+      "template": "Delhivery: Your package needs Rs 599 shipping charge. Pay at delhivery-pay.in within 48 hours or order cancelled.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["delhivery-pay.in", "Rs 599", "order cancelled"],
+      "red_flags": ["Fake Delhivery domain", "Fee demand", "Cancellation threat"]
+    },
+    {
+      "id": "CS011",
+      "template": "HDFC Insurance: Your policy maturity is due. To claim, share policy number, Aadhaar, and bank OTP for verification.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["share policy number", "Aadhaar", "bank OTP"],
+      "red_flags": ["Identity harvesting", "OTP request"]
+    },
+    {
+      "id": "JI011",
+      "template": "HCL Technologies: Walk-in interview for 2026 graduates. Salary Rs 5 LPA. Send Aadhaar, PAN, and Rs 800 registration fee to hcl-hr@yahoo.com",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["hcl-hr@yahoo.com", "Aadhaar, PAN", "Rs 800 registration fee"],
+      "red_flags": ["Personal email", "Identity harvesting", "Fee demand"]
+    },
+    {
+      "id": "IF011",
+      "template": "Mutual Fund SIP: Invest Rs 10,000 monthly, get Rs 10,00,000 in 5 years. Guaranteed. Join: sip-guaranteed.in",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["Guaranteed", "sip-guaranteed.in", "10x return"],
+      "red_flags": ["Unrealistic returns", "Guaranteed claim", "Fake domain"]
+    },
+    {
+      "id": "LS011",
+      "template": "Car Loan Pre-Approved: Rs 12,00,000 at 1.5% interest. No CIBIL check. Pay Rs 7,000 processing fee. Apply: car-loan-quick.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["No CIBIL check", "car-loan-quick.in", "Rs 7,000 processing fee"],
+      "red_flags": ["No credit check claim", "Fee demand", "Too low interest"]
+    },
+    {
+      "id": "PH011",
+      "template": "SBI Card: Annual fee Rs 4,999 charged. To waive, enter card details at sbi-card-waiver.in. Limited time offer.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["sbi-card-waiver.in", "card details", "waive"],
+      "red_flags": ["Fake SBI domain", "Card details request"]
+    },
+    {
+      "id": "SE011",
+      "template": "I am from the Income Tax department. You have pending refund of Rs 22,000. To claim, share your bank account, PAN, and OTP.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["Income Tax", "bank account", "PAN", "OTP", "share"],
+      "red_flags": ["Government impersonation", "Identity harvesting", "OTP request"]
+    },
+    {
+      "id": "FK012",
+      "template": "Voter ID Update: Your EPIC number needs to be linked with Aadhaar. Link at voter-aadhaar.in. Fee: Rs 50.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.86,
+      "detection_trigger": ["voter-aadhaar.in", "EPIC number", "Fee: Rs 50"],
+      "red_flags": ["Fake election domain", "Fee demand", "ID harvesting"]
+    },
+    {
+      "id": "BA012",
+      "template": "IDBI Bank Alert: Your account XXXX5566 is flagged for money laundering investigation. Verify at idbi-verify.in immediately.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["money laundering", "idbi-verify.in", "investigation"],
+      "red_flags": ["Fake IDBI domain", "Legal threat", "Scare tactic"]
+    },
+    {
+      "id": "OT012",
+      "template": "Google Pay: Transaction of Rs 88,000 pending. OTP 223344. Share with our agent at 98XXX XXXXX to cancel.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["Share with our agent", "98XXX XXXXX", "cancel"],
+      "red_flags": ["OTP sharing", "Unknown number", "High amount"]
+    },
+    {
+      "id": "UP012",
+      "template": "CRED: You have won Rs 10,000 cashback! To claim, approve collect request from cred-reward@okhdfc. Limited slots available.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["approve collect request", "cred-reward@okhdfc", "Limited slots"],
+      "red_flags": ["Collect request scam", "Fake reward", "Urgency"]
+    },
+    {
+      "id": "DL012",
+      "template": "Shadowfax Delivery: Your Meesho order needs Rs 199 COD charge. Pay at shadowfax-pay.in to receive today.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["shadowfax-pay.in", "COD charge", "Pay to receive"],
+      "red_flags": ["Fake Shadowfax domain", "COD scam"]
+    },
+    {
+      "id": "CS012",
+      "template": "Airtel DTH: Your subscription expires today. Renew with Rs 599 and get 1 month free. Share card details for payment.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["expires today", "Share card details", "Rs 599"],
+      "red_flags": ["Card details request", "Urgency", "Expiry scare"]
+    },
+    {
+      "id": "JI012",
+      "template": "Tech Mahindra: Walk-in drive for freshers. No experience needed. Salary Rs 4 LPA. Register at techmahindra-jobs.in with Rs 600.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["techmahindra-jobs.in", "No experience", "Rs 600"],
+      "red_flags": ["Fake Tech Mahindra domain", "Fee demand"]
+    },
+    {
+      "id": "IF012",
+      "template": "Crypto Mining Investment: Earn Rs 2,00,000 monthly by mining Bitcoin. Invest Rs 50,000 for equipment. Contact: crypto-mining@proton.me",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["Rs 2,00,000 monthly", "crypto-mining@proton.me", "Invest Rs 50,000"],
+      "red_flags": ["Unrealistic returns", "Equipment fee", "Anonymous email"]
+    },
+    {
+      "id": "LS012",
+      "template": "Gold Loan Instant: Rs 5,00,000 against your gold ornaments. No valuation fee. Pay Rs 3,000 documentation charge. Apply: gold-loan-instant.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["documentation charge", "gold-loan-instant.in", "No valuation fee"],
+      "red_flags": ["Fee demand", "Fake domain"]
+    },
+    {
+      "id": "PH012",
+      "template": "Jio Payments Bank: Your account has been restricted. Login at jio-bank-verify.in to restore access within 24 hours.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["jio-bank-verify.in", "restricted", "restore access"],
+      "red_flags": ["Fake Jio domain", "Account restriction scare"]
+    },
+    {
+      "id": "SE012",
+      "template": "Hello, I am calling from passport office. Your passport application is on hold. Share your Aadhaar, PAN, and police verification code.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["passport office", "Aadhaar, PAN", "police verification code"],
+      "red_flags": ["Passport office impersonation", "Identity harvesting"]
+    },
+    {
+      "id": "FK013",
+      "template": "RC Book Update: Your vehicle RC details are outdated. Update at vahan-rc-update.in. Fee: Rs 150. Penalty Rs 5,000 after deadline.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["vahan-rc-update.in", "Rs 150", "Penalty Rs 5,000"],
+      "red_flags": ["Fake transport domain", "Penalty threat", "Fee demand"]
+    },
+    {
+      "id": "BA013",
+      "template": "Federal Bank: Your credit card has been charged Rs 45,000 at unknown merchant. Call 1800-XXX-XXXX to block within 30 minutes.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["charged Rs 45,000", "call 1800-XXX-XXXX", "within 30 minutes"],
+      "red_flags": ["Fake alert", "Fake helpline", "Time pressure"]
+    },
+    {
+      "id": "OT013",
+      "template": "Amazon: Your OTP 112233 for order placement. If you didn't order, forward this message to 1800-XXX-XXXX to cancel.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.97,
+      "detection_trigger": ["forward this message", "1800-XXX-XXXX", "cancel"],
+      "red_flags": ["OTP forwarding", "Fake helpline"]
+    },
+    {
+      "id": "UP013",
+      "template": "Freecharge: Rs 2,500 credited to your wallet by mistake. Return to freecharge-return@okaxis or face account suspension.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["freecharge-return@okaxis", "Return", "account suspension"],
+      "red_flags": ["Fake credit", "Return demand", "Suspension threat"]
+    },
+    {
+      "id": "DL013",
+      "template": "Ecom Express: Your Meesho parcel needs Rs 399 shipping fee. Pay at ecom-express-pay.in within 12 hours.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.87,
+      "detection_trigger": ["ecom-express-pay.in", "Rs 399", "shipping fee"],
+      "red_flags": ["Fake courier domain", "Fee demand"]
+    },
+    {
+      "id": "CS013",
+      "template": "LinkedIn Premium: Your trial expires in 2 hours. To keep premium, share your card details to avoid Rs 2,999 charge.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["share your card details", "expires in 2 hours", "Rs 2,999"],
+      "red_flags": ["Card details request", "Expiry scare", "Urgency"]
+    },
+    {
+      "id": "JI013",
+      "template": "Cognizant Hiring: Data entry work from home. Rs 28,000 salary. Register at cognizant-wfh.in with Rs 450 fee.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["cognizant-wfh.in", "Rs 450 fee", "data entry"],
+      "red_flags": ["Fake Cognizant domain", "Fee demand"]
+    },
+    {
+      "id": "IF013",
+      "template": "IPO Investment Club: Guaranteed allotment in every IPO. Monthly fee Rs 5,000. Join: ipo-club.in",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["Guaranteed allotment", "ipo-club.in", "Monthly fee"],
+      "red_flags": ["Guaranteed claim", "Subscription fee", "Fake domain"]
+    },
+    {
+      "id": "LS013",
+      "template": "Personal Loan: Rs 8,00,000 approved by SBI. Pay Rs 9,000 processing fee. Apply at sbi-loan-quick.in. No CIBIL check.",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["sbi-loan-quick.in", "No CIBIL check", "Rs 9,000 processing fee"],
+      "red_flags": ["Fake SBI domain", "No credit check claim", "Fee demand"]
+    },
+    {
+      "id": "PH013",
+      "template": "Gmail: Your storage is full. Delete important emails or upgrade at gmail-storage-increase.in. Rs 99/year for 100GB.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["gmail-storage-increase.in", "storage is full", "Rs 99/year"],
+      "red_flags": ["Fake Google domain", "Payment page phishing"]
+    },
+    {
+      "id": "SE013",
+      "template": "I am from CBI. Your bank account is involved in a money laundering case. To clear your name, share all bank details and OTP.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["CBI", "money laundering", "share all bank details and OTP"],
+      "red_flags": ["CBI impersonation", "Identity harvesting", "OTP request"]
+    },
+    {
+      "id": "FK014",
+      "template": "Income Tax Notice: Your ITR for AY 2025-26 has discrepancies. File revised return at itr-notice.in or face Rs 10,000 penalty.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["itr-notice.in", "discrepancies", "Rs 10,000 penalty"],
+      "red_flags": ["Fake income tax domain", "Penalty threat"]
+    },
+    {
+      "id": "BA014",
+      "template": "South Indian Bank: Rs 56,700 debited from your account. Unauthorized? Block immediately: 1800-XXX-XXXX. Do not share OTP.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.95,
+      "detection_trigger": ["debited Rs 56,700", "Block immediately", "1800-XXX-XXXX"],
+      "red_flags": ["Fake debit alert", "Fake helpline"]
+    },
+    {
+      "id": "OT014",
+      "template": "ICICI: OTP 445566 for Rs 1,50,000 credit card transaction. If not you, share OTP to 1800-XXX-XXXX to block.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.98,
+      "detection_trigger": ["share OTP to 1800-XXX-XXXX", "Rs 1,50,000", "block"],
+      "red_flags": ["OTP sharing", "Fake helpline", "High amount"]
+    },
+    {
+      "id": "UP014",
+      "template": "Amazon Pay: Rs 8,000 refund pending. To receive, send Rs 1 to amazon-verify@okaxis. One-time verification.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["send Rs 1", "amazon-verify@okaxis", "One-time verification"],
+      "red_flags": ["Micro-payment scam", "Fake verification"]
+    },
+    {
+      "id": "DL014",
+      "template": "Xpressbees: Your order needs Rs 249 delivery charge. Pay at xpressbees-pay.in within 24 hours.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.86,
+      "detection_trigger": ["xpressbees-pay.in", "Rs 249", "delivery charge"],
+      "red_flags": ["Fake courier domain", "Fee demand"]
+    },
+    {
+      "id": "CS014",
+      "template": "Google Workspace: Your subscription is inactive. To reactivate, share your Google account password and 2FA code.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["share your Google account password", "2FA code", "inactive"],
+      "red_flags": ["Credential request", "2FA code request"]
+    },
+    {
+      "id": "JI014",
+      "template": "IBM Hiring: Freshers walk-in. Package Rs 5.5 LPA. Apply at ibm-jobs-india.in. Registration: Rs 700.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["ibm-jobs-india.in", "Registration: Rs 700", "walk-in"],
+      "red_flags": ["Fake IBM domain", "Fee demand"]
+    },
+    {
+      "id": "IF014",
+      "template": "Real Estate Investment: Invest in farmland, earn 40% annual returns. Minimum Rs 2,00,000. Contact: farmland-invest.in",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["40% annual returns", "farmland-invest.in", "Minimum Rs 2,00,000"],
+      "red_flags": ["Unrealistic returns", "Fake domain"]
+    },
+    {
+      "id": "LS014",
+      "template": "Instant Loan: Rs 5,00,000 approved. No documents needed. Pay Rs 5,000 processing fee. Apply: instant-cash-24.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["No documents", "instant-cash-24.in", "Rs 5,000 processing fee"],
+      "red_flags": ["No documents claim", "Fee demand", "Fake domain"]
+    },
+    {
+      "id": "PH014",
+      "template": "Instagram: Someone reported your account. Verify at instagram-security.in within 24 hours or account suspended.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.90,
+      "detection_trigger": ["instagram-security.in", "account suspended", "within 24 hours"],
+      "red_flags": ["Fake Instagram domain", "Suspension threat"]
+    },
+    {
+      "id": "SE014",
+      "template": "I am from your bank's credit card division. Your annual fee waiver requires your card number, CVV, and OTP. Share now.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["card number, CVV, and OTP", "credit card division", "Share now"],
+      "red_flags": ["Card details request", "OTP request", "Fee waiver bait"]
+    },
+    {
+      "id": "FK015",
+      "template": "Aadhaar Address Update: Your address is outdated. Update at aadhaar-address.in. Fee: Rs 50. Penalty Rs 1,000 after deadline.",
+      "scam_type": "fake_kyc",
+      "language": "english",
+      "risk_score": 0.88,
+      "detection_trigger": ["aadhaar-address.in", "Rs 50", "Penalty Rs 1,000"],
+      "red_flags": ["Fake UIDAI domain", "Penalty threat", "Fee demand"]
+    },
+    {
+      "id": "BA015",
+      "template": "Bank of India: Your account XXXX4321 shows Rs 2,34,500 unauthorized transfer. Call fraud team: 1800-XXX-XXXX to reverse.",
+      "scam_type": "fake_bank_alert",
+      "language": "english",
+      "risk_score": 0.96,
+      "detection_trigger": ["unauthorized transfer", "Call fraud team", "1800-XXX-XXXX"],
+      "red_flags": ["Fake alert", "Fake helpline", "High amount"]
+    },
+    {
+      "id": "OT015",
+      "template": "PhonePe: Your UPI PIN was changed. If not you, share OTP 887766 with security team at 98XXX XXXXX.",
+      "scam_type": "otp_theft",
+      "language": "english",
+      "risk_score": 0.99,
+      "detection_trigger": ["share OTP", "security team", "98XXX XXXXX", "UPI PIN changed"],
+      "red_flags": ["OTP sharing", "Fake security team", "PIN change scare"]
+    },
+    {
+      "id": "UP015",
+      "template": "JioMoney: You won Rs 15,000 cashback! Claim by sending Rs 99 to jio-reward@okaxis. Limited time offer.",
+      "scam_type": "upi_fraud",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["send Rs 99", "jio-reward@okaxis", "Limited time"],
+      "red_flags": ["Advance fee", "Fake reward", "Suspicious UPI ID"]
+    },
+    {
+      "id": "DL015",
+      "template": "Overseas Delivery: Your international parcel requires Rs 12,000 customs clearance. Pay at customs-clearance.in within 48 hours.",
+      "scam_type": "fake_delivery",
+      "language": "english",
+      "risk_score": 0.92,
+      "detection_trigger": ["customs-clearance.in", "Rs 12,000", "customs clearance"],
+      "red_flags": ["Fake customs domain", "High fee", "Urgency"]
+    },
+    {
+      "id": "CS015",
+      "template": "Vodafone Support: Your number has been used for fraud. To clear, share Aadhaar, PAN, and bank OTP with our verification team.",
+      "scam_type": "customer_support_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["used for fraud", "Aadhaar, PAN, and bank OTP", "verification team"],
+      "red_flags": ["Fraud accusation", "Identity harvesting", "OTP request"]
+    },
+    {
+      "id": "JI015",
+      "template": "Capgemini Recruitment: Walk-in for freshers. Salary Rs 4.8 LPA. Register at capgemini-careers.in. Fee: Rs 550.",
+      "scam_type": "job_internship_scam",
+      "language": "english",
+      "risk_score": 0.89,
+      "detection_trigger": ["capgemini-careers.in", "Fee: Rs 550", "walk-in"],
+      "red_flags": ["Fake Capgemini domain", "Fee demand"]
+    },
+    {
+      "id": "IF015",
+      "template": "Insurance Investment Plan: Invest Rs 5,00,000, get Rs 15,00,000 in 10 years. Guaranteed. Contact: insurance-invest.in",
+      "scam_type": "investment_fraud",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["Guaranteed", "insurance-invest.in", "3x return"],
+      "red_flags": ["Unrealistic returns", "Guaranteed claim", "Fake domain"]
+    },
+    {
+      "id": "LS015",
+      "template": "Business Loan: Rs 25,00,000 sanctioned by ICICI. Pay Rs 12,000 as security deposit. Apply: icici-business-quick.in",
+      "scam_type": "loan_scam",
+      "language": "english",
+      "risk_score": 0.94,
+      "detection_trigger": ["icici-business-quick.in", "security deposit", "Rs 12,000"],
+      "red_flags": ["Fake ICICI domain", "Fee demand", "Guaranteed sanction"]
+    },
+    {
+      "id": "PH015",
+      "template": "WhatsApp: Your account will be deleted in 12 hours. Verify at whatsapp-security.in to keep your number.",
+      "scam_type": "phishing",
+      "language": "english",
+      "risk_score": 0.91,
+      "detection_trigger": ["whatsapp-security.in", "deleted in 12 hours", "Verify"],
+      "red_flags": ["Fake WhatsApp domain", "Deletion threat", "Urgency"]
+    },
+    {
+      "id": "SE015",
+      "template": "I am calling from UIDAI. Your Aadhaar biometric is expired. To update, share Aadhaar number and OTP for verification.",
+      "scam_type": "social_engineering",
+      "language": "english",
+      "risk_score": 0.93,
+      "detection_trigger": ["UIDAI", "biometric is expired", "share Aadhaar number and OTP"],
+      "red_flags": ["UIDAI impersonation", "False expiry", "Identity harvesting"]
+    }
+  ]
+}

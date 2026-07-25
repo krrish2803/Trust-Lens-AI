@@ -1,0 +1,405 @@
+{
+  "metrics": {
+    "total_cases": 20,
+    "true_positives": 16,
+    "false_positives": 4,
+    "true_negatives": 0,
+    "false_negatives": 0,
+    "accuracy": 0.8,
+    "precision": 0.8,
+    "recall": 1.0,
+    "f1_score": 0.888888888888889,
+    "category_accuracy": 0.5,
+    "risk_accuracy": 0.2,
+    "false_positive_rate": 1.0
+  },
+  "results": [
+    {
+      "id": "TC001",
+      "text": "URGENT: Aapka SBI account band hoga 24 ghante mein. KYC update karein: https://sbi-verify.tk",
+      "expected": {
+        "id": "TC001",
+        "text": "URGENT: Aapka SBI account band hoga 24 ghante mein. KYC update karein: https://sbi-verify.tk",
+        "expected_category": "fake_kyc",
+        "expected_risk": "critical",
+        "is_scam": true
+      },
+      "detected_category": "fake_kyc",
+      "detected_risk": "medium",
+      "risk_score": 0.6071,
+      "confidence": 0.7995,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC002",
+      "text": "Aapko Amazon ka Rs. 10,000 gift card mila hai! Claim karein: https://amazon-prize.xyz",
+      "expected": {
+        "id": "TC002",
+        "text": "Aapko Amazon ka Rs. 10,000 gift card mila hai! Claim karein: https://amazon-prize.xyz",
+        "expected_category": "job_internship_scam",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "unknown",
+      "detected_risk": "high",
+      "risk_score": 0.7626,
+      "confidence": 0.7941,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC003",
+      "text": "OTP share karein verification ke liye. Hum bank se bol rahe hain.",
+      "expected": {
+        "id": "TC003",
+        "text": "OTP share karein verification ke liye. Hum bank se bol rahe hain.",
+        "expected_category": "otp_theft",
+        "expected_risk": "critical",
+        "is_scam": true
+      },
+      "detected_category": "otp_theft",
+      "detected_risk": "medium",
+      "risk_score": 0.6252,
+      "confidence": 0.8193,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC004",
+      "text": "Dear customer, your account has been compromised. Click here to verify: http://192.168.1.1/verify",
+      "expected": {
+        "id": "TC004",
+        "text": "Dear customer, your account has been compromised. Click here to verify: http://192.168.1.1/verify",
+        "expected_category": "phishing",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "fake_bank_alert",
+      "detected_risk": "high",
+      "risk_score": 0.8001,
+      "confidence": 0.7384,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC005",
+      "text": "Congratulations! Aapko iPhone 15 Pro mila hai. Tax pay karein Rs. 999 lene ke liye.",
+      "expected": {
+        "id": "TC005",
+        "text": "Congratulations! Aapko iPhone 15 Pro mila hai. Tax pay karein Rs. 999 lene ke liye.",
+        "expected_category": "job_internship_scam",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "ransomware",
+      "detected_risk": "medium",
+      "risk_score": 0.562,
+      "confidence": 0.8319,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC006",
+      "text": "Aapka loan Rs. 5,00,000 approved hai. Processing fee Rs. 5,000 pay karein.",
+      "expected": {
+        "id": "TC006",
+        "text": "Aapka loan Rs. 5,00,000 approved hai. Processing fee Rs. 5,000 pay karein.",
+        "expected_category": "loan_scam",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "loan_scam",
+      "detected_risk": "medium",
+      "risk_score": 0.5226,
+      "confidence": 0.7823,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC007",
+      "text": "Police verification hai. Documents courier karein turant.",
+      "expected": {
+        "id": "TC007",
+        "text": "Police verification hai. Documents courier karein turant.",
+        "expected_category": "social_engineering",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "social_engineering",
+      "detected_risk": "high",
+      "risk_score": 0.7384,
+      "confidence": 0.8672,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC008",
+      "text": "Aapka mutual fund mature ho gaya hai. Payout lene ke liye UPI PIN share karein.",
+      "expected": {
+        "id": "TC008",
+        "text": "Aapka mutual fund mature ho gaya hai. Payout lene ke liye UPI PIN share karein.",
+        "expected_category": "investment_fraud",
+        "expected_risk": "critical",
+        "is_scam": true
+      },
+      "detected_category": "upi_fraud",
+      "detected_risk": "high",
+      "risk_score": 0.689,
+      "confidence": 0.683,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC009",
+      "text": "Hi, just wanted to confirm our meeting tomorrow at 3pm. See you then!",
+      "expected": {
+        "id": "TC009",
+        "text": "Hi, just wanted to confirm our meeting tomorrow at 3pm. See you then!",
+        "expected_category": "unknown",
+        "expected_risk": "safe",
+        "is_scam": false
+      },
+      "detected_category": "phishing",
+      "detected_risk": "medium",
+      "risk_score": 0.6038,
+      "confidence": 0.7471,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC010",
+      "text": "Your order #12345 has been shipped. Track your package at amazon.in/track",
+      "expected": {
+        "id": "TC010",
+        "text": "Your order #12345 has been shipped. Track your package at amazon.in/track",
+        "expected_category": "unknown",
+        "expected_risk": "safe",
+        "is_scam": false
+      },
+      "detected_category": "fake_delivery",
+      "detected_risk": "high",
+      "risk_score": 0.7608,
+      "confidence": 0.7646,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC011",
+      "text": "Digital arrest hai. Video call pe aaiye turant warna arrest hoga.",
+      "expected": {
+        "id": "TC011",
+        "text": "Digital arrest hai. Video call pe aaiye turant warna arrest hoga.",
+        "expected_category": "social_engineering",
+        "expected_risk": "critical",
+        "is_scam": true
+      },
+      "detected_category": "social_engineering",
+      "detected_risk": "high",
+      "risk_score": 0.6915,
+      "confidence": 0.767,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC012",
+      "text": "Work from home job. Rs. 30,000 monthly. Registration fee Rs. 500 pay karein.",
+      "expected": {
+        "id": "TC012",
+        "text": "Work from home job. Rs. 30,000 monthly. Registration fee Rs. 500 pay karein.",
+        "expected_category": "job_internship_scam",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "job_internship_scam",
+      "detected_risk": "medium",
+      "risk_score": 0.5666,
+      "confidence": 0.8744,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC013",
+      "text": "Aapka UPI fraud ho gaya hai. Turant block karein. Hum ICICI bank se bol rahe hain.",
+      "expected": {
+        "id": "TC013",
+        "text": "Aapka UPI fraud ho gaya hai. Turant block karein. Hum ICICI bank se bol rahe hain.",
+        "expected_category": "upi_fraud",
+        "expected_risk": "critical",
+        "is_scam": true
+      },
+      "detected_category": "fake_bank_alert",
+      "detected_risk": "high",
+      "risk_score": 0.725,
+      "confidence": 0.8433,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC014",
+      "text": "Package deliver ho gaya. Rs. 99 delivery charge pay karein.",
+      "expected": {
+        "id": "TC014",
+        "text": "Package deliver ho gaya. Rs. 99 delivery charge pay karein.",
+        "expected_category": "fake_delivery",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "fake_delivery",
+      "detected_risk": "medium",
+      "risk_score": 0.5075,
+      "confidence": 0.8702,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC015",
+      "text": "Crypto investment. Guaranteed profit. Rs. 5,000 se start karein. Double hoga 30 din mein.",
+      "expected": {
+        "id": "TC015",
+        "text": "Crypto investment. Guaranteed profit. Rs. 5,000 se start karein. Double hoga 30 din mein.",
+        "expected_category": "investment_fraud",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "investment_fraud",
+      "detected_risk": "high",
+      "risk_score": 0.69,
+      "confidence": 0.8703,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC016",
+      "text": "Happy birthday! Wishing you a wonderful day ahead.",
+      "expected": {
+        "id": "TC016",
+        "text": "Happy birthday! Wishing you a wonderful day ahead.",
+        "expected_category": "unknown",
+        "expected_risk": "safe",
+        "is_scam": false
+      },
+      "detected_category": "unknown",
+      "detected_risk": "medium",
+      "risk_score": 0.5318,
+      "confidence": 0.6973,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC017",
+      "text": "Meeting rescheduled to 4pm. Please update your calendar.",
+      "expected": {
+        "id": "TC017",
+        "text": "Meeting rescheduled to 4pm. Please update your calendar.",
+        "expected_category": "unknown",
+        "expected_risk": "safe",
+        "is_scam": false
+      },
+      "detected_category": "fake_kyc",
+      "detected_risk": "medium",
+      "risk_score": 0.5269,
+      "confidence": 0.7854,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC018",
+      "text": "CBI investigation mein aapka naam hai. Call karein 9876543210 pe.",
+      "expected": {
+        "id": "TC018",
+        "text": "CBI investigation mein aapka naam hai. Call karein 9876543210 pe.",
+        "expected_category": "social_engineering",
+        "expected_risk": "critical",
+        "is_scam": true
+      },
+      "detected_category": "unknown",
+      "detected_risk": "high",
+      "risk_score": 0.7173,
+      "confidence": 0.6527,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC019",
+      "text": "Screen share karein problem solve karne ke liye. Remote access dijiye.",
+      "expected": {
+        "id": "TC019",
+        "text": "Screen share karein problem solve karne ke liye. Remote access dijiye.",
+        "expected_category": "customer_support_scam",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "customer_support_scam",
+      "detected_risk": "medium",
+      "risk_score": 0.5289,
+      "confidence": 0.7867,
+      "is_scam_detected": true
+    },
+    {
+      "id": "TC020",
+      "text": "Income tax refund Rs. 15,000 aaya hai. Bank details confirm karein.",
+      "expected": {
+        "id": "TC020",
+        "text": "Income tax refund Rs. 15,000 aaya hai. Bank details confirm karein.",
+        "expected_category": "phishing",
+        "expected_risk": "high",
+        "is_scam": true
+      },
+      "detected_category": "fake_bank_alert",
+      "detected_risk": "medium",
+      "risk_score": 0.6236,
+      "confidence": 0.8166,
+      "is_scam_detected": true
+    }
+  ],
+  "confusion_matrix": {
+    "fake_kyc": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    "job_internship_scam": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 2
+    },
+    "unknown": {
+      "tp": 1,
+      "fp": 2,
+      "fn": 3
+    },
+    "otp_theft": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "phishing": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 2
+    },
+    "fake_bank_alert": {
+      "tp": 0,
+      "fp": 3,
+      "fn": 0
+    },
+    "ransomware": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0
+    },
+    "loan_scam": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "social_engineering": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1
+    },
+    "investment_fraud": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    "upi_fraud": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 1
+    },
+    "fake_delivery": {
+      "tp": 1,
+      "fp": 1,
+      "fn": 0
+    },
+    "customer_support_scam": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0
+    }
+  }
+}

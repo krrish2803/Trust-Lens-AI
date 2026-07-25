@@ -1,0 +1,438 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-07-25",
+  "banks": [
+    {
+      "name": "State Bank of India",
+      "short_name": "SBI",
+      "aliases": ["SBI", "State Bank", "State Bank India", "sbicolonial"],
+      "legitimate_domains": ["sbi.co.in", "onlinesbi.com", "sbiintl.com"],
+      "common_typos": ["sbl.co.in", "sbi.co.in.co", "sbi-login.com", "sbi-verify.in", "sbi-kyc.com", "sbi-update.in", "sib.co.in"],
+      "customer_care": "1800-11-2211"
+    },
+    {
+      "name": "HDFC Bank",
+      "short_name": "HDFC",
+      "aliases": ["HDFC", "HDFC Bank", "HDFC Bank Ltd"],
+      "legitimate_domains": ["hdfcbank.com", "hdfcsec.com", "hdfclife.com", "hdfcerfo.com"],
+      "common_typos": ["hdfcbank.com.co", "hdfc-bank.in", "hdfc-login.com", "hdfc-update.in", "hdfc-verify.in", "hdfcbnak.com", "hdfcbnank.com"],
+      "customer_care": "1800-266-4332"
+    },
+    {
+      "name": "ICICI Bank",
+      "short_name": "ICICI",
+      "aliases": ["ICICI", "ICICI Bank", "ICICI Bank Ltd"],
+      "legitimate_domains": ["icicibank.com", "icicibankonline.in", "icicisecurities.com"],
+      "common_typos": ["icicibank.com.co", "icici-bank.in", "icici-login.com", "icici-update.in", "icici-verify.in", "icicibnk.com", "icicibak.com"],
+      "customer_care": "1800-103-8181"
+    },
+    {
+      "name": "Axis Bank",
+      "short_name": "Axis",
+      "aliases": ["Axis", "Axis Bank", "Axis Bank Ltd"],
+      "legitimate_domains": ["axisbank.com", "axisdirect.in", "axismaxlife.in"],
+      "common_typos": ["axisbank.com.co", "axis-bank.in", "axis-login.com", "axis-update.in", "axis-verify.in", "axsibank.com", "axsibank.com"],
+      "customer_care": "1800-209-5577"
+    },
+    {
+      "name": "Yes Bank",
+      "short_name": "Yes",
+      "aliases": ["Yes", "Yes Bank", "Yes Bank Ltd"],
+      "legitimate_domains": ["yesbank.in", "yesbankltd.com"],
+      "common_typos": ["yesbank.com", "yes-bank.in", "yes-login.com", "yes-update.in", "yesbank.com.co", "yesbanl.in"],
+      "customer_care": "1800-1200"
+    },
+    {
+      "name": "Kotak Mahindra Bank",
+      "short_name": "Kotak",
+      "aliases": ["Kotak", "KMB", "Kotak Mahindra", "Kotak Bank"],
+      "legitimate_domains": ["kotak.com", "kotakbank.com", "kotaksecurities.com"],
+      "common_typos": ["kotak.com.co", "kotak-bank.in", "kotak-login.com", "kotak-update.in", "kotak-verify.in", "kotakbank.com.co", "kotck.com"],
+      "customer_care": "1800-102-6022"
+    },
+    {
+      "name": "Punjab National Bank",
+      "short_name": "PNB",
+      "aliases": ["PNB", "Punjab National", "PNB Bank"],
+      "legitimate_domains": ["pnb.co.in", "pnetbanking.com"],
+      "common_typos": ["pnb.com", "pnb.co.in.co", "pnb-login.com", "pnb-update.in", "pnb-verify.in", "pnb.co.in.co"],
+      "customer_care": "1800-180-2223"
+    },
+    {
+      "name": "Bank of Baroda",
+      "short_name": "BOB",
+      "aliases": ["BOB", "Bank of Baroda", "Baroda Bank"],
+      "legitimate_domains": ["bankofbaroda.com", "bobibanking.com"],
+      "common_typos": ["bankofbaroda.com.co", "bob-bank.in", "bob-login.com", "bob-update.in", "bob-verify.in", "bankofbaroda.com.co"],
+      "customer_care": "1800-258-4455"
+    },
+    {
+      "name": "Canara Bank",
+      "short_name": "Canara",
+      "aliases": ["Canara", "Canara Bank", "Canara Bank Ltd"],
+      "legitimate_domains": ["canarabank.com", "canarabank.in"],
+      "common_typos": ["canarabank.com.co", "canara-bank.in", "canara-login.com", "canara-update.in", "canara-verify.in", "canarabnak.com"],
+      "customer_care": "1800-425-0018"
+    },
+    {
+      "name": "Union Bank of India",
+      "short_name": "Union",
+      "aliases": ["Union", "Union Bank", "UBI"],
+      "legitimate_domains": ["unionbankofindia.co.in", "unionbank.co.in"],
+      "common_typos": ["unionbank.com", "union-bank.in", "union-login.com", "union-update.in", "unionbankofindia.com.co"],
+      "customer_care": "1800-22-2244"
+    },
+    {
+      "name": "IDBI Bank",
+      "short_name": "IDBI",
+      "aliases": ["IDBI", "IDBI Bank", "IDBI Ltd"],
+      "legitimate_domains": ["idbibank.in", "idbi.com"],
+      "common_typos": ["idbibank.com", "idbi-bank.in", "idbi-login.com", "idbi-update.in", "idbi-verify.in", "idbibank.com.co"],
+      "customer_care": "1800-200-1947"
+    },
+    {
+      "name": "Indian Bank",
+      "short_name": "Indian",
+      "aliases": ["Indian", "Indian Bank", "Indian Bank Ltd"],
+      "legitimate_domains": ["indianbank.in", "indianbank.net"],
+      "common_typos": ["indianbank.com", "indian-bank.in", "indian-login.com", "indian-update.in", "indianbank.com.co"],
+      "customer_care": "1800-425-00-000"
+    },
+    {
+      "name": "Central Bank of India",
+      "short_name": "Central",
+      "aliases": ["Central", "Central Bank", "CBI Bank"],
+      "legitimate_domains": ["centralbankofindia.co.in", "centralbank.com"],
+      "common_typos": ["centralbankofindia.com", "central-bank.in", "central-login.com", "centralbank.com.co"],
+      "customer_care": "1800-22-1911"
+    },
+    {
+      "name": "UCO Bank",
+      "short_name": "UCO",
+      "aliases": ["UCO", "UCO Bank", "United Commercial Bank"],
+      "legitimate_domains": ["ucobank.com", "ucobank.co.in"],
+      "common_typos": ["ucobank.com.co", "uco-bank.in", "uco-login.com", "uco-update.in", "ucobank.com.co"],
+      "customer_care": "1800-103-0123"
+    },
+    {
+      "name": "Bank of India",
+      "short_name": "BOI",
+      "aliases": ["BOI", "Bank of India", "Indian Bank BOI"],
+      "legitimate_domains": ["bankofindia.com", "bankofindia.co.in"],
+      "common_typos": ["bankofindia.com.co", "boi-bank.in", "boi-login.com", "boi-update.in", "bankofindia.com.co"],
+      "customer_care": "1800-22-0229"
+    },
+    {
+      "name": "Fino Payments Bank",
+      "short_name": "Fino",
+      "aliases": ["Fino", "Fino Bank", "Fino Payments"],
+      "legitimate_domains": ["finobank.com", "finoPaymentsbank.com"],
+      "common_typos": ["finobank.com.co", "fino-bank.in", "fino-login.com", "fino-update.in", "finobank.com.co"],
+      "customer_care": "1860-266-3466"
+    },
+    {
+      "name": "Airtel Payments Bank",
+      "short_name": "Airtel Bank",
+      "aliases": ["Airtel Bank", "Airtel Payments", "APB"],
+      "legitimate_domains": ["airtelbank.com", "airtel.in/bank"],
+      "common_typos": ["airtelbank.com.co", "airtel-bank.in", "airtel-login.com", "airtelbank.com.co"],
+      "customer_care": "4001600100"
+    },
+    {
+      "name": "Paytm Payments Bank",
+      "short_name": "Paytm Bank",
+      "aliases": ["Paytm Bank", "Paytm Payments", "PPB"],
+      "legitimate_domains": ["paytmbank.com", "paytm.com"],
+      "common_typos": ["paytmbank.com.co", "paytm-bank.in", "paytm-login.com", "paytmbank.com.co"],
+      "customer_care": "0120-4456-456"
+    },
+    {
+      "name": "Jio Payments Bank",
+      "short_name": "Jio Bank",
+      "aliases": ["Jio Bank", "Jio Payments", "JPB"],
+      "legitimate_domains": ["jiobank.com", "jio.com"],
+      "common_typos": ["jiobank.com.co", "jio-bank.in", "jio-login.com", "jiobank.com.co"],
+      "customer_care": "1800-889-9999"
+    },
+    {
+      "name": "India Post Payments Bank",
+      "short_name": "IPPB",
+      "aliases": ["IPPB", "India Post Bank", "Post Bank"],
+      "legitimate_domains": ["ippbonline.com", "indiapost.gov.in"],
+      "common_typos": ["ippbonline.com.co", "ippb-bank.in", "ippb-login.com", "ippbonline.com.co"],
+      "customer_care": "155299"
+    },
+    {
+      "name": "Bandhan Bank",
+      "short_name": "Bandhan",
+      "aliases": ["Bandhan", "Bandhan Bank"],
+      "legitimate_domains": ["bandhanbank.com", "bandhankonnect.com"],
+      "common_typos": ["bandhanbank.com.co", "bandhan-bank.in", "bandhan-login.com", "bandhanbank.com.co"],
+      "customer_care": "1800-258-8181"
+    },
+    {
+      "name": "Federal Bank",
+      "short_name": "Federal",
+      "aliases": ["Federal", "Federal Bank", "Fed Bank"],
+      "legitimate_domains": ["federalbank.co.in", "federalbank.com"],
+      "common_typos": ["federalbank.com.co", "federal-bank.in", "federal-login.com", "federalbank.com.co"],
+      "customer_care": "1800-425-1199"
+    },
+    {
+      "name": "Karur Vysya Bank",
+      "short_name": "KVB",
+      "aliases": ["KVB", "Karur Vysya", "Karur Bank"],
+      "legitimate_domains": ["karurvysyabank.com", "kvbin.com"],
+      "common_typos": ["karurvysyabank.com.co", "kvb-bank.in", "kvb-login.com", "karurvysyabank.com.co"],
+      "customer_care": "1800-102-1916"
+    },
+    {
+      "name": "City Union Bank",
+      "short_name": "CUB",
+      "aliases": ["CUB", "City Union", "City Union Bank"],
+      "legitimate_domains": ["cityunionbank.com", "cityunionbank.co.in"],
+      "common_typos": ["cityunionbank.com.co", "cub-bank.in", "cub-login.com", "cityunionbank.com.co"],
+      "customer_care": "1800-208-4100"
+    },
+    {
+      "name": "DCB Bank",
+      "short_name": "DCB",
+      "aliases": ["DCB", "DCB Bank", "Development Credit Bank"],
+      "legitimate_domains": ["dcb bank.in", "dcb.com"],
+      "common_typos": ["dcb-bank.in", "dcb-login.com", "dcb-update.in", "dcb-bank.com"],
+      "customer_care": "022-6899-7777"
+    },
+    {
+      "name": "Lakshmi Vilas Bank",
+      "short_name": "LVB",
+      "aliases": ["LVB", "Lakshmi Vilas", "Lakshmi Bank"],
+      "legitimate_domains": ["lvbank.com", "lakshmivilasbank.com"],
+      "common_typos": ["lvbank.com.co", "lvb-bank.in", "lvb-login.com", "lvbank.com.co"],
+      "customer_care": "1800-266-5678"
+    },
+    {
+      "name": "Tamilnad Mercantile Bank",
+      "short_name": "TMB",
+      "aliases": ["TMB", "Tamilnad Mercantile", "TMB Bank"],
+      "legitimate_domains": ["tmbank.in", "tmb.co.in"],
+      "common_typos": ["tmbank.com", "tmb-bank.in", "tmb-login.com", "tmbank.com.co"],
+      "customer_care": "1800-425-04-00"
+    },
+    {
+      "name": "Karnataka Bank",
+      "short_name": "Karnataka",
+      "aliases": ["Karnataka", "Karnataka Bank", "KBL"],
+      "legitimate_domains": ["karnatakabank.com", "karnatakabank.co.in"],
+      "common_typos": ["karnatakabank.com.co", "karnataka-bank.in", "karnataka-login.com", "karnatakabank.com.co"],
+      "customer_care": "1800-425-1444"
+    },
+    {
+      "name": "South Indian Bank",
+      "short_name": "SIB",
+      "aliases": ["SIB", "South Indian", "South Indian Bank"],
+      "legitimate_domains": ["southindianbank.com", "sib.co.in"],
+      "common_typos": ["southindianbank.com.co", "sib-bank.in", "sib-login.com", "southindianbank.com.co"],
+      "customer_care": "1800-102-9408"
+    },
+    {
+      "name": "Dhanlaxmi Bank",
+      "short_name": "Dhanlaxmi",
+      "aliases": ["Dhanlaxmi", "Dhanlaxmi Bank", "DLB"],
+      "legitimate_domains": ["dhanlaxmibank.com", "dhanbank.co.in"],
+      "common_typos": ["dhanlaxmibank.com.co", "dhanlaxmi-bank.in", "dhanlaxmi-login.com", "dhanlaxmibank.com.co"],
+      "customer_care": "1800-103-1010"
+    },
+    {
+      "name": "Ratnakar Bank",
+      "short_name": "RBL",
+      "aliases": ["RBL", "Ratnakar", "Ratnakar Bank"],
+      "legitimate_domains": ["rblbank.com", "rbl.in"],
+      "common_typos": ["rblbank.com.co", "rbl-bank.in", "rbl-login.com", "rblbank.com.co"],
+      "customer_care": "1800-123-8040"
+    },
+    {
+      "name": "IndusInd Bank",
+      "short_name": "IndusInd",
+      "aliases": ["IndusInd", "IndusInd Bank"],
+      "legitimate_domains": ["indusind.com", "indusindbank.com"],
+      "common_typos": ["indusind.com.co", "indusind-bank.in", "indusind-login.com", "indusind.com.co"],
+      "customer_care": "1860-267-7777"
+    },
+    {
+      "name": "Bajaj Finserv",
+      "short_name": "Bajaj",
+      "aliases": ["Bajaj", "Bajaj Finserv", "Bajaj Finance"],
+      "legitimate_domains": ["bajajfinserv.in", "bajajfinance.in"],
+      "common_typos": ["bajajfinserv.com", "bajaj-finserv.in", "bajaj-login.com", "bajajfinserv.com.co"],
+      "customer_care": "020-3956 2000"
+    },
+    {
+      "name": "South Indian Bank",
+      "short_name": "SIB",
+      "aliases": ["SIB", "South Indian", "South Indian Bank"],
+      "legitimate_domains": ["southindianbank.com", "sib.co.in"],
+      "common_typos": ["southindianbank.com.co", "sib-bank.in", "sib-login.com", "southindianbank.com.co"],
+      "customer_care": "1800-102-9408"
+    },
+    {
+      "name": "HDFC Life",
+      "short_name": "HDFC Life",
+      "aliases": ["HDFC Life", "HDFC Life Insurance"],
+      "legitimate_domains": ["hdfclife.com"],
+      "common_typos": ["hdfclife.com.co", "hdfc-life.in", "hdfc-login.com", "hdfclife.com.co"],
+      "customer_care": "1800-266-9777"
+    },
+    {
+      "name": "LIC of India",
+      "short_name": "LIC",
+      "aliases": ["LIC", "LIC India", "Life Insurance Corporation"],
+      "legitimate_domains": ["licindia.in", "licindia.com"],
+      "common_typos": ["licindia.com", "lic-india.in", "lic-login.com", "licindia.com.co"],
+      "customer_care": "1800-33-4444"
+    },
+    {
+      "name": "National Payments Corporation of India",
+      "short_name": "NPCI",
+      "aliases": ["NPCI", "BHIM NPCI", "RuPay"],
+      "legitimate_domains": ["npci.org.in", "bhimupi.org.in"],
+      "common_typos": ["npci.com", "npci.org.in.co", "npci-login.com", "npci-update.in"],
+      "customer_care": "1800-120-1740"
+    },
+    {
+      "name": "Reserve Bank of India",
+      "short_name": "RBI",
+      "aliases": ["RBI", "Reserve Bank", "RBI India"],
+      "legitimate_domains": ["rbi.org.in", "rbidocs.org.in"],
+      "common_typos": ["rbi.com", "rbi.org.in.co", "rbi-login.com", "rbi-update.in"],
+      "customer_care": "1800-11-0001"
+    },
+    {
+      "name": "Securities and Exchange Board of India",
+      "short_name": "SEBI",
+      "aliases": ["SEBI", "SEBI India", "Securities Board"],
+      "legitimate_domains": ["sebi.gov.in", "sebiadfb.org"],
+      "common_typos": ["sebi.com", "sebi.gov.in.co", "sebi-login.com"],
+      "customer_care": "1800-22-0002"
+    },
+    {
+      "name": "Insurance Regulatory and Development Authority",
+      "short_name": "IRDAI",
+      "aliases": ["IRDAI", "IRDA", "Insurance Authority"],
+      "legitimate_domains": ["irdai.gov.in"],
+      "common_typos": ["irdai.com", "irdai.gov.in.co", "irdai-login.com"],
+      "customer_care": "1800-425-4732"
+    },
+    {
+      "name": "Central Board of Direct Taxes",
+      "short_name": "CBDT",
+      "aliases": ["CBDT", "Income Tax Department", "IT Department"],
+      "legitimate_domains": ["incometaxindia.gov.in", "incometaxindiaefiling.gov.in"],
+      "common_typos": ["incometaxindia.com", "income-tax.in", "tax-login.com"],
+      "customer_care": "1800-103-0025"
+    },
+    {
+      "name": "Unique Identification Authority of India",
+      "short_name": "UIDAI",
+      "aliases": ["UIDAI", "Aadhaar", "Aadhaar Authority"],
+      "legitimate_domains": ["uidai.gov.in", "uidai.net.in"],
+      "common_typos": ["uidai.com", "uidai.gov.in.co", "uidai-login.com", "aadhaar-update.in"],
+      "customer_care": "1947"
+    },
+    {
+      "name": "Telecom Regulatory Authority of India",
+      "short_name": "TRAI",
+      "aliases": ["TRAI", "Telecom Authority"],
+      "legitimate_domains": ["trai.gov.in"],
+      "common_typos": ["trai.com", "trai.gov.in.co", "trai-login.com"],
+      "customer_care": "1800-11-1234"
+    },
+    {
+      "name": "National Securities Depository Limited",
+      "short_name": "NSDL",
+      "aliases": ["NSDL", "NSDL e-Gov", "Tax Information Network"],
+      "legitimate_domains": ["nsdl.com", "tin-nsdl.com", "incometaxindiaefiling.gov.in"],
+      "common_typos": ["nsdl.com.co", "nsdl-login.com", "nsdl-update.in"],
+      "customer_care": "020-2712-2600"
+    },
+    {
+      "name": "UTI Infrastructure Technology and Services",
+      "short_name": "UTIITSL",
+      "aliases": ["UTIITSL", "UTI", "UTI Infrastructure"],
+      "legitimate_domains": ["utiitsl.com"],
+      "common_typos": ["utiitsl.com.co", "uti-login.com", "uti-update.in"],
+      "customer_care": "1800-267-6666"
+    },
+    {
+      "name": "Employees Provident Fund Organisation",
+      "short_name": "EPFO",
+      "aliases": ["EPFO", "PF Department", "Provident Fund"],
+      "legitimate_domains": ["epfindia.gov.in", "unifiedportal-mem.epfindia.gov.in"],
+      "common_typos": ["epfo.com", "epfindia.com", "epfo-login.com"],
+      "customer_care": "1800-118-111"
+    },
+    {
+      "name": "Central Board of Indirect Taxes and Customs",
+      "short_name": "CBIC",
+      "aliases": ["CBIC", "Customs", "Central Excise"],
+      "legitimate_domains": ["cbic.gov.in", "icegate.gov.in"],
+      "common_typos": ["cbic.com", "cbic-login.com", "customs-login.in"],
+      "customer_care": "1800-367-3000"
+    },
+    {
+      "name": "Ministry of Corporate Affairs",
+      "short_name": "MCA",
+      "aliases": ["MCA", "Corporate Ministry", "Company Affairs"],
+      "legitimate_domains": ["mca.gov.in"],
+      "common_typos": ["mca.com", "mca-login.com", "mca-update.in"],
+      "customer_care": "0120-4832500"
+    },
+    {
+      "name": "National Company Law Tribunal",
+      "short_name": "NCLT",
+      "aliases": ["NCLT", "Company Tribunal"],
+      "legitimate_domains": ["nclt.gov.in"],
+      "common_typos": ["nclt.com", "nclt-login.com"],
+      "customer_care": "011-2338-9100"
+    },
+    {
+      "name": "Competition Commission of India",
+      "short_name": "CCI",
+      "aliases": ["CCI", "Competition Commission"],
+      "legitimate_domains": ["cci.gov.in"],
+      "common_typos": ["cci.com", "cci-login.com"],
+      "customer_care": "011-2338-2560"
+    },
+    {
+      "name": "National Housing Bank",
+      "short_name": "NHB",
+      "aliases": ["NHB", "Housing Bank"],
+      "legitimate_domains": ["nhb.org.in"],
+      "common_typos": ["nhb.com", "nhb-login.com"],
+      "customer_care": "011-2616-3960"
+    },
+    {
+      "name": "National Bank for Agriculture and Rural Development",
+      "short_name": "NABARD",
+      "aliases": ["NABARD", "Agriculture Bank"],
+      "legitimate_domains": ["nabard.org"],
+      "common_typos": ["nabard.com", "nabard-login.com"],
+      "customer_care": "022-2653-9895"
+    },
+    {
+      "name": "Small Industries Development Bank of India",
+      "short_name": "SIDBI",
+      "aliases": ["SIDBI", "Small Industries Bank"],
+      "legitimate_domains": ["sidbi.in"],
+      "common_typos": ["sidbi.com", "sidbi-login.com"],
+      "customer_care": "1800-11-0001"
+    },
+    {
+      "name": "Exim Bank",
+      "short_name": "Exim",
+      "aliases": ["Exim", "Export Import Bank"],
+      "legitimate_domains": ["eximbankindia.in"],
+      "common_typos": ["eximbank.com", "exim-login.com"],
+      "customer_care": "022-2218-2424"
+    }
+  ]
+}
