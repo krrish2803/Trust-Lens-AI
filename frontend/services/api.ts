@@ -30,6 +30,17 @@ export async function apiPost<T = any>(endpoint: string, body: any): Promise<T> 
   return res.json();
 }
 
+export async function apiPostForm<T = any>(endpoint: string, formData: FormData): Promise<T> {
+  const res = await fetch(`${API_BASE_URL}${endpoint}`, {
+    method: 'POST',
+    body: formData,
+  });
+  if (!res.ok) {
+    throw new Error(`API POST Form to ${endpoint} failed with status ${res.status}`);
+  }
+  return res.json();
+}
+
 export async function scanUrl(url: string): Promise<ScanResultResponse> {
   const res = await fetch(`${API_BASE_URL}/scan/url`, {
     method: 'POST',

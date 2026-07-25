@@ -1,21 +1,28 @@
 /**
- * TrustLens AI - Frontend TypeScript Definitions
+ * TrustLens AI - Unified Type System & Canonical Definitions
  */
 
 export type RiskLevel =
   | 'safe' | 'low' | 'medium' | 'high' | 'critical'
   | 'Safe' | 'Low Risk' | 'Medium Risk' | 'High Risk' | 'Critical';
 
-export type ScanType = 'url' | 'message' | 'image' | 'link' | 'screenshot';
+export type ScanType = 'url' | 'message' | 'image' | 'link' | 'screenshot' | 'text';
 
 export type Verdict = 'SAFE' | 'LOW_RISK' | 'MEDIUM_RISK' | 'HIGH_RISK' | 'CRITICAL';
 
 export interface UserProfile {
   id: string;
-  name: string;
+  name?: string;
+  fullName?: string;
   email: string;
   role?: string;
   created_at?: string;
+}
+
+export interface UserSettings {
+  realtimeAlerts?: boolean;
+  biometricAuth?: boolean;
+  sessionTimeout?: number;
 }
 
 export interface ThreatDetail {
@@ -36,8 +43,8 @@ export interface ScanResultResponse {
   id: string;
   scan_type: ScanType;
   input_summary: string;
-  risk_score: number; // 0 to 100
-  confidence_score: number; // 0.0 to 1.0
+  risk_score: number;
+  confidence_score: number;
   verdict: RiskLevel;
   scam_category: string;
   matched_phrases: string[];
@@ -48,6 +55,47 @@ export interface ScanResultResponse {
   ai_explanation?: string;
   threat_breakdown?: ThreatDetail[];
   created_at: string;
+}
+
+// Canonical model matching UI & mock representations
+export interface ScanResult {
+  scanId: string;
+  timestamp: string;
+  input: string;
+  type: ScanType;
+  verdict: Verdict | RiskLevel;
+  riskLevel: RiskLevel;
+  riskScore: number;
+  confidenceScore: number;
+  category: string;
+  explanation: string;
+  originalContent?: string;
+  actions: ActionStep[];
+}
+
+export interface ScanHistoryItem {
+  scanId: string;
+  timestamp: string;
+  title: string;
+  snippet: string;
+  type: ScanType;
+  verdict: Verdict | string;
+  riskLevel: RiskLevel;
+}
+
+export interface DashboardStats {
+  totalScans: number;
+  scamsBlocked: number;
+  securityRating: number;
+  monthlyChange: number;
+}
+
+export interface RecentScanItem {
+  id: string;
+  name: string;
+  verdict: string;
+  time: string;
+  icon: string;
 }
 
 export interface HistoryResponse {
