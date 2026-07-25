@@ -589,3 +589,8 @@ class RuleEngine:
             lines.append(f"- ...and {len(triggered_rules) - 5} more indicators")
 
         return "\n".join(lines)
+
+
+# Module-level singleton instance export
+rule_engine = RuleEngine()
+
