@@ -1,10 +1,8 @@
 "use client";
 
-import AppShell from "@/components/AppShell";
-
 export default function AboutPage() {
   return (
-    <AppShell>
+    <>
       <div className="max-w-4xl mx-auto space-y-10 py-6">
         {/* Hero Section */}
         <div className="text-center space-y-4">
@@ -58,6 +56,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </AppShell>
+    </>
   );
 }

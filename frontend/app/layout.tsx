@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Sidebar from "@/components/Sidebar";
-import Footer from "@/components/Footer";
+import AppShell from "@/components/AppShell";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -25,8 +23,6 @@ const geistMono = Geist_Mono({
   weight: ["400", "500"],
   display: "swap",
 });
-
-import AppShell from "@/components/AppShell";
 
 export const metadata: Metadata = {
   title: "TrustLens AI — Detect. Explain. Protect.",
@@ -66,6 +62,12 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[#081425] text-[#d8e3fb] min-h-screen overflow-x-hidden font-[family-name:var(--font-inter)]">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-[#4d8eff] focus:text-[#002e6a] focus:px-4 focus:py-2 focus:rounded-lg focus:font-semibold focus:outline-none"
+        >
+          Skip to main content
+        </a>
         <AppShell>{children}</AppShell>
       </body>
     </html>

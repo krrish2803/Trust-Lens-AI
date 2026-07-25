@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   backend:
     build:
@@ -11,14 +9,19 @@ services:
       - MONGODB_URI=mongodb://mongodb:27017
       - MONGODB_DB_NAME=trustlens_db
       - NVIDIA_NIM_API_KEY=${NVIDIA_NIM_API_KEY}
+      - DEBUG=False
     depends_on:
-      - mongodb
+      mongodb:
+        condition: service_started
     restart: always
 
   mongodb:
     image: mongo:6.0
     ports:
-      - "27017:27017"
+      - "127.0.0.1:27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=trustlens
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD:-changeme}
     volumes:
       - mongo_data:/data/db
     restart: always

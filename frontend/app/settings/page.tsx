@@ -113,6 +113,7 @@ export default function SettingsPage() {
             <button
               id="toggle-realtime"
               aria-pressed={alerts}
+              aria-label="Toggle real-time risk detection"
               onClick={() => setAlerts(!alerts)}
               className={toggleStyle(alerts)}
             >
@@ -133,6 +134,7 @@ export default function SettingsPage() {
             <button
               id="toggle-biometric"
               aria-pressed={biometric}
+              aria-label="Toggle biometric authentication"
               onClick={() => setBiometric(!biometric)}
               className={toggleStyle(biometric)}
             >
@@ -143,9 +145,9 @@ export default function SettingsPage() {
           {/* Session timeout */}
           <div className="flex items-center justify-between p-5">
             <div>
-              <p className="text-[#d8e3fb] text-sm font-semibold">
+              <label htmlFor="session-timeout" className="text-[#d8e3fb] text-sm font-semibold">
                 Session Timeout
-              </p>
+              </label>
               <p className="text-[#8c909f] text-xs mt-0.5">
                 Automatically log out after periods of inactivity.
               </p>

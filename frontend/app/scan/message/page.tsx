@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import AppShell from "@/components/AppShell";
 import { scanMessage } from "@/services/api";
 
 export default function ScanMessagePage() {
@@ -31,7 +30,7 @@ export default function ScanMessagePage() {
   };
 
   return (
-    <AppShell>
+    <>
       <div className="max-w-4xl mx-auto space-y-8 py-6">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">Scan Message / SMS / WhatsApp</h1>
@@ -98,6 +97,6 @@ export default function ScanMessagePage() {
           </form>
         </div>
       </div>
-    </AppShell>
+    </>
   );
 }

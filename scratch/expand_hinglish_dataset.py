@@ -1,8 +1,10 @@
 import json
+import os
 
 # Read current dataset
-target_path = r"c:\Users\SHALONI\OneDrive\Documents\New folder (2)\Trust-Lens-AI\datasets\hinglish_phrases.json"
-data = json.load(open(target_path, encoding='utf-8'))
+target_path = os.path.join(os.path.dirname(__file__), "..", "datasets", "hinglish_phrases.json")
+with open(target_path, encoding='utf-8') as f:
+    data = json.load(f)
 existing_phrases = data.get("phrases", [])
 
 seen = {item["phrase"].strip().lower() for item in existing_phrases}

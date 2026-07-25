@@ -1,6 +1,7 @@
 "use client";
 
-import { getRiskStrokeColor, getRiskLevel, getVerdictIcon, getVerdictLabel } from "@/utils/riskUtils";
+import { memo } from "react";
+import { getRiskStrokeColor, getVerdictLabel } from "@/utils/riskUtils";
 import type { Verdict, RiskLevel } from "@/types";
 import {
   CriticalAlertIcon,
@@ -20,7 +21,7 @@ interface VerdictCardProps {
   riskLevel?: RiskLevel;
 }
 
-export default function VerdictCard({
+function VerdictCardInner({
   verdict = "SAFE",
   title,
   category,
@@ -49,7 +50,6 @@ export default function VerdictCard({
 
   return (
     <div className="relative overflow-hidden glass-panel rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8 bg-slate-900/60 border border-slate-800 backdrop-blur-xl">
-      {/* Scan-line animation overlay */}
       <div
         className="absolute inset-0 pointer-events-none animate-scan-line opacity-40"
         style={{
@@ -59,7 +59,6 @@ export default function VerdictCard({
         }}
       />
 
-      {/* Icon */}
       <div
         className="relative z-10 shrink-0 w-20 h-20 rounded-full flex items-center justify-center animate-float"
         style={{
@@ -77,9 +76,7 @@ export default function VerdictCard({
         )}
       </div>
 
-      {/* Content */}
       <div className="relative z-10 flex-1 text-center md:text-left">
-        {/* Verdict badge */}
         <div
           className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-3"
           style={{
@@ -92,7 +89,7 @@ export default function VerdictCard({
             {isSafe ? "verified" : "report"}
           </span>
           Verdict: {verdictLabelText}
-          {confidence !== undefined && ` (${Math.round(confidence * 100)}% Confidence)`}
+          {confidence !== undefined && ` (${Math.round(confidence)}% Confidence)`}
         </div>
 
         <h1 className="font-[family-name:var(--font-manrope)] font-bold text-3xl md:text-4xl text-[#d8e3fb] mb-2">
@@ -103,7 +100,6 @@ export default function VerdictCard({
         </p>
       </div>
 
-      {/* Timestamp + ID */}
       <div className="relative z-10 flex flex-col items-center md:items-end gap-2 shrink-0">
         <span className="text-xs text-[#8c909f] font-medium">Scan ID</span>
         <span className="font-[family-name:var(--font-geist)] text-sm bg-[#152031] px-3 py-1.5 rounded-lg text-[#adc6ff] border border-[#424754]/50">
@@ -117,3 +113,6 @@ export default function VerdictCard({
     </div>
   );
 }
+
+const VerdictCard = memo(VerdictCardInner);
+export default VerdictCard;

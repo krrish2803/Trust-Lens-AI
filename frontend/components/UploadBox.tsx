@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { ScreenshotScanIcon } from "@/components/icons/BrandIcons";
+import { scanUrl, scanMessage, scanImage } from "@/services/api";
 
 type TabType = "link" | "message" | "screenshot";
 
@@ -52,15 +53,32 @@ export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadB
     }
   };
 
+  const [apiError, setApiError] = useState<string | null>(null);
+
   const handleAnalyze = async () => {
     if (activeTab === "link" && !urlValue.trim()) return;
     if (activeTab === "message" && !messageValue.trim()) return;
     if (activeTab === "screenshot" && !selectedFile) return;
 
     setIsScanning(true);
-    await new Promise((r) => setTimeout(r, 1800));
-    setIsScanning(false);
-    router.push("/report");
+    setApiError(null);
+
+    try {
+      let result;
+      if (activeTab === "link") {
+        result = await scanUrl(urlValue.trim());
+      } else if (activeTab === "message") {
+        result = await scanMessage(messageValue.trim());
+      } else {
+        result = await scanImage(selectedFile!);
+      }
+      localStorage.setItem("lastScanResult", JSON.stringify(result));
+      router.push(`/scan/result?id=${result.id}`);
+    } catch (err: any) {
+      setApiError(err.message || "Scan failed. Please ensure the backend is running.");
+    } finally {
+      setIsScanning(false);
+    }
   };
 
   const canSubmit =
@@ -103,7 +121,7 @@ export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadB
         {/* Link Tab */}
         {activeTab === "link" && (
           <div className="space-y-3 animate-fade-in">
-            <label className="block text-xs font-semibold text-[#8c909f] uppercase tracking-widest">
+            <label htmlFor="url-input" className="block text-xs font-semibold text-[#8c909f] uppercase tracking-widest">
               Target URL
             </label>
             <input
@@ -125,7 +143,7 @@ export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadB
         {/* Message Tab */}
         {activeTab === "message" && (
           <div className="space-y-3 animate-fade-in">
-            <label className="block text-xs font-semibold text-[#8c909f] uppercase tracking-widest">
+            <label htmlFor="message-input" className="block text-xs font-semibold text-[#8c909f] uppercase tracking-widest">
               Paste Message / SMS / Email
             </label>
             <textarea
@@ -146,11 +164,20 @@ export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadB
         {/* Screenshot Tab */}
         {activeTab === "screenshot" && (
           <div className="space-y-3 animate-fade-in">
-            <label className="block text-xs font-semibold text-[#8c909f] uppercase tracking-widest">
+            <label htmlFor="screenshot-upload" className="block text-xs font-semibold text-[#8c909f] uppercase tracking-widest">
               Upload Screenshot
             </label>
             <div
               id="drop-zone"
+              role="button"
+              tabIndex={0}
+              aria-label="Upload screenshot by clicking or dragging a file"
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  fileInputRef.current?.click();
+                }
+              }}
               onDragOver={(e) => {
                 e.preventDefault();
                 setIsDragging(true);
@@ -215,6 +242,7 @@ export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadB
             </div>
             <input
               ref={fileInputRef}
+              id="screenshot-upload"
               type="file"
               accept="image/*"
               className="hidden"
@@ -257,6 +285,12 @@ export default function UploadBox({ onFileSelect, defaultTab = "link" }: UploadB
             </>
           )}
         </button>
+
+        {apiError && (
+          <div className="p-3 bg-red-500/10 border border-red-500/30 rounded-xl text-red-400 text-sm text-center">
+            {apiError}
+          </div>
+        )}
       </div>
 
       {/* Feature pills */}

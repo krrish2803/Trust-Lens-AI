@@ -4,7 +4,6 @@ import json
 import os
 import sys
 import argparse
-import pickle
 import numpy as np
 from typing import List, Dict
 
@@ -83,16 +82,18 @@ def save_embeddings(embeddings, all_texts, text_to_phrase_idx, output_dir: str):
     """Save embeddings to disk."""
     os.makedirs(output_dir, exist_ok=True)
     
-    output_path = os.path.join(output_dir, "hinglish_phrases.pkl")
-    with open(output_path, 'wb') as f:
-        pickle.dump({
-            "embeddings": embeddings,
+    npy_path = os.path.join(output_dir, "hinglish_phrases.npy")
+    json_path = os.path.join(output_dir, "hinglish_phrases_meta.json")
+    
+    np.save(npy_path, np.array(embeddings, dtype=np.float32))
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump({
             "texts": all_texts,
             "text_to_phrase_idx": text_to_phrase_idx,
-            "shape": embeddings.shape if hasattr(embeddings, 'shape') else None
-        }, f)
+            "shape": list(embeddings.shape) if hasattr(embeddings, 'shape') else None
+        }, f, ensure_ascii=False)
     
-    print(f"✓ Embeddings saved to {output_path}")
+    print(f"✓ Embeddings saved to {npy_path}")
     print(f"  Shape: {embeddings.shape if hasattr(embeddings, 'shape') else (len(embeddings), len(embeddings[0]) if embeddings else 0)}")
     print(f"  Total texts: {len(all_texts)}")
 

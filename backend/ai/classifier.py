@@ -19,9 +19,9 @@ class AIClassifier:
     async def classify_content(
         self,
         text: str,
-        detected_urls: List[str] = None,
-        matched_phrases: List[str] = None,
-        rule_findings: List[Dict[str, Any]] = None
+        detected_urls: Optional[List[str]] = None,
+        matched_phrases: Optional[List[str]] = None,
+        rule_findings: Optional[List[Dict[str, Any]]] = None,
     ) -> Optional[Dict[str, Any]]:
         """
         Classifies input text using NVIDIA NIM model.

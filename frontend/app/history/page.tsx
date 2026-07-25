@@ -67,6 +67,7 @@ export default function HistoryPage() {
         <input
           type="text"
           placeholder="Search past scans..."
+          aria-label="Search past scans"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full bg-[#152031] border border-[#424754] focus:border-[#4d8eff] text-[#d8e3fb] placeholder-[#424754] rounded-xl pl-10 pr-4 py-3 text-sm outline-none transition-colors"

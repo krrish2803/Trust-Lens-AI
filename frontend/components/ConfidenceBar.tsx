@@ -1,16 +1,13 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { memo, useEffect, useRef } from "react";
 
 interface ConfidenceBarProps {
   value: number; // 0–100
   label?: string;
 }
 
-export default function ConfidenceBar({
-  value,
-  label = "AI Confidence",
-}: ConfidenceBarProps) {
+function ConfidenceBarInner({ value, label = "AI Confidence" }: ConfidenceBarProps) {
   const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -37,9 +34,14 @@ export default function ConfidenceBar({
         </span>
       </div>
 
-      {/* Track */}
-      <div className="w-full h-3 bg-[#2a3548] rounded-full overflow-hidden">
-        {/* Fill — teal → blue gradient */}
+      <div
+        className="w-full h-3 bg-[#2a3548] rounded-full overflow-hidden"
+        role="progressbar"
+        aria-valuenow={value}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        aria-label={`${label}: ${value}%`}
+      >
         <div
           ref={barRef}
           className="h-full rounded-full"
@@ -51,7 +53,6 @@ export default function ConfidenceBar({
         />
       </div>
 
-      {/* Descriptor */}
       <p className="text-xs text-[#8c909f]">
         {value >= 90
           ? "Very high confidence — result is highly reliable"
@@ -64,3 +65,6 @@ export default function ConfidenceBar({
     </div>
   );
 }
+
+const ConfidenceBar = memo(ConfidenceBarInner);
+export default ConfidenceBar;

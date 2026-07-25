@@ -18,24 +18,33 @@ class NvidiaNimClient:
         self.base_url = settings.NVIDIA_NIM_BASE_URL
         self.model_name = settings.NVIDIA_MODEL_NAME
         self.timeout = 15.0
+        self._client: Optional[httpx.AsyncClient] = None
 
     @property
     def is_configured(self) -> bool:
         return bool(self.api_key and self.api_key.startswith("nvapi-"))
 
+    def _get_client(self) -> httpx.AsyncClient:
+        if self._client is None or self._client.is_closed:
+            self._client = httpx.AsyncClient(timeout=self.timeout)
+        return self._client
+
+    async def close(self):
+        if self._client and not self._client.is_closed:
+            await self._client.aclose()
+
     async def generate_chat_completion(
         self,
         messages: list,
-        temperature: float = 0.1,
-        max_tokens: int = 500
+        temperature: float = None,
+        max_tokens: int = None,
     ) -> Optional[str]:
-        """
-        Sends chat completion request to NVIDIA NIM API.
-        Returns the text response or None if request fails or is unconfigured.
-        """
         if not self.is_configured:
             logger.info("NVIDIA NIM API key not configured. Using rule-based fallback.")
             return None
+
+        temperature = temperature or settings.AI_TEMPERATURE
+        max_tokens = max_tokens or settings.AI_MAX_TOKENS
 
         headers = {
             "Authorization": f"Bearer {self.api_key}",
@@ -48,29 +57,29 @@ class NvidiaNimClient:
             "messages": messages,
             "temperature": temperature,
             "max_tokens": max_tokens,
-            "top_p": 0.95
+            "top_p": 0.95,
         }
 
         try:
-            async with httpx.AsyncClient(timeout=self.timeout) as client:
-                response = await client.post(
-                    f"{self.base_url}/chat/completions",
-                    headers=headers,
-                    json=payload
-                )
+            client = self._get_client()
+            response = await client.post(
+                f"{self.base_url}/chat/completions",
+                headers=headers,
+                json=payload,
+            )
 
-                if response.status_code == 200:
-                    data = response.json()
-                    choices = data.get("choices", [])
-                    if choices and "message" in choices[0]:
-                        return choices[0]["message"].get("content", "").strip()
-                else:
-                    logger.warning(
-                        f"NVIDIA NIM API returned status {response.status_code}: {response.text}"
-                    )
-                    return None
+            if response.status_code == 200:
+                data = response.json()
+                choices = data.get("choices", [])
+                if choices and "message" in choices[0]:
+                    return choices[0]["message"].get("content", "").strip()
+            else:
+                logger.warning(
+                    "NVIDIA NIM API returned status %d", response.status_code
+                )
+                return None
         except Exception as e:
-            logger.error(f"Error calling NVIDIA NIM API: {str(e)}")
+            logger.error("Error calling NVIDIA NIM API: %s", type(e).__name__)
             return None
 
 

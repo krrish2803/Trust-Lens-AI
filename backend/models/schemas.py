@@ -5,8 +5,8 @@ Defines request validation and structured API output formats.
 
 from enum import Enum
 from typing import List, Optional, Dict, Any
-from datetime import datetime
-from pydantic import BaseModel, Field, HttpUrl
+from datetime import datetime, timezone
+from pydantic import BaseModel, Field
 
 
 class ScanType(str, Enum):
@@ -39,15 +39,34 @@ class ScamCategory(str, Enum):
     BENIGN = "Safe Content"
 
 
+class ChannelType(str, Enum):
+    AUTO = "auto"
+    SMS = "sms"
+    WHATSAPP = "whatsapp"
+    EMAIL = "email"
+    TEXT = "text"
+
+
 # --- Request Models ---
 
 class URLScanRequest(BaseModel):
-    url: str = Field(..., description="The URL to scan for phishing or fraud", example="http://sbi-kyc-update.online")
+    url: str = Field(
+        ..., min_length=1, max_length=2048,
+        description="The URL to scan for phishing or fraud",
+        example="http://sbi-kyc-update.online",
+    )
 
 
 class MessageScanRequest(BaseModel):
-    text: str = Field(..., description="SMS, WhatsApp message, email body or text content to scan", example="Dear customer, your SBI account is blocked. Click here to update KYC immediately: http://bit.ly/fake-sbi")
-    channel: Optional[str] = Field("auto", description="Communication channel: sms, whatsapp, email, text")
+    text: str = Field(
+        ..., min_length=1, max_length=50000,
+        description="SMS, WhatsApp message, email body or text content to scan",
+        example="Dear customer, your SBI account is blocked. Click here to update KYC immediately: http://bit.ly/fake-sbi",
+    )
+    channel: ChannelType = Field(
+        ChannelType.AUTO,
+        description="Communication channel: auto, sms, whatsapp, email, text",
+    )
 
 
 class ImageScanRequest(BaseModel):
@@ -78,7 +97,7 @@ class ScanResultResponse(BaseModel):
     extracted_text: Optional[str] = None
     ai_explanation: Optional[str] = None
     threat_breakdown: List[ThreatDetail] = Field(default_factory=list)
-    created_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
 class HistoryItem(BaseModel):

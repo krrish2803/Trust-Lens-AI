@@ -3,7 +3,7 @@ TrustLens AI - Database Document Schemas
 Defines database collection structures for history, users, and reports.
 """
 
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, List, Optional
 from pydantic import BaseModel, Field
 
@@ -22,14 +22,14 @@ class HistoryDocument(BaseModel):
     recommended_actions: List[str] = []
     extracted_text: Optional[str] = None
     ai_explanation: Optional[str] = None
-    created_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
 class UserDocument(BaseModel):
     id: str
     email: str
     name: Optional[str] = None
-    created_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+    created_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
 
 
 class ReportDocument(BaseModel):
@@ -37,4 +37,4 @@ class ReportDocument(BaseModel):
     scan_id: str
     reporter_notes: Optional[str] = None
     scam_url_or_number: Optional[str] = None
-    reported_at: str = Field(default_factory=lambda: datetime.utcnow().isoformat())
+    reported_at: str = Field(default_factory=lambda: datetime.now(timezone.utc).isoformat())

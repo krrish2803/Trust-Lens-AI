@@ -2,10 +2,9 @@
 
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
-import AppShell from "@/components/AppShell";
 import RiskMeter from "@/components/RiskMeter";
 import VerdictCard from "@/components/VerdictCard";
-import ActionGuide from "@/components/ActionGuide";
+import ActionGuideWrapper from "@/components/ActionGuideWrapper";
 import { ScanResultResponse } from "@/types";
 import { getScanById } from "@/services/api";
 
@@ -15,6 +14,7 @@ function ScanResultContent() {
 
   const [result, setResult] = useState<ScanResultResponse | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     // Check localStorage first for instant render
@@ -27,7 +27,9 @@ function ScanResultContent() {
           setLoading(false);
           return;
         }
-      } catch (e) {}
+      } catch {
+        // Cached data is corrupted, fall through to API fetch
+      }
     }
 
     if (scanId) {
@@ -35,7 +37,9 @@ function ScanResultContent() {
         .then((res) => {
           setResult(res);
         })
-        .catch(() => {})
+        .catch(() => {
+          setError("Failed to load scan result. Please try again.");
+        })
         .finally(() => setLoading(false));
     } else {
       setLoading(false);
@@ -55,8 +59,12 @@ function ScanResultContent() {
     return (
       <div className="max-w-xl mx-auto text-center py-16 space-y-4">
         <div className="text-5xl">🔍</div>
-        <h2 className="text-2xl font-bold text-white">No Scan Result Selected</h2>
-        <p className="text-slate-400 text-sm">Please submit a URL, message, or screenshot to generate a new threat analysis report.</p>
+        <h2 className="text-2xl font-bold text-white">
+          {error || "No Scan Result Selected"}
+        </h2>
+        <p className="text-slate-400 text-sm">
+          {error ? "Please try submitting again." : "Please submit a URL, message, or screenshot to generate a new threat analysis report."}
+        </p>
       </div>
     );
   }
@@ -134,22 +142,23 @@ function ScanResultContent() {
       </div>
 
       {/* Action Recommendation Guide */}
-      <ActionGuide actions={result.recommended_actions} verdict={result.verdict} />
+      <ActionGuideWrapper
+        actions={result.recommended_actions}
+        confidenceScore={result.confidence_score}
+      />
     </div>
   );
 }
 
 export default function ScanResultPage() {
   return (
-    <AppShell>
-      <Suspense fallback={
-        <div className="flex flex-col items-center justify-center min-h-[60vh]">
-          <div className="w-12 h-12 border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin mb-4" />
-          <p className="text-slate-400 text-sm">Loading Scan Result...</p>
-        </div>
-      }>
-        <ScanResultContent />
-      </Suspense>
-    </AppShell>
+    <Suspense fallback={
+      <div className="flex flex-col items-center justify-center min-h-[60vh]">
+        <div className="w-12 h-12 border-4 border-cyan-500/30 border-t-cyan-500 rounded-full animate-spin mb-4" />
+        <p className="text-slate-400 text-sm">Loading Scan Result...</p>
+      </div>
+    }>
+      <ScanResultContent />
+    </Suspense>
   );
 }

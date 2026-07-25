@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import AppShell from "@/components/AppShell";
 import { scanUrl } from "@/services/api";
 
 export default function ScanUrlPage() {
@@ -31,7 +30,7 @@ export default function ScanUrlPage() {
   };
 
   return (
-    <AppShell>
+    <>
       <div className="max-w-4xl mx-auto space-y-8 py-6">
         <div>
           <h1 className="text-3xl font-bold tracking-tight text-white mb-2">Scan Suspicious URL</h1>
@@ -107,6 +106,6 @@ export default function ScanUrlPage() {
           </div>
         </div>
       </div>
-    </AppShell>
+    </>
   );
 }

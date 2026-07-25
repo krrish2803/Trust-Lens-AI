@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import type { ActionStep, RiskLevel } from "@/types";
 
 interface ActionGuideProps {
@@ -16,20 +17,19 @@ const severityStyles: Record<string, { bg: string; text: string }> = {
   tertiary: { bg: "bg-[#ffb786]/15", text: "text-[#ffb786]" },
 };
 
-export default function ActionGuide({
+function ActionGuideInner({
   actions = [],
   confidenceScore = 95,
   verdict = "Safe",
   onDownload,
   onDismiss,
 }: ActionGuideProps) {
-  // Normalize string actions into ActionStep objects if necessary
   const normalizedSteps: ActionStep[] = actions.map((act, idx) => {
     if (typeof act === "string") {
       let severity: "primary" | "tertiary" | "error" = "primary";
-      if (act.includes("DO NOT") || act.includes("NEVER") || act.includes("🚨")) {
+      if (act.includes("DO NOT") || act.includes("NEVER") || act.includes("\u{1F6A8}")) {
         severity = "error";
-      } else if (act.includes("⚠️") || act.includes("Block")) {
+      } else if (act.includes("\u26A0\uFE0F") || act.includes("Block")) {
         severity = "tertiary";
       }
       return {
@@ -51,7 +51,6 @@ export default function ActionGuide({
         Recommended Safety Actions
       </h4>
 
-      {/* Action steps grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
         {normalizedSteps.map((action) => {
           const style = severityStyles[action.severity] ?? severityStyles.primary;
@@ -60,7 +59,6 @@ export default function ActionGuide({
               key={action.step}
               className="flex gap-4 p-4 bg-[#152031] rounded-xl border border-white/5 hover:border-[#6bd8cb]/20 transition-all duration-200 group"
             >
-              {/* Step number badge */}
               <div
                 className={`w-10 h-10 shrink-0 rounded-full ${style.bg} ${style.text} flex items-center justify-center font-bold text-sm`}
               >
@@ -80,11 +78,10 @@ export default function ActionGuide({
         })}
       </div>
 
-      {/* Footer row */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-t border-white/5 pt-6">
         <p className="text-[#8c909f] text-sm max-w-md leading-relaxed">
           TrustLens AI Engine is active. Threat analysis carries{" "}
-          <span className="text-[#6bd8cb] font-semibold">{Math.round(confidenceScore * 100)}% confidence</span>. Always verify unverified financial requests.
+          <span className="text-[#6bd8cb] font-semibold">{Math.round(confidenceScore)}% confidence</span>. Always verify unverified financial requests.
         </p>
 
         <div className="flex gap-3 shrink-0">
@@ -111,3 +108,6 @@ export default function ActionGuide({
     </div>
   );
 }
+
+const ActionGuide = memo(ActionGuideInner);
+export default ActionGuide;

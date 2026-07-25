@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: trustlens-backend
+    runtime: docker
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: MONGODB_DB_NAME
+        value: trustlens_db
+      - key: NVIDIA_NIM_API_KEY
+        sync: false
+      - key: DEBUG
+        value: "False"
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ENVIRONMENT
+        value: production
+    healthCheckPath: /health
+    autoDeploy: true
+    plan: starter

@@ -21,7 +21,7 @@ class ConfidenceScoreCalculator:
         scores = [s for s in [rule_score, phrase_score, url_score] if s > 0]
 
         if not scores:
-            return 0.85  # Default baseline for clear non-scams
+            return 0.50
 
         # Higher consensus across multiple layers yields higher confidence
         variance = max(scores) - min(scores) if len(scores) > 1 else 0.0

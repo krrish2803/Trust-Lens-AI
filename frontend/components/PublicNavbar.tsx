@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function PublicNavbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#152031]/90 backdrop-blur-md border-b border-white/5 transition-all duration-300">
-      <nav className="flex items-center justify-between w-full h-16 px-6 max-w-[1280px] mx-auto">
+      <nav aria-label="Public navigation" className="flex items-center justify-between w-full h-16 px-6 max-w-[1280px] mx-auto">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center group">
           <Image

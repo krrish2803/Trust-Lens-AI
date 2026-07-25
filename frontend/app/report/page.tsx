@@ -12,7 +12,7 @@ export default function ReportPage() {
   return (
     <div className="px-4 md:px-8 py-8 max-w-5xl mx-auto space-y-5">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-[#8c909f]">
+      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-sm text-[#8c909f]">
         <a href="/history" className="hover:text-[#adc6ff] transition-colors">
           History
         </a>

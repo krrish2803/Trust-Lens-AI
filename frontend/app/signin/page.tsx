@@ -17,7 +17,6 @@ export default function SignInPage() {
     e.preventDefault();
     setError(null);
 
-    // Basic client validation
     if (!email || !password) {
       setError("Please fill in all fields.");
       return;
@@ -29,17 +28,12 @@ export default function SignInPage() {
 
     setLoading(true);
     try {
-      // Attempt API call stub
       await login(email, password);
+      router.push("/home");
     } catch (_err) {
-      // DEV BYPASS COMMENT FOR KRRISH:
-      // Since backend API is not connected yet during frontend preview,
-      // swallow the stub error and navigate to /home so UI can be tested.
-      // Krrish: remove this catch block bypass once backend auth endpoint is live.
-      console.warn("[Dev Preview Bypass] Redirecting to /home without live API auth");
+      setError("Sign-in failed. Please check your credentials and try again.");
     } finally {
       setLoading(false);
-      router.push("/home");
     }
   };
 
@@ -139,19 +133,6 @@ export default function SignInPage() {
             )}
           </button>
         </form>
-
-        {/* DEV BYPASS BUTTON — FOR LOCAL FRONTEND PREVIEW */}
-        <div className="pt-1">
-          <Link
-            href="/home"
-            className="w-full border border-dashed border-[#adc6ff]/40 hover:border-[#adc6ff] text-[#adc6ff] text-xs font-semibold py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 transition-all duration-200 hover:bg-[#adc6ff]/10"
-          >
-            <span className="material-symbols-outlined text-base">
-              developer_mode
-            </span>
-            Skip to App (Dev Preview)
-          </Link>
-        </div>
 
         {/* Footer link */}
         <div className="text-center pt-2 border-t border-white/5">

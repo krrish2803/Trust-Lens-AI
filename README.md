@@ -31,7 +31,7 @@ It provides instant risk verdicts (**Safe**, **Low**, **Medium**, **High**, **Cr
 - **State Management:** React Hooks & Context API
 
 ### Backend Microservices
-- **API Framework:** FastAPI / Python 3.14
+- **API Framework:** FastAPI / Python 3.11
 - **Web Server:** Uvicorn
 - **Data Schemas:** Pydantic v2
 - **OCR Engine:** Tesseract OCR (PyTesseract)

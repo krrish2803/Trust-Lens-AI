@@ -64,13 +64,13 @@ class URLDetector:
         self.suspicious_domains = self._load_suspicious_domains()
         self.bank_names = self._load_bank_names()
 
-    def _load_trusted_domains(self) -> List[str]:
+    def _load_trusted_domains(self) -> set:
         try:
             data = load_json_dataset(get_dataset_path('trusted_domains.json'))
             loaded = [d['domain'].lower() for d in data.get('domains', [])]
-            return list(set(loaded + list(BUILTIN_TRUSTED_DOMAINS)))
+            return set(loaded) | BUILTIN_TRUSTED_DOMAINS
         except (FileNotFoundError, KeyError):
-            return list(BUILTIN_TRUSTED_DOMAINS)
+            return set(BUILTIN_TRUSTED_DOMAINS)
 
     def _load_suspicious_domains(self) -> List[dict]:
         try:

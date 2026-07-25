@@ -1,5 +1,6 @@
 "use client";
 
+import { memo } from "react";
 import { FingerprintIcon } from "@/components/icons/BrandIcons";
 
 interface ScamCategoryProps {
@@ -23,11 +24,7 @@ const categoryMeta: Record<string, { icon: string; color: string }> = {
   Unknown: { icon: "help_outline", color: "#8c909f" },
 };
 
-export default function ScamCategory({
-  category,
-  icon,
-  compact = false,
-}: ScamCategoryProps) {
+function ScamCategoryInner({ category, icon, compact = false }: ScamCategoryProps) {
   const meta = categoryMeta[category] ?? categoryMeta["Unknown"];
   const displayIcon = icon ?? meta.icon;
   const color = meta.color;
@@ -42,7 +39,6 @@ export default function ScamCategory({
           border: `1px solid ${color}30`,
         }}
       >
-        {/* Brand icon ONLY for Fake KYC Scam; all others use Material Symbols */}
         {category === "Fake KYC Scam" ? (
           <FingerprintIcon size={12} color={color} />
         ) : (
@@ -68,13 +64,8 @@ export default function ScamCategory({
           {category}
         </h3>
       </div>
-      {/* Brand FingerprintIcon for Fake KYC Scam; Material Symbol for all others */}
       {category === "Fake KYC Scam" ? (
-        <FingerprintIcon
-          size={40}
-          color={color}
-          className="shrink-0"
-        />
+        <FingerprintIcon size={40} color={color} className="shrink-0" />
       ) : (
         <span
           className="material-symbols-outlined text-4xl"
@@ -90,3 +81,6 @@ export default function ScamCategory({
     </div>
   );
 }
+
+const ScamCategory = memo(ScamCategoryInner);
+export default ScamCategory;

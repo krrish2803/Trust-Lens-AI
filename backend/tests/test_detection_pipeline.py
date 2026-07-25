@@ -85,7 +85,9 @@ class TestTrustLensAIDetectionPipeline(unittest.TestCase):
     def test_tc_phr_002_fuzzy_hinglish_match(self):
         text = "Apna OTP bhej do verify karne waste"
         res = self.phrase_matcher.detect(text)
-        self.assertTrue(res["detected"] or len(res["phrases"]) >= 0)
+        self.assertIsInstance(res, dict)
+        self.assertIn("detected", res)
+        self.assertIn("phrases", res)
 
     # --- 5. Rule Engine Test Cases ---
     def test_tc_rul_001_urgency_and_credential_rules(self):
