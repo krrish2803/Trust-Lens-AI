@@ -1,215 +1,330 @@
-# TrustLens AI 🛡️
+# TrustLens AI
+
 > **Detect. Explain. Protect.**
-> AI-powered Scam & Phishing Detection Platform custom-built for Indian users.
 
-![TrustLens AI Banner](trustlens_ai_branding/logo.svg)
+AI-powered Scam & Phishing Detection Platform built for Indian users.
 
-TrustLens AI is an intelligent, multi-layered cyber scam and phishing detection ecosystem built specifically to protect Indian users from digital financial fraud. By combining rule-based heuristics, Hinglish scam-phrase analysis (200+ verified patterns), OCR-powered screenshot evaluation, and deep AI security models, TrustLens AI allows users to analyze suspicious links, SMS/WhatsApp messages, emails, and payment receipts in real time. 
-
-It provides instant risk verdicts (**Safe**, **Low**, **Medium**, **High**, **Critical**), multi-layered confidence scores, scam categorizations (e.g., UPI Fraud, Fake KYC, Job Scam, Cyber Arrest), and plain-language explainability with step-by-step emergency action guides.
-
----
-
-## 💡 Key Features
-
-- **🌐 URL Phishing Detection:** Analyzes domain squatting, typosquatting, suspicious TLDs (`.xyz`, `.top`, `.club`), URL shorteners (`bit.ly`, `tinyurl`), and IP host patterns.
-- **💬 Hinglish Scam Phrase Matcher:** Trained on a dataset of 200+ authentic Hinglish fraud patterns spanning 14 Indian cyber scam categories.
-- **📸 Screenshot OCR Analysis:** Tesseract OCR engine extracts text from payment receipts, WhatsApp chats, and fake lottery cheques to detect reverse QR & collect requests.
-- **🛡️ 15-Rule Heuristic Engine:** Evaluates urgency language, credential harvesting, brand impersonation, authority threats, and time pressure tactics.
-- **🎯 Multi-Layer Risk Scoring:** Combines weighted scores across phrase matching (35%), rule engine (30%), URL detector (25%), and scam classifier (10%).
-- **🧠 Plain-Language Explainability:** Generates clear, non-technical explanations and step-by-step action guides (e.g., "Never enter UPI PIN to receive money").
-- **🚨 Instant Bug Reporting & QA Portal:** Built-in validation suite ensuring technical precision and zero false positives on official banking domains.
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+![Python 3.11](https://img.shields.io/badge/Python-3.11-blue.svg)
+![Next.js 16](https://img.shields.io/badge/Next.js-16-black.svg)
 
 ---
 
-## 🚀 Overview
+## Problem Statement
 
-### Frontend Application
-- **Framework:** Next.js 16 (App Router)
-- **UI Library:** React 19, TypeScript
-- **Styling:** Tailwind CSS v4, Lucide React Icons
-- **State Management:** React Hooks & Context API
+India loses over **₹10,000 crore annually** to digital payment fraud. With 800M+ UPI users, scammers exploit Hinglish messages, fake KYC links, OTP phishing, and UPI QR fraud to target vulnerable populations — often elderly users and first-time digital payment adopters.
 
-### Backend Microservices
-- **API Framework:** FastAPI / Python 3.11
-- **Web Server:** Uvicorn
-- **Data Schemas:** Pydantic v2
-- **OCR Engine:** Tesseract OCR (PyTesseract)
-- **Database:** MongoDB (Async Motor driver)
+Existing solutions focus on English-language spam detection and fail to catch:
+- **Hinglish scam phrases** like "OTP batao", "account freeze ho jayega"
+- **Fake banking URLs** mimicking SBI, HDFC, ICICI with typosquatting
+- **Payment screenshot fraud** using manipulated QR codes and receipts
+- **Multi-channel attacks** spanning SMS, WhatsApp, Telegram, and email
 
-### AI & Security Models
-- **NLP Engine:** Custom Hinglish Pattern Matcher + Fuzzy Sequence Matcher
-- **Security APIs:** NVIDIA AI Security Models / Google Gemini 1.5 Pro integration ready
+There is no unified, open-source tool that combines OCR, Hinglish NLP, and AI analysis for Indian scam detection.
 
 ---
 
-## ⚡ 8-Layer Multi-Tiered Architecture
+## Proposed Solution
 
-```
-Trust-Lens-AI/
-├── backend/                                   # FastAPI Python Backend Application
-│   ├── ai/                                    # AI Model & Prompt Interfaces
-│   ├── api/                                   # REST API Endpoint Routers (scan, link, message, screenshot, history, report)
-│   ├── database/                              # MongoDB Connection & ODM Mappers
-│   ├── detection/                             # Core Scam Detection Engines
-│   │   ├── domain_checker.py                 # Whitelist & Domain Squatting Analyzer
-│   │   ├── pattern_analyzer.py                # RegEx & Pattern Extraction Engine
-│   │   ├── phrase_matcher.py                 # 200+ Hinglish Phrase Matching Engine
-│   │   ├── risk_engine.py                    # Multi-Layer Risk Scoring & Aggregation
-│   │   ├── rule_engine.py                    # 15 Predefined Security Rules
-│   │   ├── scam_classifier.py                # 14 Scam Category Classifier
-│   │   ├── url_detector.py                   # URL Phishing & TLD Analyzer
-│   │   └── utils.py                          # String Normalization & Text Utilities
-│   ├── models/                                # Pydantic Request/Response Models
-│   ├── ocr/                                   # Tesseract OCR Screenshot Processor
-│   ├── tests/                                 # PyTest & Unittest Suite (100% Pass Rate)
-│   └── app.py                                 # FastAPI Main Application Gateway
-├── datasets/                                  # Verified JSON Datasets
-│   ├── bank_names.json                        # Indian Bank Names & Aliases
-│   ├── fake_brand_patterns.json               # Brand Impersonation Rules
-│   ├── hinglish_phrases.json                  # 200+ Verified Hinglish Scam Phrases
-│   ├── phishing_keywords.json                 # High-Risk Phishing Keywords
-│   ├── scam_templates.json                    # Fraud Message Templates
-│   ├── suspicious_domains.json                # Known Phishing Domains
-│   ├── trusted_domains.json                   # Verified Official Indian Domains
-│   └── upi_patterns.json                      # UPI Fraud RegEx Patterns
-├── docs/                                      # Complete Project Documentation
-│   ├── AI_Workflow.md                         # AI Security Pipeline Workflow
-│   ├── API_Documentation.md                   # Full REST API Reference
-│   ├── Architecture.md                        # System Architecture & Diagram
-│   ├── Bug_Reports.md                         # QA Bug Reports & Remediation Log
-│   ├── Database_Schema.md                     # MongoDB Collections & Indexes
-│   ├── Demo_Script.md                         # 3-Min & 5-Min Pitch Demo Scripts
-│   ├── Deployment_Guide.md                    # Docker & Cloud Deployment Guide
-│   ├── Feature_Validation_Report.md           # End-to-End QA Validation Audit
-│   ├── Judge_QA.md                            # Hackathon Judge Q&A Matrix
-│   ├── Research_Report.md                     # Indian Cyber Scams Research Report
-│   ├── Test_Cases.md                          # 28 Verified Test Execution Cases
-│   ├── User_Guide.md                          # User Operation Manual
-│   └── Workflow.md                            # End-to-End Execution Flowchart
-├── frontend/                                  # Next.js 16 Web Application
-│   ├── app/                                   # App Router Pages (Landing, Dashboard, Scan, Report)
-│   ├── components/                            # UI Components & Brand SVGs
-│   ├── data/                                  # Mock & Preview Datasets
-│   ├── services/                              # API Client & Backend Connection Services
-│   └── types/                                 # TypeScript Interfaces
-├── presentation/                              # Presentation Support Assets
-│   ├── Demo_Video.mp4                         # Live System Walkthrough Video
-│   ├── Pitch.pdf                              # Pitch Presentation Deck PDF
-│   ├── Poster.png                             # Project Hackathon Poster
-│   └── PPT_Review_and_Enhancements.md        # Slide-by-Slide Enhancement Audit
-├── docker-compose.yml                         # Full-Stack Container Orchestration
-├── requirements.txt                           # Backend Python Dependencies
-└── README.md                                  # Root Documentation
-```
+TrustLens AI is a **multi-layered detection pipeline** that analyzes suspicious content through 6 independent engines and produces a unified risk verdict:
+
+| Layer | What It Does | Example |
+|-------|-------------|---------|
+| **Hinglish Phrase Matcher** | Matches 200+ verified scam phrases with fuzzy matching | "OTP batao", "account block" |
+| **Rule Engine** | 15 heuristic rules for urgency, credential harvesting, brand impersonation | Detects "share OTP immediately" |
+| **URL Detector** | Analyzes domain squatting, suspicious TLDs, URL shorteners | `sbi-kyc-update.online` |
+| **Domain Checker** | Checks against 244 trusted + 1000 suspicious domains | Flags `bit.ly/free-kbc-reward` |
+| **Pattern Analyzer** | Social engineering, urgency indicators, emotional triggers | Detects authority threats |
+| **Scam Classifier** | Categorizes into 13 scam types (OTP, KYC, UPI fraud, etc.) | Labels as "OTP Scam" |
+
+Results are blended with **NVIDIA NIM AI** (Nemotron 49B) for nuanced analysis, producing:
+- Risk score (0-100) with 5 verdict levels
+- Plain-language explanation in English/Hinglish
+- Step-by-step emergency action guide
 
 ---
 
-## 🚀 Quick Start Guide
+## Key Features
+
+- **URL Phishing Detection** — Domain squatting, typosquatting, suspicious TLDs, URL shorteners
+- **Hinglish Scam Phrase Matcher** — 200+ verified fraud patterns across 14 Indian scam categories
+- **Screenshot OCR Analysis** — EasyOCR extracts text from payment receipts, WhatsApp chats, banking screens
+- **AI-Powered Analysis** — NVIDIA NIM (Nemotron 49B) for nuanced threat assessment
+- **13-Category Scam Classification** — OTP, KYC, UPI, lottery, job, loan, digital arrest scams
+- **Plain-Language Explainability** — Non-technical explanations and action guides
+- **JWT Authentication** — Secure user accounts with bcrypt password hashing
+- **Scan History** — Full audit trail saved to MongoDB
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4 |
+| Backend | FastAPI, Python 3.11, Pydantic v2, Uvicorn |
+| AI Engine | NVIDIA NIM API (`nvidia/llama-3.3-nemotron-super-49b-v1.5`) |
+| OCR | EasyOCR (Hindi + English) |
+| Database | MongoDB Atlas (Motor async driver) |
+| Auth | JWT + bcrypt (python-jose, passlib) |
+| Deployment | Docker, Render, Vercel |
+
+---
+
+## Quick Start
 
 ### Prerequisites
-- **Python**: v3.10 or higher
-- **Node.js**: v18.0.0 or higher
-- **Tesseract OCR**: Installed on host OS (optional for local non-OCR testing)
 
----
+- Python 3.11+
+- Node.js 18+
+- MongoDB Atlas account (free tier works)
+- NVIDIA NIM API key (free at [build.nvidia.com](https://build.nvidia.com))
 
-### 1. Backend Setup & Run
+### 1. Clone & Setup Backend
 
-1. **Navigate to the backend directory:**
-   ```bash
-   cd backend
-   ```
-
-2. **Create and activate a virtual environment:**
-   ```bash
-   python -m venv venv
-   # On Windows:
-   .\venv\Scripts\activate
-   # On Linux/macOS:
-   source venv/bin/activate
-   ```
-
-3. **Install dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Run backend test suite to verify pipeline:**
-   ```bash
-   python -m unittest tests/test_detection_pipeline.py
-   ```
-
-5. **Start the FastAPI development server:**
-   ```bash
-   python -m uvicorn app:app --reload --port 8000
-   ```
-   *The interactive API documentation will be available at [http://localhost:8000/docs](http://localhost:8000/docs)*
-
----
-
-### 2. Frontend Setup & Run
+```bash
+git clone https://github.com/krrish2803/Trust-Lens-AI.git
+cd Trust-Lens-AI
 
 # Create virtual environment
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate  # Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r backend/requirements.txt
 
 # Configure environment
 cp .env.example .env
-
-# Run FastAPI server
-uvicorn backend.app:app --reload --port 8000
+# Edit .env with your MongoDB URI and NVIDIA API key
 ```
-API Documentation available at: `http://localhost:8000/docs`
 
-### 3. Frontend Setup
+### 2. Start Backend
+
+```bash
+python -m uvicorn backend.app:app --host 0.0.0.0 --port 5001 --reload
+```
+
+API docs: [http://localhost:5001/docs](http://localhost:5001/docs)
+
+### 3. Start Frontend
+
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Open `http://localhost:3000` in your browser.
+
+Open [http://localhost:3000](http://localhost:3000)
+
+### 4. Run Tests
+
+```bash
+python -m pytest backend/tests/ -v
+```
 
 ---
 
-4. **Access Application:**
-   Open browser at [http://localhost:3000](http://localhost:3000)
+## Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+# MongoDB Atlas
+MONGODB_URI=mongodb+srv://<user>:<password>@cluster.mongodb.net/?appName=Cluster0
+MONGODB_DB_NAME=trustlens_db
+
+# NVIDIA NIM AI
+NVIDIA_NIM_API_KEY=nvapi-xxxxx
+
+# Server
+DEBUG=False
+SECRET_KEY=your-secret-key-here
+```
 
 ---
 
-## 🔌 API Overview
+## API Endpoints
 
 | Endpoint | Method | Description |
-| :--- | :--- | :--- |
-| `GET /api/v1/health` | `GET` | System health check & dataset status |
-| `POST /api/v1/scan` | `POST` | Unified multi-layer threat scan (Text / URL / Image) |
-| `POST /api/v1/link` | `POST` | Standalone URL phishing & domain analysis |
-| `POST /api/v1/message` | `POST` | SMS, Email & WhatsApp text phrase analysis |
-| `POST /api/v1/screenshot` | `POST` | Upload screenshot image for OCR text extraction & scan |
-| `GET /api/v1/history` | `GET` | Retrieve user scan audit history |
-| `POST /api/v1/report` | `POST` | Submit newly discovered scam message to community database |
+|----------|--------|-------------|
+| `/health` | GET | System health check |
+| `/api/auth/signup` | POST | Create account |
+| `/api/auth/login` | POST | Login, get JWT |
+| `/api/auth/me` | GET | Get current user |
+| `/scan/url` | POST | Scan a URL for phishing |
+| `/scan/message` | POST | Scan SMS/WhatsApp/email text |
+| `/scan/image` | POST | Upload screenshot for OCR + scan |
+| `/history` | GET | Get scan history |
 
 ---
 
-## 👥 Team Members
+## File Structure
 
-- **Lead AI & Backend Architect:** Cyber Security & NLP Engineering Lead
-- **Frontend Lead & UI Designer:** UX & Product Designer
-- **Research, Documentation, Testing & QA Lead:** System Validation & Technical Writer
+```
+Trust-Lens-AI/
+├── backend/
+│   ├── ai/                        # AI model integration
+│   │   ├── classifier.py          # NVIDIA NIM classifier orchestrator
+│   │   ├── confidence_score.py    # Confidence calculator
+│   │   ├── explainability.py      # Plain-language explanation generator
+│   │   ├── nvidia_client.py       # NVIDIA NIM API client
+│   │   └── prompt_builder.py      # Prompt construction + injection defense
+│   ├── api/                       # FastAPI route handlers
+│   │   ├── auth.py                # JWT signup/login/profile
+│   │   ├── health.py              # Health check endpoint
+│   │   ├── history.py             # Scan history endpoints
+│   │   ├── message.py             # Text/SMS/WhatsApp scan
+│   │   ├── scan.py                # Unified auto-scan endpoint
+│   │   ├── screenshot.py          # Image/OCR scan
+│   │   └── url.py                 # URL phishing scan
+│   ├── database/                  # MongoDB layer
+│   │   ├── history.py             # History repository
+│   │   ├── models.py              # DB document schemas
+│   │   └── mongodb.py             # Connection manager + in-memory fallback
+│   ├── detection/                 # Core detection engines
+│   │   ├── domain_checker.py      # 244 trusted + 1000 suspicious domains
+│   │   ├── pattern_analyzer.py    # Social engineering + urgency patterns
+│   │   ├── phrase_matcher.py      # 200+ Hinglish scam phrases
+│   │   ├── risk_engine.py         # Multi-layer risk aggregation
+│   │   ├── rule_engine.py         # 15 heuristic security rules
+│   │   ├── scam_classifier.py     # 13-category scam classifier
+│   │   ├── url_detector.py        # URL phishing + TLD analyzer
+│   │   └── utils.py               # Text normalization utilities
+│   ├── models/
+│   │   └── schemas.py             # Pydantic request/response models
+│   ├── ocr/                       # OCR pipeline
+│   │   ├── image_reader.py        # EasyOCR wrapper
+│   │   ├── preprocessing.py       # Image enhancement
+│   │   └── screenshot_parser.py   # OCR error correction + entity extraction
+│   ├── tests/                     # Test suite (20 tests)
+│   ├── app.py                     # FastAPI app entry point
+│   ├── config.py                  # Centralized configuration
+│   └── requirements.txt           # Python dependencies
+├── frontend/
+│   ├── app/                       # Next.js App Router pages
+│   │   ├── page.tsx               # Landing page
+│   │   ├── home/page.tsx          # Authenticated home
+│   │   ├── scan/                  # Scan pages (URL, message, image)
+│   │   ├── result/page.tsx        # Scan result display
+│   │   ├── history/page.tsx       # Scan history
+│   │   ├── signin/page.tsx        # Login
+│   │   └── signup/page.tsx        # Registration
+│   ├── components/                # Reusable UI components
+│   │   ├── UploadBox.tsx          # Multi-tab scan input
+│   │   ├── RiskMeter.tsx          # Animated circular risk gauge
+│   │   ├── VerdictCard.tsx        # Verdict display card
+│   │   ├── ActionGuide.tsx        # Emergency action steps
+│   │   └── ...                    # 15+ components
+│   ├── services/
+│   │   ├── api.ts                 # API client with auth headers
+│   │   └── auth.ts                # JWT token management
+│   └── types/
+│       └── index.ts               # TypeScript interfaces
+├── datasets/                      # JSON detection datasets
+│   ├── hinglish_phrases.json      # 200+ scam phrases
+│   ├── trusted_domains.json       # 244 verified Indian domains
+│   ├── suspicious_domains.json    # 1000+ known phishing domains
+│   └── ...                        # 8 dataset files
+├── Dockerfile                     # Multi-stage Docker build
+├── docker-compose.yml             # Full-stack orchestration
+├── render.yaml                    # Render deploy config
+└── LICENSE                        # MIT License
+```
 
 ---
 
-## 🔮 Future Scope & Roadmap
+## How It Works
 
-1. **Multilingual Regional Expansion:** Extending phrase matcher datasets to Tamil, Telugu, Bengali, Marathi, and Kannada.
-2. **Browser Extension:** Chrome & Firefox extension to automatically flag phishing URLs and fake UPI payment popups in real time.
-3. **WhatsApp Bot Integration:** Interactive WhatsApp business bot allowing users to forward suspicious messages directly for instant verification.
-4. **On-Device Mobile SDK:** Lightweight Android SDK for integration into banking applications to intercept SMS fraud before execution.
-5. **Real-time Threat Intelligence Exchange:** Automated reporting gateway connecting flagged scam accounts directly to I4C (1930 Cyber Helpline portal).
+```
+User Input (URL / Text / Screenshot)
+        │
+        ▼
+┌─────────────────────────────────────┐
+│         Input Router                │
+│   (URL? → url.py)                   │
+│   (Text? → message.py)              │
+│   (Image? → screenshot.py)          │
+└─────────────┬───────────────────────┘
+              │
+    ┌─────────┼─────────┐
+    ▼         ▼         ▼
+┌────────┐ ┌────────┐ ┌────────┐
+│Phrase  │ │Rule    │ │URL     │
+│Matcher │ │Engine  │ │Detector│
+│(200+)  │ │(15)    │ │        │
+└───┬────┘ └───┬────┘ └───┬────┘
+    │          │          │
+    ▼          ▼          ▼
+┌─────────────────────────────────────┐
+│     Risk Score Aggregator           │
+│  rule_score × 0.60                  │
+│  + phrase_score × 0.25              │
+│  + url_score × 0.15                 │
+│  + pattern_boost × 0.10             │
+│  (floor: 70 if rules trigger)       │
+└─────────────┬───────────────────────┘
+              │
+              ▼
+┌─────────────────────────────────────┐
+│     NVIDIA NIM AI Analysis          │
+│  (nemotron-49b blending)            │
+└─────────────┬───────────────────────┘
+              │
+              ▼
+┌─────────────────────────────────────┐
+│  Verdict + Explanation + Actions    │
+│  Risk: 0-100 │ Category │ Guide    │
+└─────────────────────────────────────┘
+```
 
 ---
 
-*TrustLens AI — Empowering Indian citizens with AI-driven cyber defense.*
+## Detection Categories
+
+| # | Category | Example |
+|---|----------|---------|
+| 1 | OTP Scam | "OTP batao", "share your OTP" |
+| 2 | KYC Scam | "KYC update pending, account blocked" |
+| 3 | Bank Impersonation | Fake SBI/HDFC/ICICI alerts |
+| 4 | Delivery Scam | "India Post parcel stuck, pay fee" |
+| 5 | Lottery & Prize | "KBC lottery won, claim reward" |
+| 6 | UPI Fraud | "Scan QR to receive money" |
+| 7 | Investment Scam | "Guaranteed 10x return" |
+| 8 | Job Scam | "Work from home, earn 50k daily" |
+| 9 | Fake Loan | "Instant loan approved, pay processing fee" |
+| 10 | Digital Arrest | "CBI investigating, join video call" |
+| 11 | Phishing URL | Fake banking login pages |
+| 12 | Tax Refund | "Income tax refund pending" |
+| 13 | Safe Content | Legitimate messages |
+
+---
+
+## Contributing
+
+Contributions welcome! Please open an issue or PR.
+
+```bash
+# Fork → Branch → Commit → PR
+git checkout -b feature/your-feature
+git commit -m "feat: add your feature"
+git push origin feature/your-feature
+```
+
+---
+
+## License
+
+This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+## Acknowledgments
+
+- NVIDIA NIM for AI inference API
+- EasyOCR for multilingual text extraction
+- MongoDB Atlas for database hosting
+- The Indian cybersecurity community for scam pattern research
+
+---
+
+**TrustLens AI** — Empowering Indian citizens with AI-driven cyber defense.
