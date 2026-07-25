@@ -160,12 +160,70 @@ class RuleEngine:
 
         total_risk = self._calculate_total_risk(triggered_rules)
         explanation = self._generate_explanation(triggered_rules)
+        categories_triggered = self._detect_categories(text, triggered_rules)
+        rule_risk_score = round(total_risk * 100.0, 2) if total_risk > 0 else 0.0
+
+        if total_risk >= 0.7:
+            verdict = "MALICIOUS"
+            recommendation = "CRITICAL RISK: Do not interact, share OTP, or send money."
+        elif total_risk >= 0.4:
+            verdict = "SUSPICIOUS"
+            recommendation = "MEDIUM RISK: Proceed with caution and verify sender identity."
+        else:
+            verdict = "SAFE"
+            recommendation = "No significant risk indicators detected."
+
+        findings = [{"finding": r["evidence"], "rule_id": r["rule_id"], "rule_name": r["rule_name"], "risk_score": r["risk_score"]} for r in triggered_rules]
 
         return {
             "rules_triggered": triggered_rules,
             "total_risk_from_rules": total_risk,
+            "rule_risk_score": rule_risk_score,
+            "risk_score": total_risk,
+            "categories_triggered": categories_triggered,
             "explanation": explanation,
+            "recommendation": recommendation,
+            "verdict": verdict,
+            "findings": findings,
         }
+
+    def _detect_categories(self, text: str, triggered_rules: List[dict]) -> List[str]:
+        text_lower = text.lower()
+        categories = []
+        rule_ids = {r["rule_id"] for r in triggered_rules}
+
+        if any(re.search(p, text_lower) for p in self.otp_patterns) or "R002" in rule_ids:
+            categories.append("OTP Scam")
+
+        if any(re.search(p, text_lower) for p in self.kyc_patterns) or "R015" in rule_ids:
+            categories.append("KYC Scam")
+
+        if any(re.search(p, text_lower) for p in self.bank_patterns) or "R004" in rule_ids or "R005" in rule_ids:
+            categories.append("Bank Impersonation")
+
+        if any(re.search(p, text_lower) for p in self.delivery_patterns):
+            categories.append("Delivery Scam")
+
+        if any(re.search(p, text_lower) for p in self.lottery_patterns) or "R006" in rule_ids:
+            categories.append("Lottery & Prize Scam")
+
+        if any(re.search(p, text_lower) for p in self.upi_patterns):
+            categories.append("UPI Fraud Scam")
+
+        if any(re.search(p, text_lower) for p in self.investment_patterns) or "R007" in rule_ids:
+            categories.append("Investment Scam")
+
+        if any(re.search(p, text_lower) for p in self.job_patterns):
+            categories.append("Job Scam")
+
+        if any(re.search(p, text_lower) for p in self.loan_patterns):
+            categories.append("Loan Scam")
+
+        if any(re.search(p, text_lower) for p in self.govt_patterns) or "R013" in rule_ids:
+            categories.append("Government / Authority Scam")
+
+        return categories
+
 
     def _check_urgency(self, text: str) -> Optional[dict]:
         """R001: Check for urgency language patterns."""
@@ -337,7 +395,7 @@ class RuleEngine:
 
     def _check_unknown_sender(self, sender_type: str) -> Optional[dict]:
         """R008: Check for unknown sender."""
-        if sender_type.lower() in ("unknown", "untrusted", "external"):
+        if sender_type.lower() in ("untrusted", "external"):
             return {
                 "rule_id": "R008",
                 "rule_name": RULES["R008"]["name"],
@@ -345,6 +403,7 @@ class RuleEngine:
                 "evidence": f"Sender type is '{sender_type}'",
             }
         return None
+
 
     def _check_generic_greeting(self, text: str) -> Optional[dict]:
         """R009: Check for generic greetings."""

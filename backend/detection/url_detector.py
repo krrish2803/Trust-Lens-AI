@@ -100,6 +100,9 @@ class URLDetector:
         if not url or not url.strip():
             return {
                 "url": "",
+                "is_phishing": False,
+                "risk_score": 0.0,
+                "findings": [],
                 "risk_indicators": [],
                 "final_url_risk": 0.0,
                 "verdict": "SAFE: No URL provided.",
@@ -114,11 +117,15 @@ class URLDetector:
         if is_trusted:
             return {
                 "url": url,
+                "is_phishing": False,
+                "risk_score": 0.0,
+                "findings": [],
                 "risk_indicators": [],
                 "final_url_risk": 0.0,
                 "verdict": "SAFE: Officially verified legitimate domain.",
                 "recommendation": "SAFE to proceed. Official verified domain."
             }
+
 
         checks = [
             self._check_suspicious_tld(domain),
