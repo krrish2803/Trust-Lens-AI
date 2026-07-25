@@ -47,7 +47,7 @@ class RuleEngine:
             self._check_urgency(text),
             self._check_credential_request(text),
             self._check_payment_request(text),
-            self._check_brand_impersonation(text),
+            self._check_brand_impersonation(text, sender_type),
             self._check_account_threat(text),
             self._check_reward_prize(text),
             self._check_too_good(text),
@@ -111,6 +111,8 @@ class RuleEngine:
             r'\bverification\s*(?:code|number|otp)\b',
         ]
         text_lower = text.lower()
+        if re.search(r'\b(?:do\s*not|dont|don\'t|never)\s*(?:share|tell|disclose|give)\b', text_lower):
+            return None
         matches = [p for p in credential_patterns if re.search(p, text_lower)]
         if matches:
             return {
@@ -144,8 +146,10 @@ class RuleEngine:
             }
         return None
 
-    def _check_brand_impersonation(self, text: str) -> Optional[dict]:
+    def _check_brand_impersonation(self, text: str, sender_type: str = "unknown") -> Optional[dict]:
         """R004: Check for brand name usage in suspicious context."""
+        if sender_type == "verified":
+            return None
         brand_patterns = [
             r'\b(?:hdfc|icici|sbi|axis|kotak|pnb|bob|canara|union\s*bank)\b',
             r'\b(?:paytm|phonepe|google\s*pay|gpay|amazon\s*pay|mobikwik)\b',

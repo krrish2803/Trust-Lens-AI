@@ -119,6 +119,19 @@ class ScamClassifier:
                 "matching_patterns": []
             }
 
+        phrases = detection_results.get("phrases_detected", [])
+        rules = detection_results.get("rules_triggered", [])
+        url_r = detection_results.get("url_risk", {})
+        url_score = url_r.get("final_url_risk", 0.0) if isinstance(url_r, dict) else (url_r if isinstance(url_r, (int, float)) else 0.0)
+
+        if not phrases and not rules and url_score <= 0.2:
+            return {
+                "scam_category": "unknown",
+                "category_description": self.categories["unknown"]["description"],
+                "confidence": 0.0,
+                "matching_patterns": []
+            }
+
         scores = self._score_categories(text, detection_results)
         total_score = sum(scores.values())
 

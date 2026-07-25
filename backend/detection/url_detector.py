@@ -64,8 +64,28 @@ class URLDetector:
             return []
 
     def detect(self, url: str) -> dict:
+        if not url or not url.strip():
+            return {
+                "url": "",
+                "risk_indicators": [],
+                "final_url_risk": 0.0,
+                "verdict": "SAFE: No URL provided.",
+                "recommendation": "SAFE"
+            }
+
         indicators = []
         domain = extract_domain(url)
+
+        # Check if domain is trusted
+        is_trusted = domain in self.trusted_domains or any(domain == td or domain.endswith('.' + td) for td in self.trusted_domains)
+        if is_trusted:
+            return {
+                "url": url,
+                "risk_indicators": [],
+                "final_url_risk": 0.0,
+                "verdict": "SAFE: Officially verified legitimate domain.",
+                "recommendation": "SAFE to proceed. Official verified domain."
+            }
 
         checks = [
             self._check_suspicious_tld(domain),
