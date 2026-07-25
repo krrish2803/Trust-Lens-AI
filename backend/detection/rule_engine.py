@@ -14,7 +14,27 @@ Multi-category rule engine covering 10 distinct Indian scam types:
 """
 
 import re
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Optional
+
+
+# Rule definitions with risk scores
+RULES = {
+    "R001": {"name": "Urgency Language", "risk_score": 0.7, "description": "Detects urgent language patterns"},
+    "R002": {"name": "Credential Request", "risk_score": 0.95, "description": "Detects requests for credentials/OTP/PIN"},
+    "R003": {"name": "Payment Request", "risk_score": 0.9, "description": "Detects requests for money transfer"},
+    "R004": {"name": "Brand Impersonation", "risk_score": 0.85, "description": "Detects brand/company name usage in suspicious context"},
+    "R005": {"name": "Account Threat", "risk_score": 0.8, "description": "Detects threats about account suspension/closure"},
+    "R006": {"name": "Reward/Prize Offer", "risk_score": 0.75, "description": "Detects prize/reward/gift offers"},
+    "R007": {"name": "Too Good To Be True", "risk_score": 0.7, "description": "Detects unrealistic promises"},
+    "R008": {"name": "Unknown Sender", "risk_score": 0.6, "description": "Detects unknown/suspicious sender patterns"},
+    "R009": {"name": "Generic Greeting", "risk_score": 0.4, "description": "Detects generic greetings like Dear Customer"},
+    "R010": {"name": "Poor Grammar/Spelling", "risk_score": 0.5, "description": "Detects grammar/spelling errors"},
+    "R011": {"name": "Redirect Links", "risk_score": 0.75, "description": "Detects suspicious redirect URLs"},
+    "R012": {"name": "Time Pressure", "risk_score": 0.65, "description": "Detects time-limited pressure tactics"},
+    "R013": {"name": "Authority Impersonation", "risk_score": 0.85, "description": "Detects government/bank authority impersonation"},
+    "R014": {"name": "Mobile-Only Instruction", "risk_score": 0.7, "description": "Detects instructions to use only mobile"},
+    "R015": {"name": "Document Request", "risk_score": 0.8, "description": "Detects requests for personal documents"},
+}
 
 
 class RuleEngine:
