@@ -1,49 +1,77 @@
-// ─── Risk & Verdict ────────────────────────────────────────────────────────
+/**
+ * TrustLens AI - Unified Type System & Canonical Definitions
+ */
 
-export type RiskLevel = "safe" | "low" | "medium" | "high" | "critical";
+export type RiskLevel =
+  | 'safe' | 'low' | 'medium' | 'high' | 'critical'
+  | 'Safe' | 'Low Risk' | 'Medium Risk' | 'High Risk' | 'Critical';
 
-export type Verdict = "SAFE" | "LOW_RISK" | "MEDIUM_RISK" | "HIGH_RISK" | "CRITICAL";
+export type ScanType = 'url' | 'message' | 'image' | 'link' | 'screenshot' | 'text';
 
-export type ScanType = "link" | "message" | "screenshot";
+export type Verdict = 'SAFE' | 'LOW_RISK' | 'MEDIUM_RISK' | 'HIGH_RISK' | 'CRITICAL';
 
-export type ScamCategoryType =
-  | "Fake KYC Scam"
-  | "UPI Fraud"
-  | "Job Scam"
-  | "Phishing Link"
-  | "Impersonation"
-  | "Lottery Scam"
-  | "Investment Fraud"
-  | "OTP Fraud"
-  | "Package Delivery Scam"
-  | "Tech Support Scam"
-  | "Unknown";
+export interface UserProfile {
+  id: string;
+  name?: string;
+  fullName?: string;
+  email: string;
+  role?: string;
+  created_at?: string;
+}
 
-// ─── Scan Result ───────────────────────────────────────────────────────────
+export interface UserSettings {
+  realtimeAlerts?: boolean;
+  biometricAuth?: boolean;
+  sessionTimeout?: number;
+}
 
-export interface ScanResult {
-  scanId: string;
-  timestamp: string;
-  input: string;
-  type: ScanType;
-  verdict: Verdict;
-  riskLevel: RiskLevel;
-  riskScore: number;          // 0–100
-  confidenceScore: number;    // 0–100
-  category: ScamCategoryType;
-  explanation: string;
-  originalContent?: string;
-  actions: ActionStep[];
+export interface ThreatDetail {
+  layer: string;
+  finding: string;
+  severity: string;
+  weight: number;
 }
 
 export interface ActionStep {
   step: number;
   title: string;
   description: string;
-  severity: "error" | "primary" | "tertiary";
+  severity: 'primary' | 'tertiary' | 'error';
 }
 
-// ─── History ───────────────────────────────────────────────────────────────
+export interface ScanResultResponse {
+  id: string;
+  scan_type: ScanType;
+  input_summary: string;
+  risk_score: number;
+  confidence_score: number;
+  verdict: RiskLevel;
+  scam_category: string;
+  matched_phrases: string[];
+  detected_urls: string[];
+  reasons: string[];
+  recommended_actions: string[] | ActionStep[];
+  extracted_text?: string;
+  ai_explanation?: string;
+  threat_breakdown?: ThreatDetail[];
+  created_at: string;
+}
+
+// Canonical model matching UI & mock representations
+export interface ScanResult {
+  scanId: string;
+  timestamp: string;
+  input: string;
+  type: ScanType;
+  verdict: Verdict | RiskLevel;
+  riskLevel: RiskLevel;
+  riskScore: number;
+  confidenceScore: number;
+  category: string;
+  explanation: string;
+  originalContent?: string;
+  actions: ActionStep[];
+}
 
 export interface ScanHistoryItem {
   scanId: string;
@@ -51,11 +79,9 @@ export interface ScanHistoryItem {
   title: string;
   snippet: string;
   type: ScanType;
-  verdict: Verdict;
+  verdict: Verdict | string;
   riskLevel: RiskLevel;
 }
-
-// ─── Dashboard ─────────────────────────────────────────────────────────────
 
 export interface DashboardStats {
   totalScans: number;
@@ -67,22 +93,13 @@ export interface DashboardStats {
 export interface RecentScanItem {
   id: string;
   name: string;
-  verdict: "Safe" | "Critical Scam" | "Suspicious" | "Verified" | "Medium Risk";
+  verdict: string;
   time: string;
   icon: string;
 }
 
-// ─── User ──────────────────────────────────────────────────────────────────
-
-export interface UserProfile {
-  id: string;
-  fullName: string;
-  email: string;
-  avatarUrl?: string;
-}
-
-export interface UserSettings {
-  realtimeAlerts: boolean;
-  biometricAuth: boolean;
-  sessionTimeout: number; // minutes
+export interface HistoryResponse {
+  status: string;
+  count: number;
+  data: ScanResultResponse[];
 }

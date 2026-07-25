@@ -118,7 +118,7 @@ export default function HistoryPage() {
             </div>
           ) : (
             filtered.map((item, index) => {
-              const color = getRiskStrokeColor(item.riskLevel);
+              const color = getRiskStrokeColor(item.riskLevel as RiskLevel);
               return (
                 <div key={item.scanId} className="relative">
                   {/* Timeline dot */}
@@ -127,7 +127,7 @@ export default function HistoryPage() {
                     style={{ background: color }}
                   />
 
-                  <Link href="/report">
+                  <Link href={`/scan/result?id=${item.scanId}`}>
                     <div
                       className="glass-card rounded-xl p-4 md:p-5 flex items-center gap-4 hover:border-white/10 hover:bg-[#1f2a3c]/60 transition-all duration-200 cursor-pointer animate-fade-in-up"
                       style={{ animationDelay: `${index * 60}ms` }}
