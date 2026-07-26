@@ -6,6 +6,7 @@ JWT-based signup, login, and profile management.
 import uuid
 import hashlib
 import hmac
+import os
 from datetime import datetime, timezone, timedelta
 from fastapi import APIRouter, HTTPException, status, Depends, Header
 from typing import Optional
@@ -17,24 +18,24 @@ from backend.database.mongodb import db_manager
 
 router = APIRouter(prefix="/api/auth")
 
-try:
-    import bcrypt as _bcrypt
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
 
-    def hash_password(password: str) -> str:
-        return _bcrypt.hashpw(password.encode("utf-8"), _bcrypt.gensalt()).decode("utf-8")
 
-    def verify_password(password: str, hashed: str) -> bool:
-        return _bcrypt.checkpw(password.encode("utf-8"), hashed.encode("utf-8"))
+def hash_password(password: str) -> str:
+    salt = os.urandom(16)
+    dk = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 100000)
+    return salt.hex() + ":" + dk.hex()
 
-except ImportError:
-    def hash_password(password: str) -> str:
-        salt = settings.SECRET_KEY[:16].encode("utf-8")
-        return hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 100000).hex()
 
-    def verify_password(password: str, hashed: str) -> bool:
-        salt = settings.SECRET_KEY[:16].encode("utf-8")
-        computed = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 100000).hex()
-        return hmac.compare_digest(computed, hashed)
+def verify_password(password: str, stored: str) -> bool:
+    try:
+        salt_hex, dk_hex = stored.split(":")
+        salt = bytes.fromhex(salt_hex)
+        dk = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 100000)
+        return hmac.compare_digest(dk.hex(), dk_hex)
+    except Exception:
+        return False
 
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
