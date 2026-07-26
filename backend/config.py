@@ -29,6 +29,7 @@ class Settings(BaseSettings):
         "https://trustlens-ai.vercel.app",
         "https://trustlens-ai-frontend.onrender.com",
         "https://trustlens-ai.onrender.com",
+        "https://trust-lens-ai.netlify.app",
     ]
 
     # Rate Limiting
