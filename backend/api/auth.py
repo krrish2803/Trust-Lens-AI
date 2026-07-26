@@ -7,6 +7,7 @@ import uuid
 import hashlib
 import hmac
 import os
+import logging
 from datetime import datetime, timezone, timedelta
 from fastapi import APIRouter, HTTPException, status, Depends, Header
 from typing import Optional
@@ -16,10 +17,12 @@ from jose import JWTError, jwt
 from backend.config import settings
 from backend.database.mongodb import db_manager
 
+logger = logging.getLogger("trustlens.auth")
+
 router = APIRouter(prefix="/api/auth")
 
 ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24
+ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
 
 
 def hash_password(password: str) -> str:
@@ -36,9 +39,6 @@ def verify_password(password: str, stored: str) -> bool:
         return hmac.compare_digest(dk.hex(), dk_hex)
     except Exception:
         return False
-
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
 
 
 # ── Request / Response Models ────────────────────────────────────────────────
@@ -141,45 +141,63 @@ async def _get_current_user(authorization: Optional[str] = Header(None)) -> dict
 
 @router.post("/signup", response_model=TokenResponse)
 async def signup(payload: SignupRequest):
-    existing = await _get_user_by_email(payload.email.lower().strip())
-    if existing:
+    try:
+        existing = await _get_user_by_email(payload.email.lower().strip())
+        if existing:
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="An account with this email already exists.",
+            )
+
+        user_id = f"user-{uuid.uuid4().hex[:12]}"
+        hashed_password = hash_password(payload.password)
+        user = {
+            "id": user_id,
+            "name": payload.name.strip(),
+            "email": payload.email.lower().strip(),
+            "password_hash": hashed_password,
+            "created_at": datetime.now(timezone.utc).isoformat(),
+        }
+
+        await _save_user(user)
+        token = create_access_token(user_id, user["email"])
+        return TokenResponse(access_token=token)
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Signup failed: {type(e).__name__}: {e}", exc_info=True)
         raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail="An account with this email already exists.",
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Signup failed: {type(e).__name__}: {e}",
         )
-
-    user_id = f"user-{uuid.uuid4().hex[:12]}"
-    hashed_password = hash_password(payload.password)
-    user = {
-        "id": user_id,
-        "name": payload.name.strip(),
-        "email": payload.email.lower().strip(),
-        "password_hash": hashed_password,
-        "created_at": datetime.now(timezone.utc).isoformat(),
-    }
-
-    await _save_user(user)
-    token = create_access_token(user_id, user["email"])
-    return TokenResponse(access_token=token)
 
 
 @router.post("/login", response_model=TokenResponse)
 async def login(payload: LoginRequest):
-    user = await _get_user_by_email(payload.email.lower().strip())
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password.",
-        )
+    try:
+        user = await _get_user_by_email(payload.email.lower().strip())
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password.",
+            )
 
-    if not verify_password(payload.password, user.get("password_hash", "")):
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password.",
-        )
+        if not verify_password(payload.password, user.get("password_hash", "")):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password.",
+            )
 
-    token = create_access_token(user["id"], user["email"])
-    return TokenResponse(access_token=token)
+        token = create_access_token(user["id"], user["email"])
+        return TokenResponse(access_token=token)
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Login failed: {type(e).__name__}: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Login failed: {type(e).__name__}: {e}",
+        )
 
 
 @router.get("/me", response_model=UserProfile)
