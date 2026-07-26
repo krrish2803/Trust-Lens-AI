@@ -4,11 +4,12 @@ JWT-based signup, login, and profile management.
 """
 
 import uuid
+import hashlib
+import hmac
 from datetime import datetime, timezone, timedelta
 from fastapi import APIRouter, HTTPException, status, Depends, Header
 from typing import Optional
-from pydantic import BaseModel, Field, EmailStr
-from passlib.context import CryptContext
+from pydantic import BaseModel, Field
 from jose import JWTError, jwt
 
 from backend.config import settings
@@ -16,7 +17,24 @@ from backend.database.mongodb import db_manager
 
 router = APIRouter(prefix="/api/auth")
 
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+try:
+    import bcrypt as _bcrypt
+
+    def hash_password(password: str) -> str:
+        return _bcrypt.hashpw(password.encode("utf-8"), _bcrypt.gensalt()).decode("utf-8")
+
+    def verify_password(password: str, hashed: str) -> bool:
+        return _bcrypt.checkpw(password.encode("utf-8"), hashed.encode("utf-8"))
+
+except ImportError:
+    def hash_password(password: str) -> str:
+        salt = settings.SECRET_KEY[:16].encode("utf-8")
+        return hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 100000).hex()
+
+    def verify_password(password: str, hashed: str) -> bool:
+        salt = settings.SECRET_KEY[:16].encode("utf-8")
+        computed = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt, 100000).hex()
+        return hmac.compare_digest(computed, hashed)
 
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60 * 24  # 24 hours
@@ -130,7 +148,7 @@ async def signup(payload: SignupRequest):
         )
 
     user_id = f"user-{uuid.uuid4().hex[:12]}"
-    hashed_password = pwd_context.hash(payload.password)
+    hashed_password = hash_password(payload.password)
     user = {
         "id": user_id,
         "name": payload.name.strip(),
@@ -153,7 +171,7 @@ async def login(payload: LoginRequest):
             detail="Invalid email or password.",
         )
 
-    if not pwd_context.verify(payload.password, user.get("password_hash", "")):
+    if not verify_password(payload.password, user.get("password_hash", "")):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid email or password.",
